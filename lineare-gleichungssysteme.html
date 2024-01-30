@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Kapitel 8 Lineare Gleichungssysteme | Wirtschaftsmathematik</title>
+  <meta name="description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Kapitel 8 Lineare Gleichungssysteme | Wirtschaftsmathematik" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Kapitel 8 Lineare Gleichungssysteme | Wirtschaftsmathematik" />
+  
+  <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="integralrechnung.html"/>
+<link rel="next" href="matrizen-und-grundlegende-matrixoperationen.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Einführung</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#warum-benötigen-wir-die-methoden-der-wirtschaftsmathematik"><i class="fa fa-check"></i>Warum benötigen wir die Methoden der Wirtschaftsmathematik?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#beispiel-nutzenmaximierung"><i class="fa fa-check"></i>Beispiel: Nutzenmaximierung</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="grundlagen.html"><a href="grundlagen.html"><i class="fa fa-check"></i><b>2</b> Grundlagen</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="grundlagen.html"><a href="grundlagen.html#mengen-und-zahlen"><i class="fa fa-check"></i><b>2.1</b> Mengen und Zahlen</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="grundlagen.html"><a href="grundlagen.html#mengenoperationen"><i class="fa fa-check"></i><b>2.1.1</b> Mengenoperationen</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="grundlagen.html"><a href="grundlagen.html#zahlenmengen"><i class="fa fa-check"></i><b>2.2</b> Zahlenmengen</a></li>
+<li class="chapter" data-level="2.3" data-path="grundlagen.html"><a href="grundlagen.html#punktmengen-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Punktmengen in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-abstand"><i class="fa fa-check"></i><b>2.3.2</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: Abstand</a></li>
+<li class="chapter" data-level="2.3.3" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-varepsilon-umgebung"><i class="fa fa-check"></i><b>2.3.3</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\varepsilon-\)</span>Umgebung</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="grundlagen.html"><a href="grundlagen.html#funktionen"><i class="fa fa-check"></i><b>2.4</b> Funktionen</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="grundlagen.html"><a href="grundlagen.html#lineare-funktionen"><i class="fa fa-check"></i><b>2.4.1</b> Lineare Funktionen</a></li>
+<li class="chapter" data-level="2.4.2" data-path="grundlagen.html"><a href="grundlagen.html#quadratische-funktionen"><i class="fa fa-check"></i><b>2.4.2</b> Quadratische Funktionen</a></li>
+<li class="chapter" data-level="2.4.3" data-path="grundlagen.html"><a href="grundlagen.html#potenz--exponential--und-logarithmusfunktionen"><i class="fa fa-check"></i><b>2.4.3</b> Potenz-, Exponential- und Logarithmusfunktionen</a></li>
+<li class="chapter" data-level="2.4.4" data-path="grundlagen.html"><a href="grundlagen.html#konvexe-und-konkave-funktionen"><i class="fa fa-check"></i><b>2.4.4</b> Konvexe und konkave Funktionen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html"><i class="fa fa-check"></i><b>3</b> Folgen, Grenzwerte und Reihen</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#folgen"><i class="fa fa-check"></i><b>3.1</b> Folgen</a></li>
+<li class="chapter" data-level="3.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#konvergenz-von-folgen"><i class="fa fa-check"></i><b>3.2</b> Konvergenz von Folgen</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#konvergente-folgen-und-grenzwerte"><i class="fa fa-check"></i><b>3.2.1</b> Konvergente Folgen und Grenzwerte</a></li>
+<li class="chapter" data-level="3.2.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#divergente-folgen"><i class="fa fa-check"></i><b>3.2.2</b> Divergente Folgen</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#wichtige-sätze-zu-konvergenz-von-folgen"><i class="fa fa-check"></i><b>3.3</b> Wichtige Sätze zu Konvergenz von Folgen</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#beschränkte-folgen"><i class="fa fa-check"></i><b>3.3.1</b> Beschränkte Folgen</a></li>
+<li class="chapter" data-level="3.3.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#monotone-folgen"><i class="fa fa-check"></i><b>3.3.2</b> Monotone Folgen</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#reihen"><i class="fa fa-check"></i><b>3.4</b> Reihen</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#spezielle-reihen"><i class="fa fa-check"></i><b>3.4.1</b> Spezielle Reihen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html"><i class="fa fa-check"></i><b>4</b> Stetigkeit von Funktionen</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html#punktweise-stetigkeit"><i class="fa fa-check"></i><b>4.1</b> Punktweise Stetigkeit</a></li>
+<li class="chapter" data-level="4.2" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html#stetige-funktionen-und-deren-eigenschaften"><i class="fa fa-check"></i><b>4.2</b> Stetige Funktionen und deren Eigenschaften</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differentialrechnung.html"><a href="differentialrechnung.html"><i class="fa fa-check"></i><b>5</b> Differentialrechnung</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-tangente"><i class="fa fa-check"></i><b>5.1</b> Definition der Tangente</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#sekante-und-tangente"><i class="fa fa-check"></i><b>5.1.1</b> Sekante und Tangente</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#von-der-sekante-zur-tangente"><i class="fa fa-check"></i><b>5.1.2</b> Von der Sekante zur Tangente</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-ableitung"><i class="fa fa-check"></i><b>5.2</b> Definition der Ableitung</a></li>
+<li class="chapter" data-level="5.3" data-path="differentialrechnung.html"><a href="differentialrechnung.html#differenzierbarkeit"><i class="fa fa-check"></i><b>5.3</b> Differenzierbarkeit</a></li>
+<li class="chapter" data-level="5.4" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungsregel"><i class="fa fa-check"></i><b>5.4</b> Ableitungsregel</a></li>
+<li class="chapter" data-level="5.5" data-path="differentialrechnung.html"><a href="differentialrechnung.html#regel-von-lhôpital"><i class="fa fa-check"></i><b>5.5</b> Regel von L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungen-höhere-ordnung"><i class="fa fa-check"></i><b>5.6</b> Ableitungen höhere Ordnung</a></li>
+<li class="chapter" data-level="5.7" data-path="differentialrechnung.html"><a href="differentialrechnung.html#der-satz-von-taylor"><i class="fa fa-check"></i><b>5.7</b> Der Satz von Taylor</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimierung.html"><a href="optimierung.html"><i class="fa fa-check"></i><b>6</b> Optimierung</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimierung.html"><a href="optimierung.html#notwendige-bedingungen-für-maxima-und-minima"><i class="fa fa-check"></i><b>6.1</b> Notwendige Bedingungen für Maxima und Minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimierung.html"><a href="optimierung.html#bedingungen-zweiter-ordnung"><i class="fa fa-check"></i><b>6.2</b> Bedingungen zweiter Ordnung</a></li>
+<li class="chapter" data-level="6.3" data-path="optimierung.html"><a href="optimierung.html#optimierung-auf-einem-intervall"><i class="fa fa-check"></i><b>6.3</b> Optimierung auf einem Intervall</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integralrechnung.html"><a href="integralrechnung.html"><i class="fa fa-check"></i><b>7</b> Integralrechnung</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integralrechnung.html"><a href="integralrechnung.html#das-unbestimmte-integral"><i class="fa fa-check"></i><b>7.1</b> Das unbestimmte Integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integralrechnung.html"><a href="integralrechnung.html#das-bestimmte-integral"><i class="fa fa-check"></i><b>7.2</b> Das bestimmte Integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integralrechnung.html"><a href="integralrechnung.html#eigenschaften-und-elementare-rechenregeln"><i class="fa fa-check"></i><b>7.2.1</b> Eigenschaften und elementare Rechenregeln</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html"><i class="fa fa-check"></i><b>8</b> Lineare Gleichungssysteme</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#gleichungssysteme-mit-zwei-linearen-gleichungen"><i class="fa fa-check"></i><b>8.1</b> Gleichungssysteme mit zwei linearen Gleichungen</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#lösung-durch-substitution-und-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Lösung durch Substitution und Elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#gleichungssysteme-mit-n-linearen-gleichungen"><i class="fa fa-check"></i><b>8.2</b> Gleichungssysteme mit <span class="math inline">\(n\)</span> linearen Gleichungen</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#lösen-von-gleichungssystemen-mit-m-linearen-gleichungen"><i class="fa fa-check"></i><b>8.2.1</b> Lösen von Gleichungssystemen mit <span class="math inline">\(m\)</span> linearen Gleichungen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html"><i class="fa fa-check"></i><b>9</b> Matrizen und Grundlegende Matrixoperationen</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#matrizen"><i class="fa fa-check"></i><b>9.1</b> Matrizen</a></li>
+<li class="chapter" data-level="9.2" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#grundlegende-matrizenoperationen"><i class="fa fa-check"></i><b>9.2</b> Grundlegende Matrizenoperationen</a></li>
+<li class="chapter" data-level="9.3" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#ökonomische-anwendungen"><i class="fa fa-check"></i><b>9.3</b> Ökonomische Anwendungen</a></li>
+<li class="chapter" data-level="9.4" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#transponierte-einer-matrix"><i class="fa fa-check"></i><b>9.4</b> Transponierte einer Matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#determinante-und-inverse-einer-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinante und Inverse einer Matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#mehr-zu-der-determinante"><i class="fa fa-check"></i><b>9.5.1</b> Mehr zu der Determinante</a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#rang-und-determinanteast"><i class="fa fa-check"></i><b>9.5.2</b> Rang und Determinante<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html"><i class="fa fa-check"></i><b>10</b> Analysis mit <span class="math inline">\(n\)</span> Veränderlichen</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#stetigkeit"><i class="fa fa-check"></i><b>10.1</b> Stetigkeit</a></li>
+<li class="chapter" data-level="10.2" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#partielle-ableitungen"><i class="fa fa-check"></i><b>10.2</b> Partielle Ableitungen</a></li>
+<li class="chapter" data-level="10.3" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#partielle-ableitungen-höherer-ordnung"><i class="fa fa-check"></i><b>10.3</b> Partielle Ableitungen höherer Ordnung</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#der-gradientenvektor-und-die-hesse-matrix"><i class="fa fa-check"></i><b>10.3.1</b> Der Gradientenvektor und die Hesse-Matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#ableitung-impliziter-funktionenast"><i class="fa fa-check"></i><b>10.4</b> Ableitung impliziter Funktionen<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#höhenlinien-indifferenzkurvenast"><i class="fa fa-check"></i><b>10.4.1</b> Höhenlinien / Indifferenzkurven<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimierung-ii.html"><a href="optimierung-ii.html"><i class="fa fa-check"></i><b>11</b> Optimierung II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimierung-ii.html"><a href="optimierung-ii.html#bedingungen-erster-ordnung"><i class="fa fa-check"></i><b>11.1</b> Bedingungen erster Ordnung</a></li>
+<li class="chapter" data-level="11.2" data-path="optimierung-ii.html"><a href="optimierung-ii.html#bedingungen-zweiter-ordnung-1"><i class="fa fa-check"></i><b>11.2</b> Bedingungen zweiter Ordnung</a></li>
+<li class="chapter" data-level="11.3" data-path="optimierung-ii.html"><a href="optimierung-ii.html#optimierung-unter-nebenbedingungen-lagrange-methode"><i class="fa fa-check"></i><b>11.3</b> Optimierung unter Nebenbedingungen: Lagrange-Methode</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wirtschaftsmathematik</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lineare-gleichungssysteme" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Kapitel 8</span> Lineare Gleichungssysteme<a href="lineare-gleichungssysteme.html#lineare-gleichungssysteme" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Glückwunsch! Deine Antwort ist richtig.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Leider falsch. Versuch es nochmal!`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Bitte zwei Optionen auswählen.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 100) + 2;
+      const x2 = Math.floor(Math.random() * 100) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Glückwunsch! Deine Antwort ist richtig.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Glückwunsch! Deine Antwort ist richtig.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Leider falsch. Versuch es nochmal!`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Bitte eine Option wählen.';
+      }
+    }
+</script>
+<p>Viele ökonomische Modelle bauen auf linearen Gleichungssystemen auf:</p>
+<ul>
+<li>Produktionsplanung unter linearen Ressourcenbeschränkungen:
+Produktionsbeschränkung auf Maschine 1: 2 Stunden für eine Einheit von <span class="math inline">\(x\)</span> und 3 Stunden für eine Einheit von <span class="math inline">\(y\)</span> mit insgesamt 8 Stunden Verfügbarkeit: <span class="math inline">\(2x+3y = 8\)</span>.
+Produktionsbeschränkung auf Maschine 2: 4 Stunden für eine Einheit von <span class="math inline">\(x\)</span> und 0,5 Stunden für eine Einheit von <span class="math inline">\(y\)</span> mit insgesamt 8 Stunden Verfügbarkeit: <span class="math inline">\(4x+0,5 y = 8\)</span>.</li>
+</ul>
+<p>Was ist die optimale Produktion?</p>
+<ul>
+<li>Finden des Marktgleichgewichts bei linearen Nachfrage- und Angebotsfunktionen:
+Inverse Nachfrage: <span class="math inline">\(p(q)=400-0,3q\)</span> versus Angebot: <span class="math inline">\(p(q)=40+0,3q\)</span>.</li>
+</ul>
+<p>Wie hoch ist der Gleichgewichtspreis?</p>
+<ul>
+<li>Kalibrierung von volkswirtschaftlichen Modellen (Suche das Gleichgewicht zwischen Einkommen <span class="math inline">\(Y\)</span> und Konsum <span class="math inline">\(C\)</span>):</li>
+</ul>
+<p><span class="math display">\[\begin{align*}
+Y &amp;= C+I+G\\
+C&amp;=C_0 +bY\\
+I&amp;=I_0+aY
+\end{align*}\]</span></p>
+<p>für gegebene Anfangsinvestitionen <span class="math inline">\(I_0=50\)</span>, Konsum <span class="math inline">\(C_0=65\)</span> und Staatsausgaben <span class="math inline">\(G=20\)</span> sowie <span class="math inline">\(b=0,7\)</span>, <span class="math inline">\(a=0,1\)</span> .</p>
+<p>Wie hoch ist das Gleichgewicht zwischen Einkommen und Konsum?</p>
+<p><span class="math inline">\(\leadsto\)</span> In diesem Kapitel werden wir die Methoden zur Lösung linearer Gleichungssysteme betrachten.</p>
+<hr />
+<!--Eine lineare Gleichung mit \(n\) Variablen (“Unbekannten”) hat die Form: 
+
+\[a_1x_1 + a_2x_2 + · · · + a_nx_n = b,\]
+
+wobei 
+
+- \(a_1, ... , a_n\) und \(b\) bekannte Konstanten (z.B. Preise), so genannte Parameter, sind und 
+
+- \(x_1, ... , x_n\) die Variablen (z.B. Gütermengen) bezeichnen. 
+
+Ein System linearer Gleichungen (LGS) besteht aus zwei oder mehr linearen Gleichungen.
+ 
+Eine Lösung ist eine Zuordnung von Variablen, sodass alle Gleichungen gleichzeitig wahr/erfüllt sind.
+
+
+::: {.example #steuervort name="Steuervorteil für Spenden"}
+
+Eine Firma erwirtschaftet vor-steuerliche Gewinne in Höhe von \(100.000 €\). 
+
+Sie spendet an das Rote Kreuz. Dabei soll die Spende so groß sein, dass sie \(10%\) des nachsteuerlichen Gewinns ausmacht.
+ 
+An Kommunalsteuern werden \(5%\) des Gewinns fällig (nach der Spende an das Rote Kreuz), dazu kommen \(40%\) des Gewinns an Bundessteuern (nach der Spende und nach Abführen der Kommunalsteuer). 
+
+Wie viel muss die Firma an Kommunalsteuern und an Bundessteuern abführen und wie hoch ist die Spende?
+
+<details>
+<summary>Antwort</summary>
+
+Es seien
+– \(C\): Spende
+– \(S\): Kommunalsteuern
+– \(F\): Bundessteuern 
+
+Die nach-steuerlichen Gewinne betragen: \(100.000 − (S + F)\).
+
+Die Spende ist demnach:
+\(C = 0,10(100.000 − (S + F))\).
+
+Umformen ergibt
+\(C + 0,1S + 0,1F = 10.000\). 
+
+Die Kommunalsteuern betragen \(5 \% \) des Gewinns – nachdem die Spende erfolgt ist – also
+\(S = 0,05(100.000 − C)\),
+
+was umgeformt ergibt:
+\(0,05C + S = 5.000\).
+
+Die Bundessteuern betragen \(40 \%\) des Gewinns, nach der Abgabe von \(C\) und \(S\), folglich:
+\(F = 0,40(100.000 − (C + S))\);
+
+das ist äquivalent zu:
+\(0,4C + 0,4S + F = 40.000\).
+
+Wir fassen die Zahlungen in einem LGS zusammen:
+
+\(C + 0,1S + 0,1F = 10.000\)
+\(0,05C + S = 5.000\)
+\(0,4C + 0,4S + F = 40.000\) 
+
+Es gibt verschiedene Lösungswege. Man kann z.B. die mittlere Gleichung nach \(S\) auflösen, das Ergebnis in die erste und dritte Gleichung einsetzen und dann die restlichen Gleichungen des Systems nach den verbleibenden zwei Unbekannten auflösen. 
+
+Dieses Vorgehen ergibt:
+\(C = 5.956\),
+\(S = 4.702\),
+\(F = 35.737\). 
+
+Der Firma verbleiben demnach nach Zahlung der Steuer und nach Abführen der Spende \(53.605€\).
+</details>
+:::
+-->
+<div class="definition">
+<p><span id="def:deflineq" class="definition"><strong>Definition 8.1  (Systeme linearer Gleichungen) </strong></span>Eine <strong>lineare Gleichung</strong> mit <span class="math inline">\(n\)</span> Variablen („Unbekannten“) hat die Form:</p>
+<p><span class="math display">\[a_1x_1 + a_2x_2 + + a_nx_n = b,\]</span></p>
+<p>wodurch</p>
+<ul>
+<li><p><span class="math inline">\(a_1, ... , a_n\)</span> und <span class="math inline">\(b\)</span> bekannte Konstanten (z. B. Preise), sogenannte Parameter, sind und</p></li>
+<li><p><span class="math inline">\(x_1, ... , x_n\)</span> bezeichnen die Variablen (z. B. Warenmengen).</p></li>
+</ul>
+<p>Ein <strong>System linearer Gleichungen (LGS)</strong> besteht aus zwei oder mehr linearen Gleichungen. Eine <strong>Lösung</strong> ist eine Zuweisung von Variablen, sodass alle Gleichungen gleichzeitig wahr/erfüllt sind.</p>
+</div>
+<div id="qlingl" class="quiz">
+<script>
+
+
+// Generate a random question
+  const questionObj15 = {
+      question: 'Welche der folgenden Gleichungen sind linear?',
+      options: ['\\(3x_1 +4x_2+5x_3=6\\)', '\\(x+3^{\\frac12}z=4\\)', ' \\(x_1x_2x_3=-2\\)', '\\(x^2+6y=1\\)'],
+      answer: ['1','2'],
+      id: 15
+    };
+</script>
+<p class="question">
+Frage: <span id="question-text15"></span>
+</p>
+<div class="options">
+<p><label>
+<input type="checkbox" name="option15" value=1> <span class="math inline">\(3x_1 +4x_2+5x_3=6\)</span>
+</label>
+<label>
+<input type="checkbox" name="option15" value=2> <span class="math inline">\(x+3^{\frac12}z=4\)</span>
+</label>
+<label>
+<input type="checkbox" name="option15" value=3> <span class="math inline">\(x_1x_2x_3=-2\)</span>
+</label>
+<label>
+<input type="checkbox" name="option15" value=4> <span class="math inline">\(x^2+6y=1\)</span>
+</label></p>
+</div>
+<button onclick="checkAnswer_mmc(questionObj15)">
+Check
+</button>
+<p id="result15">
+</p>
+<script>
+    // Display the question
+    document.getElementById('question-text15').textContent = questionObj15.question;
+
+</script>
+</div>
+<div class="example">
+<p><span id="exm:prodsys" class="example"><strong>Beispiel 8.1  (Lineares Produktionsmodell) </strong></span>Wir betrachten eine Volkswirtschaft mit <span class="math inline">\(n + 1\)</span> Gütern.</p>
+<ul>
+<li><p>Jedes der Güter <span class="math inline">\(1, . . . , n\)</span> ist das Ergebnis eines Produktionsprozesses.</p></li>
+<li><p>Ein Produktionsprozess ist durch eine Reihe von Gütermengen gekennzeichnet, die zur Herstellung einer Einheit des Produktionsguts erforderlich sind.</p></li>
+<li><p>Gut <span class="math inline">\(0\)</span> bezeichnet den Faktor Arbeit, der nicht durch einen Prozess produziert wird, sondern in jedem Produktionsprozess eingesetzt wird.</p></li>
+<li><p>Die folgende Input-Output-Tabelle zeigt den Produktionsprozess für eine 3-Güter-Wirtschaft (ohne den Faktor Arbeit):</p></li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+        \begin{array}{l|lll}
+         out\downarrow;~ in\rightarrow&amp; x_1&amp;x_2&amp;x_3\\\hline
+         x_1&amp; 0 &amp; 0,4 &amp; 0,3\\
+         x_2&amp; 0,2 &amp; 0,12 &amp; 0,14\\
+         x_3&amp; 0,5 &amp; 0,2 &amp; 0,05
+        \end{array}
+\end{equation*}\]</span></p>
+<ul>
+<li><p>Der Eintrag <span class="math inline">\(a_{ij}\)</span> in der <span class="math inline">\(i\)</span>-ten Zeile und der <span class="math inline">\(j\)</span>-ten Spalte bezeichnet die Gütermenge <span class="math inline">\(i\)</span>, die zur Produktion einer Gütereinheit <span class="math inline">\(j\)</span> erforderlich ist ): Um eine Einheit des Guten <span class="math inline">\(2\)</span> zu produzieren, sind <span class="math inline">\(0,4\)</span> Einheiten des Guten <span class="math inline">\(1\)</span> sowie <span class="math inline">\(0,12\)</span> Einheiten des Guten <span class="math inline">\(2\)</span> und <span class="math inline">\(0,2\)</span> erforderlich. Einheiten des Guten <span class="math inline">\(3\)</span>.</p></li>
+<li><p>Es besteht eine exogene Nachfrage nach <span class="math inline">\(130\)</span> Einheiten des Guten <span class="math inline">\(1\)</span>, nach <span class="math inline">\(74\)</span> Einheiten des Guten <span class="math inline">\(2\)</span> und nach <span class="math inline">\(95\)</span> Einheiten des Guten (3\) ).</p></li>
+</ul>
+<p><strong>Welches Produktionsvolumen entspricht der Nachfrage?</strong></p>
+<p>Die Lösung lautet: Die Wirtschaft muss <span class="math inline">\(300\)</span> Einheiten des Guten <span class="math inline">\(1\)</span>, <span class="math inline">\(200\)</span> Einheiten des Guten <span class="math inline">\(2\)</span> und <span class="math inline">\(300\)</span> Einheiten des Guten <span class="math inline">\(3\)</span> produzieren. um den exogenen Bedarf zu decken.</p>
+</div>
+<div id="gleichungssysteme-mit-zwei-linearen-gleichungen" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Gleichungssysteme mit zwei linearen Gleichungen<a href="lineare-gleichungssysteme.html#gleichungssysteme-mit-zwei-linearen-gleichungen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Wir beginnen mit den kleinsten LGS - LGS mit nur zwei Gleichungen und zwei Unbekannten.</p>
+<div class="example">
+<p><span id="exm:2gl" class="example"><strong>Beispiel 8.2  (LGS mit zwei Gleichungen und zwei Unbekannten) </strong></span>Betrachten wir folgendes System mit zwei linearen Gleichungen:</p>
+<ul>
+<li><span class="math inline">\(2 x + 2y = 4\)</span> <span class="math inline">\(\rightarrow y=4-x \rightarrow\)</span> Gerade mit negativem Anstieg <span class="math inline">\(-1\)</span>,</li>
+<li><span class="math inline">\(4x + 0.5y = 8\)</span> <span class="math inline">\(\rightarrow y=16 -8x \rightarrow\)</span> Gerade mit negativem Anstieg <span class="math inline">\(-8\)</span>.
+Zur Lösung des LGS braucht man mindestens ein Wertepaar <span class="math inline">\((x,y)\)</span>, welches <strong>beide</strong> Gleichungen erfüllt.</li>
+</ul>
+<p>Es lässt sich zeigen, dass dies für <span class="math inline">\(x = \frac{12}7\)</span> und <span class="math inline">\(y = \frac{16}7\)</span> gilt; das entspricht gerade dem Schnittpunkt der beiden Geraden.</p>
+<p><span class="math display">\[{\color{blue}{4-x}}={\color{red}{16-8x}}\rightarrow 7x=12\rightarrow x=\frac{12}7\rightarrow y=4-\frac{12}7=\frac{16}7.\]</span></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+<p>Für <span class="math inline">\(x = 1\)</span> und <span class="math inline">\(y = 3\)</span> ist die erste Gleichung erfüllt, die zweite aber nicht; dieses Wertepaar ist daher keine Lösung des Systems.</p>
+</div>
+<div id="lösung-durch-substitution-und-elimination" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Lösung durch Substitution und Elimination<a href="lineare-gleichungssysteme.html#lösung-durch-substitution-und-elimination" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="theorem">
+<p><span id="thm:thmlinsys" class="theorem"><strong>Theorem 8.1  (Anzahl von Lösungen in einem LGS mit zwei Gleichungen) </strong></span>Ein System mit zwei linearen Gleichungen hat entweder</p>
+<ul>
+<li>keine Lösung,</li>
+<li>genau eine Lösung oder</li>
+<li>unendlich viele Lösungen.</li>
+</ul>
+</div>
+<p>Graphisch bedeutet das: Zwei Geraden können…</p>
+<ul>
+<li>… sich nie schneiden;</li>
+<li>… sich genau einmal schneiden;</li>
+<li>… in allen Punkten übereinstimmen.</li>
+</ul>
+<p>Gegeben sei ein System mit zwei linearen Gleichungen:</p>
+<p><span class="math display">\[ax + by = c,\]</span></p>
+<p><span class="math display">\[dx + ey = f,\]</span></p>
+<p>wobei <span class="math inline">\(a, b, c, d, e, f\)</span> bekannte Konstanten sind.</p>
+<p>Wir betrachten <strong>zwei verschiedene Methoden</strong>, um dieses System zu lösen.</p>
+<p><strong>1. Lösung durch Substitution: </strong></p>
+<ol style="list-style-type: lower-roman">
+<li>Lösen der ersten Gleichung nach <span class="math inline">\(x\)</span> (sofern <span class="math inline">\(a\neq 0\)</span>):</li>
+</ol>
+<p><span class="math display">\[ x= \color{red}{\frac{c}{a} - \frac{b}{a} \cdot y}. \]</span></p>
+<ol start="2" style="list-style-type: lower-roman">
+<li>Substitution/Einsetzen des Ausdrucks für }(x) in die zweite Gleichung, um eine Lösung für <span class="math inline">\(y\)</span> zu finden (sofern <span class="math inline">\(ae-bd \neq 0\)</span>):</li>
+</ol>
+<p><span class="math display">\[ d\left( \color{red}{\frac{c}{a} - \frac{b}{a} \cdot y}\right)+ey=f \ \Rightarrow \ y= \frac{af-cd}{ae-bd}. \]</span></p>
+<ol start="3" style="list-style-type: lower-roman">
+<li>Rückwärtseinsetzen/Substituieren in die erste Gleichung ergibt:</li>
+</ol>
+<p><span class="math display">\[ x= \frac{ce-bf}{ae-bd}. \]</span></p>
+<div class="example">
+<p><span id="exm:lsub" class="example"><strong>Beispiel 8.3  (Lösung durch Substitution) </strong></span>Betrachten wir das folgende LGS:
+<span class="math display">\[5x + 2y = 3,\]</span></p>
+<p><span class="math display">\[−x − 4y = 3.\]</span></p>
+<ul>
+<li><p>Umstellen der zweiten Gleichung ergibt: <span class="math inline">\(x = \color{red}{−3 − 4y}\)</span>.</p></li>
+<li><p>Einsetzen in die erste Gleichung liefert:</p></li>
+</ul>
+<p><span class="math display">\[5(\color{red}{−3 − 4y}) + 2y = 3\Leftrightarrow −15 − 18y = 3\Leftrightarrow y = \color{blue}{−1},\]</span></p>
+<p>und</p>
+<p><span class="math display">\[x = −3 − 4\color{blue}{y} = −3 - 4\cdot(\color{blue}{-1}) = 1.\]</span></p>
+</div>
+<p><strong>2. Lösung durch (Gauß-)Elimination:</strong></p>
+<ol style="list-style-type: lower-roman">
+<li>Hierzu multipliziert man eine oder beide Gleichungen mit einer Konstanten, um die zu <span class="math inline">\(x\)</span> und <span class="math inline">\(y\)</span> gehörigen Koeffizienten anzugleichen:</li>
+</ol>
+<p><span class="math display">\[a{\color{red}{d}}x + b{\color{red}{d}}y = c{\color{red}{d}},\]</span></p>
+<p><span class="math display">\[{\color{blue}{a}}dx + {\color{blue}{a}}ey = {\color{blue}{a}}f.\]</span></p>
+<ol start="2" style="list-style-type: lower-roman">
+<li>Als nächstes subtrahiert man die zwei Gleichungen, um eine Variable zu eliminieren:</li>
+</ol>
+<p><span class="math display">\[(ae − bd)y = af − cd.\]</span></p>
+<ol start="3" style="list-style-type: lower-roman">
+<li>Anschließend löst man das System für die verbleibende Variable (sofern <span class="math inline">\(ae-bd \neq 0\)</span>):</li>
+</ol>
+<p><span class="math display">\[ y= \frac{af-cd}{ae-bd}, \]</span></p>
+<ol start="4" style="list-style-type: lower-roman">
+<li>und berechnet die eliminierte Variable:</li>
+</ol>
+<p><span class="math display">\[ x= \frac{ce-bf}{ae-bd}. \]</span></p>
+<div class="example">
+<p><span id="exm:lelim" class="example"><strong>Beispiel 8.4  (Lösung durch Elimination) </strong></span>Man betrachte nochmals folgendes LGS:
+<span class="math display">\[5x + 2y = 3,\]</span></p>
+<p><span class="math display">\[−x − 4y = 3.\]</span></p>
+<p>Skalieren der ersten Gleichung mit <span class="math inline">\(\color{red}{2}\)</span> ergibt:</p>
+<p><span class="math display">\[\color{red}{2}\cdot 5x + \color{red}{2}\cdot 2y = \color{red}{2}\cdot 3,\]</span></p>
+<p><span class="math display">\[−x − 4y = 3.\]</span></p>
+<p>Also,</p>
+<p><span class="math display">\[10x + 4y = 6,\]</span></p>
+<p><span class="math display">\[−x − 4y = 3.\]</span></p>
+<p>Als nächstes werden die zwei Gleichungen addiert:</p>
+<p><span class="math display">\[9x = 9.\]</span></p>
+<p>Die Elimination von <span class="math inline">\(y\)</span> liefert <span class="math inline">\(x = \color{blue}{1}.\)</span></p>
+<p>Setzt man dieses Ergebnis in die zweite Gleichung ein, erhält man</p>
+<p><span class="math display">\[− \color{blue}{1} − 4y = 3,\]</span> sodass <span class="math inline">\(y = −1\)</span> gelten muss.</p>
+</div>
+<div id="qtisch" class="quiz">
+<p id="question">
+<span id="question-text16"></span>
+</p>
+<input type="number" id="answer16" placeholder="Antwort eingeben">
+<button onclick="checkAnswer_num(questionObj16)">Check</button>
+<p id="result16">
+</p>
+</div>
+<script>
+
+ // Generate a random question
+    const questionObj16 = generateQuestion_num(16);
+// Display the question
+    document.getElementById('question-text16').textContent = "Ein Tischler benötigt zur Herstellung von Tischen und Stühlen Holz und Metall. Konkret werden zur Herstellung eines Stuhls \\((x) ~" +  questionObj16.question[0] +"\\)  Einheiten Holz und \\(" + questionObj16.question[1] + "\\) Einheiten Metall benötigt. Zur Herstellung eines Tisches \\((y)\\) benötigt der Tischler \\(" + (questionObj16.question[2]) + "\\) Einheiten Holz und \\(" + (questionObj16.question[3]) +"\\) Einheiten Metall. \n\n Wie viele Stühle (\\(x\\)) wird der Tischler mit \\(" + questionObj16.question[4] +"\\) Einheiten Holz und \\(" + questionObj16.question[5] +"\\) Einheiten Metall herstellen, unter der Vorgabe, dass er beide Arten von Möbel anfertigt und alle Einheiten Holz und Metall aufgebraucht?";
+    questionObj16.answer = (questionObj16.question[4]*(questionObj16.question[3]) - (questionObj16.question[2])*questionObj16.question[5])                            /(questionObj16.question[0]*(questionObj16.question[3]) - (questionObj16.question[2])*questionObj16.question[1])
+</script>
+</div>
+</div>
+<div id="gleichungssysteme-mit-n-linearen-gleichungen" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Gleichungssysteme mit <span class="math inline">\(n\)</span> linearen Gleichungen<a href="lineare-gleichungssysteme.html#gleichungssysteme-mit-n-linearen-gleichungen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Wir verallgemeinern nun die Ergebnisse auf n Variablen.</p>
+<p>Ein System bestehend aus <span class="math inline">\(m\)</span> Gleichungen und <span class="math inline">\(n\)</span> Unbekannten/Variablen ist wie folgt gegeben:</p>
+<p><span class="math display">\[\begin{align*}a_{11}x_1 + a_{12}x_2 + ... + a_{1n}x_n &amp;= b_1,\\
+a_{21}x_1 + a_{22}x_2 + ... + a_{2n}x_n &amp;= b_2,\\
+\ldots\\
+a_{m1}x_1 + a_{m2}x_2 + ... + a_{mn}x_n &amp;= b_m.
+\end{align*}\]</span></p>
+<p>Die <span class="math inline">\(a_{ij}\)</span> und <span class="math inline">\(b_i\)</span> seien reelle Zahlen, wobei <span class="math inline">\(a_{ij}\)</span> den Koeffizienten der unbekannten Größe <span class="math inline">\(x_j\)</span> in der <span class="math inline">\(i\)</span>-ten Gleichung bezeichnet.</p>
+<p>Eine Lösung des Systems ist ein <span class="math inline">\(n\)</span>-Tupel reeller Zahlen <span class="math inline">\(x_1, x_2, ... , x_n\)</span>, das jede der <span class="math inline">\(m\)</span> Gleichungen simultan erfüllt.</p>
+<p>In Bezug auf LGS sind wir an folgenden drei Fragen interessiert:</p>
+<ol style="list-style-type: decimal">
+<li>Gibt es eine Lösung?</li>
+<li>Wie viele Lösungen gibt es?</li>
+<li>Gibt es einen effizienten Algorithmus, der die Lösung(en) berechnen kann?</li>
+</ol>
+<p>Grundsätzlich gibt es drei Wege, um ein LGS zu lösen:</p>
+<ol style="list-style-type: decimal">
+<li>Substitution;</li>
+<li>Elimination der Variablen;</li>
+<li>Matrixmethode.</li>
+</ol>
+<p>Der Satz aus dem letzten Abschnitt kann auf den Fall mit <span class="math inline">\(n\)</span> Variablen verallgemeinert werden:</p>
+<div class="theorem">
+<p><span id="thm:thmln" class="theorem"><strong>Theorem 8.2  (Lösungsmenge eines LGS mit n Gleichungen) </strong></span>Ein System mit <span class="math inline">\(m\)</span> linearen Gleichungen und <span class="math inline">\(n\)</span> Unbekannten hat entweder keine Lösung, genau eine Lösung oder unendlich viele Lösungen.</p>
+</div>
+<div id="lösen-von-gleichungssystemen-mit-m-linearen-gleichungen" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Lösen von Gleichungssystemen mit <span class="math inline">\(m\)</span> linearen Gleichungen<a href="lineare-gleichungssysteme.html#lösen-von-gleichungssystemen-mit-m-linearen-gleichungen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Lösen eines Systems mit <span class="math inline">\(m\)</span> linearen Gleichungen mithilfe von <strong>Substitution</strong>:</p>
+<ul>
+<li><p>Man löse eine Gleichung des Systems nach einer Variablen, z.B. <span class="math inline">\(x_n\)</span>, auf, sodass sich <span class="math inline">\(x_n\)</span> als Ausdruck der anderen Variablen schreiben lässt.</p></li>
+<li><p>Substituieren Sie diesen Ausdruck für <span class="math inline">\(x_n\)</span> in die restlichen <span class="math inline">\(m − 1\)</span> Gleichungen.</p></li>
+<li><p>Das Ergebnis ist ein neues System bestehend aus <span class="math inline">\(m − 1\)</span> Gleichungen mit <span class="math inline">\(n − 1\)</span> Unbekannten.</p></li>
+<li><p>Dieser Prozess wird fortgesetzt durch Auflösen einer weiteren Gleichung nach <span class="math inline">\(x_{n−1}\)</span>, usw.</p></li>
+<li><p>Diese Prozedur wird solange wiederholt, bis eine einzige Gleichung übrig bleibt, die leicht gelöst werden kann.</p></li>
+</ul>
+<div class="example">
+<p><span id="exm:prodsys1" class="example"><strong>Beispiel 8.5  (Lineares Produktionsmodell) </strong></span>Fortführung von Beispiel <a href="lineare-gleichungssysteme.html#exm:prodsys">8.1</a>.</p>
+<p>Wir betrachten eine Ökonomie mit <span class="math inline">\(n + 1\)</span> Gütern.</p>
+<ul>
+<li>Die folgende Input-Output-Tabelle zeigt den Produktionsprozess für eine 3-Güter Ökonomie (ohne den Faktor Arbeit):</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+        \begin{array}{l|lll}
+         out\downarrow;~ in\rightarrow&amp; x_1&amp;x_2&amp;x_3\\
+         x_1&amp; \color{red}0 &amp; \color{red}{0.4} &amp; \color{red}{0.3}\\
+         x_2&amp; \color{blue}{0.2} &amp; \color{blue}{0.12} &amp; \color{blue}{0.14}\\
+         x_3&amp; \color{green}{0.5} &amp; \color{green}{0.2} &amp; \color{green}{0.05}
+        \end{array}
+\end{equation*}\]</span></p>
+<ul>
+<li><p>Es besteht eine exogene Nachfrage nach <span class="math inline">\(\color{red}{130}\)</span> Einheiten von Gut <span class="math inline">\(1\)</span>, nach <span class="math inline">\(\color{blue}{74}\)</span> Einheiten von Gut <span class="math inline">\(2\)</span> und <span class="math inline">\(\color{green}{95}\)</span> Einheiten von Gut <span class="math inline">\(3\)</span>.</p></li>
+<li><p>Welche Produktionsmenge deckt die Nachfrage?</p></li>
+</ul>
+<hr />
+<p>Die Gesamtmenge <span class="math inline">\(x_1\)</span> von Gut <span class="math inline">\(1\)</span>, die in der Ökonomie hergestellt wird, entspricht:</p>
+<p><span class="math display">\[x_1 = \color{red}{0} x_1 + \color{red}{0,4}x_2 + \color{red}{0,3}x_3 + \color{red}{130},\]</span></p>
+<p>denn:</p>
+<ul>
+<li><span class="math inline">\(0,4\)</span> Einheiten von Gut <span class="math inline">\(1\)</span> werden zur Produktion von Gut <span class="math inline">\(2\)</span> benötigt,</li>
+<li><span class="math inline">\(0,3\)</span> Einheiten von Gut <span class="math inline">\(1\)</span> werden zur Produktion von Gut <span class="math inline">\(3\)</span> benötigt,</li>
+<li>und <span class="math inline">\(130\)</span> Einheiten werden in den Markt verkauft.</li>
+</ul>
+<p>Analog,</p>
+<p><span class="math display">\[\begin{align}x_2 &amp;= \color{blue}{0,2}x_1 + \color{blue}{0,12}x_2 + \color{blue}{0,14}x_3 + \color{blue}{74},\\
+x_3 &amp;= \color{green}{0,5}x_1 + \color{green}{0,2}x_2 + \color{green}{0,05}x_3 + \color{green}{95}.
+\end{align}\]</span></p>
+<p>Die Lösung des Sytems liefert, dass die Ökonomie – um die exogene Nachfrage zu decken – <span class="math inline">\(300\)</span> Einheiten von Gut <span class="math inline">\(1\)</span>, <span class="math inline">\(200\)</span> Einheiten von Gut <span class="math inline">\(2\)</span> und <span class="math inline">\(300\)</span> Einheiten von Gut <span class="math inline">\(3\)</span> produzieren muss.</p>
+<hr />
+<details>
+<summary>
+Wie man das System per Substitution löst…
+</summary>
+<p><br></p>
+<p>Bringt man alle Variablen auf die linke Seite, ergibt sich das System:</p>
+<p>(4a.) <span class="math inline">\(x_1 − 0,4x_2 − 0,3x_3 = 130,\)</span></p>
+<p>(4b.) <span class="math inline">\(−0,2x_1 + 0,88x_2 − 0,14x_3 = 74,\)</span></p>
+<p>(4c.) <span class="math inline">\(−0,5x_1 − 0,2x_2 + 0,95x_3 = 95.\)</span></p>
+<p>Auflösen der Gleichung (1.) nach <span class="math inline">\(x_1\)</span> ergibt:</p>
+<p>(5.) <span class="math inline">\(x_1 = 0,4x_2 + 0,3x_3 + 130\)</span>.</p>
+<p>Substitution in (4a.) und (4c.) liefert:</p>
+<p><span class="math inline">\(−0,2(0,4x_2 + 0,3x_3 + 130) + 0,88x_2 − 0,14x_3 = 74,\)</span></p>
+<p><span class="math inline">\(−0,5(0,4x_2 + 0,3x_3 + 130) − 0,2x_2 + 0,95x_3 = 95.\)</span></p>
+<p>Dies lässt sich vereinfachen zu:</p>
+<p>(6a.) <span class="math inline">\(0,8x_2 − 0,2x_3 = 100,\)</span></p>
+<p>(6b.) <span class="math inline">\(−0,4x_2 + 0,8x_3 = 160.\)</span></p>
+<p>Dieses Untersystem wird nun ebenfalls per Substitution gelöst; (6a.) liefert:</p>
+<p>(7.) <span class="math inline">\(x_2 = 125 + 0,25x_3\)</span></p>
+<p>und Einsetzen in (6b.) ergibt:</p>
+<p><span class="math inline">\(−0,4(125 + 0,25x_3) + 0,8x_3 = 160,\)</span></p>
+<p><span class="math inline">\(x_3 = 300\)</span>.</p>
+<p>Substitution von x<span class="math inline">\(_3 = 300\)</span> in (7.) ergibt <span class="math inline">\(x_2 = 200\)</span>.</p>
+<p>Substitution von <span class="math inline">\(x_2 = 200\)</span> und <span class="math inline">\(x_3 = 300\)</span> in (5) liefert <span class="math inline">\(x_1 = 300\)</span>.</p>
+</details>
+</div>
+<p>Lösen eines Systems mit <span class="math inline">\(m\)</span> Gleichungen per <strong>Gauß-Elimination</strong>:</p>
+<ul>
+<li><p>Anhand des Koeffizienten für <span class="math inline">\(x_1\)</span> in der ersten Gleichung wird der <span class="math inline">\(x_1\)</span>-Term aus allen unteren/nachfolgenden Gleichungen eliminiert;</p></li>
+<li><p>Hierzu wird ein geeignetes Vielfaches der ersten Gleichung zu jeder der nachfolgenden Gleichungen addiert.</p></li>
+<li><p>Im Weiteren wird die erste Gleichung ignoriert. Von den verbleibenden <span class="math inline">\(m − 1\)</span> Gleichungen wird dann die nächste Variable, <span class="math inline">\(x_2\)</span>, eliminiert.</p></li>
+<li><p>Ist <span class="math inline">\(x_2\)</span> nicht in der zweiten Gleichung enthalten, dafür aber in einer anderen Gleichung, tauscht man die beiden Gleichungen aus.</p></li>
+<li><p>Die Elimination von Variablen wird solange durchgeführt, bis nur noch eine Gleichung übrig bleibt.</p></li>
+<li><p>Das vereinfachte System kann nun durch Substitution gelöst werden.</p></li>
+</ul>
+<div class="example">
+<p><span id="exm:prodsys2" class="example"><strong>Beispiel 8.6  (Lineares Produktionsmodell) </strong></span>Fortführung von (@ref{exm:prodsys1}).</p>
+<p>Wir lösen das Gleichungssystem (4a)-(4c) mithilfe der Gauß-Elimination:</p>
+<p>(8a) <span class="math inline">\(x_1 − 0,4 x_2 − 0,3 x_3 = 130,\)</span></p>
+<p>(8b) <span class="math inline">\(−0,2x_1 + 0,88x_2 − 0,14x_3 = 74,\)</span></p>
+<p>(8c) <span class="math inline">\(−0,5x_1 − 0,2 x_2 + 0,95x_3 = 95.\)</span></p>
+<p>Zur Elimination von <span class="math inline">\(x_1\)</span> wird jeweils ein geeignetes Vielfaches der ersten Gleichung zur zweiten und zur dritten Gleichung addiert.</p>
+<p>Präziser: (8a) wird mit <span class="math inline">\(\color{red}{0,2}\)</span> multipliziert und zu (8b) addiert:</p>
+<p><span class="math inline">\(\color{red}{0,2}x_1 − \color{red}{0,2}\cdot0,4 x_2 − \color{red}{0,2}\cdot0,3 x_3 = \color{red}{0,2}\cdot130,\)</span></p>
+<p><span class="math inline">\(~~~~~~+\)</span></p>
+<p><span class="math inline">\(−0,2x_1 + 0,88x_2 − 0,14x_3 = 74.\)</span></p>
+<p>Dies ergibt:</p>
+<p><span class="math inline">\((0,2x_1-0,2x_1) + (-0,08x_2 + 0,88x_2) + (-0,06 x_3 - 0,14x_3) = (26+74)\)</span></p>
+<p>oder vereinfacht:</p>
+<p><span class="math inline">\(0,8x_2 − 0,2x_3 = 100.\)</span></p>
+<p>Analog ergibt die Addition des <span class="math inline">\(0,5\)</span>-fachen von (8a) zu (8c):</p>
+<p><span class="math inline">\(−0,4x_2 + 0,8x_3 = 160.\)</span></p>
+<p>Das Ergebnis ist folgendes vereinfachtes System:</p>
+<p>(9a) <span class="math inline">\(x_1 − 0,4x_2 − 0,3x_3 = 130,\)</span></p>
+<p>(9b) <span class="math inline">\(0,8x_2 − 0,2x_3 = 100,\)</span></p>
+<p>(9c) <span class="math inline">\(−0,4x_2 + 0,8x_3 = 160.\)</span></p>
+<p>Nun wird <span class="math inline">\(x_2\)</span> aus der zweiten Gleichung eliminiert: Multiplikation von (9b) mit <span class="math inline">\(0,5\)</span> und Addition zu (9c) ergibt:</p>
+<p>(10a) <span class="math inline">\(x_1 − 0,4x_2 − 0,3x_3 = 130,\)</span></p>
+<p>(10b) <span class="math inline">\(0,8x_2 − 0,2x_3 = 100,\)</span></p>
+<p>(10c) <span class="math inline">\(0,7x_3 = 210.\)</span></p>
+<p>Schließlich erhalten wir durch Rückwärtseinsetzen / Rücksubstitution:</p>
+<p><span class="math inline">\(x_3 = 300, x_2 = 200\)</span> und <span class="math inline">\(x_1 = 300.\)</span></p>
+</div>
+<p>Warum ist diese Methode der Elimination zulässig?</p>
+<p>Genauer gesagt: Welche Operationen können in einem LGS durchgeführt werden, ohne die Lösung der Gleichungen zu verändern?</p>
+<p>Die Addition eines Vielfachen einer Gleichung zu einer anderen, wie sie mehrfach angewandt wurde, z.B. im Übergang von (8b) zu (9b), ist umkehrbar, …</p>
+<p>… z.B. kann (8b) aus (9a)–(9c) wieder hergestellt werden, indem das <span class="math inline">\(−0,2\)</span>-fache von (9a) zu (9b) addiert wird.</p>
+<p>Insgesamt können die folgenden drei Operationen, sogenannte elementare Gleichungsoperationen, zur Lösung eines LGS eingesetzt werden:</p>
+<ol style="list-style-type: decimal">
+<li>Addition eines Vielfachen einer Gleichung zu einer anderen;</li>
+<li>Multiplikation beider Seiten einer Gleichung mit einem Skalar (<span class="math inline">\(\neq 0\)</span>);</li>
+<li>Vertauschen zweier Gleichungen.</li>
+</ol>
+<p>Wegen der Umkehrbarkeit dieser Operationen ist jede Lösung des transformierten Systems auch eine Lösung des Ausgangssystems.</p>
+<p>Diese folgende Variante ist die <strong>Gauß-Jordan-Elimination</strong>:</p>
+<ul>
+<li>Sobald sämtliche Eliminationsschritte der Gauß-Elimination ausgeführt wurden, wird – anstelle der Rücksubstition – ein weiterer Eliminationsschritt ausgeführt, diesmal von unten nach oben. Dieser liefert dann die endgültige Lösung.</li>
+</ul>
+<div class="example">
+<p><span id="exm:prodsys3" class="example"><strong>Beispiel 8.7  (Lineares Produktionsmodell) </strong></span>Fortführung von <a href="lineare-gleichungssysteme.html#exm:prodsys1">8.5</a> und <a href="lineare-gleichungssysteme.html#exm:prodsys2">8.6</a>.</p>
+<p>Betrachten wir wieder das lineare Produktionsmodell, welches nach der Elimination folgende Form hat:</p>
+<p>(11a) <span class="math inline">\(x_1 − 0,4x_2 − 0,3x_3 = 130\)</span></p>
+<p>(11b) <span class="math inline">\(0,8x_2 − 0,2x_3 = 100\)</span></p>
+<p>(11c) <span class="math inline">\(0,7x_3 = 210\)</span></p>
+<p>Anstelle der Rücksubstitution wird die Elimination von unten durchgeführt.</p>
+<p>Zunächst wird jede Gleichung so skaliert, dass der erste nicht-Null Koeffizient gerade <span class="math inline">\(1\)</span> ist: (z.B. durch Division von (11c) durch <span class="math inline">\(0,7\)</span>):</p>
+<p>(12a) <span class="math inline">\(x_1 − 0,4 x_2 − 0,3x_3 = 130\)</span></p>
+<p>(12b) <span class="math inline">\(x_2 − 0,25x_3 = 125\)</span></p>
+<p>(12c) <span class="math inline">\(x_3 = 300\)</span></p>
+<p>Als nächstes wird <span class="math inline">\(x_3\)</span> aus (12b) durch Multiplikation von (12c) mit <span class="math inline">\(0,25\)</span> und Addition von (12c) zu (12b) eliminiert; dies ergibt:</p>
+<p>(13a) <span class="math inline">\(x_1 − 0,4x_2 − 0,3x_3 = 130\)</span></p>
+<p>(13b) <span class="math inline">\(x_2 = 200\)</span></p>
+<p>(13c) <span class="math inline">\(x_3 = 300\)</span></p>
+<p>Analog werden <span class="math inline">\(x_2\)</span> und <span class="math inline">\(x_3\)</span> aus (13a) eliminiert, indem man das <span class="math inline">\(0,3\)</span>-fache von (13c) und <span class="math inline">\(0,4\)</span>-fache von (13b) zu (13a) addiert; schließlich erhält man:</p>
+<p>(14a) <span class="math inline">\(x_1 = 300\)</span></p>
+<p>(14b) <span class="math inline">\(x_2 = 200\)</span></p>
+<p>(14c) <span class="math inline">\(x_3 = 300\)</span>.</p>
+</div>
+<div class="exercise">
+<p><span id="exr:nsub" class="exercise"><strong>Aufgabe 8.1  (Lösen durch Substitution) </strong></span>Lösen Sie durch Substitution:</p>
+<p><span class="math inline">\(x − 3y + 6z = −1\)</span> (I)</p>
+<p><span class="math inline">\(2x − 5y + 10z = 0\)</span> (II)</p>
+<p><span class="math inline">\(3x − 8y + 17z = 1\)</span> (II)</p>
+<details>
+<summary>
+Antwort
+</summary>
+<p>Die erste Gleichung (I) nach <span class="math inline">\(x\)</span> umstellen: <span class="math inline">\(x=-1+3y-6z\)</span> (IV). Dann in (II) einsetzen:</p>
+<p><span class="math inline">\(2(-1+3y-6z)-5y+10z=0\)</span></p>
+<p><span class="math inline">\(-2+6y-12z-5y+10z=0\)</span></p>
+<p><span class="math inline">\(y-2z=2\rightarrow y=2+2z\)</span> (V).</p>
+<p>Die Ausdrücke für <span class="math inline">\(x\)</span> (IV) und <span class="math inline">\(y\)</span> (V) in (III) einsetzen:</p>
+<p><span class="math inline">\(3(-1+3y-6z)-8(2+2z)+17z=1\)</span></p>
+<p><span class="math inline">\(-3+9y-18z-16-16z+17z=1\)</span></p>
+<p><span class="math inline">\(-3+9(2+2z)-18z-16-16z+17z=1\)</span></p>
+<p><span class="math inline">\(\rightarrow z=2\)</span>.</p>
+<p>Dann, den Wert von <span class="math inline">\(z\)</span> in (V) einsetzen: <span class="math inline">\(y=2+2 \cdot 2 = 6\)</span>.</p>
+Anschließend, die Werte für <span class="math inline">\(z\)</span> und <span class="math inline">\(y\)</span> in (IV) einsetzen: <span class="math inline">\(x=-1+3 \cdot6 - 6 \cdot2=5\)</span>.
+</details>
+</div>
+<div class="exercise">
+<p><span id="exr:nelim" class="exercise"><strong>Aufgabe 8.2  (Lösen durch Gauß-Elimination) </strong></span>Lösen Sie durch Gauß-Elimination:</p>
+<p><span class="math inline">\(x_1 + x_2 + x_3 = 0\)</span> (I)</p>
+<p><span class="math inline">\(12x_1 + 2x_2 − 3x_3 = 5\)</span> (II)</p>
+<p><span class="math inline">\(3x_1 + 4x_2 + x_3 = −4\)</span> (III)</p>
+<details>
+<summary>
+Antwort
+</summary>
+<p>Die erste Gleichung (I) <span class="math inline">\(\cdot 12\)</span> nehmen, um <span class="math inline">\(x_1\)</span> zu eliminieren:</p>
+<p><span class="math inline">\(12x_1+12x_2+12x_3=0\)</span> (Ia)</p>
+<p>davon (II) abziehen: (Ia)-(II)</p>
+<p><span class="math inline">\(10x_2+15x_3=-5\)</span> (IV)</p>
+<p>Gleichung (I) <span class="math inline">\(\cdot 3\)</span>, um wieder <span class="math inline">\(x_1\)</span> zu eliminieren:</p>
+<p><span class="math inline">\(3x_1+3x_2+3x_3=0\)</span> (Ib)</p>
+<p>Davon (III) abziehen: (Ib)-(III)</p>
+<p><span class="math inline">\(-x_2+2x_3=4\)</span> (V)</p>
+<p>Gleichung (V) von (IV) abziehen, dafür (V) <span class="math inline">\(\cdot 10\)</span></p>
+<p><span class="math inline">\(-10x_2+20x_3=40\)</span> (Va)</p>
+Dann (Va)-(IV) <span class="math inline">\(35x_3=35\)</span> ergibt <span class="math inline">\(x_3=1\)</span>. Dies in (V) einsetzen ergibt:
+<span class="math inline">\(x_2=2 \cdot 1 -4=-2\)</span> und <span class="math inline">\(x_1=-x_2-x_3=2-1=1\)</span>.
+</details>
+</div>
+<p>Lösungsverfahren für Gleichungssysteme sind für viele weitere Beispiele vom Nutzen:</p>
+<div class="example">
+<p><span id="exm:gleicgg" class="example"><strong>Beispiel 8.8  (Gleichgewichtspreis für drei Güter) </strong></span></p>
+<ul>
+<li>Die Angebotsfunktionen für drei Güter seien wie folgt:</li>
+</ul>
+<p><span class="math inline">\(q_1^s = −10 + p_1\)</span></p>
+<p><span class="math inline">\(q_2^s = 2p_2\)</span></p>
+<p><span class="math inline">\(q_3^s = −5 + 3p_3\)</span></p>
+<ul>
+<li>Die Nachfragefunktionen für drei Güter seien wie folgt:</li>
+</ul>
+<p><span class="math inline">\(q_1^d = 20 − p_1 − p_3\)</span></p>
+<p><span class="math inline">\(q_2^d = 40 − 2p_2 − p_3\)</span></p>
+<p><span class="math inline">\(q_3^d = 10 + p_2 − p-3 − p-1\)</span></p>
+<ul>
+<li>Gleichsetzen von Angebot und Nachfrage ergibt folgendes Gleichungssystem:</li>
+</ul>
+<p><span class="math inline">\(2p_1 + p_3 = 30\)</span></p>
+<p><span class="math inline">\(4p_2 + p_3 = 40\)</span></p>
+<p><span class="math inline">\(p_1 − p_2 + 4p_3 = 15\)</span></p>
+<p>Die Lösung des LGS/ der Gleichgewichtspreis für die drei Güter ist <span class="math inline">\(p_1 = 41/3\)</span>, <span class="math inline">\(p_2 = 28/3\)</span>, <span class="math inline">\(p_3 = 8/3\)</span>.</p>
+</div>
+<div class="exercise">
+<p><span id="exr:maschinen" class="exercise"><strong>Aufgabe 8.3  (Maschinenlaufzeit) </strong></span>Drei verschiedene Produkte werden mit drei verschiedenen Maschinen hergestellt.</p>
+<p>Die Laufzeiten (in Stunden) der Maschinen zur Herstellung je einer Einheit jedes Produkts lauten wie folgt:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{array}[t]{l|ccc}
+    \hline %
+    &amp; P_1 &amp; P_2 &amp; P_3\\\hline
+    M_1 &amp; 2 &amp; 2 &amp; 2\\
+    M_2 &amp; 3 &amp; 4 &amp; 1\\
+    M_3 &amp; 6 &amp; 10/3 &amp; 2/3\\\hline
+    \end{array}
+\end{equation*}\]</span></p>
+Wenn alle Maschinen 8 Stunden pro Tag laufen, wie viele Einheiten jedes Produkts können pro Tag hergestellt werden?
+<details>
+<summary>
+Lösungshinweis
+</summary>
+<img src="images/llsys.png" />
+</details>
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="integralrechnung.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="matrizen-und-grundlegende-matrixoperationen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/08-lineare-algebra.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

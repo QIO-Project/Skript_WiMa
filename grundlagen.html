@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Kapitel 2 Grundlagen | Wirtschaftsmathematik</title>
+  <meta name="description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Kapitel 2 Grundlagen | Wirtschaftsmathematik" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Kapitel 2 Grundlagen | Wirtschaftsmathematik" />
+  
+  <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="folgen-grenzwerte-und-reihen.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Einführung</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#warum-benötigen-wir-die-methoden-der-wirtschaftsmathematik"><i class="fa fa-check"></i>Warum benötigen wir die Methoden der Wirtschaftsmathematik?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#beispiel-nutzenmaximierung"><i class="fa fa-check"></i>Beispiel: Nutzenmaximierung</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="grundlagen.html"><a href="grundlagen.html"><i class="fa fa-check"></i><b>2</b> Grundlagen</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="grundlagen.html"><a href="grundlagen.html#mengen-und-zahlen"><i class="fa fa-check"></i><b>2.1</b> Mengen und Zahlen</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="grundlagen.html"><a href="grundlagen.html#mengenoperationen"><i class="fa fa-check"></i><b>2.1.1</b> Mengenoperationen</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="grundlagen.html"><a href="grundlagen.html#zahlenmengen"><i class="fa fa-check"></i><b>2.2</b> Zahlenmengen</a></li>
+<li class="chapter" data-level="2.3" data-path="grundlagen.html"><a href="grundlagen.html#punktmengen-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Punktmengen in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-abstand"><i class="fa fa-check"></i><b>2.3.2</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: Abstand</a></li>
+<li class="chapter" data-level="2.3.3" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-varepsilon-umgebung"><i class="fa fa-check"></i><b>2.3.3</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\varepsilon-\)</span>Umgebung</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="grundlagen.html"><a href="grundlagen.html#funktionen"><i class="fa fa-check"></i><b>2.4</b> Funktionen</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="grundlagen.html"><a href="grundlagen.html#lineare-funktionen"><i class="fa fa-check"></i><b>2.4.1</b> Lineare Funktionen</a></li>
+<li class="chapter" data-level="2.4.2" data-path="grundlagen.html"><a href="grundlagen.html#quadratische-funktionen"><i class="fa fa-check"></i><b>2.4.2</b> Quadratische Funktionen</a></li>
+<li class="chapter" data-level="2.4.3" data-path="grundlagen.html"><a href="grundlagen.html#potenz--exponential--und-logarithmusfunktionen"><i class="fa fa-check"></i><b>2.4.3</b> Potenz-, Exponential- und Logarithmusfunktionen</a></li>
+<li class="chapter" data-level="2.4.4" data-path="grundlagen.html"><a href="grundlagen.html#konvexe-und-konkave-funktionen"><i class="fa fa-check"></i><b>2.4.4</b> Konvexe und konkave Funktionen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html"><i class="fa fa-check"></i><b>3</b> Folgen, Grenzwerte und Reihen</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#folgen"><i class="fa fa-check"></i><b>3.1</b> Folgen</a></li>
+<li class="chapter" data-level="3.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#konvergenz-von-folgen"><i class="fa fa-check"></i><b>3.2</b> Konvergenz von Folgen</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#konvergente-folgen-und-grenzwerte"><i class="fa fa-check"></i><b>3.2.1</b> Konvergente Folgen und Grenzwerte</a></li>
+<li class="chapter" data-level="3.2.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#divergente-folgen"><i class="fa fa-check"></i><b>3.2.2</b> Divergente Folgen</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#wichtige-sätze-zu-konvergenz-von-folgen"><i class="fa fa-check"></i><b>3.3</b> Wichtige Sätze zu Konvergenz von Folgen</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#beschränkte-folgen"><i class="fa fa-check"></i><b>3.3.1</b> Beschränkte Folgen</a></li>
+<li class="chapter" data-level="3.3.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#monotone-folgen"><i class="fa fa-check"></i><b>3.3.2</b> Monotone Folgen</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#reihen"><i class="fa fa-check"></i><b>3.4</b> Reihen</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#spezielle-reihen"><i class="fa fa-check"></i><b>3.4.1</b> Spezielle Reihen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html"><i class="fa fa-check"></i><b>4</b> Stetigkeit von Funktionen</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html#punktweise-stetigkeit"><i class="fa fa-check"></i><b>4.1</b> Punktweise Stetigkeit</a></li>
+<li class="chapter" data-level="4.2" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html#stetige-funktionen-und-deren-eigenschaften"><i class="fa fa-check"></i><b>4.2</b> Stetige Funktionen und deren Eigenschaften</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differentialrechnung.html"><a href="differentialrechnung.html"><i class="fa fa-check"></i><b>5</b> Differentialrechnung</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-tangente"><i class="fa fa-check"></i><b>5.1</b> Definition der Tangente</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#sekante-und-tangente"><i class="fa fa-check"></i><b>5.1.1</b> Sekante und Tangente</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#von-der-sekante-zur-tangente"><i class="fa fa-check"></i><b>5.1.2</b> Von der Sekante zur Tangente</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-ableitung"><i class="fa fa-check"></i><b>5.2</b> Definition der Ableitung</a></li>
+<li class="chapter" data-level="5.3" data-path="differentialrechnung.html"><a href="differentialrechnung.html#differenzierbarkeit"><i class="fa fa-check"></i><b>5.3</b> Differenzierbarkeit</a></li>
+<li class="chapter" data-level="5.4" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungsregel"><i class="fa fa-check"></i><b>5.4</b> Ableitungsregel</a></li>
+<li class="chapter" data-level="5.5" data-path="differentialrechnung.html"><a href="differentialrechnung.html#regel-von-lhôpital"><i class="fa fa-check"></i><b>5.5</b> Regel von L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungen-höhere-ordnung"><i class="fa fa-check"></i><b>5.6</b> Ableitungen höhere Ordnung</a></li>
+<li class="chapter" data-level="5.7" data-path="differentialrechnung.html"><a href="differentialrechnung.html#der-satz-von-taylor"><i class="fa fa-check"></i><b>5.7</b> Der Satz von Taylor</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimierung.html"><a href="optimierung.html"><i class="fa fa-check"></i><b>6</b> Optimierung</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimierung.html"><a href="optimierung.html#notwendige-bedingungen-für-maxima-und-minima"><i class="fa fa-check"></i><b>6.1</b> Notwendige Bedingungen für Maxima und Minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimierung.html"><a href="optimierung.html#bedingungen-zweiter-ordnung"><i class="fa fa-check"></i><b>6.2</b> Bedingungen zweiter Ordnung</a></li>
+<li class="chapter" data-level="6.3" data-path="optimierung.html"><a href="optimierung.html#optimierung-auf-einem-intervall"><i class="fa fa-check"></i><b>6.3</b> Optimierung auf einem Intervall</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integralrechnung.html"><a href="integralrechnung.html"><i class="fa fa-check"></i><b>7</b> Integralrechnung</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integralrechnung.html"><a href="integralrechnung.html#das-unbestimmte-integral"><i class="fa fa-check"></i><b>7.1</b> Das unbestimmte Integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integralrechnung.html"><a href="integralrechnung.html#das-bestimmte-integral"><i class="fa fa-check"></i><b>7.2</b> Das bestimmte Integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integralrechnung.html"><a href="integralrechnung.html#eigenschaften-und-elementare-rechenregeln"><i class="fa fa-check"></i><b>7.2.1</b> Eigenschaften und elementare Rechenregeln</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html"><i class="fa fa-check"></i><b>8</b> Lineare Gleichungssysteme</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#gleichungssysteme-mit-zwei-linearen-gleichungen"><i class="fa fa-check"></i><b>8.1</b> Gleichungssysteme mit zwei linearen Gleichungen</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#lösung-durch-substitution-und-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Lösung durch Substitution und Elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#gleichungssysteme-mit-n-linearen-gleichungen"><i class="fa fa-check"></i><b>8.2</b> Gleichungssysteme mit <span class="math inline">\(n\)</span> linearen Gleichungen</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#lösen-von-gleichungssystemen-mit-m-linearen-gleichungen"><i class="fa fa-check"></i><b>8.2.1</b> Lösen von Gleichungssystemen mit <span class="math inline">\(m\)</span> linearen Gleichungen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html"><i class="fa fa-check"></i><b>9</b> Matrizen und Grundlegende Matrixoperationen</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#matrizen"><i class="fa fa-check"></i><b>9.1</b> Matrizen</a></li>
+<li class="chapter" data-level="9.2" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#grundlegende-matrizenoperationen"><i class="fa fa-check"></i><b>9.2</b> Grundlegende Matrizenoperationen</a></li>
+<li class="chapter" data-level="9.3" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#ökonomische-anwendungen"><i class="fa fa-check"></i><b>9.3</b> Ökonomische Anwendungen</a></li>
+<li class="chapter" data-level="9.4" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#transponierte-einer-matrix"><i class="fa fa-check"></i><b>9.4</b> Transponierte einer Matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#determinante-und-inverse-einer-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinante und Inverse einer Matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#mehr-zu-der-determinante"><i class="fa fa-check"></i><b>9.5.1</b> Mehr zu der Determinante</a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#rang-und-determinanteast"><i class="fa fa-check"></i><b>9.5.2</b> Rang und Determinante<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html"><i class="fa fa-check"></i><b>10</b> Analysis mit <span class="math inline">\(n\)</span> Veränderlichen</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#stetigkeit"><i class="fa fa-check"></i><b>10.1</b> Stetigkeit</a></li>
+<li class="chapter" data-level="10.2" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#partielle-ableitungen"><i class="fa fa-check"></i><b>10.2</b> Partielle Ableitungen</a></li>
+<li class="chapter" data-level="10.3" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#partielle-ableitungen-höherer-ordnung"><i class="fa fa-check"></i><b>10.3</b> Partielle Ableitungen höherer Ordnung</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#der-gradientenvektor-und-die-hesse-matrix"><i class="fa fa-check"></i><b>10.3.1</b> Der Gradientenvektor und die Hesse-Matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#ableitung-impliziter-funktionenast"><i class="fa fa-check"></i><b>10.4</b> Ableitung impliziter Funktionen<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#höhenlinien-indifferenzkurvenast"><i class="fa fa-check"></i><b>10.4.1</b> Höhenlinien / Indifferenzkurven<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimierung-ii.html"><a href="optimierung-ii.html"><i class="fa fa-check"></i><b>11</b> Optimierung II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimierung-ii.html"><a href="optimierung-ii.html#bedingungen-erster-ordnung"><i class="fa fa-check"></i><b>11.1</b> Bedingungen erster Ordnung</a></li>
+<li class="chapter" data-level="11.2" data-path="optimierung-ii.html"><a href="optimierung-ii.html#bedingungen-zweiter-ordnung-1"><i class="fa fa-check"></i><b>11.2</b> Bedingungen zweiter Ordnung</a></li>
+<li class="chapter" data-level="11.3" data-path="optimierung-ii.html"><a href="optimierung-ii.html#optimierung-unter-nebenbedingungen-lagrange-methode"><i class="fa fa-check"></i><b>11.3</b> Optimierung unter Nebenbedingungen: Lagrange-Methode</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wirtschaftsmathematik</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="grundlagen" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Kapitel 2</span> Grundlagen<a href="grundlagen.html#grundlagen" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Glückwunsch! Deine Antwort ist richtig.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Leider falsch. Versuch es nochmal!`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Bitte zwei Optionen auswählen.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 100) + 2;
+      const x2 = Math.floor(Math.random() * 100) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Glückwunsch! Deine Antwort ist richtig.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Glückwunsch! Deine Antwort ist richtig.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Leider falsch. Versuch es nochmal!`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Bitte eine Option wählen.';
+      }
+    }
+</script>
+<div id="mengen-und-zahlen" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Mengen und Zahlen<a href="grundlagen.html#mengen-und-zahlen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In unserem Beispiel zu Nutzenmaximierung haben wir uns überlegt, welche Konsummöglichkeiten (<span class="math inline">\(x=\# Donuts\)</span> und <span class="math inline">\(y= \# Kaffee\)</span>) der Studierende Alex sich leisten kann. Wie wir gesehen haben, gibt es mehrere finanzierbare Konsumkombinationen <span class="math inline">\((x,y)\)</span>
+für Alex, zwischen denen er wählen kann. Es ist sinnvoll solche Konsummöglichkeiten, die bestimmte Kriterien erfüllen, als eine Menge zu betrachten. Alex wird sein Nutzen maximieren, in dem er aus dieser Menge der für ihn erreichbaren Konsumbündeln, die Konsumkombination, die ihm den maximalen Nutzen bringt, auswählt.</p>
+<p>Doch was ist eine Menge und wie kann man sie definieren?</p>
+<div class="definition">
+<p><span id="def:def1" class="definition"><strong>Definition 2.1  (Mengen) </strong></span>Eine Menge ist eine Zusammenfassung unterschiedlicher Objekte.</p>
+<p>Eine Menge kann dargestellt werden durch:</p>
+<ul>
+<li><p>Aufzählen der Elemente <span class="math inline">\(M=\{x_1,x_2,\ldots\}\)</span> (explizite Darstellung),</p></li>
+<li><p>Angabe einer Eigenschaft <span class="math inline">\(P(x)\)</span>, die die Elemente charakterisiert, <span class="math inline">\(M=\{x:P(x)\}\)</span> (implizite Darstellung).</p></li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:menge1" class="example"><strong>Beispiel 2.1  (Die Menge der geraden Zahlen zwischen 1 und 11) </strong></span><br>
+Die Menge der geraden Zahlen zwischen 1 und 11 kann dargestellt werden …</p>
+<ul>
+<li>in der expliziten Darstellung:
+<span class="math inline">\(M=\{2,4,6,8,10\}\)</span></li>
+</ul>
+<p>oder</p>
+<ul>
+<li>in der impliziten Darstellung:
+<span class="math inline">\(M=\{x:x \text{ ist eine gerade Zahl zwischen 1 und 11}\}\)</span></li>
+</ul>
+</div>
+<p>Falls das Objekt <span class="math inline">\(x\)</span> Element der Menge <span class="math inline">\(M\)</span> ist, schreiben wir <span class="math inline">\(x\in M\)</span> ansonsten <span class="math inline">\(x\not\in M\)</span>.</p>
+<p>Im Fall von Alex’ Budgetmenge nutzt man die implizite Darstellung, denn alle erreichbaren Kombinationen aufzuschreiben viel zu lange dauern würde 😅.</p>
+<div class="example">
+<p><span id="exm:menge2" class="example"><strong>Beispiel 2.2  (Alex' Konsummenge) </strong></span>Wenn man ihm genug Zeit gibt, kann Alex beliebige (positive oder Null) Mengen von Kaffee und Donuts konsumieren. Seine Konsummenge kann dann wie folgt aufgeschrieben werden:</p>
+<p><span class="math inline">\(C=\{(x,y):x\geq 0,y\geq 0\}\)</span></p>
+<p>Die Menge der für Alex erreichbaren Konsumbündeln aus Kaffee und Donuts definiert man als:</p>
+<p><span class="math inline">\(B=\{(x,y):P_X+P_Y\leq Budget\}\)</span></p>
+<p>Dann gilt für <span class="math inline">\(Budget=200\)</span>, <span class="math inline">\(P_X=2\)</span> und <span class="math inline">\(P_Y=4\)</span>:
+<span class="math display">\[(30;10)\in B\]</span>
+<span class="math display">\[(99;1)\not \in B \]</span></p>
+</div>
+<p>Nehmen wir nun an, Alex möchte sein Konsum von süßen und nicht so gesunden Donuts begrenzen. Er möchte nun <strong>nicht mehr als <span class="math inline">\(30\)</span> Donuts</strong> pro Monat verzerren.</p>
+<p><br><strong>Hat sich nun seine Konsummenge verändert?</strong></p>
+<p><br>Hier helfen uns die Mengenrelationen (Teilmenge) weiter…</p>
+<div class="definition">
+<p><span id="def:def2" class="definition"><strong>Definition 2.2  (Teilmengen) </strong></span>Falls alle Elemente einer Menge <span class="math inline">\(X\)</span> auch Elemente einer Menge <span class="math inline">\(Y\)</span> sind, dann ist <span class="math inline">\(X\)</span> eine <strong>Teilmenge</strong> von <span class="math inline">\(Y\)</span>,
+formal:<span class="math display">\[X\subseteq Y\]</span></p>
+<p>Falls darüber hinaus <strong>nicht alle</strong> Elemente von <span class="math inline">\(Y\)</span> in <span class="math inline">\(X\)</span> sind, dann ist <span class="math inline">\(X\)</span> eine <strong>echte Teilmenge</strong> von <span class="math inline">\(Y\)</span>,
+formal: <span class="math display">\[X\subset Y\]</span></p>
+<p>Zwei Mengen <span class="math inline">\(X\)</span> und <span class="math inline">\(Y\)</span> sind gleich, falls sie dieselben Elemente enthalten,
+formal: <span class="math display">\[X=Y\]</span></p>
+<p>Also: <span class="math inline">\(X=Y\Leftrightarrow X\subseteq Y\text{ und } Y\subseteq X\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:menge3" class="example"><strong>Beispiel 2.3  (Teilmenge) </strong></span>Es seien
+<span class="math display">\[\mathbb N = \{x:x \text{ ist eine positive ganze Zahl},\]</span>
+<span class="math display">\[A=\{x\in \mathbb N:x\leq 11\}=\{1,2,3,4,5,6,7,8,9,10,11\}\]</span></p>
+<p>Dann gilt: <span class="math inline">\(A\subset \mathbb N\)</span>.</p>
+<p>Venn-Diagramm:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+<p>Nun zurück zu Alex und seiner selbst auferlegten Auflage, nicht mehr als <span class="math inline">\(30\)</span>
+Donuts im Monat zu essen.</p>
+<div class="example">
+<p><span id="exm:menge3" class="example"><strong>Beispiel 2.3  (Alex' Konsummenge unter Bedingung) </strong></span>Seine neue Konsummenge ist:
+<span class="math display">\[C_{neu} =  \{(x;y):0\leq x\leq 30,y\geq 0\}\]</span>
+Dann gilt: <span class="math inline">\(C_{neu}\subset C\)</span>. Denn alle Konsumkombinationen aus <span class="math inline">\(C_{neu}\)</span> sind auch in <span class="math inline">\(C\)</span> enthalten, aber in <span class="math inline">\(C\)</span> sind auch weitere Konsumkombinationen enthalten, wie z.B. <span class="math inline">\((45,90)\)</span>, die durch die Restriktion <span class="math inline">\(\#Donats\leq 30\)</span> nicht in <span class="math inline">\(C_{neu}\)</span> enthalten sind.</p>
+<p>Graphisch:</p>
+<div class="figure"><span style="display:block;" id="fig:konsummenge"></span>
+<img src="_main_files/figure-html/konsummenge-1.png" alt="Konsummenge mit (rechts) und ohne Restriktion auf Donats (links)." width="672" />
+<p class="caption">
+Abbildung 2.1: Konsummenge mit (rechts) und ohne Restriktion auf Donats (links).
+</p>
+</div>
+</div>
+<div id="mengenoperationen" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Mengenoperationen<a href="grundlagen.html#mengenoperationen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Alex hat nun ein weiteres Problem: die Lieblingsdonuts sind teurer geworden und kosten nun <span class="math inline">\(5\)</span> Euro. Eine gute Nachricht gibt es trotzdem - in der Mensa kostet eine Tasse Kaffee nur <span class="math inline">\(1\)</span> Euro. Somit verändert sich die Budgetmenge von Alex. Wie kann man die neue Situation mit der Situation davor vergleichen? Hier helfen uns die Mengenoperationen weiter.</p>
+<p>Wir definieren noch die <strong>Universalmenge</strong>, hier ausgedrückt mit <span class="math inline">\(U\)</span>. Das ist die größte Menge, mit der wir in einem bestimmten Kontext arbeiten. Die <strong>leere Menge</strong> (oder die <strong>Nullmenge</strong>) enthält keine Elemente, diese wird als <span class="math inline">\(\emptyset\)</span> notiert.</p>
+<p>Es ist sinnvoll für Alex’ Entscheidungsproblem die hypothetische Konsummenge <span class="math inline">\(C=\{(x,y):x\geq 0,y\geq 0\}\)</span> als Universalmenge festzulegen. Wenn Alex’ Budget <span class="math inline">\(0\)</span> Euro beträgt, ist seine Budgetmenge eine leere Menge.</p>
+<div class="definition">
+<p><span id="def:def3" class="definition"><strong>Definition 2.3  (Durchschnitt und Vereinigung) </strong></span><br>Der <strong>Durchschnitt</strong> zweier Mengen <span class="math inline">\(X\)</span> und <span class="math inline">\(Y\)</span> ist die Menge, deren Elemente sowohl in <span class="math inline">\(X\)</span> als auch in <span class="math inline">\(Y\)</span> enthalten sind; formal:</p>
+<p><span class="math inline">\(X\cap Y=\{x:x\in X \text{ und } x\in Y\}\)</span> <img src="images/schnitt.png" /></p>
+<p>Falls <span class="math inline">\(X\cap Y=\emptyset\)</span>, dann sind <span class="math inline">\(X\)</span> und <span class="math inline">\(Y\)</span> <strong>disjunkt</strong>.</p>
+<p>Die <strong>Vereinigung</strong> zweier Mengen <span class="math inline">\(X\)</span> und <span class="math inline">\(Y\)</span> ist die Menge, deren Elemente in mindestens einer der Mengen <span class="math inline">\(X\)</span> und <span class="math inline">\(Y\)</span> enthalten sind; formal:</p>
+<p><span class="math inline">\(X\cup Y=\{x:x\in X \text{ oder } x\in Y\}\)</span> <img src="images/vereinigung.png" /></p>
+</div>
+<div class="exercise">
+<p><span id="exr:mengenop" class="exercise"><strong>Aufgabe 2.1  (Mengenoperation 1) </strong></span>Es sei <span class="math inline">\(\mathbb N\)</span> die Universalmenge, ferner</p>
+<p><span class="math inline">\(X=\{x\in \mathbb N:x\leq 20 \text{ und } x/2\in \mathbb N\}\)</span>, sowie</p>
+<p><span class="math inline">\(Y=\{x\in \mathbb N:10\leq x\leq 24 \text{ und } x/2\in \mathbb N\}\)</span></p>
+<p>Was sind <span class="math inline">\(X\cap Y\)</span> und <span class="math inline">\(X\cup Y\)</span>?
+Was sind <span class="math inline">\(X\cap \mathbb N, X\cup \mathbb N, Y\cap\mathbb N\text{ und } Y\cup\mathbb N\)</span>?</p>
+<details>
+<summary>
+Antwort
+</summary>
+<p>
+<span class="math inline">\(X\cap Y = \{x\in \mathbb N: 10\leq x\leq 20\text{ und } x/2\in \mathbb N\}\)</span>, <span class="math inline">\(X\cup Y = \{x\in \mathbb N: x\leq 24\text{ und } x/2\in \mathbb N\}\)</span>, <span class="math inline">\(X \cap \mathbb N=X\)</span>,<span class="math inline">\(X \cup \mathbb N=\mathbb N\)</span>, <span class="math inline">\(Y \cap \mathbb N=Y\)</span>und <span class="math inline">\(Y \cup \mathbb N=\mathbb N\)</span>
+</p>
+</details>
+</div>
+<p>Neben dem Schnitt und Vereinigung zweier Mengen wird Komplementenbildung und Mengendifferenz häufig benötigt.</p>
+<div class="definition">
+<p><span id="def:def4" class="definition"><strong>Definition 2.4  (Komplement und Differenz) </strong></span>Das <strong>Komplement</strong> einer Menge <span class="math inline">\(X\)</span> ist die Menge aller Elemente, die in <span class="math inline">\(U\)</span> aber nicht in <span class="math inline">\(X\)</span> enthalten sind;
+Notation: <span class="math inline">\(\overline X\)</span>.</p>
+<p><span class="math inline">\(\overline X=\{x\in U:x\not \in X\}\)</span> <img src="images/komplement.png" /></p>
+<p>Die <strong>Differenz</strong> <span class="math inline">\(X\setminus Y\)</span>, manchmal auch <span class="math inline">\(X−Y\)</span>, ist die Menge aller Elemente in <span class="math inline">\(X\)</span>, die nicht in <span class="math inline">\(Y\)</span> enthalten sind:</p>
+<p><span class="math inline">\(X\setminus Y=\{x\in U:x\in X \text{ und } x\not\in Y\}\)</span> <img src="images/differenz.png" /></p>
+</div>
+<div class="exercise">
+<p><span id="exr:mengenop2" class="exercise"><strong>Aufgabe 2.2  (Mengenoperation 2) </strong></span></p>
+<ul>
+<li>Zeige graphisch, dass <span class="math inline">\(X\setminus Y=X\cap\overline Y\)</span></li>
+</ul>
+<details>
+<summary>
+Antwort
+</summary>
+<p>
+<img src="images/Mdifferenz.png" alt="" width="300" height="142" role="presentation" class="img-responsive atto_image_button_text-bottom"><br>
+</p>
+<p>
+Siehe auch <a href="https://www.geogebra.org/classic/nbwt4ega" target="_blank">Mengen visualisieren mit Geogebra</a>
+</p>
+</details>
+<ul>
+<li><p>Es seien <span class="math inline">\(\mathbb N, X, Y\)</span> wie in der vorigen Übung.</p>
+<ul>
+<li>Was sind die Komplemente von <span class="math inline">\(\mathbb N, X, Y\)</span></li>
+<li>Was ist <span class="math inline">\(X\cap \overline Y\)</span>?</li>
+<li>Was ist <span class="math inline">\(X\cup \overline Y\)</span>?</li>
+</ul></li>
+</ul>
+<details>
+<summary>
+Antwort
+</summary>
+<p>
+<span class="math inline">\(\overline{N}=\emptyset\)</span>, <span class="math inline">\(\overline{X}=\{x\in \mathbb N: x\geq 21 \text{ oder } x \text{ ungerade }\}\)</span>, <span class="math inline">\(\overline{Y}=\{x\in \mathbb N: x\leq 9 \text{ oder }x\geq 25 \text{ oder } x \text{ ungerade }\}\)</span>
+</p>
+<p>
+<span class="math inline">\(\overline{X\cap Y} = \{x\in \mathbb N: x\leq 9 \text{ oder }x\geq 20 \text{ oder } x \text{ ungerade }\}\)</span>, <span class="math inline">\(\overline{X\cup Y}=\{x\in \mathbb N: x\geq 25 \text{ oder } x \text{ ungerade }\}\)</span>
+</p>
+</details>
+<ul>
+<li><p>Es seien <span class="math inline">\(\mathbb N, X, Y\)</span> wie in der vorigen Übung.</p>
+<ul>
+<li>Was ist die Differenz <span class="math inline">\(X\setminus Y\)</span>?</li>
+<li>Was ist <span class="math inline">\(Y\setminus X\)</span>?</li>
+</ul></li>
+</ul>
+<details>
+<summary>
+Antwort
+</summary>
+<p>
+<span class="math inline">\(X\setminus Y =\{x\in \mathbb N, x &lt; 10 \text{ und } x/2\in\mathbb N\}\)</span>
+</p>
+<p>
+<span class="math inline">\(Y\setminus X = \{x\in \mathbb N: 20&lt;x\leq 24 \text{ und } x/2\in \mathbb N\}\)</span>
+</p>
+</details>
+</div>
+<div class="exercise">
+<p><span id="exr:mengenop3" class="exercise"><strong>Aufgabe 2.3  (Alex' Konsummenge und Budget) </strong></span><br>
+<img src="images/Alex.png" />
+<br>Die Konsummenge von Alex ist gegeben als <span class="math inline">\(C=\{(x_1,x_2):x_1\geq 0,x_2\geq 0\}\)</span>.</p>
+<p>Die dazugehörige Budgetmenge für Alex ist <span class="math inline">\(B=\{(x_1,x_2):p_1x_1+p_2x_2\leq M\}\)</span>,</p>
+<p>wobei <span class="math inline">\(x_1,x_2\)</span> die Mengen der Güter, <span class="math inline">\(p_1,p_2\)</span> die Preise und <span class="math inline">\(M\)</span> das Einkommen bezeichnen.</p>
+<p>Illustrieren Sie die folgenden Mengen in einem Diagramm:</p>
+<ul>
+<li><span class="math inline">\(B,C\)</span></li>
+<li><span class="math inline">\(B\cap C\)</span></li>
+</ul>
+<p>Interpretieren Sie die einzelnen Mengen.</p>
+<details>
+<summary>
+Antwort
+</summary>
+<p>
+<img src="images/KonsumBudget.PNG" alt="" width="500" height="270" role="presentation" class="img-responsive atto_image_button_text-bottom">
+</p>
+</details>
+</div>
+</div>
+</div>
+<div id="zahlenmengen" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Zahlenmengen<a href="grundlagen.html#zahlenmengen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:def4" class="definition"><strong>Definition 2.4  (Einige Zahlenmengen) </strong></span>Die Menge der <strong>natürlichen Zahlen</strong> ist <span class="math inline">\(\mathbb N= \mathbb Z_+ = \{1,2,3,...\}\)</span></p>
+<p>Die Menge der <strong>ganzen Zahlen</strong> ist <span class="math inline">\(\mathbb Z = \{...,−3,−2,−1,0,1,2,3,...\}\)</span></p>
+<p>Die Menge der <strong>rationalen Zahlen</strong> ist <span class="math inline">\(\mathbb Q=\{\frac ab:a\in \mathbb Z, b\in \mathbb Z\setminus\{0\}\}\)</span></p>
+</div>
+<p>Eigenschaften:</p>
+<ul>
+<li>
+Es gilt: <span class="math inline">\(\mathbb{N}\subset \mathbb{Z}\subset \mathbb{Q}\)</span>.
+</li>
+<li>
+Die Menge <span class="math inline">\(\mathbb{N}\)</span> ist geschlossen unter Addition und Multiplikation, d.h. für alle <span class="math inline">\(a, b \in\mathbb{N}\)</span> gilt: <span class="math inline">\(a + b \in\mathbb{N}\)</span>, <span class="math inline">\(a\cdot b \in\mathbb{N}\)</span>.
+</li>
+<li>
+Die Menge <span class="math inline">\(\mathbb{Z}\)</span> ist geschlossen unter Addition, Subtraktion und Multiplikation, d.h. für alle <span class="math inline">\(a, b \in\mathbb{Z}\)</span> gilt: <span class="math inline">\(a + b \in \mathbb{Z}\)</span>, <span class="math inline">\(a - b \in\mathbb{Z}\)</span>,
+<span class="math inline">\(a \cdot b ∈\)</span> <span class="math inline">\(\mathbb{Z}\)</span>.
+</li>
+<li>
+Die Menge <span class="math inline">\(\mathbb{Q}\)</span> ist geschlossen unter Addition, Subtraktion, Multiplikation und Division (mit Ausnahme von Division durch 0), d.h. für alle <span class="math inline">\(a, b \in\mathbb{Q}\)</span>, c <span class="math inline">\(\neq 0\)</span> gilt: <br><span class="math inline">\(a + b \in\mathbb{Q}\)</span>, <span class="math inline">\(a - b \in\mathbb{Q}\)</span>, <span class="math inline">\(a \cdot b \in\mathbb{Q}\)</span>, <span class="math inline">\(a/c \in\mathbb{Q}\)</span>.
+</li>
+</ul>
+<p>Beispiele</p>
+<ul>
+<li>Die Menge <span class="math inline">\(\mathbb N\)</span>: Anzahl Mitarbeiter im Unternehmen, Anzahl Kunden im Unternehmen</li>
+<li>Die Menge <span class="math inline">\(\mathbb Z\)</span>: Zuwachs/ Abgang Kunden oder Mitarbeitern (absolut)</li>
+<li>Die Menge <span class="math inline">\(\mathbb Q\)</span>: Anteil Bestandskund*innen/Mitarbeiter*innen in Vollzeit</li>
+</ul>
+<div class="exercise">
+<p><span id="exr:zahlen" class="exercise"><strong>Aufgabe 2.4  (Zahlenmengen) </strong></span>Zeige per Gegenbeispiel, dass <span class="math inline">\(\mathbb N\)</span> nicht geschlossen ist unter Subtraktion und Division.</p>
+<details>
+<summary>
+Antwort
+</summary>
+<p>
+<span style="font-size: 1rem;">zum Beispiel: <span class="math inline">\(4; 5\in\mathbb{N}\)</span></span><br>
+</p>
+<p>
+<span class="math inline">\(4-5=-1 \notin\mathbb{N}\rightarrow\mathbb{N}\)</span> ist nicht geschlossen unter Subtraktion<br>
+</p>
+<p>
+<span class="math inline">\(4 / 5\notin\mathbb{N}\rightarrow\mathbb{N}\)</span> ist nicht geschlossen unter Division<br>
+</p>
+</details>
+</div>
+<p><br>Es existieren Zahlen außerhalb von <span class="math inline">\(\mathbb Q\)</span>, die sogenannten irrationalen Zahlen.
+Beispiel: <span class="math inline">\(\sqrt2\)</span> ist irrational.</p>
+<div class="definition">
+<p><span id="def:def5" class="definition"><strong>Definition 2.5  (Reele Zahlen) </strong></span>Die Vereinigung der rationalen und irrationalen Zahlen ergibt die <strong>Menge der reellen Zahlen</strong> <span class="math inline">\(\mathbb R\)</span>.</p>
+</div>
+<p>Die folgenden Eigenschaften werden als Axiome unterstellt:</p>
+<ol style="list-style-type: decimal">
+<li><p>Abgeschlossenheit: für alle <span class="math inline">\(a,b\in\mathbb R\)</span> gilt <span class="math inline">\(a+b\in\mathbb R\)</span> und <span class="math inline">\(a\cdot b\in\mathbb R\)</span></p></li>
+<li><p>Kommutativgesetze: für alle <span class="math inline">\(a,b\in\mathbb R\)</span> gilt <span class="math inline">\(a+b=b+a\)</span>, <span class="math inline">\(a\cdot b=b\cdot a\)</span></p></li>
+<li><p>Assoziativgesetze: für alle <span class="math inline">\(a,b,c\in\mathbb R\)</span> gilt <span class="math inline">\(a+(b+c)=(a+b)+c\)</span> und <span class="math inline">\(a\cdot (b\cdot c)=(a\cdot b)\cdot c\)</span></p></li>
+<li><p>Distributivgesetz: für alle <span class="math inline">\(a,b,c\in\mathbb R\)</span> gilt <span class="math inline">\(a\cdot (b+c)=a\cdot b+a\cdot c\)</span></p></li>
+<li><p>Nullelement: das Element <span class="math inline">\(0\in\mathbb R\)</span> besitzt die Eigenschaft, <span class="math inline">\(a\in\mathbb R\)</span> dann <span class="math inline">\(a+0=a\)</span> und <span class="math inline">\(a\cdot 0=0\)</span></p></li>
+<li><p>Eins-Element: das Element <span class="math inline">\(1\in\mathbb R\)</span> besitzt die Eigenschaft, <span class="math inline">\(1\cdot a=a\)</span></p></li>
+<li><p>Inverses additives Element: für jedes <span class="math inline">\(a\in\mathbb R\)</span> hat <span class="math inline">\(−a\in\mathbb R\)</span> die Eigenschaft <span class="math inline">\(a+(−a)=0\)</span></p></li>
+<li><p>Inverses multiplikatives Element: für <span class="math inline">\(a\in\mathbb R \setminus\{0\}\)</span>, hat <span class="math inline">\(\frac 1a \in\mathbb R\)</span> die Eigenschaft <span class="math inline">\(a\cdot\frac 1a=1\)</span>.</p></li>
+</ol>
+<div class="definition">
+<p><span id="def:def5" class="definition"><strong>Definition 2.5  (Teilmengen von reelen Zahlen) </strong></span><br>Die Menge <span class="math inline">\(\mathbb R_{++}\subset\mathbb R\)</span>
+enthält die <strong>(streng) positiven Zahlen</strong>. Es gilt:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\mathbb R_{++}\)</span> ist geschlossen unter Addition und Multiplikation.</li>
+<li>Für jedes <span class="math inline">\(a\in\mathbb R\)</span> gilt exakt eine der folgenden Eigenschaften:
+<span class="math inline">\(a\in\mathbb R_{++}\)</span>oder <span class="math inline">\(a=0\)</span> oder <span class="math inline">\(−a\in\mathbb R_{++}\)</span>.</li>
+</ol>
+<p>Die Menge <span class="math inline">\(\mathbb R_+ = \mathbb R_{++}\cup \{0\}\)</span> ist die Menge der <strong>nicht-negativen Zahlen</strong>.</p>
+</div>
+<p>Manchmal muss man die Zahlen miteinander vergleichen oder eine Eigenschaft angeben, die eine Relation zu einem Zahl darstellt. In diesem Fall sind Ungleichungen nützlich.</p>
+<div class="definition">
+<p><span id="def:def6" class="definition"><strong>Definition 2.6  (Ungleichungen) </strong></span><br>
+Die strenge Ungleichung <span class="math inline">\(&gt;\)</span> und die schwache Ungleichung <span class="math inline">\(\geq\)</span> sind wie folgt definiert:</p>
+<ol style="list-style-type: decimal">
+<li><p>Falls <span class="math inline">\(a+b\in\mathbb R_{++}\)</span>, dann <span class="math inline">\(a&gt;b\)</span></p></li>
+<li><p>Falls <span class="math inline">\(−(a−b)\in\mathbb R_{++}\)</span>, dann <span class="math inline">\(b&gt;a\)</span></p></li>
+<li><p>Falls <span class="math inline">\(a−b\in\mathbb R_+\)</span>, dann <span class="math inline">\(a\geq b\)</span></p></li>
+<li><p>Falls <span class="math inline">\(−(a−b)\in\mathbb R_+\)</span>, dann <span class="math inline">\(b\geq a\)</span>.</p></li>
+</ol>
+</div>
+<p>Wird, zum Beispiel, geplant einige Mitarbeiter mit den Eigenschaften:</p>
+<ul>
+<li>mindestens 5 Jahre Betriebszugehörigkeit (<span class="math inline">\(X\)</span>),</li>
+<li>mehr als 1000 Euro Monatsverdienst (<span class="math inline">\(Y\)</span>),</li>
+<li>weniger als 10 Krankheitstage im letzten Jahr (<span class="math inline">\(K\)</span>),</li>
+<li>die höchsten 45 Jahre alt sind (<span class="math inline">\(Z\)</span>)</li>
+</ul>
+<p>zu befragen, so kann der gewünschte Zielkreis mittels Ungleichungen wie folgst einggerenzt werden: <span class="math inline">\(X\geq 5,Y&gt;1,K&lt;10 \text{ und } Z\leq 45\)</span>.</p>
+<p>Häufig möchte man keine bloßen Zahlen betrachten, sondern die <strong>Abweichungen</strong> zu einem Sollwert ohne die Richtung der Abweichung miteinzubeziehen. In diesem Fall braucht man die Beträge dieser Abweichungen.</p>
+<div class="definition">
+<p><span id="def:def7" class="definition"><strong>Definition 2.7  (Betrag) </strong></span>Der Betrag (auch Absolutwert, “Vorzeichenkiller”) von <span class="math inline">\(x\in\mathbb R\)</span> ist definiert als</p>
+<p><span class="math inline">\(v=\begin{cases}x, &amp;\text{ falls } x\geq 0,\\ -x, &amp;\text{ falls } x&lt;0\end{cases}\)</span></p>
+</div>
+<p>Betrachten Sie als Beispiel die Abweichungen von monatlichen Umsätzen zum Jahresdurchschnitt:</p>
+<ul>
+<li>Monat 1: <span class="math inline">\(−1250,2\)</span> Euro</li>
+<li>Monat 2: <span class="math inline">\(−135,5\)</span> Euro</li>
+<li>Monat 3: <span class="math inline">\(680\)</span> Euro</li>
+<li>Monat 4: <span class="math inline">\(55\)</span> Euro</li>
+</ul>
+<p>Wie lautet die mittlere Abweichung?</p>
+<p>Die Beträge der Umsatzabweichungen sind: <span class="math inline">\(1250,2;135,5;680;55\)</span> Euro. Die Mittlere Abweichung ist also: <span class="math inline">\(530,175\)</span> Euro. Hätte man die mittlere Abweichung ermittelt, ohne den Betrag vorher zu nehmen, würden sich positive und negative Abweichungen gegenseitig weghebeln, so dass man das Ergebnis nicht als mittlere Abweichung ansehen könnte.</p>
+<p>Dies wird durch die folgende <strong>Dreiecksungleichung</strong> verdeutlicht.</p>
+<div class="theorem">
+<p><span id="thm:th1" class="theorem"><strong>Theorem 2.1  (Dreiecksungleichung) </strong></span>Für alle <span class="math inline">\(x,y\in\mathbb R\)</span> gilt: <span class="math display">\[|x+y|\leq|x|+|y|\]</span>
+Beweis:
+<br>Es gilt <span class="math inline">\(x\leq|x|\)</span> und <span class="math inline">\(y\leq|y|\)</span>, woraus folgt:
+<span class="math inline">\(x+y\leq |x|+|y|\)</span>.</p>
+<p>Analog gilt: <span class="math inline">\(−x\leq|x|\)</span> und <span class="math inline">\(−y\leq |y|\)</span>, so dass <span class="math inline">\(−(x+y)\leq |x|+|y|\)</span>.</p>
+</div>
+<p>Die Summe der Abweichungen von Monat 2 und Monat 3 ist im Betrag <span class="math inline">\(544,5=|−135,5+680|\)</span>, was kleiner als die Summe der einzelnen Beträge <span class="math inline">\(815,5=|−135,5|+|680|\)</span> ist.</p>
+<script>
+ 
+   // Generate a random question
+    const questionObj3 = {
+      question: 'Welche Zahlenmenge beschreibt am besten Mitarbeiterzahl?',
+      options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
+      answer: '1',
+      id: 3,
+      where: 'result3'
+    };
+     const questionObj31 = {
+      question: 'Welche Zahlenmenge beschreibt am besten den Anteil von Mitarbeitern in Elternzeit?',
+      options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
+      answer: '3',
+      id: 31,
+      where: 'result31'
+    };
+     const questionObj32 = {
+      question: 'Welche Zahlenmenge beschreibt am besten Verschuldungsgrad eines Unternehmens?',
+      options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
+      answer: '4',
+      id: 32,
+      where: 'result32'
+    };
+     const questionObj33 = {
+      question: 'Welche Zahlenmenge beschreibt am besten Dauer von Geschäftsbeziehungen mit einem Bestandskunden?',
+      options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
+      answer: '5',
+      id: 33,
+      where: 'result33'
+    };
+    const questionObj34 = {
+      question: 'Welche Zahlenmenge beschreibt am besten Stundensaldo von einem Mitarbeiterstundenkonto (in ganzen Stunden gemessen)?',
+      options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
+      answer: '2',
+      id: 34,
+      where: 'result34'
+    };
+    
+    
+</script>
+<div id="q1" class="quiz">
+<p class="question">
+<span id="question-text3"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option3" value=1> \(\mathbb N\)
+</label>
+<label>
+<input type="radio" name="option3" value=2> \(\mathbb Z\)
+</label>
+<label>
+<input type="radio" name="option3" value=3> \(\mathbb Q\)
+</label>
+<label>
+<input type="radio" name="option3" value=4> \(\mathbb R\)
+</label>
+<label>
+<input type="radio" name="option3" value=5> \(\mathbb R_{++}\)
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj3)">Submit</button>
+<p id="result3">
+</p>
+<p class="question">
+<span id="question-text31"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option31" value=1> \(\mathbb N\)
+</label>
+<label>
+<input type="radio" name="option31" value=2> \(\mathbb Z\)
+</label>
+<label>
+<input type="radio" name="option31" value=3> \(\mathbb Q\)
+</label>
+<label>
+<input type="radio" name="option" value=4> \(\mathbb R\)
+</label>
+<label>
+<input type="radio" name="option31" value=5> \(\mathbb R_{++}\)
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj31)">Submit</button>
+<p id="result31">
+</p>
+<p class="question">
+<span id="question-text32"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option32" value=1> \(\mathbb N\)
+</label>
+<label>
+<input type="radio" name="option32" value=2> \(\mathbb Z\)
+</label>
+<label>
+<input type="radio" name="option32" value=3> \(\mathbb Q\)
+</label>
+<label>
+<input type="radio" name="option32" value=4> \(\mathbb R\)
+</label>
+<label>
+<input type="radio" name="option32" value=5> \(\mathbb R_{++}\)
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj32)">Submit</button>
+<p id="result32">
+</p>
+<p class="question">
+<span id="question-text33"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option33" value=1> \(\mathbb N\)
+</label>
+<label>
+<input type="radio" name="option33" value=2> \(\mathbb Z\)
+</label>
+<label>
+<input type="radio" name="option" value=3> \(\mathbb Q\)
+</label>
+<label>
+<input type="radio" name="option33" value=4> \(\mathbb R\)
+</label>
+<label>
+<input type="radio" name="option33" value=5> \(\mathbb R_{++}\)
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj33)">Submit</button>
+<p id="result33">
+</p>
+<p class="question">
+<span id="question-text34"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option34" value=1> \(\mathbb N\)
+</label>
+<label>
+<input type="radio" name="option34" value=2> \(\mathbb Z\)
+</label>
+<label>
+<input type="radio" name="option34" value=3> \(\mathbb Q\)
+</label>
+<label>
+<input type="radio" name="option34" value=4> \(\mathbb R\)
+</label>
+<label>
+<input type="radio" name="option34" value=5> \(\mathbb R_{++}\)
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj34)">Submit</button>
+<p id="result34">
+</p>
+<script>
+  // Display the question
+    document.getElementById('question-text3').textContent = questionObj3.question;
+    document.getElementById('question-text31').textContent = questionObj31.question;
+    document.getElementById('question-text32').textContent = questionObj32.question;
+    document.getElementById('question-text33').textContent = questionObj33.question;
+    document.getElementById('question-text34').textContent = questionObj34.question;
+</script>
+</div>
+</div>
+<div id="punktmengen-in-mathbb-rn" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Punktmengen in <span class="math inline">\(\mathbb R^n\)</span><a href="grundlagen.html#punktmengen-in-mathbb-rn" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Häufig hat man die Situation, in der mehrere Objekte oder Personen oder deren Verhalten verglichen werden müssen. Die letzteren werden durch ein oder mehrere Werte repräsentiert. Diese einzelne Werte aus <span class="math inline">\(\mathbb R\)</span> oder Tupeln von mehreren Werten aus <span class="math inline">\(\mathbb R ^ 2, \mathbb R^3,\ldots\)</span> können wir immer als Punkte im geeigneten Koordinatensystem darstellen. Dies ermöglicht, die Ähnlichkeit der Objekte oder Personen zu ermitteln, in dem man den Abstand zwischen den Punkten misst.</p>
+<ul>
+<li>Die reelle Linie, <span class="math inline">\(\mathbb{R}\)</span> eignet sich, wenn jedes Objekt mittels nur einer Zahl beschrieben wird. Diese markiert dann jeweils einen Punkt auf dem Zahlenstrahl:
+<br><img src="images/R1.png" /></li>
+</ul>
+<div class="example">
+<p><span id="exm:realline" class="example"><strong>Beispiel 2.4  (reele Linie) </strong></span>Die Konsument*innen Alex, Tina und Amy werden hinsichtlich deren Kontostand (<span class="math inline">\(x\)</span>) verglichen. Alex hat <span class="math inline">\(500\)</span> Euro, Tina hat <span class="math inline">\(250\)</span> Euro und Amy hat <span class="math inline">\(-600\)</span> Euro auf dem Konto. Wie sehen diese Kontostände auf der reellen Linie als Punkte aus?</p>
+</div>
+<ul>
+<li>Der Raum <span class="math inline">\(\mathbb{R^2}\)</span>, definiert über das <strong>kartesische Produkt</strong> die zweidimensionale Sicht:
+<span class="math inline">\(\mathbb R ⊗ \mathbb R = \left\{ {(x,y) : x \in \mathbb R, y \in\mathbb R} \right\} =\mathbb R^2\)</span>
+<br><img src="images/R2.png" /></li>
+</ul>
+<div class="example">
+<p><span id="exm:r2" class="example"><strong>Beispiel 2.5  (zweidimensionaler reeler Raum) </strong></span>Die Konsument*innen Alex, Tina und Amy werden hinsichtlich deren Kontostand (<span class="math inline">\(x\)</span>) und der Veränderung deren Konsumausgaben (<span class="math inline">\(y\)</span>) zum letzten Monat verglichen. Alex Verhalten wird durch den Tupel (Kontostand; Veränderung der Konsumausgaben <span class="math inline">\(=(x;y)\)</span>) <span class="math inline">\((500; 300)\)</span>, Tinas durch <span class="math inline">\((250; -200)\)</span> und Amys durch <span class="math inline">\((-600; 200)\)</span> beschrieben.
+Wie sehen die verschiedenen Konsumverhalten dieser Konsument*innen als Punkte im Koordinatensystem aus?</p>
+</div>
+<ul>
+<li>Der Raum <span class="math inline">\(\mathbb{R^3} \left\{ {(x, y, z) : x \in\mathbb R, y \in\mathbb R, z \in\mathbb R}\right\}\)</span> ermöglich die Analyse von drei dimensionalen Punkten.
+<br><img src="images/R3.png" /></li>
+</ul>
+<div class="example">
+<p><span id="exm:r3" class="example"><strong>Beispiel 2.6  (dreidimensionaler reeler Raum) </strong></span>Alex, Tina und Amy als Arbeitnehmer*innen werden hinsichtlich deren Gehalts- <span class="math inline">\(x\)</span>, Produktivitätsveränderung <span class="math inline">\(y\)</span> und Zielerreichungsscore <span class="math inline">\(z\)</span> abgebildet. Deren Verhalten wird durch den Tupel (Gehalt; Produktivität; Zielerreichung) <span class="math inline">\(=(x;y;z)\)</span> abgebildet. Tinas Beschreibung ist <span class="math inline">\((3; 2,5; 2)\)</span>, Alex <span class="math inline">\((-2; -5; -2,5)\)</span> und Amys <span class="math inline">\((-3; 1,2; 1,5)\)</span>. Wie sehen die verschiedenen Eigenschaften der Mitarbeiter*innen als Punkte im Koordinatensystem aus?</p>
+</div>
+<ul>
+<li>Der Raum <span class="math inline">\(\mathbb{R^n}\)</span>: ermöglicht die Abbildung von mehrdimensionalen Punkten. Zum Beispiel, wenn man weitere Eigenschaften von Mitarbeiter*innen miteinbezieht. Die Visualisierung ist an der Stelle schwierig, aber die multivariate Analyse dieser Punkte auch die Berechnung von Abstand kann problemlos durchgeführt werden.
+<span class="math display">\[\mathbb R^n =  \left\{ {(x_1,x_2, ... , x_n) : x_i \in\mathbb R, 1 \leq i \leq n}\right\}  \]</span>
+Teilmengen von <span class="math inline">\(\mathbb{R^n}\)</span>: Punktmengen.</li>
+</ul>
+<div id="intervale-als-punktmengen-in-mathbbrn" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R^n}\)</span><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbrn" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Wichtige Punktmengen im <span class="math inline">\(\mathbb{R}\)</span> sind Intervalle.</p>
+<div class="example">
+<p><span id="exm:int" class="example"><strong>Beispiel 2.7  (Intervalle als Punktmengen) </strong></span>Die Personalchefin von Alex, Tina und Amy könnte z.B. nur Angestellte mit negativem Gehaltsscore im Intervall von <span class="math inline">\(-5\)</span> bis <span class="math inline">\(-1\)</span> in einer Auswertung betrachten. Dabei hätte sie mehrere Optionen festzulegen. Sollen die Mitarbeitende mit dem Score <span class="math inline">\(0\)</span> berücksichtigt werden oder sind sie noch außen vor? Bisher gab es keine Gehaltscores jenseits von <span class="math inline">\(-5\)</span>. Sollen aber künftig auch die Personen, die einen kleineren Score als <span class="math inline">\(-5\)</span> haben, in der Auswertung berücksichtigt werden?
+Im ersten Fall würden wir das entsprechende Intervall als <span class="math inline">\([-5;0]\)</span>, in dem zweiten - als <span class="math inline">\([-5;0)\)</span> und im dritten Fal (bei Ja) - <span class="math inline">\((-\infty; 0)\)</span> aufschreiben.</p>
+</div>
+<p>Dementsprechend für <span class="math inline">\(a, b \in R, \ a &lt; b\)</span> unterscheidet man:</p>
+<ul>
+<li><p><strong>Beschränkte Mengen</strong>:</p>
+<ul>
+<li><p>Geschlossenes Intervall (Die Grenzen <span class="math inline">\(a\)</span> und <span class="math inline">\(b\)</span> sind im Invall <strong>enthalten</strong>): <span class="math display">\[\left[ a, b \right]  =  \left\{   {x ∈ \mathbb{R}  : a \leq x \leq b}  \right\} \]</span></p></li>
+<li><p>Halb-offenes Intervall (Einer der Endpunkte <span class="math inline">\(a\)</span> oder <span class="math inline">\(b\)</span> ist im Invall enthalten und der andere nicht):
+<span class="math display">\[[a, b) =  \left\{   {x ∈  \mathbb{R}  : a  \leq  x &lt; b}\right\} \]</span>
+<span class="math display">\[(a, b] =  \left\{   {x \in \mathbb{R} : a &lt; x}\leq b\right\} \]</span></p></li>
+<li><p>Offenes Intervall (Die Grenzen <span class="math inline">\(a\)</span> und <span class="math inline">\(b\)</span> sind im Invall <strong>nicht enthalten</strong>): <span class="math display">\[(a, b) =  \left\{  {x \in R : a &lt; x &lt; b}\right\} \]</span></p></li>
+</ul></li>
+<li><p><strong>Unbeschränkte Mengen</strong> (Das Zeichen <span class="math inline">\(\infty\)</span> steht für die Unendlichkeit):</p>
+<ul>
+<li>Nach oben unbeschränktes Intervall:
+<span class="math display">\[[a, \infty) =  \left\{   {x \in \mathbb R : a \leq x}\right\} \]</span>
+<span class="math display">\[(a, \infty) =  \left\{   {x \in \mathbb R : a &lt; x}\right\} \]</span></li>
+<li>Nach unten unbeschränktes Intervall:
+<span class="math display">\[(−\infty, b] =  \left\{   {x \in \mathbb R : x \leq b}\right\} \]</span>
+<span class="math display">\[(−\infty, b) =  \left\{   {x \in \mathbb R : x &lt; b} \right\} \]</span></li>
+</ul></li>
+</ul>
+<div id="q1" class="quiz">
+<script>
+   const questionObj36 = {
+      question: 'Bei einer Befragung möchte man alle Mitarbeiter befragen, die länger als 3 Jahre aber maximal 5 Jahre in einem Unternehmen angestellt sind. Welches Intervall für die Betriebszugehörigkeit ist in diesem Fall relevant?',
+      options: ['\\((3;5)\\)','\\([3;5)\\)' ,'\\((3;5]\\)', '\\([3;5)\\)'],
+      answer: '3',
+      id: 36,
+      where: 'result36'
+    };
+    
+   const questionObj37 = {
+      question: 'Bei einer anderen Befragung möchte man alle Mitarbeiter befragen, deren Betriebszugehörigkeit im Intervall \\([2;~~ 3,5)\\) Jahren liegt. Mitarbeiter mit welcher Betriebszugehörigkeit, können an der Umfrage teilnehmen?',
+      options: ['1,5 Jahre','2 Jahre' ,'2,5 Jahre', '3,5 Jahre'],
+      answer: ['2','3'],
+      id: 37,
+      where: 'result37'
+    };
+
+</script>
+<p class="question">
+<span id="question-text36"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option36" value=1> \((3;5)\)
+</label>
+<label>
+<input type="radio" name="option36" value=2> \([3;5)\)
+</label>
+<label>
+<input type="radio" name="option36" value=3> \((3;5]\)
+</label>
+<label>
+<input type="radio" name="option36" value=4> \([3;5]\)
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj36)">Submit</button>
+<p id="result36">
+</p>
+<br><br />
+
+<p class="question">
+<span id="question-text37"></span>
+</p>
+<div class="options">
+<label>
+<input type="checkbox" name="option37" value=1> 1,5 Jahre
+</label>
+<label>
+<input type="checkbox" name="option37" value=2> 2 Jahre
+</label>
+<label>
+<input type="checkbox" name="option37" value=3> 2,5 Jahre
+</label>
+<label>
+<input type="checkbox" name="option37" value=4> 2,5 Jahre
+</label>
+</div>
+<button onclick="checkAnswer_mmc(questionObj37)">Submit</button>
+<p id="result37">
+</p>
+<script>
+    document.getElementById('question-text36').textContent = questionObj36.question;
+     document.getElementById('question-text37').textContent = questionObj37.question;
+</script>
+</div>
+</div>
+<div id="eigenschaften-des-mathbb-rn-abstand" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: Abstand<a href="grundlagen.html#eigenschaften-des-mathbb-rn-abstand" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Wie könnte nun die Personalchefin im Beispiel <a href="grundlagen.html#exm:r3">2.6</a> die Arbeitnehmer*innen Alex, Tina und Amy hinsichtlich deren Gehalts-<span class="math inline">\(x\)</span>, Produktivitätsveränderung <span class="math inline">\(y\)</span> und Zielerreichungsscore <span class="math inline">\(z\)</span> vergleichen?</p>
+<p>Deren Verhalten wird ja bisher durch den Tupel (Gehalt; Produktivität; Zielerreichung) <span class="math inline">\(=(x;y;z)\)</span> abgebildet. Tinas Beschreibung ist <span class="math inline">\((3; 2,5; 2)\)</span>, Alex <span class="math inline">\((-2; -5; -2,5)\)</span> und Amys <span class="math inline">\((-3; 1,2; 1,5)\)</span>. Welche Arbeitnehmer*innen sind sich am ähnlichsten?
+Es ist hier sinnvoll den <strong>Euklidschen Abstand</strong> zwischen den Punkten, die für Alex, Tina und Emy stehen, zu ermitteln.</p>
+<p>Nach dem Satz von Pythagoras beträgt die Länge der Geraden, die zwei Punkte <span class="math inline">\(a\)</span> und <span class="math inline">\(b\)</span> in <span class="math inline">\(\mathbb R^2\)</span> verbindet,
+<span class="math display">\[d(a, b) = \sqrt{(a_{1}-b_{1})^{2}  + (a_{2}-b_{2})^{2}}  \]</span>
+<img src="images/abstand.png" /></p>
+<p>Verallgemeinert man dies auf Punkte in <span class="math inline">\(\mathbb R^n\)</span>, so erhält man die folgende Abstandsmetrik.</p>
+<div class="definition">
+<p><span id="def:def1abstand" class="definition"><strong>Definition 2.8  (Der Euklidsche Abstand) </strong></span>Der <strong>Euklidsche Abstand</strong> zwischen zwei Punkten <span class="math inline">\(a = (a_1, ... , a_n)\)</span> und <span class="math inline">\(b = (b_1, ... , b_n)\)</span> im <span class="math inline">\(\mathbb{R}^n\)</span>, <span class="math inline">\(n \geq 1\)</span>, ist definiert als
+<span class="math display">\[d(a, b) = \sqrt{ \  \sum_{i=1}^{n} (a _{i} -b_{i}) ^{2} }\]</span></p>
+</div>
+<p>Die Personalchefin hat jetzt auch einen Ansatz und berechnet:</p>
+<div class="example">
+<p><span id="exm:personal" class="example"><strong>Beispiel 2.8  (Arbeitnehmervergleich) </strong></span>Die Eigenschaften der Arbeitnehmer aus Beispiel <a href="grundlagen.html#exm:r3">2.6</a> werden durch den Tupel (Gehalt; Produktivität; Zielerreichung) <span class="math inline">\(=(x;y;z)\)</span> abgebildet. Tinas Beschreibung ist <span class="math inline">\((3; 2,5; 2)\)</span>, Alex <span class="math inline">\((-2; -5; -2,5)\)</span> und Amys <span class="math inline">\((-3; 1,2; 1,5)\)</span>. Welche Arbeitnehmer*innen sind sich am ähnlichsten?</p>
+<p><span class="math inline">\(d(Tina, Alex) = \sqrt{(3-(-2))^2 + (2,5-(-5))^2 + (2-(-2,5))^2} = 10,074\)</span>
+<span class="math inline">\(d(Tina, Amy) = \sqrt{(3-(-3))^2 + (2,5-1,2)^2 + (2-1,5))^2} = 6,1595\)</span>
+<span class="math inline">\(d(Alex, Amy) = \sqrt{(-2-(-3))^2 + (-5-1,2)^2 + (-2,5-1,5))^2} = 7,446\)</span></p>
+<details>
+<summary>
+Antwort
+</summary>
+Hinsichtlich der Beschreibung durch den Gehalts-, Produktivitätsveränderung und Zielerreichungsscore sind sich Tina und Amy am ähnlichsten, da der Euklidische Abstand zwischen deren Eigenschaften am kleinsten ist.
+</details>
+</div>
+<div class="exercise">
+<p><span id="exr:euklabstand" class="exercise"><strong>Aufgabe 2.5  (Der Euklidsche Abstand) </strong></span>Finde den Euklidschen Abstand zwischen den folgenden Punkten:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(2\)</span> und <span class="math inline">\(3\)</span> im <span class="math inline">\(\mathbb{R}\)</span></p></li>
+<li><p><span class="math inline">\((2; 3)\)</span> und <span class="math inline">\((4; 1)\)</span> im <span class="math inline">\(\mathbb{R^2}\)</span></p></li>
+<li><p><span class="math inline">\((2; 3; 4)\)</span> und <span class="math inline">\((4; 1; −5)\)</span> im <span class="math inline">\(\mathbb{R^3}\)</span></p></li>
+<li><p><span class="math inline">\((2; 3; 4; 5)\)</span> und <span class="math inline">\((−2; 4; 1; −5)\)</span> im <span class="math inline">\(\mathbb{R^4}\)</span></p></li>
+</ol>
+<details>
+<summary>
+Antwort
+</summary>
+<p>
+1.<span class="math inline">\(\sqrt{(2-3)^2} = 1\)</span>
+</p>
+<p>
+2.<span class="math inline">\(\sqrt{(2-4)^2 +(3-1)^2 } =\sqrt{4+4} =\sqrt{8}\)</span>
+</p>
+<p>
+3.<span class="math inline">\(\sqrt{(2-4)^2 +(3-1)^2 + (4-(-5))^2} =\sqrt{4+4+81} =\sqrt{89}\)</span>
+</p>
+<p>
+4.<span class="math inline">\(\sqrt{(2-(-2))^2 +(3-4)^2 + (4-1)^2 + (5-(-5))^2}\)</span>
+<br><span class="math inline">\(=\sqrt{16+1+9+100} =\sqrt{126}\)</span><br>
+</p>
+</details>
+</div>
+<script>
+
+ // Generate a random question
+    const questionObj4 = generateQuestion_num(4);
+    
+    questionObj4.answer = Math.sqrt(Math.pow(questionObj4.question[2]/10-questionObj4.question[5]/10,2) + Math.pow(questionObj4.question[3]/10 - questionObj4.question[6]/10,2) + Math.pow(questionObj4.question[4]/10-questionObj4.question[7]/10,2));
+    
+</script>
+<div id="q2" class="quiz">
+<p id="question">
+<span id="question-text4"></span>
+</p>
+<input type="number" id="answer4" placeholder="Antwort eingeben">
+<button onclick="checkAnswer_num(questionObj4)">Check</button>
+<p id="result4">
+</p>
+</div>
+<script>
+// Display the question
+    document.getElementById('question-text4').textContent = "Berechne den Euklidischen Abstand zwischen den folgenden zwei Punkten in \\(\\mathbb R^3: ("+ questionObj4.question[2]/10+ ";" +  questionObj4.question[3]/10 + ";" + questionObj4.question[4]/10 + ") \\) and \\((" + questionObj4.question[5]/10 + ";" + questionObj4.question[6]/10 + ";"+ questionObj4.question[7]/10 + ")\\). Runde auf vier Nachkommastellen.";
+</script>
+</div>
+<div id="eigenschaften-des-mathbb-rn-varepsilon-umgebung" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\varepsilon-\)</span>Umgebung<a href="grundlagen.html#eigenschaften-des-mathbb-rn-varepsilon-umgebung" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Wir brauchen noch ein Konzept, das uns hilft festzustellen, ob gegebene Punkte “nah genug” bei einander liegen. Später im Kurs wollen wir schauen, ob eine Folge gegen einen bestimmten Punkt strebt, bzw, ihm beliebig nah kommt. Dieses “beliebig nah” formalisiert man mit Hilfe der <span class="math inline">\(\varepsilon-\)</span>Umgebung.</p>
+<div class="definition">
+<p><span id="def:defumgebung" class="definition"><strong>Definition 2.9  (ε-Umgebung) </strong></span>Es sei <span class="math inline">\(\varepsilon\)</span> eine positive reelle Zahl. Die <span class="math inline">\(\varepsilon\)</span>-Umgebung eines Punkts <span class="math inline">\(x_0 \in\mathbb R^n\)</span> ist definiert als die Menge
+<span class="math inline">\(N_ \varepsilon (x_0) = {x \in \mathbb R^n : d(x_0, x) &lt; \varepsilon }\)</span>.</p>
+<p>Mit anderen Worten, <span class="math inline">\(N_ \epsilon \left( x_0 \right)\)</span> ist die Menge der Punkte, deren Abstand zu <span class="math inline">\(x_0\)</span> weniger als <span class="math inline">\(\epsilon\)</span> beträgt.</p>
+</div>
+<div class="example">
+<p><span id="exm:umgebung" class="example"><strong>Beispiel 2.9  (ε-Umgebung) </strong></span></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(N _\varepsilon (2) = \left\{ x \in \mathbb{R : } \sqrt{(x-2)^2} &lt; \varepsilon \right\} = \left\{ x \in \mathbb{R} : \lvert x-2\rvert &lt; \varepsilon \right\} = (2- \varepsilon ; 2+ \varepsilon )\)</span>
+<br>
+<img src="images/N11.png" />
+<br>
+Wird <span class="math inline">\(\varepsilon = 0,1\)</span> gesetzt, so sind es alle Punkte im Intervall <span class="math inline">\((1,9; 2,1)\)</span>.
+<br></li>
+<li><span class="math inline">\(N _\varepsilon (2,3) = \left\{ ( x, y) \in \mathbb{R^2 : } \sqrt{(x-2)^2 + (y-3)^2} &lt; \varepsilon \right\}\)</span>
+Dies ist die Menge der Punkte in <span class="math inline">\(\mathbb{R^2}\)</span>, die innerhalb eines Kreises mit Radius <span class="math inline">\(\varepsilon\)</span> um den Punkt <span class="math inline">\((2; 3)\)</span> liegen.
+<br>
+<img src="images/N21.png" />
+<br></li>
+<li><span class="math inline">\(N _\varepsilon (2,3,1) = \left\{ ( x, y, z) \in \mathbb{R^3 : } \sqrt{(x-2)^2 + (y-3)^2+(z-1)^2} &lt; \varepsilon \right\}\)</span>
+Dies ist die Menge der Punkte in <span class="math inline">\(\mathbb{R^3}\)</span>, die innerhalb einer Kugel mit Radius <span class="math inline">\(\varepsilon\)</span> um den Punkt <span class="math inline">\((2, 3, 1)\)</span> liegen.
+<br>
+<!--![](images/N3.png)--></li>
+</ol>
+</div>
+<p>Betrachten wir das Beispiel mit der Personalchefin und dem Produktivitätsscore für die Arbeitnehmer. Angenommen, die Personalchefin hat festgestellt, dass eine Produktivitätsabweichung von <span class="math inline">\(\varepsilon = 0,5\)</span> eine ungewöhnliche Entwicklung darstellt und auf eine Überlastung bei den betroffenen Arbeitnehmer*innen hindeuten kann.</p>
+<div class="example">
+<p><span id="exm:umgebung" class="example"><strong>Beispiel 2.9  (ε-Umgebung im Personal) </strong></span>Beträgt der durchschnittliche Produktivitätsscore <span class="math inline">\(1,5\)</span> und legt man <span class="math inline">\(\epsilon=0.5\)</span> fest, so liegt der Score von Amy noch in der <span class="math inline">\(\epsilon\)</span>-Umgebung von dem durchschnittlichen Score (also im Normalbereich) und die Scores von Tina und Alex - nicht. Dies sieht man, wenn man die <span class="math inline">\(\epsilon\)</span>-Umgebung für den eindimensionalen Fall aufschreibt: <span class="math display">\[ N _{\varepsilon=0,5}  (1,5) =  \left\{   x \in  \mathbb{R : }  \sqrt{(x-1,5)^2} &lt;  0,5 \right\} =  \left\{   x   \in \mathbb{R} :  \lvert  x-1,5\rvert &lt;  0,5 \right\} \]</span><span class="math display">\[= (1,5- 0,5 ; 1,5+ 0,5 ).\]</span> Da dieses Intervall ein offenes Intervall darstellt, gehört Tinas Score von <span class="math inline">\(2\)</span> nicht mehr dazu. Somit wird die Personalchefin mit Alex und Tina über ihre berufliche Belastung Gespräche führen.</p>
+</div>
+</div>
+</div>
+<div id="funktionen" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Funktionen<a href="grundlagen.html#funktionen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Wenn ganz viele Punkte hat, wie im Fall von Alex und seiner Budgetrestriktion, ist eine Darstellung als Punktmenge inpraktikabel. Wir haben bereits bei Alex Nutzen-Budget-Darstellung gesehen, wie hilfreich es sein kann, die Gegebenheiten durch eine geeignete Funktion (hier Budgetgerade) auszudrücken. Auch in anderen Kontexten wie Produktion und Produktionskosten kann eine funktionale Form sehr hilfreich sein, um optimale Produktionsentscheidung zu treffen.</p>
+<iframe src="https://scratch.mit.edu/projects/766839776/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen>
+</iframe>
+<p>Nun schauen wir uns genauer an, wie Funktionen definiert sind und welche Arten von Funktionen im wirtschaftlichen Kontext häufig Anwendung finden.</p>
+<div class="definition">
+<p><span id="def:deffunction" class="definition"><strong>Definition 2.10  (Funktion) </strong></span>Es seien <span class="math inline">\(X, Y \subset\mathbb R\)</span>. Eine <strong>Funktion</strong> (auch <strong>Abbildung</strong>) von <span class="math inline">\(X\)</span> nach <span class="math inline">\(Y\)</span> ist eine Vorschrift, die jedem Element in <span class="math inline">\(X\)</span> genau ein Element von <span class="math inline">\(Y\)</span> zuweist.</p>
+</div>
+<ul>
+<li><p>Die Menge <span class="math inline">\(X\)</span> heißt Definitionsbereich der Funktion.</p></li>
+<li><p>Die Menge <span class="math inline">\(Y\)</span> heißt Wertebereich der Funktion.</p></li>
+<li><p>Notation: Ist <span class="math inline">\(f\)</span> eine Funktion, dann schreiben wir</p>
+<p><span class="math inline">\(f : X \rightarrow Y\)</span> und
+<span class="math inline">\(y = f (x)\)</span>, <span class="math inline">\(x \in X\)</span>, wobei <span class="math inline">\(y\)</span> das Bild oder der Funktionswert von <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(x\)</span> genannt wird.</p></li>
+</ul>
+<p>Eine spezielle Art von Funktionen, die Umkehrfunktionen (oder inverse Funktionen) benötigen wir, wenn wir Gleichungen lösen oder für einen bekannten Funktionswert (Nutzenfunktion von einer Konsumkombination ist <span class="math inline">\(40\)</span>: <span class="math inline">\(U(x) = \sqrt x=4, x&gt;0\)</span> ) den unbekannten Wert der Funktionsvariable <span class="math inline">\(x\)</span> zu finden: <span class="math inline">\(\sqrt x=4\rightarrow x^2=4^2=16.\)</span></p>
+<div class="definition">
+<p><span id="def:definv" class="definition"><strong>Definition 2.11  (Inverse Funktion, Umkehrfunktion) </strong></span>Sei <span class="math inline">\(f : X \rightarrow Y\)</span> mit <span class="math inline">\(y = f (x)\)</span> dem Bild von <span class="math inline">\(x\)</span>.</p>
+<p>Falls jedes Element <span class="math inline">\(y \in Y\)</span> das Bild von genau einem Punkt <span class="math inline">\(x \in X\)</span> ist, dann existiert die <strong>inverse Funktion</strong>, geschrieben als <span class="math inline">\(f (−1)\)</span>, und sie erfüllt folgende Gleichung: <span class="math display">\[{f}^{-1} \ ( y )= x.\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:fun1" class="example"><strong>Beispiel 2.10  (Inverse Funktionen) </strong></span><span class="math inline">\(y = f (x) = {x}^{2}\)</span> mit <span class="math inline">\(X = \mathbb{R^+}\)</span> und <span class="math inline">\({f}^{-1} ( y ) = \sqrt{y}\)</span>, denn <span class="math inline">\(\sqrt{y} = \sqrt{x^2} = x\)</span>.</p>
+</div>
+<p>Eine weitere spezielle Funktionsart, eine Verkettung zweier Funktionen, ist hilfreich um komplexere Zusammenhänge zu studieren. Konkret, hilft uns beim Ableiten eine Verkettung in ihre Bestandteile zu zerlegen und abzuleiten (Kettenregel).</p>
+<div class="definition">
+<p><span id="def:defcomposition" class="definition"><strong>Definition 2.12  (Komposition) </strong></span>Sei <span class="math inline">\(g : Y \rightarrow Z\)</span> eine weitere Funktion mit <span class="math inline">\(z = g( y )\)</span>.
+Die <strong>Komposition (Verkettung)</strong> von <span class="math inline">\(f\)</span> und <span class="math inline">\(g\)</span> ist gegeben durch
+<span class="math display">\[g \circ  f : X \rightarrow Z    \text{ mit }    z = g(f (x)) \]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:fun2" class="example"><strong>Beispiel 2.11  (Komposition) </strong></span><span class="math inline">\(f (x) = x + 2, \ g( y ) = {y}^{2}\)</span> und <span class="math inline">\(g(f (x)) = {(x+2)}^{2}\)</span>.</p>
+</div>
+<p>Darüberhinaus, unterscheiden wir die wichtigsten Funktionstypen, je nach dem in welcher Weise die Funktionsvorschrift auf den Funktionsargument einwirkt. Das sind lineare, quadratische, Potenz-, exponentiale und logarithmische Funktionen.</p>
+<div id="lineare-funktionen" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Lineare Funktionen<a href="grundlagen.html#lineare-funktionen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Im Beispiel Nutzenmaximierung hatte Alex die Budgetrestriktion <span class="math inline">\(x \cdot P_X + y \cdot P_Y = 100.\)</span>, die als eine lineare Funktion <span class="math inline">\(y(x)=\frac{100}{P_Y}-\frac {P_X}{P_Y} x\)</span> dargestellt werden könnte.</p>
+<p>Zudem, können viele Kostenfunktionen als lineare Funktionen der produzierten Mengen modelliert werden. In diesem Fall bestehen die Kosten aus einem fixen Betrag <span class="math inline">\(b\)</span> und wachsen proportional zu der produzierten Menge <span class="math inline">\(x\)</span> mit dem Faktor <span class="math inline">\(b\)</span>, so dass <span class="math inline">\(K(x) = ax+b\)</span>.</p>
+<div class="definition">
+<p><span id="def:deflin" class="definition"><strong>Definition 2.13  (Lineare Funktion) </strong></span>Es seien <span class="math inline">\(a, b\)</span> reelle Zahlen. Die Funktion <span class="math inline">\(f : \mathbb{R} → \mathbb{R}\)</span> mit</p>
+<p><span class="math inline">\(f (x) = a \cdot x + b\)</span>, <span class="math inline">\(x ∈ \mathbb{R}\)</span>,</p>
+<p>ist eine <strong>lineare Funktion</strong>.</p>
+</div>
+<div class="example">
+<p><span id="exm:linfun" class="example"><strong>Beispiel 2.12  (Lineare Funktionen) </strong></span>Lineare Funktionen: positives <span class="math inline">\(a\)</span> in <span class="math inline">\((a)\)</span> und <span class="math inline">\((c)\)</span>; negatives <span class="math inline">\(a\)</span> in <span class="math inline">\((b)\)</span>; <span class="math inline">\(b = 0\)</span> in <span class="math inline">\((a)\)</span> und <span class="math inline">\((b)\)</span>, positives <span class="math inline">\(b\)</span> in <span class="math inline">\((c)\)</span>:
+<br>
+<img src="images/linfun.png" /></p>
+</div>
+<ul>
+<li><p>Der Parameter <span class="math inline">\(a\)</span> bestimmt die Steigung der linearen Funktion:
+Es seien <span class="math inline">\(y_1 = a \cdot x_1 + b\)</span>, <span class="math inline">\(y_2 = a \cdot x_2 + b\)</span>;
+Hieraus folgt <span class="math inline">\(y_2 − y_1 = a\ (x_2 − x_1)\)</span>, so dass <span class="math inline">\(a = \frac{y_2-y_1}{x_2-x_1} = \frac{Δy}{Δx} .\)</span>
+<span class="math inline">\(\Delta y\)</span> bezeichnet die “Änderung in <span class="math inline">\(y\)</span>”, <span class="math inline">\(\Delta x\)</span> bezeichnet die “Änderung in <span class="math inline">\(x\)</span>”.</p></li>
+<li><p>Das Verhältnis <span class="math inline">\(\Delta y/\Delta x\)</span> ist die Steigung, <span class="math inline">\(a\)</span> ist der Steigungskoeffizient.</p></li>
+<li><p>Der Parameter <span class="math inline">\(b\)</span> ist der <span class="math inline">\(y\)</span>-Achsenabschnitt / Ordinatenabschnitt / Interzept.</p></li>
+</ul>
+<p><br>
+<img src="images/linfunpar.png" /></p>
+<div class="example">
+<p><span id="exm:kostenf" class="example"><strong>Beispiel 2.13  (Kostenfunktion und marginale Kostenfunktion) </strong></span>Die Kosten einer Fahrradmanufaktur belaufen sich auf 50.000 € pro Monat und 25 € pro Fahrrad.
+Die Kostenfunktion (in EUR) ist <span class="math display">\[ C(q) = 50.000 + 25q \]</span></p>
+<p>Die Marginalkosten (Grenzkosten), d.h. die Kosten, ein zusätzliches Fahrrad zu produzieren, sind <span class="math display">\[C^\prime (q) = 25\]</span>
+Wegen der Linearität sind die Marginalkosten 25 € unabhängig vom Produktionsniveau/ der produzierten Menge <span class="math inline">\(q\)</span>.</p>
+</div>
+</div>
+<div id="quadratische-funktionen" class="section level3 hasAnchor" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Quadratische Funktionen<a href="grundlagen.html#quadratische-funktionen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Manche Kostenfunktionen lassen sich nicht durch eine lineare Funktion darstellen. Dann wachsen die Kosten überproportional zu der Menge. Um solche Kosten zu beschreiben verwendet man dann quadratische Terme in der produzierten Menge.</p>
+<div class="definition">
+<p><span id="def:defquadf" class="definition"><strong>Definition 2.14  (Quadratische Funktion) </strong></span>Seien <span class="math inline">\(a, b, c\)</span> konstante reelle Zahlen. Eine quadratische Funktion hat die Form
+<span class="math display">\[ y = a \cdot x^2 + b \cdot x + c, ~~x  \in  \mathbb{R}, a  \neq 0 \]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:quadfun" class="example"><strong>Beispiel 2.14  (Quadratische Funktionen) </strong></span>Quadratische Funktionen: positives <span class="math inline">\(a\)</span> in <span class="math inline">\((a)\)</span>; negatives <span class="math inline">\(a\)</span> in }((b)}):
+<img src="images/quadfun.png" /></p>
+</div>
+<p>Der Graph einer quadratischen Funktion ist eine <strong>Parabel</strong>.</p>
+<div class="example">
+<p><span id="exm:qkosten" class="example"><strong>Beispiel 2.15  (Quadratische Kostenfunktion) </strong></span>Wir betrachten wieder die Fahrradmanufaktur aus dem vorherigen Beispiel.
+Realistischer ist die Annahme, ein größerer Output sei mit zusätzlichen Kosten versehen. Beispielsweise kann die gestiegene Nachfrage den Preis von Rohstoffen erhöhen.
+Dies wird durch einen zusätzlichen Term erfasst, z.B. <span class="math inline">\(0,001 q^2\)</span>. Dieser Term ist sehr klein für kleines <span class="math inline">\(q\)</span>, aber wächst stark mit steigendem Produktionsniveau <span class="math inline">\(q\)</span>.
+Nun lautet die Kostenfunktion</p>
+<p><span class="math display">\[C(q) = 50.000 + 25q + 0,001q^2,\]</span></p>
+<p>mit Marginalkosten (auch Grenzkosten genannt):</p>
+<p><span class="math display">\[C^\prime (q) = 25 + 0,002q.\]</span></p>
+<p>Die Marginalkosten betragen 25,20 € bei einer Produktion von 100 Fahrrädern pro Woche, und steigen auf 45 € bei einer Erhöhung der Produktion auf 10.000 Fahrräder pro Woche.</p>
+</div>
+</div>
+<div id="potenz--exponential--und-logarithmusfunktionen" class="section level3 hasAnchor" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> Potenz-, Exponential- und Logarithmusfunktionen<a href="grundlagen.html#potenz--exponential--und-logarithmusfunktionen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Wachstumsprozesse sind meistens weder linear noch quadratisch in der Variable Zeit. Ein schnelles Wachstum gut mittels Exponential- und Potenzfunktionen beschrieben.</p>
+<p>Während der Corona-Pandemie hat man ganz genau die Ansteckungszahlen verfolgt. Angenommen, jede infizierte Person pro Woche weitere zwei Personen ansteckt. Dann sieht das Wachstum folgendermaßen aus:</p>
+<p><img src="images/corona.gif" /></p>
+<p>An der Stelle brauchen wir die Definition und Rechenregeln für die Exponenten, die so ein Wachstum beschreiben können.</p>
+<p>Wir schreiben <span class="math inline">\({a}^{n}\)</span> für das <span class="math inline">\(n-fache\)</span> Produkt einer Zahl <span class="math inline">\(a\)</span> mit sich selbst (<span class="math inline">\(n \in \mathbb{N}\)</span>). Die Zahl <span class="math inline">\(n\)</span> wird Exponent genannt.</p>
+<p>Dies kann auf <span class="math inline">\(n \in \mathbb{R}\)</span> erweitert werden.</p>
+<div class="theorem">
+<p><span id="thm:th2" class="theorem"><strong>Theorem 2.2  </strong></span>Satz (Regeln für Exponenten).</p>
+<p><span class="math inline">\(a^n \cdot a^m = {a}^{n+m}\)</span></p>
+<p><span class="math inline">\(({a}^{n} ) ^m = {a}^{n \cdot m}\)</span></p>
+<p><span class="math inline">\(\frac{a^n}{a^m} = {a}^{n-m}\)</span></p>
+<p><span class="math inline">\(\frac{a^n}{a^n} = {a}^{0} = 1\)</span></p>
+<p>Außerdem gelten: <span class="math inline">\(a^n \cdot b^n = (a \cdot b)^n; a^n/b^n = (a/b)^n \ und \  {a}^{-n} = 1/a^n\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:defpotfun" class="definition"><strong>Definition 2.15  (Potenzfunktion) </strong></span>Eine Potenzfunktion hat die Form
+<span class="math inline">\(y = ax^b\)</span>, <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(a &gt; 0\)</span>.</p>
+<p>Der Parameter <span class="math inline">\(b\)</span> heißt Exponent.
+<br>
+<img src="images/potfun.png" /></p>
+</div>
+<p>Beachte, dass die Variable <span class="math inline">\(x\)</span> hier als Basis der Potenzfunktion fungiert.</p>
+<div class="definition">
+<p><span id="def:defexpfun" class="definition"><strong>Definition 2.16  (Exponentialfunktion) </strong></span>Eine Exponentialfunktion hat die Form</p>
+<p><span class="math inline">\(y = ab^x\)</span> , <span class="math inline">\(x \in \mathbb{R}\)</span>.</p>
+<p><br>
+<img src="images/expfun.png" /></p>
+<p>Der Parameter <span class="math inline">\(b\)</span> heißt Basis der Funktion.</p>
+</div>
+<ul>
+<li><p>Exponentialfunktionen erfassen Wachstumseffekte (z.B. Populationen, Geld).</p></li>
+<li><p>Häufig wird als Basis die Euler Konstante <span class="math inline">\(e = 2,718...\)</span> verwendet. ( mehr später)</p></li>
+<li><p>Beachte: Der Exponent ist nun die Funktionsvariable.</p></li>
+</ul>
+<p>Wenn wir nun eine Exponentialfunktion umkehren möchten, z.B. um herauszufinden, wie viele Wochen es dauert, bis eine bestimmte Anzahl von Infizierten erreich wird, bedienen wir uns der <strong>Logarithmusfunktion</strong>.</p>
+<div class="definition">
+<p><span id="def:deflogfun" class="definition"><strong>Definition 2.17  (Logarithmusfunktion) </strong></span>Falls <span class="math inline">\(x = b^y\)</span> , mit <span class="math inline">\(b &gt; 0\)</span> und <span class="math inline">\(b \neq 1\)</span>, dann ist <span class="math inline">\(y\)</span> der Logarithmus von <span class="math inline">\(x\)</span> zur Basis <span class="math inline">\(b\)</span>, geschrieben als
+<span class="math inline">\(y = log_b x\)</span>, <span class="math inline">\(x \in \mathbb{R}_+\)</span></p>
+<p><br>
+<img src="images/logfun.png" /></p>
+</div>
+<p>Der Logarithmus zur Basis <span class="math inline">\(e (10)\)</span> heißt <strong>natürlicher Logarithmus</strong> (<strong>dekadischer Logarithmus</strong>), geschrieben als
+<span class="math inline">\(y = \ln \ x\)</span> <span class="math inline">\((y = \log \ x)\)</span>.</p>
+<p>Der Logarithmus von <span class="math inline">\(x\)</span> zur Basis <span class="math inline">\(b\)</span> beantwortet die Frage:
+“Wie oft multipliziert man <span class="math inline">\(b\)</span> mit sich selbst, um <span class="math inline">\(x\)</span> zu erhalten?”</p>
+<div class="theorem">
+<p><span id="thm:th2" class="theorem"><strong>Theorem 2.2  </strong></span>Satz (Regeln für Logarithmen).</p>
+<p><span class="math inline">\(\log_b(xz) = \log_b\  x + \log_b\  z\)</span></p>
+<p><span class="math inline">\(\log_b(x/z) = \log_b \ x − \log_b \ z\)</span></p>
+<p><span class="math inline">\(\log_b(x ^a) = a \log_b \ x\)</span></p>
+</div>
+<ul>
+<li><p>Bemerkung: Aus der letzten Eigenschaft folgt, dass <span class="math inline">\(\log_b \ x = \ln \ x / \ln\  b\)</span> .
+Denn: Setzt man <span class="math inline">\(y = \frac{\ln\ x}{\ln\ b}\)</span> , dann gilt: <span class="math inline">\(\ln \ x = y \ln b = \ln(b^y )\)</span>.
+Also <span class="math inline">\(b^y = x\)</span> und daher <span class="math inline">\(y = \log_b x\)</span>.</p></li>
+<li><p>Auf dem Taschenrechner kann man also beliebige Logarithmen anhand des natürlichen Logarithmus bestimmen.</p></li>
+</ul>
+<div id="q3" class="quiz">
+<p>Die Weltbevölkerung wächst. Diesen Prozess kann man mit Hilfe einer Exponentialfunktion (wenn auch sehr vereinfacht) modellieren.</p>
+<p>Folgende Formel hilft dabei die zukünftige Population <span class="math inline">\(P(t)\)</span> nach <span class="math inline">\(t\)</span> Perioden mit dem Anfangsbestand <span class="math inline">\(P(0)\)</span> und Wachstumsrate <span class="math inline">\(r\)</span> pro Periode zu verbinden:</p>
+<p><span class="math inline">\(P(t)=P(0)(1+r)^t\)</span></p>
+<p>dabei kann <span class="math inline">\(r\)</span> positiv oder negativ sein. Ein negatives <span class="math inline">\(r\)</span> würde bedeuten, dass die Bevölkerung schrumpft. Im Jahr <span class="math inline">\(2000\)</span> betrug die Weltbevölkerung etwa <span class="math inline">\(5,2 \ Milliarden\)</span> mit <span class="math inline">\(r&gt;0\)</span>, demzufolge weist sie ein positives Wachstum auf. Je nach dem, welche Schätzung zugrunde gelegt wird, gilt <span class="math inline">\(r \approx 1,5\)</span> Prozent pro Jahr.</p>
+<p>Angenommen, die Bevölkerung wächst exponentiell und die Wachstumsrate liegt bei <span class="math inline">\(r \approx 1,5\)</span> Prozent pro Jahr. Wie hoch sollte die Bevölkerungszahl im Jahr <span class="math inline">\(2025\)</span> sein, wenn man von <span class="math inline">\(5,2 \ Milliarden\)</span> im Jahr <span class="math inline">\(2000\)</span> ausgeht?</p>
+<script>
+questionObj5 = {
+        question: [],
+        answer: 5.2*Math.pow(1.015,25),
+        id: 5
+      };
+
+</script>
+<p id="question">
+<span id="question-text5"></span>
+</p>
+<input type="number" id="answer5" placeholder="Antwort eingeben">
+<button onclick="checkAnswer_num(questionObj5)">Check</button>
+<p id="result5">
+</p>
+<p>Wie lange dauert es, bis die Weltbevölkerung die Marke <span class="math inline">\(8\)</span> Milliarden erreicht?</p>
+<script>
+questionObj6 = {
+        question: [],
+        answer: Math.log(8/5.2)/Math.log(1.015),
+        id: 6
+      };
+
+</script>
+<p id="question">
+<span id="question-text6"></span>
+</p>
+<input type="number" id="answer6" placeholder="Antwort eingeben">
+<button onclick="checkAnswer_num(questionObj6)">Check</button>
+<p id="result6">
+</p>
+</div>
+</div>
+<div id="konvexe-und-konkave-funktionen" class="section level3 hasAnchor" number="2.4.4">
+<h3><span class="header-section-number">2.4.4</span> Konvexe und konkave Funktionen<a href="grundlagen.html#konvexe-und-konkave-funktionen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Als wir die Nutzenfunktion von Alex untersucht haben, haben wir festgestellt, dass mit zunehmenden Konsummengen der Nutzen steigt, aber die Steigung nimmt mit zunehmenden Konsum ab. Man geht davon aus, dass alle Konsumenten so ein Verhalten aufweisen und sagt dazu, dass die typische Nutzenfunktion <strong>konkav</strong> sei.</p>
+<div class="definition">
+<p><span id="def:defkonkav" class="definition"><strong>Definition 2.18  (Konkave Funktion) </strong></span>Die Funktion <span class="math inline">\(f : D \rightarrow \mathbb{R}\)</span> ist <strong>konkav</strong>, falls für alle <span class="math inline">\(x_1,x_2 \in D\)</span> und <span class="math inline">\(\lambda \in (0,1)\)</span> gilt:
+<span class="math inline">\(f (\lambda x_1 + (1 − \lambda )x_2) \geq \lambda f (x_1) + (1 − \lambda)f (x_2)\)</span>.</p>
+<p>Die Funktion ist <strong>strikt (streng) konkav</strong>, falls die Ungleichung strikt ist.</p>
+<p><img src="images/konkavf.png" /></p>
+</div>
+<p>Notation:</p>
+<p><span class="math display">\[\bar{x}  = \lambda x_1 + (1 − \lambda)x_2,\]</span></p>
+<p><span class="math display">\[\bar{f}  = \lambda f(x_1) + (1 − \lambda)f(x_2).\]</span></p>
+<p>Geometrisch bedeutet (strikte) Konkavität, dass der Funktionswert jedes Punktes <span class="math inline">\(\bar{x} \in \left[ x_1, x_2 \right]\)</span> (strikt) oberhalb der Geraden liegt, die <span class="math inline">\(x_1\)</span> und <span class="math inline">\(x_2\)</span> verbindet.</p>
+<p>Beispiele konkaver Funktionen:</p>
+<ul>
+<li><p>Lineare Funktionen <span class="math inline">\(ax + b\)</span>, für <span class="math inline">\(a,b \in \mathbb{R}\)</span></p></li>
+<li><p>Potenzfunktionen <span class="math inline">\(x^a\)</span> auf <span class="math inline">\(\mathbb{R}_{++}\)</span>, mit <span class="math inline">\(a \in [0,1]\)</span></p></li>
+<li><p>Logarithmusfunktion <span class="math inline">\(\log(x)\)</span> auf <span class="math inline">\(\mathbb{R}_{++}\)</span></p></li>
+</ul>
+<div class="example">
+<p><span id="exm:nutzenf" class="example"><strong>Beispiel 1.3  (Nutzenfunktion) </strong></span>Sollte Alex eine feste Mengen an Donuts konsumieren (z.B. <span class="math inline">\(30\)</span>) so ist seine Nutzenfunktion nur von der Kaffeemenge abhängig und lautet: <span class="math inline">\(U(y )=\sqrt{30} + \sqrt{y}\)</span>
+Nehme beispielweise <span class="math inline">\(y_1=2\)</span>, <span class="math inline">\(y_2=4\)</span> und <span class="math inline">\(\lambda=0,5\)</span>. Dann ist <span class="math inline">\(\bar y=3\)</span>.
+<span class="math inline">\(U(y_1=2) = \sqrt{30} + \sqrt{2}=6,891439\)</span>, <span class="math inline">\(U(y_2=4) = \sqrt{30} + \sqrt{4}=7,477226\)</span> und <span class="math inline">\(U(\bar y) = \sqrt{30} + \sqrt{3}=7,209276\)</span>. Da eine Nutzenfunktion immer konkave ist, gilt: <span class="math inline">\(U(\bar y)=7,209276\geq 0,5\cdot U(y_1=2) + 0,5\cdot U(y_2=4) = 7,184332\)</span>.</p>
+</div>
+<p>Das Wachstum der Infiziertenzahl in der Corona-Pandemie war hingegen eine <strong>konvexe</strong> Funktion, da sich die Veränderung der Anzahl der Infizierten pro Zeiteinheit im Laufe der Zeit vervielfachte.</p>
+<div class="definition">
+<p><span id="def:defkonvex" class="definition"><strong>Definition 2.19  (Konvexe Funktion) </strong></span>Die Funktion <span class="math inline">\(f : D \rightarrow \mathbb{R}\)</span> ist <strong>konvex</strong>, falls für alle <span class="math inline">\(x_1,x_2 \in D\)</span> und <span class="math inline">\(\lambda \in (0,1)\)</span> gilt:
+<span class="math inline">\(f (\lambda x_1 + (1 − \lambda)x_2) ≤ \lambda f (x_1) + (1 − \lambda)f (x_2)\)</span>.</p>
+<p><img src="images/kovexf.png" />
+Die Funktion ist <strong>strikt (streng) konvex</strong>, falls die Ungleichung strikt ist.</p>
+</div>
+<p>Notation:</p>
+<p><span class="math inline">\(x = \lambda x_1 + (1 − \lambda)x_2, f = \lambda f (x_1) + (1 − \lambda)f (x_2)\)</span>.</p>
+<p>Geometrisch bedeutet (strikte) Konvexität, dass der Funktionswert jedes Punktes <span class="math inline">\(\bar{x} \in [x_1,x_2]\)</span> (strikt) unterhalb der Geraden liegt, die <span class="math inline">\(x_1\)</span> und <span class="math inline">\(x_2\)</span> verbindet.</p>
+<p>Beispiele konvexer Funktionen:</p>
+<ul>
+<li><p>Lineare Funktionen <span class="math inline">\(ax + b\)</span>, <span class="math inline">\(a,b \in \mathbb{R}\)</span></p></li>
+<li><p>Exponentialfunktionen <span class="math inline">\({e}^{ax}\)</span> oder <span class="math inline">\(ab^{x}\)</span> mit <span class="math inline">\(a \in \mathbb{R}\)</span> und <span class="math inline">\(b&gt;1\)</span></p></li>
+<li><p>Potenzfunktionen <span class="math inline">\({x}^{a}\)</span> auf <span class="math inline">\(\mathbb{R}_{++}\)</span> mit <span class="math inline">\(a &lt; 0\)</span> und <span class="math inline">\(a \geq 1\)</span></p></li>
+<li><p>Potenzen des Absolutwerts <span class="math inline">\(\lvert x \rvert ^{a}\)</span> auf <span class="math inline">\(\mathbb{R}\)</span> für <span class="math inline">\(a \geq 1\)</span></p></li>
+</ul>
+<div class="example">
+<p><span id="exm:konvexf" class="example"><strong>Beispiel 2.16  (Corona-Infektionen) </strong></span>Ansteckungszahlen im Beispiel mit der Corona-Pandemie, in dem jede infizierte Person zwei weitere Personen pro Woche ansteckt und anfänglich rund <span class="math inline">\(1000\)</span> Infizierten gibt, können durch die Funktion <span class="math inline">\(f(x) = 1000\cdot 2^x\)</span> modelliert werden. Dies ist eine konvexe Funktion, da es eine Exponentialfunktion der Form <span class="math inline">\(ab^{x}\)</span> mit <span class="math inline">\(2=b&gt;1\)</span> und <span class="math inline">\(a=1000\)</span> darstellt.</p>
+</div>
+<p>Die Eigenschaften der Konvexität und der Konkavität werden uns später bei der Lösung von Optimierungsproblemen behilflich sein.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="folgen-grenzwerte-und-reihen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-grundlagen.rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

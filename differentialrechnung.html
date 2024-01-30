@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Kapitel 5 Differentialrechnung | Wirtschaftsmathematik</title>
+  <meta name="description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Kapitel 5 Differentialrechnung | Wirtschaftsmathematik" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Kapitel 5 Differentialrechnung | Wirtschaftsmathematik" />
+  
+  <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="stetigkeit-von-funktionen.html"/>
+<link rel="next" href="optimierung.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Einführung</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#warum-benötigen-wir-die-methoden-der-wirtschaftsmathematik"><i class="fa fa-check"></i>Warum benötigen wir die Methoden der Wirtschaftsmathematik?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#beispiel-nutzenmaximierung"><i class="fa fa-check"></i>Beispiel: Nutzenmaximierung</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="grundlagen.html"><a href="grundlagen.html"><i class="fa fa-check"></i><b>2</b> Grundlagen</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="grundlagen.html"><a href="grundlagen.html#mengen-und-zahlen"><i class="fa fa-check"></i><b>2.1</b> Mengen und Zahlen</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="grundlagen.html"><a href="grundlagen.html#mengenoperationen"><i class="fa fa-check"></i><b>2.1.1</b> Mengenoperationen</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="grundlagen.html"><a href="grundlagen.html#zahlenmengen"><i class="fa fa-check"></i><b>2.2</b> Zahlenmengen</a></li>
+<li class="chapter" data-level="2.3" data-path="grundlagen.html"><a href="grundlagen.html#punktmengen-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Punktmengen in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-abstand"><i class="fa fa-check"></i><b>2.3.2</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: Abstand</a></li>
+<li class="chapter" data-level="2.3.3" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-varepsilon-umgebung"><i class="fa fa-check"></i><b>2.3.3</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\varepsilon-\)</span>Umgebung</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="grundlagen.html"><a href="grundlagen.html#funktionen"><i class="fa fa-check"></i><b>2.4</b> Funktionen</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="grundlagen.html"><a href="grundlagen.html#lineare-funktionen"><i class="fa fa-check"></i><b>2.4.1</b> Lineare Funktionen</a></li>
+<li class="chapter" data-level="2.4.2" data-path="grundlagen.html"><a href="grundlagen.html#quadratische-funktionen"><i class="fa fa-check"></i><b>2.4.2</b> Quadratische Funktionen</a></li>
+<li class="chapter" data-level="2.4.3" data-path="grundlagen.html"><a href="grundlagen.html#potenz--exponential--und-logarithmusfunktionen"><i class="fa fa-check"></i><b>2.4.3</b> Potenz-, Exponential- und Logarithmusfunktionen</a></li>
+<li class="chapter" data-level="2.4.4" data-path="grundlagen.html"><a href="grundlagen.html#konvexe-und-konkave-funktionen"><i class="fa fa-check"></i><b>2.4.4</b> Konvexe und konkave Funktionen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html"><i class="fa fa-check"></i><b>3</b> Folgen, Grenzwerte und Reihen</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#folgen"><i class="fa fa-check"></i><b>3.1</b> Folgen</a></li>
+<li class="chapter" data-level="3.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#konvergenz-von-folgen"><i class="fa fa-check"></i><b>3.2</b> Konvergenz von Folgen</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#konvergente-folgen-und-grenzwerte"><i class="fa fa-check"></i><b>3.2.1</b> Konvergente Folgen und Grenzwerte</a></li>
+<li class="chapter" data-level="3.2.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#divergente-folgen"><i class="fa fa-check"></i><b>3.2.2</b> Divergente Folgen</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#wichtige-sätze-zu-konvergenz-von-folgen"><i class="fa fa-check"></i><b>3.3</b> Wichtige Sätze zu Konvergenz von Folgen</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#beschränkte-folgen"><i class="fa fa-check"></i><b>3.3.1</b> Beschränkte Folgen</a></li>
+<li class="chapter" data-level="3.3.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#monotone-folgen"><i class="fa fa-check"></i><b>3.3.2</b> Monotone Folgen</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#reihen"><i class="fa fa-check"></i><b>3.4</b> Reihen</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#spezielle-reihen"><i class="fa fa-check"></i><b>3.4.1</b> Spezielle Reihen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html"><i class="fa fa-check"></i><b>4</b> Stetigkeit von Funktionen</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html#punktweise-stetigkeit"><i class="fa fa-check"></i><b>4.1</b> Punktweise Stetigkeit</a></li>
+<li class="chapter" data-level="4.2" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html#stetige-funktionen-und-deren-eigenschaften"><i class="fa fa-check"></i><b>4.2</b> Stetige Funktionen und deren Eigenschaften</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differentialrechnung.html"><a href="differentialrechnung.html"><i class="fa fa-check"></i><b>5</b> Differentialrechnung</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-tangente"><i class="fa fa-check"></i><b>5.1</b> Definition der Tangente</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#sekante-und-tangente"><i class="fa fa-check"></i><b>5.1.1</b> Sekante und Tangente</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#von-der-sekante-zur-tangente"><i class="fa fa-check"></i><b>5.1.2</b> Von der Sekante zur Tangente</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-ableitung"><i class="fa fa-check"></i><b>5.2</b> Definition der Ableitung</a></li>
+<li class="chapter" data-level="5.3" data-path="differentialrechnung.html"><a href="differentialrechnung.html#differenzierbarkeit"><i class="fa fa-check"></i><b>5.3</b> Differenzierbarkeit</a></li>
+<li class="chapter" data-level="5.4" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungsregel"><i class="fa fa-check"></i><b>5.4</b> Ableitungsregel</a></li>
+<li class="chapter" data-level="5.5" data-path="differentialrechnung.html"><a href="differentialrechnung.html#regel-von-lhôpital"><i class="fa fa-check"></i><b>5.5</b> Regel von L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungen-höhere-ordnung"><i class="fa fa-check"></i><b>5.6</b> Ableitungen höhere Ordnung</a></li>
+<li class="chapter" data-level="5.7" data-path="differentialrechnung.html"><a href="differentialrechnung.html#der-satz-von-taylor"><i class="fa fa-check"></i><b>5.7</b> Der Satz von Taylor</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimierung.html"><a href="optimierung.html"><i class="fa fa-check"></i><b>6</b> Optimierung</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimierung.html"><a href="optimierung.html#notwendige-bedingungen-für-maxima-und-minima"><i class="fa fa-check"></i><b>6.1</b> Notwendige Bedingungen für Maxima und Minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimierung.html"><a href="optimierung.html#bedingungen-zweiter-ordnung"><i class="fa fa-check"></i><b>6.2</b> Bedingungen zweiter Ordnung</a></li>
+<li class="chapter" data-level="6.3" data-path="optimierung.html"><a href="optimierung.html#optimierung-auf-einem-intervall"><i class="fa fa-check"></i><b>6.3</b> Optimierung auf einem Intervall</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integralrechnung.html"><a href="integralrechnung.html"><i class="fa fa-check"></i><b>7</b> Integralrechnung</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integralrechnung.html"><a href="integralrechnung.html#das-unbestimmte-integral"><i class="fa fa-check"></i><b>7.1</b> Das unbestimmte Integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integralrechnung.html"><a href="integralrechnung.html#das-bestimmte-integral"><i class="fa fa-check"></i><b>7.2</b> Das bestimmte Integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integralrechnung.html"><a href="integralrechnung.html#eigenschaften-und-elementare-rechenregeln"><i class="fa fa-check"></i><b>7.2.1</b> Eigenschaften und elementare Rechenregeln</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html"><i class="fa fa-check"></i><b>8</b> Lineare Gleichungssysteme</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#gleichungssysteme-mit-zwei-linearen-gleichungen"><i class="fa fa-check"></i><b>8.1</b> Gleichungssysteme mit zwei linearen Gleichungen</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#lösung-durch-substitution-und-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Lösung durch Substitution und Elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#gleichungssysteme-mit-n-linearen-gleichungen"><i class="fa fa-check"></i><b>8.2</b> Gleichungssysteme mit <span class="math inline">\(n\)</span> linearen Gleichungen</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#lösen-von-gleichungssystemen-mit-m-linearen-gleichungen"><i class="fa fa-check"></i><b>8.2.1</b> Lösen von Gleichungssystemen mit <span class="math inline">\(m\)</span> linearen Gleichungen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html"><i class="fa fa-check"></i><b>9</b> Matrizen und Grundlegende Matrixoperationen</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#matrizen"><i class="fa fa-check"></i><b>9.1</b> Matrizen</a></li>
+<li class="chapter" data-level="9.2" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#grundlegende-matrizenoperationen"><i class="fa fa-check"></i><b>9.2</b> Grundlegende Matrizenoperationen</a></li>
+<li class="chapter" data-level="9.3" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#ökonomische-anwendungen"><i class="fa fa-check"></i><b>9.3</b> Ökonomische Anwendungen</a></li>
+<li class="chapter" data-level="9.4" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#transponierte-einer-matrix"><i class="fa fa-check"></i><b>9.4</b> Transponierte einer Matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#determinante-und-inverse-einer-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinante und Inverse einer Matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#mehr-zu-der-determinante"><i class="fa fa-check"></i><b>9.5.1</b> Mehr zu der Determinante</a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#rang-und-determinanteast"><i class="fa fa-check"></i><b>9.5.2</b> Rang und Determinante<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html"><i class="fa fa-check"></i><b>10</b> Analysis mit <span class="math inline">\(n\)</span> Veränderlichen</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#stetigkeit"><i class="fa fa-check"></i><b>10.1</b> Stetigkeit</a></li>
+<li class="chapter" data-level="10.2" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#partielle-ableitungen"><i class="fa fa-check"></i><b>10.2</b> Partielle Ableitungen</a></li>
+<li class="chapter" data-level="10.3" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#partielle-ableitungen-höherer-ordnung"><i class="fa fa-check"></i><b>10.3</b> Partielle Ableitungen höherer Ordnung</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#der-gradientenvektor-und-die-hesse-matrix"><i class="fa fa-check"></i><b>10.3.1</b> Der Gradientenvektor und die Hesse-Matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#ableitung-impliziter-funktionenast"><i class="fa fa-check"></i><b>10.4</b> Ableitung impliziter Funktionen<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#höhenlinien-indifferenzkurvenast"><i class="fa fa-check"></i><b>10.4.1</b> Höhenlinien / Indifferenzkurven<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimierung-ii.html"><a href="optimierung-ii.html"><i class="fa fa-check"></i><b>11</b> Optimierung II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimierung-ii.html"><a href="optimierung-ii.html#bedingungen-erster-ordnung"><i class="fa fa-check"></i><b>11.1</b> Bedingungen erster Ordnung</a></li>
+<li class="chapter" data-level="11.2" data-path="optimierung-ii.html"><a href="optimierung-ii.html#bedingungen-zweiter-ordnung-1"><i class="fa fa-check"></i><b>11.2</b> Bedingungen zweiter Ordnung</a></li>
+<li class="chapter" data-level="11.3" data-path="optimierung-ii.html"><a href="optimierung-ii.html#optimierung-unter-nebenbedingungen-lagrange-methode"><i class="fa fa-check"></i><b>11.3</b> Optimierung unter Nebenbedingungen: Lagrange-Methode</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wirtschaftsmathematik</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="differentialrechnung" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Kapitel 5</span> Differentialrechnung<a href="differentialrechnung.html#differentialrechnung" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select two options.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 100) + 2;
+      const x2 = Math.floor(Math.random() * 100) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select an option.';
+      }
+    }
+</script>
+<p>Die Ableitung einer Funktion beschreibt die Veränderung einer Variablen als Reaktion auf die Veränderung einer anderen Variablen.</p>
+<p>Beispiele in der Ökonomie:</p>
+<ul>
+<li><p>Wie ändert eine Firma ihr Produktionsniveau in Folge gestiegener Kosten?</p></li>
+<li><p>Welchen Einfluss hat eine Veränderung in der Geldmenge auf die Inflation?</p></li>
+<li><p>Wie gestalte ich den Konsum so, dass der Nutzen maximal ist?</p></li>
+</ul>
+<p><strong>Implizit</strong> wird diese Fragestellung durch die funktionale Verknüpfung <span class="math inline">\(y = f (x)\)</span> erfasst. <strong>Explizit</strong> wird dies ausgedrückt als Einfluss einer Veränderung von <span class="math inline">\(x\)</span>, geschrieben als <span class="math inline">\(\Delta x\)</span>, auf die Veränderung in <span class="math inline">\(y\)</span>, geschrieben als <span class="math inline">\(\Delta y\)</span>.</p>
+<p>In der Ökonomie wird diese Art der Analyse auch Grenzanalyse bezeichnet.
+Z.B. Gewinnmaximierung: “Eine profitmaximierende Firma erhöht ihren Output bis der Grenzerlös (<span class="math inline">\(\Delta R\)</span>) die Grenzkosten (<span class="math inline">\(\Delta C\)</span>) erreicht oder übersteigt.”</p>
+<p><img src="images/grenzerl.png" /></p>
+<div id="definition-der-tangente" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Definition der Tangente<a href="differentialrechnung.html#definition-der-tangente" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Eine umgangssprachliche Beschreibung der Tangentengeraden lautet wie folgt:</p>
+<p>“Eine Tangente ist eine Gerade, die eine Funktion nur in einem Punkt berührt.”</p>
+<p>Im Graphen berührt die Gerade <span class="math inline">\(l_P\)</span> die Funktion nur im Punkt <span class="math inline">\(P\)</span>, ohne die Funktion an einem anderen Punkt zu schneiden.</p>
+<p><img src="images/tang1.png" /></p>
+<p>Für eine glatte Funktion ist die Steigung der Tangente identisch zur Steigung der Funktion in dem Berührungspunkt.</p>
+<p>Die Steigung der Tangente in <span class="math inline">\(P\)</span> entspricht der Ableitung von <span class="math inline">\(y = f (x)\)</span> im Punkt <span class="math inline">\(P\)</span>.</p>
+<!--<details>
+<summary></summary>
+![](images/tang_besch.png)
+</details>-->
+<p>Die obige Aussage deckt unser allgemeines Verständnis der Tangente gut ab, eingnet sich aber nicht als Definition.</p>
+<p>Denn: Die Tangente kann die Funktion in einem weiter entfernt liegenden Punkt schneiden; daher müssen wir uns auf geeignete Umgebungen des Punkts <span class="math inline">\(P\)</span> beschränken (siehe die Abbildung unten für <span class="math inline">\(f(x)=\sin(x)\)</span>).
+In Einzelfällen kann die Tangente die Funktion sogar schneiden, wie hier im Beispiel <span class="math inline">\(y = x^3\)</span> an der Stelle <span class="math inline">\(x = 0\)</span> (siehe die Abbildung unten für <span class="math inline">\(f(x)=x^3\)</span>).</p>
+<p><img src="images/tang23.png" /></p>
+<!--![](images/tang2.png)
+![](images/tang3.png)
+-->
+<div id="sekante-und-tangente" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Sekante und Tangente<a href="differentialrechnung.html#sekante-und-tangente" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Wir wenden uns daher einer formalen Herleitung des Ableitungsbegriffs zu. Zunächst definieren wir weitere Konzepte, die eine Rolle beim Definieren einer Tangente spielen.</p>
+<div id="defsekante.definition" name="Sekante">
+<p>Es seien <span class="math inline">\(P = (x_1, f (x_1))\)</span> und <span class="math inline">\(Q = (x_2, f (x_2))\)</span> zwei Punkte im Graphen der Funktion <span class="math inline">\(f\)</span> . Die Sekante von <span class="math inline">\(P\)</span> und <span class="math inline">\(Q\)</span> ist die Gerade, die <span class="math inline">\(P\)</span> und <span class="math inline">\(Q\)</span> verbindet.</p>
+</div>
+<ul>
+<li>Die Steigung der Sekanten, genannt Differenzenquotient, ist</li>
+</ul>
+<p><span class="math inline">\({m}_{PQ}= \frac{f(x_2)-f(x_1)}{x_2-x_1}=: \frac{\triangle y}{ \triangle x}\)</span> ,</p>
+<p>wobei <span class="math inline">\(\Delta y = f (x_2) − f (x_1)\)</span> und <span class="math inline">\(\Delta x = x_2 − x_1\)</span>.</p>
+<p><img src="images/sekante1.png" /></p>
+</div>
+<div id="von-der-sekante-zur-tangente" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Von der Sekante zur Tangente<a href="differentialrechnung.html#von-der-sekante-zur-tangente" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Fixieren Sie nun <span class="math inline">\(P = (x_0,f (x_0))\)</span> und betrachten Sie eine Folge von Werten <span class="math inline">\(({x_n})_{n \in \mathbb{N}}\)</span>, die gegen <span class="math inline">\(x_0\)</span> konvergiert.</p></li>
+<li><p>Dies ist äquivalent zu der Formulierung, dass <span class="math inline">\(\Delta x_n = x_n − x_0\)</span> gegen <span class="math inline">\(0\)</span> konvergiert.</p></li>
+<li><p>Falls für jede mögliche solcher Folgen die Steigungen der Sekanten existieren und diese Steigungen gegen einen Grenzwert <span class="math inline">\(m*\)</span> konvergieren, dann ist die Tangente diejenige Gerade mit Steigung <span class="math inline">\(m*\)</span>, die <span class="math inline">\(P\)</span> berührt.</p></li>
+</ul>
+<p><img src="images/tangente1.png" /></p>
+<div class="definition">
+<p><span id="def:deftangente" class="definition"><strong>Definition 5.1  (Tangente) </strong></span>Es sei <span class="math inline">\(f\)</span> auf einem offenen Intervall um <span class="math inline">\(x_0\)</span> definiert.
+Falls</p>
+<p><span class="math inline">\(m^ * = \lim _{ \triangle x \rightarrow 0} \frac{f(x_0+ \triangle x) -f(x_0) }{ \triangle x}\)</span></p>
+<p>existiert, dann ist die Gerade durch <span class="math inline">\((x_0,f (x_0))\)</span> mit Steigung <span class="math inline">\(m*\)</span> die <strong>Tangente</strong> von <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(x_0\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:tangente" class="example"><strong>Beispiel 5.1  (Sekante und Tangente) </strong></span>Es seien <span class="math inline">\(f (x) = x^2\)</span> , <span class="math inline">\(P = (2, 4)\)</span> und <span class="math inline">\(Q=(3, 9)\)</span>.</p>
+<ul>
+<li><p>Man prüft leicht, dass <span class="math inline">\(\Delta x = 3-1=1\)</span> und <span class="math inline">\(\Delta y =9-4=5\)</span>, sodass die Steigung der Sekanten <span class="math inline">\(\Delta y/\Delta x = 5/1 = 5\)</span> ist.</p></li>
+<li><p>Wählt man <span class="math inline">\(Q^\prime = (4,16)\)</span>, so ist die Sekantensteigung <span class="math inline">\(\Delta y/\Delta x = 12/2 = 6\)</span>.</p></li>
+<li><p>Wählen Sie nun die Folge <span class="math inline">\(\Delta x_n = 1/n\)</span>, <span class="math inline">\(n geq 1\)</span>.</p></li>
+<li><p>Dann: <span class="math inline">\(\Delta x_n \rightarrow 0\)</span>, wenn <span class="math inline">\(n \rightarrow \infty\)</span>.</p></li>
+</ul>
+<p>Für einen beliebigen Punkt <span class="math inline">\(x\)</span> bestimmen wir die Steigung der Tangente:</p>
+<p><span class="math inline">\(\frac{f(x+ \triangle x_n)-f(x)}{ \triangle x_n}\)</span></p>
+<p><span class="math inline">\(= \frac{(x+1/n)^2-x^2}{1/n}\)</span></p>
+<p><span class="math inline">\(= \frac{x^2+2x/n+1/n^2-x^2}{1/n}\)</span></p>
+<p><span class="math inline">\(= 2x + \frac{1}{n}\)</span> , und</p>
+<p><span class="math inline">\(\lim _{ \triangle x \rightarrow 0} 2x+1/n = 2x\)</span> (= die Ableitung von <span class="math inline">\(f(x)=x^2\)</span> ).</p>
+<p><img src="images/extangente1.png" /></p>
+</div>
+</div>
+</div>
+<div id="definition-der-ableitung" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Definition der Ableitung<a href="differentialrechnung.html#definition-der-ableitung" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:ableitung" class="definition"><strong>Definition 5.2  (Ableitung) </strong></span>Die <strong>Ableitung</strong> (der <strong>Differentialquotient</strong>) einer Funktion <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(x\)</span>, geschrieben als <span class="math inline">\(f&#39; (x)\)</span>, ist die Steigung der Tangente in diesem Punkt:
+<span class="math inline">\(f&#39;(x)= \lim_{ \triangle x \rightarrow 0 } \frac{f(x+ \triangle x)}{ \triangle x}\)</span> .</p>
+</div>
+<p>Die sogenannte Leibniz-Notation der Ableitung ist <span class="math inline">\(f&#39;(x)= \frac{df(x)}{dx}\)</span>,</p>
+<p>wobei der Differentialoperator <span class="math inline">\(d\)</span> eine infinitesimal kleine Änderung ausdrückt.</p>
+<div class="definition">
+<p><span id="def:differential" class="definition"><strong>Definition 5.3  (Differential) </strong></span>Es sei <span class="math inline">\(f\)</span> eine Funktion mit Ableitung <span class="math inline">\(f&#39;\)</span>. Das <strong>Differential</strong> von <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(x\)</span> ist
+<span class="math inline">\(df (x) = f &#39; (x) dx\)</span>.</p>
+</div>
+<p>Das Differential drückt aus, dass sich <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(x\)</span> näherungsweise um <span class="math inline">\(f&#39; (x) dx\)</span> ändert, wobei – etwas salopp ausgedrückt – <span class="math inline">\(dx\)</span> eine infinitesimale Änderung von <span class="math inline">\(x\)</span> bezeichnet und <span class="math inline">\(f&#39;\)</span> die Richtung der Änderung von <span class="math inline">\(f\)</span> vorgibt.</p>
+<div class="example">
+<p><span id="exm:kosten" class="example"><strong>Beispiel 5.2  (Gesamtkosten und Grenzkosten) </strong></span>Die Gesamtkostenfunktion <span class="math inline">\(y \mapsto C( y )\)</span> einer Firma drückt die Kosten als Funktion der Anzahl <span class="math inline">\(y\)</span> produzierter Einheiten aus.</p>
+<ul>
+<li><p>Das Verhältnis <span class="math inline">\(\frac{ \triangle C}{ \triangle y} = \frac{C(y+ \triangle y) - C( y )}{ \triangle y}\)</span> reflektiert die durchschnittlichen zusätzlichen Kosten pro Einheit, wenn zusätzlich <span class="math inline">\(\Delta y\)</span> Einheiten produziert werden.</p></li>
+<li><p>Der Grenzwert dieses Verhältnisses, wenn <span class="math inline">\(\Delta y → 0\)</span>, ist die instantane Änderungsrate; in der Ökonomie stellt diese Rate die Grenzkosten (auch Marginalkosten) dar:
+<span class="math inline">\(lim_{ \triangle y \rightarrow 0 \ } \frac{ \triangle C}{ \triangle y} = lim_{ \triangle y \rightarrow 0 \ } \frac{C(y+ \triangle y) - C( y )}{ \triangle y} = C&#39;( y )\)</span></p></li>
+<li><p>Beispiel einer linearen Kostenfunktion:</p></li>
+</ul>
+<p><img src="images/kosten1.png" /></p>
+<ul>
+<li><p>In der Praxis ist die Annahme einer linearen Kostenfunktion, also konstanter Grenzkosten, häufig unrealistisch (vgl. früheres Beispiel der Gitarrenmanufaktur). Stattdessen führt eine höhere Produktion häufig zu höheren Grenzkosten (zumindest aus kurzfristiger SIcht).</p></li>
+<li><p>Dies wird beispielsweise durch eine quadratische Kostenfunktion ausgedrückt:</p></li>
+</ul>
+<p><img src="images/kosten2.png" /></p>
+</div>
+</div>
+<div id="differenzierbarkeit" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Differenzierbarkeit<a href="differentialrechnung.html#differenzierbarkeit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:defdifferenz" class="definition"><strong>Definition 5.4  (Differenzierbarkeit) </strong></span>Die Funktion <span class="math inline">\(f\)</span> ist <strong>differenzierbar im Punkt</strong> <span class="math inline">\(x\)</span>, falls sie in einer offenen Umgebung von <span class="math inline">\(x\)</span> definiert ist und falls
+<span class="math inline">\(lim_{ \triangle x \rightarrow 0 \ } \frac{ f(x+ \triangle x)-f(x)}{ x\triangle }\)</span></p>
+<p>existiert und endlich ist.</p>
+<p>Eine Funktion heißt <strong>differenzierbar</strong>, falls sie überall in ihrem Definitionsbereich differenzierbar ist.</p>
+</div>
+<p>Ist <span class="math inline">\(f\)</span> differenzierbar in <span class="math inline">\(x\)</span>, dann existieren die <strong>linksseitige Ableitung</strong> und die <strong>rechtsseitige Ableitung</strong> und nehmen denselben Wert an:</p>
+<p><span class="math inline">\(lim_{ \triangle x \uparrow 0 \ } \frac{ f(x+ \triangle x)-f(x)}{ x\triangle } = lim_{ \triangle x \downarrow 0 \ } \frac{ f(x+ \triangle x)-f(x)}{ x\triangle }\)</span>.</p>
+<div class="example">
+<p><span id="exm:differenzierbarkeit" class="example"><strong>Beispiel 5.3  (Differenzierbarkeit) </strong></span>Wir betrachten die Funktion <span class="math inline">\(f(x)=\begin{pmatrix} x, falls \ x&lt;1 \\ 2-x, falls \ x \geq 1 \end{pmatrix}\)</span>.</p>
+<p>Obwohl die Funktion im Punkt <span class="math inline">\(x = 1\)</span> stetig ist, ist sie in diesem Punkt nicht differenzierbar.</p>
+<p>Denn: Im Punkt <span class="math inline">\(x = 1\)</span> gilt
+<span class="math inline">\(\lim_{ \triangle x \uparrow 0 \ } \frac{ f(1+ \triangle x)-f(1)}{ \Delta x } = \lim_{ \triangle x \uparrow 0 \ } \frac{ 1+ \triangle x-1 }{ \Delta x } =1\)</span></p>
+<p>und</p>
+<p><span class="math inline">\(\lim_{ \triangle x \downarrow 0 \ } \frac{ f(1+ \triangle x)-f(1)}{ \Delta x } = \lim_{ \triangle x \downarrow 0 \ } \frac{ (2-(1+ \triangle x))-(2-1) }{ \Delta x } = -1\)</span>.</p>
+<p><img src="images/differenz1.png" /></p>
+</div>
+<p>Wir betrachten den Zusammenhang zwischen Differenzierbarkeit und Stetigkeit.</p>
+<div class="theorem">
+<p><span id="thm:thm1deffirenz" class="theorem"><strong>Theorem 5.1  (Differenzierbarkeit und Stetigkeit) </strong></span>Falls eine Funktion <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(x\)</span> differenzierbar ist, so ist sie in <span class="math inline">\(x\)</span> auch stetig.</p>
+</div>
+<ul>
+<li><p>Die Umkehraussage gilt i.A. nicht, wie das vorangegangene Beispiel zeigt.</p></li>
+<li><p>Man kann äquivalent sagen: Stetigkeit ist eine notwendige, aber keine hinreichende Bedingung für Differenzierbarkeit.</p></li>
+</ul>
+<p><img src="images/differenz2.png" />
+Wir erweitern den Begriff der Differenzierbarkeit auf geschlossene Intervalle.</p>
+<div class="definition">
+<p><span id="def:defdiffint" class="definition"><strong>Definition 5.5  (Differenzierbarkeit auf einem Intervall) </strong></span>Eine Funktion <span class="math inline">\(f\)</span> , definiert auf dem Intervall <span class="math inline">\([a,b]\)</span>, ist differenzierbar auf <span class="math inline">\([a,b]\)</span>, falls gilt:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>die rechtsseitige Ableitung für <span class="math inline">\(f (a)\)</span> existiert;</p></li>
+<li><p>die linksseitige Ableitung für <span class="math inline">\(f (b)\)</span> existiert;</p></li>
+<li><p><span class="math inline">\(f\)</span> ist differenzierbar auf dem offenen Intervall <span class="math inline">\((a,b)\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div id="ableitungsregel" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Ableitungsregel<a href="differentialrechnung.html#ableitungsregel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Mithilfe der folgenden Regeln können wir Ableitungen konkret bestimmen (Differenzierbarkeit stets vorausgesetzt).</p>
+<div class="theorem">
+<p><span id="thm:thmregeln" class="theorem"><strong>Theorem 5.2  (Ableitungsregeln) </strong></span>Im Folgendem, <span class="math inline">\(c\)</span>, <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span> und <span class="math inline">\(b\)</span> seien Konstanten.</p>
+<p><span class="math display">\[\begin{equation*}
+      \begin{array}[t]{lll}
+        \hline
+        \text{(Funktions-)Typ} &amp; \text{Funktion} &amp; \text{Ableitung}\\\hline
+        \text{konstante Funktion} &amp; f(x)=c &amp; f^\prime(x)=0\\
+        \text{lineare Funktion} &amp; f(x)=mx + b &amp; f^\prime(x)=m\\
+        \text{Potenzfunktion} &amp; f(x)=x^n &amp; f^\prime(x)=n\, x^{n-1}\\
+        \text{Skalierung} &amp; g(x)=c\, f(x) &amp; g^\prime(x)=c\,
+                                                   f^\prime(x)\\
+        \text{Summenregel} &amp; f(x)=g_1(x) + g_2(x) &amp; f^\prime(x) =
+                                             g_1^\prime(x) + g_2^\prime(x)\\
+                             &amp; f(x)=\sum_{i=1}^n g_i(x) &amp; f^\prime(x) =
+                                                          \sum_{i=1}^n g_i^\prime(x)\\
+        \text{Produktregel} &amp; f(x)=g(x)\, h(x) &amp; f^\prime(x) = g^\prime(x)
+                                            h(x) + g(x) h^\prime(x)\\
+        \text{Kettenregel} &amp; f(x)=g(h(x))&amp; f^\prime(x)=g^\prime(h(x))\,
+                                          h^\prime(x)\\   \hline            
+      \end{array}
+    \end{equation*}\]</span>
+<span class="math display">\[\begin{equation*}
+      \begin{array}[t]{lll}
+        \hline
+        \text{(Funktions-)Typ}\!\!\!&amp; \text{Funktion} &amp; \text{Ableitung}\\\hline
+        \text{Quotientenregel} &amp; \displaystyle f(x)=\frac{g(x)}{h(x)}, h(x)\not=0 &amp;
+                                                                          \displaystyle f^\prime(x) = \frac{g^\prime(x) h(x) - g(x) h^\prime(x)}
+                                                                          {(h(x))^2}\\
+        \text{Inverse} &amp; y=f(x)\text{, wobei }&amp;
+                                                      \displaystyle (f^{(-1)})^\prime(y)
+                                                      =
+                                                      \frac{1}{f^\prime(x)}
+        = \frac{1}{f^\prime(f^{(-1)}(y))}\\
+                             &amp; f^{(-1)}(y)=x
+                               \text{ existiert }  &amp;    \\
+                             &amp;\text{und }
+                               f^\prime(x)\not=0 &amp;
+        \\
+        \text{Logarithmus} &amp; \ln (x) &amp; \displaystyle\ln^\prime(x)=\frac{1}{x}\\
+        &amp; \log_a (x) &amp; \displaystyle\log_a^\prime(x)=\frac{1}{x\cdot \ln (a)}\\
+        \text{Sinusfkt.} &amp; \sin(x) &amp; \sin^\prime(x)=\cos(x)\\
+         \text{Cosinusfkt.} &amp; \cos(x) &amp; \cos^\prime(x)=-\sin(x)\\
+           \text{Exponentialfkt.} &amp; e^{x} &amp; (e^{x})^\prime=e^{x}\\
+           &amp; a^{x} &amp; (a^{x})^\prime=a^{x}\ln (a)\\\hline
+      \end{array}
+    \end{equation*}\]</span></p>
+<details>
+<summary>
+Beweise
+</summary>
+Allgemein können Ableitungen über die Definition des Differentialquotienten (Definition <a href="differentialrechnung.html#def:ableitung">5.2</a>) und
+bereits bewiesene Regeln bestimmt werden.
+<ul>
+<li>
+Konstante Funktion <span class="math inline">\(f(x)=c\)</span>: Die Ableitung wird bestimmt
+durch
+<span class="math display">\[\begin{equation*}
+        f^\prime(x) = \lim_{\Delta x\rightarrow 0} \frac{f(x+\Delta
+          x)-f(x)}{\Delta x} = \lim_{\Delta x\rightarrow 0}
+        \frac{c-c}{\Delta x}=0.
+      \end{equation*}\]</span>
+</li>
+<li>
+Für Potenzfunktionen <span class="math inline">\(f(x)=x^n\)</span> benutzen wir die <strong>Binomialformel</strong>
+<span class="math display">\[\begin{equation*}
+        (x+y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} y^k
+      \end{equation*}\]</span>
+und erhalten
+<span class="math display">\[\begin{align*}
+        \frac{(x+\Delta x)^n - x^n}{\Delta x} %
+        &amp;= \frac{\sum_{k=1}^n \binom{n}{k} x^{n-k} (\Delta x)^k}
+          {\Delta x} %
+          = \sum_{k=1}^n \binom{n}{k} x^{n-k} (\Delta x)^{k-1} \\%
+        &amp;= \binom{n}{1} x^{n-1} + %
+          \underbrace{\sum_{k=2}^n \binom{n}{k} x^{n-k} (\Delta
+          x)^{k-1}}_{\rightarrow 0 \text{ für } \Delta x\rightarrow0}= n\, x^{n-1}
+      \end{align*}\]</span>
+</li>
+<li>
+Produktregel: Für das Produkt <span class="math inline">\(f(x)=g(x) h(x)\)</span> erhalten wir
+<span class="math display">\[\begin{multline*}
+        \frac{g(x+\Delta x) h(x+\Delta x) - g(x) h(x)}{\Delta x}\\ %
+        \begin{aligned}
+          &amp;=\frac{g(x+\Delta x) h(x+\Delta x) + g(x) h(x+\Delta x) -
+            g(x) h(x+\Delta x) - g(x) h(x)}{\Delta x}\\ %
+          &amp;=\frac{(g(x+\Delta x)-g(x))h(x+\Delta x) + g(x)(h(x+\Delta
+            x)-h(x))} {\Delta x}\\ %
+          &amp;\rightarrow g^\prime(x) h(x) + g(x) h^\prime(x),
+        \end{aligned}
+      \end{multline*}\]</span>
+wobei wir benutzt haben, dass:
+<span class="math display">\[\begin{align*}
+        \lim_{\Delta x\rightarrow 0} \frac{(g(x+\Delta x) - g(x))
+          h(x+\Delta x)} {\Delta x}&amp;%
+        = \lim_{\Delta x\rightarrow 0} \frac{(g(x+\Delta x) - g(x))}
+        {\Delta x} \, \lim_{\Delta x\rightarrow 0} h(x+\Delta x)
+      \end{align*}\]</span>
+</li>
+<li>
+Kettenregel (<span class="math inline">\(f(x)=g(h(x))\)</span>): Schreibe zunächst
+<span class="math display">\[\begin{equation*}
+        \frac{g(h(x+\Delta x)) - g(h(x))} {\Delta x} %
+        = \frac{g(h(x+\Delta x)) - g(h(x))} {h(x+\Delta x)-h(x)} %
+        \cdot \frac{h(x+\Delta x)-h(x)} {\Delta x} %
+      \end{equation*}\]</span>
+Für den ersten Term gilt
+<span class="math inline">\(\lim_{\Delta x\rightarrow 0} h(x+\Delta x)-h(x)=0\)</span>, sodass
+<span class="math display">\[\begin{equation*}
+        \displaystyle \frac{g(h(x+\Delta
+          x))-g(h(x))} {h(x+\Delta x)-h(x)} \rightarrow
+        g^\prime(h(x)).
+      \end{equation*}\]</span>
+Der zweite Term konvergiert gegen <span class="math inline">\(h^\prime(x)\)</span>.
+</li>
+<li>
+Quotientenregel (<span class="math inline">\(\displaystyle f(x)=\frac{g(x)}{h(x)}\)</span>):
+<span class="math display">\[\begin{align*}
+        \left(\frac{g(x)}{h(x)}\right)^\prime &amp;= \left(g(x)
+                                                \frac{1}{h(x)}\right)^\prime \stackrel{\text{Produktregel}}=
+                                                g^\prime(x) \frac{1}{h(x)} + g(x)
+                                                \left(\frac{1}{h(x)}\right)^\prime \\%
+                                              &amp;= \frac{g^\prime(x) h(x)}{h(x)^2} + g(x)
+                                              % \underbrace{
+                                                \left(h^{-1}(x)\right)^\prime.% }
+                                                % _{\stackrel{\text{chain
+                                                % rule, power
+                                                % function}}=-1\cdot
+                                                % h^{-2}(x) \cdot
+                                                % h^\prime(x)},
+      \end{align*}\]</span>
+Für <span class="math inline">\(\left(h^{-1}(x)\right)^\prime\)</span> erhalten wir mit der
+Kettenregel und der Potenzregel:
+<span class="math display">\[\begin{equation*}
+        \left(h^{-1}(x)\right)^\prime = -1\cdot h^{-2}(x)\cdot h^\prime(x)
+        = -\frac{h^\prime(x)}{h(x)^2}.
+      \end{equation*}\]</span>
+</li>
+<li>
+Für die Inverse benutzen wir <span class="math inline">\(y=f(x)\)</span> und erhalten mit
+<span class="math inline">\(\Delta y=f(x+\Delta x)-f(x)\)</span>:
+<span class="math display">\[\begin{align*}
+        &amp;\frac{f^{(-1)}(y+\Delta y) - f^{(-1)}(y)} {\Delta y}
+          = \frac{f^{(-1)}(f(x)+f(x+\Delta x)-f(x)) - f^{(-1)}(f(x))}
+          {f(x+\Delta x) - f(x)}\\
+          &amp;= \frac{f^{(-1)}(f(x+\Delta x)) - f^{(-1)}(f(x))}
+          {f(x+\Delta
+            x)-f(x)} = \frac{\Delta x}{f(x+\Delta x)-f(x)} \rightarrow
+          \frac{1}{f^\prime(x)}
+      \end{align*}\]</span>
+</li>
+<li>
+Für die Ableitung des Logarithmus, beachte zunächst,
+dass
+<span class="math inline">\(\ln (a^x)=x\cdot \ln(a)\)</span>, <span class="math inline">\(\ln(a/b)=\ln (a)-\ln (b)\)</span> und dass
+<span class="math inline">\(\displaystyle \lim_{n\rightarrow \infty}  \left(1+\frac{x}{n}\right)^n=\text{e}^x\)</span>. Dann:
+<span class="math display">\[\begin{equation*}
+        \ln^\prime(x)%
+        = \frac{\ln(x+\Delta x)-\ln (x)} {\Delta x} %
+        = \frac{1}{\Delta x} \ln \left(\frac{x+\Delta x}{x}\right)%
+        = \ln\left(\left(\frac{x+\Delta x}{x}\right)^{1/\Delta
+            x}\right).
+      \end{equation*}\]</span>
+Setze <span class="math inline">\(\displaystyle n=\frac{x}{\Delta x}\)</span> und beachte, dass
+<span class="math inline">\(n\rightarrow\infty\)</span>, wenn <span class="math inline">\(\Delta x\rightarrow 0\)</span>. Mit <span class="math inline">\(n\rightarrow\infty\)</span>:
+<span class="math display">\[\begin{equation*}
+        \ln\left(1+\frac{1}{n}\right)^{n/x}%
+        = \frac{1}{x} \ln \left(1+\frac{1}{n}\right)^n %
+        \rightarrow \frac{1}{x} \ln(\text{e}) = \frac{1}{x},
+      \end{equation*}\]</span>
+</li>
+<li>
+Schließlich, für die Exponentialfunktion nutzen wir,
+dass
+<span class="math display">\[\begin{equation*}
+        \left(\ln(\text{e}^x)\right)^\prime = x^\prime=1,
+      \end{equation*}\]</span>
+und daher, durch Anwenden der Kettenregel:
+<span class="math inline">\(\left(\ln\text{e}^x\right)^\prime=\frac{1}{\text{e}^x} (\text{e}^x)^\prime  =1,\)</span>
+woraus <span class="math inline">\(\left(\text{e}^x\right)^\prime=\text{e}^x\)</span> folgt.
+</li>
+</ul>
+</details>
+</div>
+<div class="example">
+<p><span id="exm:prodfun" class="example"><strong>Beispiel 4.1  (Produktionsfunktion und Grenzproduktivität) </strong></span>Betrachten Sie die Produktionsfunktion <span class="math inline">\(TP(L) = L^a\)</span> , <span class="math inline">\(a &gt; 0\)</span>, welche den Input <span class="math inline">\(L\)</span> (Arbeit) auf den Output <span class="math inline">\(TP (L)\)</span> abbildet.
+Die Grenzproduktivität ist</p>
+<p><span class="math inline">\(MP (L) = dTP (L)/ \ dL = aL^{a−1}\)</span> ; falls</p>
+<p><span class="math inline">\(a &gt; 1\)</span>, dann ist <span class="math inline">\(MP (L)\)</span> steigend in <span class="math inline">\(L\)</span>,</p>
+<p><span class="math inline">\(a = 1\)</span>, dann <span class="math inline">\(TP (L) = L\)</span> und <span class="math inline">\(MP (L) = 1\)</span>,</p>
+<p><span class="math inline">\(a &lt; 1\)</span>, dann ist <span class="math inline">\(MP (L)\)</span> fallend in <span class="math inline">\(L\)</span>.</p>
+<p><img src="images/prodfun3.png" /></p>
+</div>
+<div class="example">
+<p><span id="exm:grenzerl" class="example"><strong>Beispiel 5.4  (Grenzerlös mit Produktregel) </strong></span>Der Erlös (Umsatz) bestimmt sich aus dem Preis eines Guts multipliziert mit der abgesetzten Menge, also <span class="math inline">\(TR(q) = pq\)</span>.</p>
+<ul>
+<li><p>Eine im Wettbewerb stehende Firma wird den Preis als konstant annehmen (Marktpreis): <span class="math inline">\(\bar{p}\)</span>; der Grenzerlös ist daher <span class="math inline">\(MR(q) = dTR(q)/dq = \bar{p}\)</span>.</p></li>
+<li><p>Aus Sicht eines Monopolisten sind Menge und Preis durch eine Nachfragefunktion <span class="math inline">\(q = D(p)\)</span> bzw. durch deren Inverse <span class="math inline">\(p = D ^{(−1)}(q) =: p(q)\)</span> verknüpft.</p></li>
+<li><p>Der Gesamterlös des Monopolisten ist</p></li>
+</ul>
+<p><span class="math inline">\(TR(q) = p(q) q\)</span></p>
+<p>und der Grenzerlös ist</p>
+<p><span class="math inline">\(MR(q)=TR&#39;(q)= \frac{dTR(q)}{dq} = \frac{dp}{dq}q + p(q) \frac{dq}{dq} = p&#39;(q)q+p\)</span></p>
+<ul>
+<li>Typischerweise gilt <span class="math inline">\(p&#39; (q) &lt; 0\)</span>.</li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:durchkosten" class="example"><strong>Beispiel 5.5  (Durchschnitts- und Grenzkosten mit Quotientenregel) </strong></span>Die Durchschnittsfunktion einer Funktion <span class="math inline">\(f (x)\)</span>, <span class="math inline">\(x ≥ 0\)</span>, ist gegeben durch</p>
+<p><span class="math inline">\(A(x)= \frac{f(x)}{x}\)</span> .</p>
+<p>Die Quotientenregel ergibt</p>
+<p><span class="math inline">\(A&#39;(x)= \frac{f&#39;(x)x-1f(x)}{x^2} = \frac{1}{x} \left[ f&#39;(x)-A(x) \right]\)</span> .</p>
+<p>mit Grenzfunktion <span class="math inline">\(f&#39;\)</span> .</p>
+<p>Daher:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>Falls <span class="math inline">\(f&#39; (x) &lt; A(x)\)</span>, dann <span class="math inline">\(A&#39;(x) &lt; 0\)</span>;</p></li>
+<li><p>falls <span class="math inline">\(f&#39; (x) = A(x)\)</span>, dann <span class="math inline">\(A&#39; (x) = 0\)</span>;</p></li>
+<li><p>falls <span class="math inline">\(f&#39; (x) &gt; A(x)\)</span>, dann <span class="math inline">\(A&#39; (x) &gt; 0\)</span>.</p></li>
+</ol>
+<p><img src="images/durchkosten.png" /></p>
+</div>
+<p>App Ableitung üben.</p>
+</div>
+<div id="regel-von-lhôpital" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Regel von L’Hôpital<a href="differentialrechnung.html#regel-von-lhôpital" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Falls <span class="math inline">\(f (x) → 0\)</span> und <span class="math inline">\(g(x) → 0\)</span> für <span class="math inline">\(x → a\)</span>, dann sind Existenz und Bestimmung des Grenzwerts <span class="math inline">\(\lim _{x \rightarrow a} \frac{f(x)}{g(x)}\)</span> zunächst nicht offensichtlich.</p>
+<p>Beispiele:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\lim _{x \rightarrow 1} \frac{x^2-1}{x-1} = 2\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ \sin x}{x} = 1\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ 1 - cos x}{x} = 0\)</span></p></li>
+</ol>
+<p>Der erste Grenzwert ist einfach zu bestimmen, denn</p>
+<p><span class="math inline">\(\frac{x^2-1}{x-1} = \frac{(x+1)(x-1)}{x-1} = x+1\)</span>.</p>
+<p>Die beiden anderen Grenzwerte sind nicht offensichtlich.</p>
+<p>In dieser Situation ist die Regel von L’Hôpital häufig sehr hilfreich.</p>
+<p><img src="images/lopital.png" /></p>
+<div class="theorem">
+<p><span id="thm:thmlopital" class="theorem"><strong>Theorem 5.3  (Regel von L'Hôpital) </strong></span>Es seien <span class="math inline">\(f\)</span> und <span class="math inline">\(g\)</span> in <span class="math inline">\(x = a\)</span> differenzierbare Funktionen mit <span class="math inline">\(g&#39; (a) \neq 0\)</span> und</p>
+<p><span class="math inline">\(\lim _{x \rightarrow a} f(x) = 0\)</span> und <span class="math inline">\(\lim _{x \rightarrow a} g(x) = 0\)</span></p>
+<p>oder</p>
+<p><span class="math inline">\(\lim _{x \rightarrow a} f(x) = \infty\)</span> und <span class="math inline">\(\lim _{x \rightarrow a} g(x) = \infty\)</span>.</p>
+<p>Falls <span class="math inline">\(\lim _{x \rightarrow a} \frac{f&#39;(x)}{g&#39;(x)}\)</span> existiert oder falls der Grenzwert <span class="math inline">\(\pm\infty\)</span> ist, dann gilt</p>
+<p><span class="math inline">\(\lim _{x \rightarrow a} \frac{f(x)}{g(x)} = \lim _{x \rightarrow a} \frac{f&#39;(x)}{g&#39;(x)}\)</span> .</p>
+</div>
+<div class="exercise">
+<p><span id="exr:lopital" class="exercise"><strong>Aufgabe 5.1  (Grenzwerte mit der Regel von L’Hôpital) </strong></span>Überprüfen Sie die folgenden Grenzwerte mit der Regel von L’Hôpital:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\lim _{x \rightarrow 1} \frac{x^2-1}{x-1} = 2\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ \sin x}{x} = 1\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ 1 - \cos x}{x} = 0\)</span></p></li>
+</ol>
+<p>Beachten Sie: <span class="math inline">\(\sin&#39; (x) = \cos(x)\)</span> und <span class="math inline">\(\cos&#39; (x) = − \sin(x)\)</span>.</p>
+<details>
+<summary>
+Antwort
+</summary>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\lim _{x \rightarrow 1} \frac{x^2-1}{x-1} = \lim _{x \rightarrow 1} \frac{(x^2-1)&#39;}{(x-1)&#39;} = \lim _{x \rightarrow 1} \frac{2x}{1} =2\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ \sin x}{x} = \lim _{x \rightarrow 0} \frac{(\sin \ x)&#39;}{(x)&#39;} = \lim _{x \rightarrow 0} \frac{\cos \  x}{1} =1\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ 1 - \cos x}{x} = \  \lim _{x \rightarrow 0} \frac{(1-\cos \ x)&#39;}{(x)&#39;} = \lim _{x \rightarrow 0} \frac{-(- \sin \  x)}{1} = 0\)</span><br />
+</p></li>
+</ol>
+</details>
+</div>
+</div>
+<div id="ableitungen-höhere-ordnung" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Ableitungen höhere Ordnung<a href="differentialrechnung.html#ableitungen-höhere-ordnung" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Wiederholtes Ableiten ergibt Ableitungen höherer Ordnung <span class="math inline">\(f&#39;\)</span> , <span class="math inline">\(f&#39;&#39;\)</span> , <span class="math inline">\(f&#39;&#39;&#39;\)</span>, usw. (sofern sie existieren).</p>
+<p><span class="math inline">\(f&#39;\)</span> ist die erste Ableitung, <span class="math inline">\(f&#39;&#39;\)</span> ist die zweite Ableitung, usw.</p>
+<ul>
+<li>Wir schreiben auch</li>
+</ul>
+<p><span class="math inline">\(f&#39;&#39;(x)= \frac{d^2f(x)}{dx^2}\)</span> , usw..</p>
+<ul>
+<li>Für die <span class="math inline">\(n\)</span>-te Ableitung wird auch die Notation <span class="math inline">\(f^{ (n)}\)</span> benutzt.</li>
+</ul>
+<div class="example">
+<p><span id="exm:ablhoh" class="example"><strong>Beispiel 5.6  (Einige Ableitungen höherer Ordnung) </strong></span>Die ersten vier Ableitungen von <span class="math inline">\(f (x) = x^ 4\)</span> sind</p>
+<p><span class="math inline">\(f&#39; (x) = 4x^3 , \ f&#39;&#39;(x) = 12x^2 , \ f&#39;&#39;&#39;(x) = 24x, f ^{(4)}(x) = 24\)</span>.
+Alle höheren Ableitungen sind <span class="math inline">\(0\)</span>, also <span class="math inline">\(f ^{(n)} (x) = 0\)</span>, für <span class="math inline">\(n \geq 5\)</span>.</p>
+</div>
+<p>Existieren die ersten beiden Ableitungen, so heißt eine Funktion <strong>zweimal differenzierbar</strong>.</p>
+<p>Mit der zweiten Ableitung lässt sich bestimmen, ob eine Funktion konvex oder konkav ist.</p>
+<div class="theorem">
+<p><span id="thm:thmconcon" class="theorem"><strong>Theorem 5.4  (Ableitungen von Konvexen und Konkaven Funktionen) </strong></span>Es sei <span class="math inline">\(D \subset \mathbb{R}\)</span> ein offenes Intervall und sei <span class="math inline">\(f: D \rightarrow \mathbb{R}\)</span> zweimal differenzierbar.
+<span class="math inline">\(f\)</span> ist <strong>konvex</strong> genau dann, wenn <span class="math inline">\(f&#39;&#39;(x) \geq 0\)</span> (<strong>konkav</strong>: <span class="math inline">\(f&#39;&#39;(x)\leq 0\)</span>) für alle <span class="math inline">\(x \in \mathbb{D}\)</span>.</p>
+</div>
+</div>
+<div id="der-satz-von-taylor" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Der Satz von Taylor<a href="differentialrechnung.html#der-satz-von-taylor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In der Praxis stellt sich häufig folgendes Problem:</p>
+<p>Der Wert einer differenzierbaren Funktion <span class="math inline">\(f\)</span> ist an der Stelle <span class="math inline">\(x\)</span> nur schwer zu berechnen; dafür sind aber der Funktionswert und sämtliche Ableitungen an einer benachbarten Stelle <span class="math inline">\(x_0\)</span> bekannt.</p>
+<div class="example">
+<p><span id="exm:taylorprofit" class="example"><strong>Beispiel 5.7  (Approximation von Gewinnfunktionen) </strong></span>Betrachten wir die exponentiale Nachfragefunktion (ein realistischeres Modell für Nachfragefunktionen!):</p>
+<p><span class="math display">\[p(q) = 100\cdot e^{-0,01\cdot q} = 100\cdot\exp(-0,01 q).\]</span></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>Die Gewinnfunktion für einen Monopolisten mit solcher Nachfrage kann wie folgt berechnet werden:</p>
+<p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q),\]</span></p>
+<p>wo <span class="math inline">\(C(q)\)</span> ist die Kostenfunktion. Angenommen, die Kostenfunktion sieht wie folgt aus: <span class="math inline">\(C(q)=10-0.01q\)</span>,</p>
+<p>dann ist die Gewinnfunktion:</p>
+<p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q) = \exp(-0,01 q) \cdot q - 10 - 0,01\cdot q.\]</span></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>Wir suchen den Break-Even point (roter Punkt auf der Graphik). Aber: Wie können wir den Break-Even-Punkt finden? Wir können nicht nach <span class="math inline">\(q\)</span> auflösen, nach dem wir den Gewinn gleich Null setzen! (Versuch das 🤯)</p>
+<p>Wir können dennoch die Gewinnfunktion ohne Probleme ableiten und wie auf der Abbildung zu sehen ist, liegt der Break-Even Punkt nah bei <span class="math inline">\(q_0=10.\)</span> Können wir eventuell in der Umgebung von <span class="math inline">\(q_0=10\)</span> die Gewinnfunktion durch ihre Ableitungen approximieren?</p>
+</div>
+<div class="example">
+<p><span id="exm:taylor" class="example"><strong>Beispiel 5.8  (Funktionswertbestimmung für ln(2)) </strong></span>Der Funktionswert <span class="math inline">\(\ln(2)\)</span> ist ohne Taschenrechner schwierig zu bestimmen.</p>
+<p>Bekannt sind aber folgende Werte von <span class="math inline">\(f (x) = \ln \ x\)</span> an der Stelle <span class="math inline">\(x_0 = 1\)</span>:</p>
+<p><span class="math inline">\(f (1) = 0\)</span>; <span class="math inline">\(f&#39; (1) = 1\)</span>; <span class="math inline">\(f&#39;&#39;(x) = −1\)</span>; <span class="math inline">\(f&#39;&#39;&#39;(1) = 2\)</span>; <span class="math inline">\(f ^{(4)}(1) = −6\)</span>; usw.</p>
+</div>
+<p>Aus <span class="math inline">\(f (x_0)\)</span>, <span class="math inline">\(f&#39; (x_0)\)</span>, <span class="math inline">\(f&#39;&#39;(x_0)\)</span>, …, kann mithilfe des <strong>Satzes von Taylor</strong> der Funktionswert <span class="math inline">\(f (x)\)</span> approximativ ermittelt werden.</p>
+<div class="theorem">
+<p><span id="thm:thmtaylor" class="theorem"><strong>Theorem 5.5  (Satz von Taylor) </strong></span>Es sei <span class="math inline">\(f\)</span> eine <span class="math inline">\(n\)</span>-fach differenzierbare Funktion.</p>
+<p>Die Taylor-Formel (auch Taylor-Entwicklung) von <span class="math inline">\(f (x)\)</span> in der Umgebung um <span class="math inline">\(x_0\)</span> ist gegeben durch</p>
+<p><span class="math inline">\(f(x)=f(x_0)+ \sum_{k=1}^{n} (\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k +R_n(x)\)</span>,</p>
+<p>(Taylor-Polynom: <span class="math inline">\(f(x_0)+ \sum_{k=1}^{n} (\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k\)</span> )</p>
+<p>wobei <span class="math inline">\(R_n(x)= \frac{f{(n+1)}( \xi) }{(n+1)!} (x-x_0)^{n+1}\)</span></p>
+<p>mit <span class="math inline">\(\xi \in [x_0,x]\)</span>.</p>
+</div>
+<p>Falls <span class="math inline">\(R_n(x) \rightarrow 0\)</span> für <span class="math inline">\(n \rightarrow \infty\)</span>, dann kann der Funktionswert <span class="math inline">\(f (x)\)</span> durch das Taylor-Polynom approximiert werden.</p>
+<p>Insbesondere ist <span class="math inline">\(f (x_0) + f&#39; (x_0)(x − x_0)\)</span> eine lineare Approximation von <span class="math inline">\(f (x)\)</span>.</p>
+<p><img src="images/taylor.png" /></p>
+<div class="example">
+<p><span id="exm:taylorff" class="example"><strong>Beispiel 5.9  (Funktionswertbestimmung für ln(2) ff) </strong></span>Fortsetzung von Beispiel <a href="differentialrechnung.html#exm:taylor">5.8</a>. Wir bestimmen <span class="math inline">\(f (x) = ln(x)\)</span> anhand der Taylor-Approximation mit <span class="math inline">\(x_0 = 1\)</span>.</p>
+<p>Es gilt:
+<span class="math inline">\(f&#39;(x)= \frac{1}{x}\)</span>,</p>
+<p><span class="math inline">\(f&#39;&#39;(x)= - \frac{1}{x^2}\)</span>,</p>
+<p><span class="math inline">\(f&#39;&#39;&#39;(x)= - \frac{2}{x^3}\)</span>,</p>
+<p><span class="math inline">\(f^{(n)}(x)= \frac{(-1)^{n+1}(n-1)!}{x^n}\)</span></p>
+<p>Approximation durch Taylor-Polynom n-ter Ordnung:
+<span class="math inline">\(f(x) \approx (x-1)- \frac{(x-1)^2}{2} + ... + (-1)^{n+1} \  \frac{(x-1)^n}{n}\)</span></p>
+<p>Konvergenz des Restterms für <span class="math inline">\(1 &lt; x ≤ 2\)</span>:</p>
+<p>aus <span class="math inline">\(1 &lt; ξ &lt; x ≤ 2\)</span>, also <span class="math inline">\(0 &lt; (x − 1)/ ξ ≤ 1/ 1 = 1\)</span>,</p>
+<p>folgt:</p>
+<p><span class="math inline">\(R_n(x)= \frac{(-1)^{n+2} \ n!}{ \xi ^{n+1}(n+1)!}(x-1)^{n+1}\)</span></p>
+<p><span class="math inline">\(= (-1)^n\frac{(x-1)^{n+1} }{ \xi ^{n+1}(n+1)} \rightarrow 0\)</span></p>
+<p>für <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
+<p>Wir bestimmen <span class="math inline">\(ln(2)\)</span> approximativ anhand des Taylor-Polynoms <span class="math inline">\(10\)</span>-ter Ordnung:</p>
+<p><span class="math inline">\(ln 2 ≈ 1 − 1/2 + 1/3 − 1/4 + 1/5 − 1/6 + 1/7 − 1/8 + 1/9 − 1/10 = 0,6456\)</span>.
+Der Fehler liegt in <span class="math inline">\((\frac{1}{2^{11} \cdot 11}, 1/11)= \left[ 0,000044; 0,0909091] \right]\)</span>.</p>
+<p><img src="images/taylor2.png" /></p>
+</div>
+<div class="example">
+<p><span id="exm:taylorprofit2" class="example"><strong>Beispiel 5.10  (Approximation von Gewinnfunktionen) </strong></span>Fortsetzung von Beispiel <a href="differentialrechnung.html#exm:taylorprofit">5.7</a>. Approximiere die Gewinnfunktion:</p>
+<p><span class="math display">\[\pi(q) = \exp(-0,01 q) \cdot q - 10 - 0,01\cdot q\]</span></p>
+<p>in der Umgebung von <span class="math inline">\(q_0=10\)</span> mittels Taylor Entwicklung erster Ordnung:</p>
+<p><span class="math display">\[\pi(q)\approx \pi(q_0) + \pi^\prime(q_0)(q-q_0).\]</span></p>
+<ul>
+<li><span class="math inline">\(\pi(q_0) = \pi(10) = \exp(-0,01 \cdot 10) \cdot 10 - 10 - 0,01\cdot 10 = e^{-0,1}\cdot 10 -10,1 = -1,0516.\)</span></li>
+<li><span class="math inline">\(\pi^\prime(q) = -0,01\exp(-0,01q)q + \exp(-0,01q) - 0,01\)</span> (Produktregel, Kettenregel)</li>
+<li><span class="math inline">\(\pi^\prime(q_0)= \pi^\prime(10)= -0,01\exp(-0,01\cdot 10)\cdot 10 + \exp(-0,01\cdot 10) - 0,01 = 0,8044.\)</span></li>
+</ul>
+<p>Daher:</p>
+<p><span class="math display">\[\pi(q)\approx -1,0516 + 0,8044\cdot (q-10).\]</span></p>
+<p>Nun können wir die Approximation gleich Null setzen und den approximativen Break-Even Punkt finden.</p>
+<p><span class="math display">\[-1,0516 + 0,8044\cdot (q-10)=0\rightarrow q \approx 11,3073.\]</span></p>
+<p>Das Ergebnis:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" />
+Unsere Approximation für den Break-Even Punkt (grün) ist sehr nah an dem wahren Wert (rot).</p>
+</div>
+<div class="exercise">
+<p><span id="exr:taylor" class="exercise"><strong>Aufgabe 5.2  (Zinssensitivität mit Taylor-Approximation) </strong></span>Für ein Portfolio aus Zinsinstrumenten sei <span class="math inline">\(P(r)\)</span> der Marktpreis in Abhängigkeit des Zinses <span class="math inline">\(r&gt;0\)</span> (bei flacher Zinskurve). Ferner bezeichne <span class="math display">\[\operatorname{DUR}(r):=-P&#39;(r)\]</span> die <em>absolute Duration</em>, die in Form einer Sensitivität die Änderung des Marktpreises des Portfolios bei absoluter Zinsänderung beschreibt.</p>
+<p>Für den aktuellen Marktzins <span class="math inline">\(r=0,05\)</span> beträgt der Marktpreis des Portfolios <span class="math inline">\(2.400.000\)</span> und es gilt <span class="math inline">\(\operatorname{DUR}(0,05)=3.200.000\)</span>.</p>
+Berechnen Sie mithilfe der <em>Taylor-Approximation 1. Ordnung</em> näherungsweise den Marktpreis des Portfolios, wenn der Zins auf <span class="math inline">\(0,07\)</span> steigt und auf <span class="math inline">\(0,03\)</span> fällt.
+<details>
+<summary>
+Antwort
+</summary>
+<img src="images/taylor3.png" />
+</details>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="stetigkeit-von-funktionen.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="optimierung.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-differential.rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

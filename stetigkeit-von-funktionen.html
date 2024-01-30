@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Kapitel 4 Stetigkeit von Funktionen | Wirtschaftsmathematik</title>
+  <meta name="description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Kapitel 4 Stetigkeit von Funktionen | Wirtschaftsmathematik" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Kapitel 4 Stetigkeit von Funktionen | Wirtschaftsmathematik" />
+  
+  <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Natalie Packham und Thomas Knispel. Weitere Mitwirkende sind SUsanne Föhse-Hiltmann und Annika Weber." />
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="folgen-grenzwerte-und-reihen.html"/>
+<link rel="next" href="differentialrechnung.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Einführung</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#warum-benötigen-wir-die-methoden-der-wirtschaftsmathematik"><i class="fa fa-check"></i>Warum benötigen wir die Methoden der Wirtschaftsmathematik?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#beispiel-nutzenmaximierung"><i class="fa fa-check"></i>Beispiel: Nutzenmaximierung</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="grundlagen.html"><a href="grundlagen.html"><i class="fa fa-check"></i><b>2</b> Grundlagen</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="grundlagen.html"><a href="grundlagen.html#mengen-und-zahlen"><i class="fa fa-check"></i><b>2.1</b> Mengen und Zahlen</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="grundlagen.html"><a href="grundlagen.html#mengenoperationen"><i class="fa fa-check"></i><b>2.1.1</b> Mengenoperationen</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="grundlagen.html"><a href="grundlagen.html#zahlenmengen"><i class="fa fa-check"></i><b>2.2</b> Zahlenmengen</a></li>
+<li class="chapter" data-level="2.3" data-path="grundlagen.html"><a href="grundlagen.html#punktmengen-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Punktmengen in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-abstand"><i class="fa fa-check"></i><b>2.3.2</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: Abstand</a></li>
+<li class="chapter" data-level="2.3.3" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-varepsilon-umgebung"><i class="fa fa-check"></i><b>2.3.3</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\varepsilon-\)</span>Umgebung</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="grundlagen.html"><a href="grundlagen.html#funktionen"><i class="fa fa-check"></i><b>2.4</b> Funktionen</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="grundlagen.html"><a href="grundlagen.html#lineare-funktionen"><i class="fa fa-check"></i><b>2.4.1</b> Lineare Funktionen</a></li>
+<li class="chapter" data-level="2.4.2" data-path="grundlagen.html"><a href="grundlagen.html#quadratische-funktionen"><i class="fa fa-check"></i><b>2.4.2</b> Quadratische Funktionen</a></li>
+<li class="chapter" data-level="2.4.3" data-path="grundlagen.html"><a href="grundlagen.html#potenz--exponential--und-logarithmusfunktionen"><i class="fa fa-check"></i><b>2.4.3</b> Potenz-, Exponential- und Logarithmusfunktionen</a></li>
+<li class="chapter" data-level="2.4.4" data-path="grundlagen.html"><a href="grundlagen.html#konvexe-und-konkave-funktionen"><i class="fa fa-check"></i><b>2.4.4</b> Konvexe und konkave Funktionen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html"><i class="fa fa-check"></i><b>3</b> Folgen, Grenzwerte und Reihen</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#folgen"><i class="fa fa-check"></i><b>3.1</b> Folgen</a></li>
+<li class="chapter" data-level="3.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#konvergenz-von-folgen"><i class="fa fa-check"></i><b>3.2</b> Konvergenz von Folgen</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#konvergente-folgen-und-grenzwerte"><i class="fa fa-check"></i><b>3.2.1</b> Konvergente Folgen und Grenzwerte</a></li>
+<li class="chapter" data-level="3.2.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#divergente-folgen"><i class="fa fa-check"></i><b>3.2.2</b> Divergente Folgen</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#wichtige-sätze-zu-konvergenz-von-folgen"><i class="fa fa-check"></i><b>3.3</b> Wichtige Sätze zu Konvergenz von Folgen</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#beschränkte-folgen"><i class="fa fa-check"></i><b>3.3.1</b> Beschränkte Folgen</a></li>
+<li class="chapter" data-level="3.3.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#monotone-folgen"><i class="fa fa-check"></i><b>3.3.2</b> Monotone Folgen</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#reihen"><i class="fa fa-check"></i><b>3.4</b> Reihen</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#spezielle-reihen"><i class="fa fa-check"></i><b>3.4.1</b> Spezielle Reihen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html"><i class="fa fa-check"></i><b>4</b> Stetigkeit von Funktionen</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html#punktweise-stetigkeit"><i class="fa fa-check"></i><b>4.1</b> Punktweise Stetigkeit</a></li>
+<li class="chapter" data-level="4.2" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html#stetige-funktionen-und-deren-eigenschaften"><i class="fa fa-check"></i><b>4.2</b> Stetige Funktionen und deren Eigenschaften</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differentialrechnung.html"><a href="differentialrechnung.html"><i class="fa fa-check"></i><b>5</b> Differentialrechnung</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-tangente"><i class="fa fa-check"></i><b>5.1</b> Definition der Tangente</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#sekante-und-tangente"><i class="fa fa-check"></i><b>5.1.1</b> Sekante und Tangente</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#von-der-sekante-zur-tangente"><i class="fa fa-check"></i><b>5.1.2</b> Von der Sekante zur Tangente</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-ableitung"><i class="fa fa-check"></i><b>5.2</b> Definition der Ableitung</a></li>
+<li class="chapter" data-level="5.3" data-path="differentialrechnung.html"><a href="differentialrechnung.html#differenzierbarkeit"><i class="fa fa-check"></i><b>5.3</b> Differenzierbarkeit</a></li>
+<li class="chapter" data-level="5.4" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungsregel"><i class="fa fa-check"></i><b>5.4</b> Ableitungsregel</a></li>
+<li class="chapter" data-level="5.5" data-path="differentialrechnung.html"><a href="differentialrechnung.html#regel-von-lhôpital"><i class="fa fa-check"></i><b>5.5</b> Regel von L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungen-höhere-ordnung"><i class="fa fa-check"></i><b>5.6</b> Ableitungen höhere Ordnung</a></li>
+<li class="chapter" data-level="5.7" data-path="differentialrechnung.html"><a href="differentialrechnung.html#der-satz-von-taylor"><i class="fa fa-check"></i><b>5.7</b> Der Satz von Taylor</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimierung.html"><a href="optimierung.html"><i class="fa fa-check"></i><b>6</b> Optimierung</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimierung.html"><a href="optimierung.html#notwendige-bedingungen-für-maxima-und-minima"><i class="fa fa-check"></i><b>6.1</b> Notwendige Bedingungen für Maxima und Minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimierung.html"><a href="optimierung.html#bedingungen-zweiter-ordnung"><i class="fa fa-check"></i><b>6.2</b> Bedingungen zweiter Ordnung</a></li>
+<li class="chapter" data-level="6.3" data-path="optimierung.html"><a href="optimierung.html#optimierung-auf-einem-intervall"><i class="fa fa-check"></i><b>6.3</b> Optimierung auf einem Intervall</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integralrechnung.html"><a href="integralrechnung.html"><i class="fa fa-check"></i><b>7</b> Integralrechnung</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integralrechnung.html"><a href="integralrechnung.html#das-unbestimmte-integral"><i class="fa fa-check"></i><b>7.1</b> Das unbestimmte Integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integralrechnung.html"><a href="integralrechnung.html#das-bestimmte-integral"><i class="fa fa-check"></i><b>7.2</b> Das bestimmte Integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integralrechnung.html"><a href="integralrechnung.html#eigenschaften-und-elementare-rechenregeln"><i class="fa fa-check"></i><b>7.2.1</b> Eigenschaften und elementare Rechenregeln</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html"><i class="fa fa-check"></i><b>8</b> Lineare Gleichungssysteme</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#gleichungssysteme-mit-zwei-linearen-gleichungen"><i class="fa fa-check"></i><b>8.1</b> Gleichungssysteme mit zwei linearen Gleichungen</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#lösung-durch-substitution-und-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Lösung durch Substitution und Elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#gleichungssysteme-mit-n-linearen-gleichungen"><i class="fa fa-check"></i><b>8.2</b> Gleichungssysteme mit <span class="math inline">\(n\)</span> linearen Gleichungen</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#lösen-von-gleichungssystemen-mit-m-linearen-gleichungen"><i class="fa fa-check"></i><b>8.2.1</b> Lösen von Gleichungssystemen mit <span class="math inline">\(m\)</span> linearen Gleichungen</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html"><i class="fa fa-check"></i><b>9</b> Matrizen und Grundlegende Matrixoperationen</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#matrizen"><i class="fa fa-check"></i><b>9.1</b> Matrizen</a></li>
+<li class="chapter" data-level="9.2" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#grundlegende-matrizenoperationen"><i class="fa fa-check"></i><b>9.2</b> Grundlegende Matrizenoperationen</a></li>
+<li class="chapter" data-level="9.3" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#ökonomische-anwendungen"><i class="fa fa-check"></i><b>9.3</b> Ökonomische Anwendungen</a></li>
+<li class="chapter" data-level="9.4" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#transponierte-einer-matrix"><i class="fa fa-check"></i><b>9.4</b> Transponierte einer Matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#determinante-und-inverse-einer-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinante und Inverse einer Matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#mehr-zu-der-determinante"><i class="fa fa-check"></i><b>9.5.1</b> Mehr zu der Determinante</a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#rang-und-determinanteast"><i class="fa fa-check"></i><b>9.5.2</b> Rang und Determinante<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html"><i class="fa fa-check"></i><b>10</b> Analysis mit <span class="math inline">\(n\)</span> Veränderlichen</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#stetigkeit"><i class="fa fa-check"></i><b>10.1</b> Stetigkeit</a></li>
+<li class="chapter" data-level="10.2" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#partielle-ableitungen"><i class="fa fa-check"></i><b>10.2</b> Partielle Ableitungen</a></li>
+<li class="chapter" data-level="10.3" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#partielle-ableitungen-höherer-ordnung"><i class="fa fa-check"></i><b>10.3</b> Partielle Ableitungen höherer Ordnung</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#der-gradientenvektor-und-die-hesse-matrix"><i class="fa fa-check"></i><b>10.3.1</b> Der Gradientenvektor und die Hesse-Matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#ableitung-impliziter-funktionenast"><i class="fa fa-check"></i><b>10.4</b> Ableitung impliziter Funktionen<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html#höhenlinien-indifferenzkurvenast"><i class="fa fa-check"></i><b>10.4.1</b> Höhenlinien / Indifferenzkurven<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimierung-ii.html"><a href="optimierung-ii.html"><i class="fa fa-check"></i><b>11</b> Optimierung II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimierung-ii.html"><a href="optimierung-ii.html#bedingungen-erster-ordnung"><i class="fa fa-check"></i><b>11.1</b> Bedingungen erster Ordnung</a></li>
+<li class="chapter" data-level="11.2" data-path="optimierung-ii.html"><a href="optimierung-ii.html#bedingungen-zweiter-ordnung-1"><i class="fa fa-check"></i><b>11.2</b> Bedingungen zweiter Ordnung</a></li>
+<li class="chapter" data-level="11.3" data-path="optimierung-ii.html"><a href="optimierung-ii.html#optimierung-unter-nebenbedingungen-lagrange-methode"><i class="fa fa-check"></i><b>11.3</b> Optimierung unter Nebenbedingungen: Lagrange-Methode</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wirtschaftsmathematik</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="stetigkeit-von-funktionen" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Kapitel 4</span> Stetigkeit von Funktionen<a href="stetigkeit-von-funktionen.html#stetigkeit-von-funktionen" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Stetigkeit von Funktionen ist ein wichtiges Konzept, das in diversen Bereichen, darunter den Wirtschaftswissenschaften, zur Anwendung kommt.</p>
+<p>Intuitiv betrachtet ist eine Funktion stetig, wenn ihr Graph keine “Brüche” oder “Sprungstellen” hat.</p>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Glückwunsch! Deine Antwort ist richtig.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Leider falsch. Versuch es nochmal!`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Bitte zwei Optionen auswählen.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 100) + 2;
+      const x2 = Math.floor(Math.random() * 100) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Glückwunsch! Deine Antwort ist richtig.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Glückwunsch! Deine Antwort ist richtig.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Leider falsch. Versuch es nochmal!`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Bitte eine Option wählen.';
+      }
+    }
+</script>
+<div class="example">
+<p><span id="exm:prodfun" class="example"><strong>Beispiel 4.1  (Produktionsfunktion) </strong></span>Eine Produktionsfunktion verknüpft Inputfaktoren und Output eines Produktionsprozesses; formal: der Output <span class="math inline">\(y = f (x)\)</span> wird mithilfe des Inputs <span class="math inline">\(x\)</span> und der Produktionsfunktion <span class="math inline">\(f\)</span> erzeugt.
+Die Produktionsfunktion eines Autoherstellers sei <span class="math inline">\(y = x/1050\)</span>, wobei <span class="math inline">\(y\)</span> die Zahl der Autos (Output) und <span class="math inline">\(x\)</span> die Zahl der Schrauben (Input) bezeichnet.</p>
+<p><img src="images/prodfun.png" /></p>
+<p>Der Definitionsbereich der Funktion ist <span class="math inline">\(\left\{ 1050n:n \in \mathbb{N} \right\}\)</span> = <span class="math inline">\(\left\{ 1.050, 2.100, 3.150, ... \right\}\)</span>.</p>
+<p>In der Praxis ist es leichter mit der Produktionsfunktion <span class="math inline">\(y = x/1050\)</span>, mit <span class="math inline">\(x \in \mathbb{R_+}\)</span>, zu arbeiten, z.B. um Entscheidungsprobleme zu lösen.
+<img src="images/prodfun2.png" /></p>
+</div>
+<div class="exercise">
+<p><span id="exr:bonus" class="exercise"><strong>Aufgabe 4.1  (Bonusschema) </strong></span>Die Verkäufer der Gitarrenmanufaktur, in der Sophia gerade ihr Praktikum macht, erhalten monatlich:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>ein Grundgehalt von <span class="math inline">\(800 \ €\)</span>;</p></li>
+<li><p>plus eine Provision von <span class="math inline">\(10%\)</span> pro verkaufte Gitarre;</p></li>
+<li><p>plus einen Bonus von <span class="math inline">\(500 \ €\)</span>, falls der Umsatz <span class="math inline">\(20.000 \ €\)</span> übersteigt.</p></li>
+</ol>
+<p><img src="images/gitarrenman.png" /></p>
+<p>Es sei <span class="math inline">\(S\)</span> der Umsatz eines Monat; das Gehalt eines Verkäufers ist:</p>
+<p><span class="math inline">\(P = \begin{pmatrix} 800+0,01S, \text{ wenn } \ S&lt;20000 \\ 1.300+0,01S, \text{ wenn } \ S \geq 20000 \end{pmatrix}\)</span></p>
+<p>Einen Tag vor Monatsende haben drei Verkäufer folgende Umsätze erzielt: <span class="math inline">\(26000 €\)</span>, <span class="math inline">\(18500 €\)</span>, <span class="math inline">\(6000 €\)</span>.</p>
+<p>Wer wird am letzten Tag am härtesten arbeiten?</p>
+<details>
+<summary>
+Antwort
+</summary>
+Mitarbeiter 2, da er dann wahrscheinlich die Schwelle für die Bonuszahlung (20000€) erreicht.
+<img src="images/gittarremanauf11.png" />
+</details>
+<p>Was gäbe möglicherweise einen besseren motivatorischen Anreiz für die Gitarrenverkäufer?</p>
+<p>Zwei mögliche Antworten (weitere Alternativen sind denkbar):</p>
+<details>
+<summary>
+Möglichkeit 1
+</summary>
+<ol style="list-style-type: decimal">
+<li>mehrstufige Bonusvariante
+<img src="images/gitarre21.png" /></li>
+</ol>
+</details>
+<details>
+<summary>
+Möglichkeit 2
+</summary>
+<ol start="2" style="list-style-type: decimal">
+<li>stetige Gehaltsfunktion.
+<img src="images/gitarre22.png" /></li>
+</ol>
+</details>
+</div>
+<div id="qstetigkeit1" class="quiz">
+<img src="images/funaufg.png" />
+<script>
+
+
+// Generate a random question
+  const questionObj9 = {
+      question: 'Welche der abgebildeten Funktionen sind stetig? Wählen Sie passende Antwortoptionen 1-4 (von links nach rechts).',
+      options: ['1', '2', '3', '4'],
+      answer: ['1','2'],
+      id: 9
+    };
+</script>
+<p class="question">
+Frage: <span id="question-text9"></span>
+</p>
+<div class="options">
+<p><label>
+<input type="checkbox" name="option9" value=1> 1
+</label>
+<label>
+<input type="checkbox" name="option9" value=2> 2
+</label>
+<label>
+<input type="checkbox" name="option9" value=3> 3
+</label>
+<label>
+<input type="checkbox" name="option9" value=4> 4
+</label></p>
+</div>
+<button onclick="checkAnswer_mmc(questionObj9)">
+Check
+</button>
+<p id="result9">
+</p>
+<script>
+    // Display the question
+    document.getElementById('question-text9').textContent = questionObj9.question;
+
+</script>
+</div>
+<div id="punktweise-stetigkeit" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Punktweise Stetigkeit<a href="stetigkeit-von-funktionen.html#punktweise-stetigkeit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Wir betrachten zunächst die Stetigkeit einer Funktion <span class="math inline">\(f (x)\)</span> in einem Punkt mit generischer Bezeichnung <span class="math inline">\(a.\)</span></p>
+<div class="definition">
+<p><span id="def:defpstetig" class="definition"><strong>Definition 4.1  (Punktweise Stetigkeit) </strong></span>Die Funktion <span class="math inline">\(f:D \rightarrow \mathbb{R}\)</span>, mit <span class="math inline">\(D \subseteq \mathbb{R}\)</span>, ist stetig in <span class="math inline">\(a \in D,\)</span> wenn für jede Folge <span class="math inline">\((x_n)_{n \in \mathbb{N} },\)</span> die gegen <span class="math inline">\(a\)</span> konvergiert, gilt, dass <span class="math inline">\(f (x_n)\)</span> gegen <span class="math inline">\(f(a)\)</span> konvergiert. Formal:
+<span class="math display">\[\lim\limits_{n \rightarrow \infty} x_n=a  \  \Rightarrow \  \lim\limits_{n \rightarrow \infty} f(x_n)=f(a).\]</span></p>
+<p>Da dies für jede Folge gilt, können wir den Bezug zu einer bestimmten Folge vernachlässigen und schreiben:
+<span class="math display">\[\lim\limits_{x \rightarrow a} f(x)=f(a).\]</span></p>
+</div>
+<p>Die folgenden Beispiele zeigen, wie man punkweise Stetikeit nachvollziehen kann.</p>
+<div class="example">
+<p><span id="exm:stet1" class="example"><strong>Beispiel 4.2  (Punktweise Stetigkeit I) </strong></span>Wir zeigen, dass <span class="math inline">\(f (x) = x^2\)</span> , <span class="math inline">\(x \in \mathbb{R}\)</span>, stetig ist für beliebiges <span class="math inline">\(a \in \mathbb{R}\)</span>.</p>
+<p>Es sei <span class="math inline">\((x_n)_{n \in \mathbb{N} }\)</span> eine Folge mit <span class="math inline">\(\lim\limits_{n \rightarrow \infty} x_n=a\)</span>.</p>
+<p>Also: wählt man ein beliebiges <span class="math inline">\(δ &gt; 0\)</span>, so gilt <span class="math inline">\(|x_n − a| &lt; δ\)</span> für alle <span class="math inline">\(n\)</span>, die groß genug sind (also z.B. <span class="math inline">\(n &gt; N_δ\)</span>).</p>
+<p>Damit gilt:</p>
+<p><span class="math inline">\(\lvert f(x)-f(a) \rvert = \lvert x_n^2-a^2 \rvert\)</span></p>
+<p><span class="math inline">\(= \lvert (x_n-a) (x_n-a+2a)\rvert\)</span></p>
+<p><span class="math inline">\(= \lvert x_n-a \rvert \lvert x_n-a+2a \rvert\)</span></p>
+<p><span class="math inline">\(\leq \lvert x_n-a \rvert ( \lvert x_n-a \rvert+ \lvert 2a \rvert )\)</span></p>
+<p><span class="math inline">\(&lt; \delta ( \delta+2 \lvert a \rvert )\)</span></p>
+<p>Da <span class="math inline">\(\delta &gt; 0\)</span> beliebig klein gewählt werden kann, ergibt sich, dass auch der Abstand <span class="math inline">\(|f (x_n) − f (a)|\)</span> beliebig klein wird, wenn man nur <span class="math inline">\(n\)</span> groß genug wählt.
+<img src="images/stet1.png" /></p>
+</div>
+<div class="example">
+<p><span id="exm:nutzenmax" class="example"><strong>Beispiel 1.1  (Nutzenmaximierung) </strong></span>Die Funktion <span class="math inline">\(f(x) = \begin{pmatrix} +1, falls \ x \leq 0\\ -1, falls\ x&gt;0 \end{pmatrix}\)</span>, ist unstetig an der Stelle <span class="math inline">\(0\)</span>.
+Wir wählen die Folge <span class="math inline">\(x_n = 1/n \cdot (−1)^n\)</span> , <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p>Die folgende Graphik zeigt <span class="math inline">\(x_n\)</span> und <span class="math inline">\(f (x_n) = (−1)^n\)</span> , <span class="math inline">\(n = 1, ... , 20\)</span>.</p>
+<p><img src="images/stet2.png" /></p>
+<p>Es zeigt sich also, dass <span class="math inline">\(\lim _ {x \rightarrow \infty } x_n = 0\)</span>, hingegen <span class="math inline">\(f (x_n)\)</span> keinen Grenzwert hat, woraus die Unstetigkeit von <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(0\)</span> folgt.</p>
+<p>Gleiches lässt sich aus dem folgenden Graphen ablesen: Obwohl <span class="math inline">\(x_1,x_2, ...\)</span> gegen <span class="math inline">\(0\)</span> gehen, springen die Werte f<span class="math inline">\((x_1),f (x_2), ...\)</span> zwischen <span class="math inline">\(−1\)</span> und <span class="math inline">\(1\)</span> hin und her.</p>
+<p><img src="images/stet3.png" /></p>
+<p>Auch wenn die Funktion <span class="math inline">\(f(x) = \begin{pmatrix} +1, falls \ x \leq 0\\ -1, falls\ x&gt;0 \end{pmatrix}\)</span>, aus dem vorherigen Beispiel unstetig in <span class="math inline">\(0\)</span> ist, erfüllt sie eine schwächere Form der Stetigkeit in <span class="math inline">\(0\)</span>.</p>
+</div>
+<p>Ein weiterer Blickwinkel auf die punktweise Stetigkeit einer Funktion bietet die folgende richtungsabhängige Betrachtung des Funktionsverhaltens.</p>
+<div class="definition">
+<p><span id="def:deflrstetigkeit" class="definition"><strong>Definition 4.2  (Links- und Rechtstetigkeit) </strong></span></p>
+<ul>
+<li>Eine Funktion <span class="math inline">\(f:D \rightarrow \mathbb{R}\)</span> ist <strong>linksstetig</strong> in <span class="math inline">\(a \in D\)</span>, wenn für jede Folge <span class="math inline">\((x_n)_{n\in\mathbb N}\)</span>, die von unten gegen <span class="math inline">\(a\)</span> konvergiert, <span class="math inline">\(f (x_n)\)</span> gegen <span class="math inline">\(f (a)\)</span> konvergiert, d.h.
+<span class="math inline">\(\lim _{x \uparrow a} f(x)= \lim _{x \rightarrow a^-} f(x) = f(a)\)</span>.</li>
+</ul>
+<p><img src="images/lstet.png" /></p>
+<ul>
+<li>Analog ist <span class="math inline">\(f:D \rightarrow \mathbb{R}\)</span> <strong>rechtsstetig</strong> in <span class="math inline">\(a \in D\)</span>, wenn <span class="math inline">\(f (x_n)\)</span> gegen <span class="math inline">\(f (a)\)</span> konvergiert, für jede Folge <span class="math inline">\((x_n)_{n\in\mathbb N}\)</span>, die von oben gegen <span class="math inline">\(a\)</span> konvergiert, d.h.</li>
+</ul>
+<p><span class="math inline">\(\lim _{x \downarrow a} f(x)= \lim _{x \rightarrow a^+} f(x) = f(a)\)</span>.</p>
+<p><img src="images/rstet.png" /></p>
+</div>
+<p>Mittels Grenzwertbetrachtung kann man also die punktweise Links- und Rechtsstetigkeit überprüfen. Das folgende Theorem gibt uns auch einen Ansatz, wie man die Konzepte der Links- und Rechtsstetigkeit für die Bestimmung, ob eine Funktion in einem vorgegebenen Punkt stetig oder nicht ist, benutzen.</p>
+<div class="theorem">
+<p><span id="thm:thmstetig" class="theorem"><strong>Theorem 4.1  (Punktweise Stetigkeit) </strong></span>Eine Funktion <span class="math inline">\(f:D \rightarrow \mathbb{R}\)</span> ist stetig in <span class="math inline">\(a \in D\)</span> genau dann, wenn
+<span class="math inline">\(\lim _{x \uparrow a} f(x)= \lim _{x \downarrow a} f(x) = f(a)\)</span>.</p>
+</div>
+<p>Eine hilfreiche App zur Visualisierung der links- und rechtsseitigen Stetigkeit ist hier zu finden:</p>
+<iframe src="https://www.geogebra.org/m/Jf7rP6uK" allowtransparency="true" width="485" height="650" frameborder="0" scrolling="no" allowfullscreen>
+</iframe>
+<div class="example">
+<p><span id="exm:stet" class="example"><strong>Beispiel 4.3  (Stetigkeit überprüfen) </strong></span>Es sei <span class="math inline">\(f:[0,10] \rightarrow \mathbb{R}\)</span> definiert als</p>
+<p><span class="math inline">\(f(x) = \begin{cases} \lvert x-2 \rvert -2, &amp;wenn \ 0 \leq x&lt;2 \ oder \ 2 &lt; x \leq 6 \\ \frac{2}{x-6} -2, &amp;wenn \ 6&lt; x &lt;8 \\ (x-9)^3-1, &amp;wenn \ 8 \leq x \leq 10 \\ 1, &amp;wenn \ x=2 \end{cases}\)</span>.
+<img src="images/stet4.png" /></p>
+<p>Die Funktion <span class="math inline">\(f\)</span> ist unstetig in drei Punkten:</p>
+<p>Es gilt <span class="math inline">\(f (6) = 2\)</span>, aber <span class="math inline">\(\lim_{x\downarrow 6} f (x) = \infty\)</span>;</p>
+<p>Es gilt <span class="math inline">\(f (8) = −2\)</span>, aber <span class="math inline">\(\lim_{x\uparrow 8} f (x) = −1\)</span>.</p>
+<p>Es ist <span class="math inline">\(f (2) = 1\)</span>, aber <span class="math inline">\(\lim_{x\uparrow 2} f (x) = \lim_{x\downarrow 2} f (x) = −2 \neq f (2)\)</span>.</p>
+</div>
+</div>
+<div id="stetige-funktionen-und-deren-eigenschaften" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Stetige Funktionen und deren Eigenschaften<a href="stetigkeit-von-funktionen.html#stetige-funktionen-und-deren-eigenschaften" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Stetigkeit auf einem Bereich einer Funktion:</p>
+<ul>
+<li><p>Bislang haben wir Stetigkeit in einem Punkt <span class="math inline">\((a \in D)\)</span> betrachtet.</p></li>
+<li><p>Jetzt erweitern wir diese Deﬁnition auf einen Bereich.</p></li>
+</ul>
+<div class="definition">
+<p><span id="def:defstetigkeitalg" class="definition"><strong>Definition 4.3  (Stetige Funktion) </strong></span>Eine Funktion <span class="math inline">\(f : D \rightarrow R, D \subseteq \mathbb R\)</span>, heißt stetig (auf <span class="math inline">\(D\)</span>), falls sie in jedem Punkt <span class="math inline">\(a \in D\)</span> stetig ist.</p>
+</div>
+<p>Die folgenden Sätze geben uns die Eigenschaften stetiger Funktionen.</p>
+<div class="theorem">
+<p><span id="thm:thmsteteig" class="theorem"><strong>Theorem 4.2  (Stetige Funktionen) </strong></span><span class="math inline">\(f\)</span> und <span class="math inline">\(g\)</span> seien stetige Funktionen, zudem sei <span class="math inline">\(c \in \mathbb{R}\)</span>. Dann sind folgende Funktionen ebenfalls stetig:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(c f (x)\)</span>,</p></li>
+<li><p><span class="math inline">\(f (x) + c\)</span>,</p></li>
+<li><p><span class="math inline">\(f (x) \pm g(x)\)</span>,</p></li>
+<li><p><span class="math inline">\(f (x) \cdot g(x)\)</span>,</p></li>
+<li><p><span class="math inline">\(f (x)/g(x)\)</span>, für <span class="math inline">\(g(x) \  \neq 0\)</span>,</p></li>
+<li><p><span class="math inline">\(f^{ (−1)} (x)\)</span>, wenn es existiert.</p></li>
+</ol>
+</div>
+<div class="theorem">
+<p><span id="thm:thmkomp" class="theorem"><strong>Theorem 4.3  (Komposition stetiger Funktionen) </strong></span>Es seien <span class="math inline">\(f : D \rightarrow\mathbb{R}\)</span> und <span class="math inline">\(g : E \rightarrow \mathbb{R}\)</span> Funktionen mit <span class="math inline">\(f (D) \subset E\)</span> Wenn <span class="math inline">\(f\)</span> und <span class="math inline">\(g\)</span> stetig sind, dann ist auch die Funktion</p>
+<p><span class="math inline">\(g \circ f:D \rightarrow \mathbb{R} , \ g(f(x))\)</span>,</p>
+<p>stetig.</p>
+</div>
+<div id="q2" class="quiz">
+<p id="question">
+<span id="question-text10"></span>
+</p>
+<input type="number" id="answer10" placeholder="Antwort eingeben">
+<button onclick="checkAnswer_num(questionObj10)">Check</button>
+<p id="result10">
+</p>
+</div>
+<script>
+
+ // Generate a random question
+    const questionObj10 = generateQuestion_num(10);
+// Display the question
+    document.getElementById('question-text10').textContent = "Bestimmen Sie \\(k\\in\\mathbb R\\) so dass die folgende Funktion stetig auf \\(\\mathbb R\\) ist: \\[f(x) = \\begin{cases} "+ questionObj10.question[1] + "x^2 + " + questionObj10.question[2] + "x,&\\text{ falls } x\\geq" + questionObj10.question[0]+",\\\\ -" + questionObj10.question[3] + "x+k,&\\text{ falls } x<" + questionObj10.question[0] +"\\end{cases}\\]";
+    questionObj10.answer = questionObj10.question[1]*Math.pow(questionObj10.question[0],2) + questionObj10.question[2]*questionObj10.question[0]+questionObj10.question[3]*questionObj10.question[0]
+</script>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="folgen-grenzwerte-und-reihen.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="differentialrechnung.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-stetigkeit.rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
