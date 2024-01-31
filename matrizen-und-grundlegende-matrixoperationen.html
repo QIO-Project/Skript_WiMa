@@ -288,6 +288,8 @@ function checkAnswer_num(q) {
 <p>Mit Matrizen werden Daten auf sehr effiziente und wirkungsvolle Weise dargestellt und bearbeitet. Eine wichtige Anwendung von Matrizen ist die Lösung großer linearer Gleichungssysteme. Man fasst die <strong>Koeffizienten</strong> <span class="math inline">\(a_{ij}\)</span> eines solchen linearen Gleichungssystems in einer Matrix <span class="math inline">\(A\)</span> zusammen und schreibt die <strong>Unbekannten</strong> als Vektor <span class="math inline">\(\bf x\)</span>. Die Konstanten auf der rechten Seite der Gleichungen landen auch in einem Vektor <span class="math inline">\(\bf b.\)</span> Als Ergebnis, kann man das System bündig darstellen: <span class="math inline">\(A\bf{x} = \bf{b}\)</span> und mit Matrix-Operationen effizient lösen.</p>
 <p><span class="math inline">\(\leadsto\)</span> In diesem Kapitel lernen wir Matrizen und Vektoren, bzw. die Operation mit diesen kennen.</p>
 <hr />
+<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_matrix.m4a">
+</audio>
 <p>Eine Matrix kann man sich als Tabelle vorstellen, mit dem zusätzlichen Vorteil, dass man mit Matrizen rechnen kann. Matrizen können bspw. zur Lösung linearer Gleichungssysteme eingesetzt werden.</p>
 <div id="matrizen" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Matrizen<a href="matrizen-und-grundlegende-matrixoperationen.html#matrizen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -383,6 +385,8 @@ wobei das Element <span class="math inline">\(p_{ij}\)</span> den Bevölkerungsa
 [Wir kommen später auf dieses Beispiel zurück…]</p>
 </div>
 <p>Es gibt einige spezielle Matrizenarten, die in der folgenden Definition zusammengefasst sind.</p>
+<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_spez_matrix.m4a">
+</audio>
 <div class="definition">
 <p><span id="def:defspezmatrizen" class="definition"><strong>Definition 9.3  (spezielle Matrizen) </strong></span></p>
 <ul>
@@ -550,7 +554,7 @@ Die Differenz <span class="math inline">\(A − B\)</span> ist analog definiert.
 <p>Das Skalarprodukt ist also eine Operation, die aus zwei <strong>Vektoren</strong> eine <strong>Zahl</strong> liefert. Diese Zahl kann geometrisch interpretiert werden. Sie sagt aus, inwiefern die Vektoren, die als Pfeile aus dem Koordinatenursprung zu dem Punkt mit Vektorelementen als Koordinaten dargestellt werden, in die gleiche Richtung zeigen (siehe die Abbildung unten).</p>
 <p>Ist das Skalarprodukt <span class="math inline">\(\color{green}{positiv}\)</span>, ist der Winkel zwischen den Pfeilen <span class="math inline">\(\color{green}{\alpha&lt;90°}\)</span>. Bei einem <span class="math inline">\(\color{red}{negativen}\)</span> Skalarprodukt wird der Winkel <span class="math inline">\(\color{red}{\beta&gt;90°}\)</span>. Ist das Skalarprodukt Null, so stehen die Pfeile senkrecht zu einander (im 90° Winkel).</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-53"></span>
-<img src="images/unnamed-chunk-53-1.png" alt="Illustation von Skalarprodukt" width="672" />
+<img src="_main_files/figure-html/unnamed-chunk-53-1.png" alt="Illustation von Skalarprodukt" width="672" />
 <p class="caption">
 Abbildung 9.1: Illustation von Skalarprodukt
 </p>
@@ -570,7 +574,7 @@ Abbildung 9.1: Illustation von Skalarprodukt
       \end{pmatrix}
       = 3\cdot 1 + 3 \cdot 5 = 18.
     \end{equation*}\]</span></p>
-<p><img src="images/unnamed-chunk-54-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
 <ul>
 <li>Das <strong>Skalarprodukt</strong> <span class="math inline">\(\bf x^\top y\)</span> von <span class="math inline">\(\bf x = \begin{pmatrix}  3 &amp; -3  \end{pmatrix}\)</span> und <span class="math inline">\(\bf y = \begin{pmatrix}  -1\\  5  \end{pmatrix}\)</span> ist:
 <span class="math display">\[\begin{equation*}
@@ -585,7 +589,7 @@ Abbildung 9.1: Illustation von Skalarprodukt
     = 3\cdot (-1) + (-3) \cdot 5 = -18.
 \end{equation*}\]</span></li>
 </ul>
-<p><img src="images/unnamed-chunk-55-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
 </div>
 <p>Damit wir das Skalarprodukt im Sinne von Kosinus des entsprechenden <strong>Winkels</strong> interpretieren können, müssen wir es normieren, d.h. die Längen der Vektoren berücksichtigen. Dafür definieren wir die Euklidische Norm eines Vektors.</p>
 <div class="definition">
@@ -623,7 +627,7 @@ Fortführung von <a href="matrizen-und-grundlegende-matrixoperationen.html#exm:e
 &amp;= \arccos\left(\frac{18}{\sqrt{18}\sqrt{26}}\right)= \arccos(0.8321)= 0.588rad\\
 &amp;\approx33.7°
 \end{align}\]</span></p>
-<p><img src="images/unnamed-chunk-56-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
 </div>
 <p>Es bleibt nur der Fall, wenn das Skalarprodukt Null ist. In diesem Fall stehen die Vektoren <strong>senkrecht</strong> zu einander. Solche senkrechte Vektoren bilden bspw. klassische Koordinatensysteme. Es ist ausserdem sinnvoll wenn die Vektoren, die die Basis von solchen Koordinatensystemen bilden, die Länge <span class="math inline">\(1\)</span> haben (intuitiv: jeweils ein Schritt in die jeweilige Richtung). Wenn man die Länge von Vektoren auf <span class="math inline">\(1\)</span> bringt, sagt man dazu <strong>normieren</strong>. Die folgende Definition präzisiert die Begriffe.</p>
 <div class="definition">
@@ -883,6 +887,8 @@ Antwort
 </div>
 <div id="transponierte-einer-matrix" class="section level2 hasAnchor" number="9.4">
 <h2><span class="header-section-number">9.4</span> Transponierte einer Matrix<a href="matrizen-und-grundlegende-matrixoperationen.html#transponierte-einer-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_transpon.m4a">
+</audio>
 <p>Wir haben bereits gesehen, dass man durch das Transponieren einen Spaltenvektor zu einem Zeilenvektor und umgekehrt umwandeln kann. Auch Matrizen kann man transponieren und so deren DImensionen vertauschen.</p>
 <div class="definition">
 <p><span id="def:deftransponierte" class="definition"><strong>Definition 9.12  (Transponierte einer Matrix) </strong></span>Es sei <span class="math inline">\(A\)</span> eine <span class="math inline">\(m\times n\)</span> Matrix. Die <strong>transponierte Matrix</strong>
@@ -962,6 +968,8 @@ durch:
 <span class="math display">\[A{\bf x} = {\bf b}\]</span>
 zu lösen, müssen wir die Matrix <span class="math inline">\(A\)</span> auf der rechten Seite “los werden” damit da nur <span class="math inline">\(\bf x\)</span> steht und linke Seite gibt dann die Lösung an.</p>
 <p>Dafür definieren wir die <strong>Inverse</strong> einer quadratischen Matrix.</p>
+<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_inverse.m4a">
+</audio>
 <div class="definition">
 <p><span id="def:definverse" class="definition"><strong>Definition 9.13  (Inverse einer quadratischen Matrix) </strong></span></p>
 <ul>
@@ -1231,6 +1239,8 @@ die Output-Mengen <span class="math inline">\(y_{1}\)</span> und <span class="ma
 <div id="mehr-zu-der-determinante" class="section level3 hasAnchor" number="9.5.1">
 <h3><span class="header-section-number">9.5.1</span> Mehr zu der Determinante<a href="matrizen-und-grundlegende-matrixoperationen.html#mehr-zu-der-determinante" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Bei der Bestimmung der Inverse <span class="math inline">\(A^{-1}\)</span>, spielt die besondere Kennzahl - die <strong>Determinante</strong> der ursprunglichen Matrix <span class="math inline">\(A\)</span> - eine entscheidende Rolle. In den nachfolgenden Kapiteln, wird diese Kennzahl gebraucht um bspw. Maxima und Minima von multivariaten Funktionen zu überprüfen. Im folgenden, definieren wir diese Kennzahl explizit.</p>
+<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_determinante.m4a">
+</audio>
 <div class="definition">
 <p><span id="def:defdeterminante" class="definition"><strong>Definition 9.14  (Determinante) </strong></span>Es sei <span class="math inline">\(A\)</span> eine <span class="math inline">\(2\times 2\)</span> Matrix. Der Term
 <span class="math inline">\(a_{22}a_{11}-a_{21}a_{12}\)</span> ist die <strong>Determinante</strong> von <span class="math inline">\(A\)</span>
