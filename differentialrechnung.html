@@ -285,8 +285,6 @@ function checkAnswer_num(q) {
       }
     }
 </script>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/diff_einf.m4a">
-</audio>
 <p>Die Ableitung einer Funktion beschreibt die Veränderung einer Variablen als Reaktion auf die Veränderung einer anderen Variablen.</p>
 <p>Beispiele in der Ökonomie:</p>
 <ul>
@@ -300,8 +298,6 @@ Z.B. Gewinnmaximierung: “Eine profitmaximierende Firma erhöht ihren Output bi
 <p><img src="images/grenzerl.png" /></p>
 <div id="definition-der-tangente" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Definition der Tangente<a href="differentialrechnung.html#definition-der-tangente" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_tangente.m4a">
-</audio>
 <p>Eine umgangssprachliche Beschreibung der Tangentengeraden lautet wie folgt:</p>
 <p>“Eine Tangente ist eine Gerade, die eine Funktion nur in einem Punkt berührt.”</p>
 <p>Im Graphen berührt die Gerade <span class="math inline">\(l_P\)</span> die Funktion nur im Punkt <span class="math inline">\(P\)</span>, ohne die Funktion an einem anderen Punkt zu schneiden.</p>
@@ -312,7 +308,7 @@ Z.B. Gewinnmaximierung: “Eine profitmaximierende Firma erhöht ihren Output bi
 <summary></summary>
 ![](images/tang_besch.png)
 </details>-->
-<p>Die obige Aussage deckt unser allgemeines Verständnis der Tangente gut ab, eignet sich aber nicht als Definition.</p>
+<p>Die obige Aussage deckt unser allgemeines Verständnis der Tangente gut ab, eingnet sich aber nicht als Definition.</p>
 <p>Denn: Die Tangente kann die Funktion in einem weiter entfernt liegenden Punkt schneiden; daher müssen wir uns auf geeignete Umgebungen des Punkts <span class="math inline">\(P\)</span> beschränken (siehe die Abbildung unten für <span class="math inline">\(f(x)=\sin(x)\)</span>).
 In Einzelfällen kann die Tangente die Funktion sogar schneiden, wie hier im Beispiel <span class="math inline">\(y = x^3\)</span> an der Stelle <span class="math inline">\(x = 0\)</span> (siehe die Abbildung unten für <span class="math inline">\(f(x)=x^3\)</span>).</p>
 <p><img src="images/tang23.png" /></p>
@@ -322,16 +318,14 @@ In Einzelfällen kann die Tangente die Funktion sogar schneiden, wie hier im Bei
 <div id="sekante-und-tangente" class="section level3 hasAnchor" number="5.1.1">
 <h3><span class="header-section-number">5.1.1</span> Sekante und Tangente<a href="differentialrechnung.html#sekante-und-tangente" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Wir wenden uns daher einer formalen Herleitung des Ableitungsbegriffs zu. Zunächst definieren wir weitere Konzepte, die eine Rolle beim Definieren einer Tangente spielen.</p>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_sekante.m4a">
-</audio>
-<div class="definition">
-<p><span id="def:defsekante" class="definition"><strong>Definition 5.1  (Sekante) </strong></span>Es seien <span class="math inline">\(P = (x_1, f (x_1))\)</span> und <span class="math inline">\(Q = (x_2, f (x_2))\)</span> zwei Punkte im Graphen der Funktion <span class="math inline">\(f\)</span> . Die Sekante von <span class="math inline">\(P\)</span> und <span class="math inline">\(Q\)</span> ist die Gerade, die <span class="math inline">\(P\)</span> und <span class="math inline">\(Q\)</span> verbindet.</p>
+<div id="defsekante.definition" name="Sekante">
+<p>Es seien <span class="math inline">\(P = (x_1, f (x_1))\)</span> und <span class="math inline">\(Q = (x_2, f (x_2))\)</span> zwei Punkte im Graphen der Funktion <span class="math inline">\(f\)</span> . Die Sekante von <span class="math inline">\(P\)</span> und <span class="math inline">\(Q\)</span> ist die Gerade, die <span class="math inline">\(P\)</span> und <span class="math inline">\(Q\)</span> verbindet.</p>
 </div>
 <ul>
-<li>Die Steigung der Sekanten, genannt Differenzenquotient, ist
-<span class="math display">\[{m}_{PQ}= \frac{f(x_2)-f(x_1)}{x_2-x_1}=:    \frac{\triangle y}{ \triangle  x},\]</span>
-wobei <span class="math inline">\(\Delta y = f (x_2) − f (x_1)\)</span> und <span class="math inline">\(\Delta x = x_2 − x_1\)</span>.</li>
+<li>Die Steigung der Sekanten, genannt Differenzenquotient, ist</li>
 </ul>
+<p><span class="math inline">\({m}_{PQ}= \frac{f(x_2)-f(x_1)}{x_2-x_1}=: \frac{\triangle y}{ \triangle x}\)</span> ,</p>
+<p>wobei <span class="math inline">\(\Delta y = f (x_2) − f (x_1)\)</span> und <span class="math inline">\(\Delta x = x_2 − x_1\)</span>.</p>
 <p><img src="images/sekante1.png" /></p>
 </div>
 <div id="von-der-sekante-zur-tangente" class="section level3 hasAnchor" number="5.1.2">
@@ -343,7 +337,7 @@ wobei <span class="math inline">\(\Delta y = f (x_2) − f (x_1)\)</span> und <s
 </ul>
 <p><img src="images/tangente1.png" /></p>
 <div class="definition">
-<p><span id="def:deftangente" class="definition"><strong>Definition 5.2  (Tangente) </strong></span>Es sei <span class="math inline">\(f\)</span> auf einem offenen Intervall um <span class="math inline">\(x_0\)</span> definiert.
+<p><span id="def:deftangente" class="definition"><strong>Definition 5.1  (Tangente) </strong></span>Es sei <span class="math inline">\(f\)</span> auf einem offenen Intervall um <span class="math inline">\(x_0\)</span> definiert.
 Falls</p>
 <p><span class="math inline">\(m^ * = \lim _{ \triangle x \rightarrow 0} \frac{f(x_0+ \triangle x) -f(x_0) }{ \triangle x}\)</span></p>
 <p>existiert, dann ist die Gerade durch <span class="math inline">\((x_0,f (x_0))\)</span> mit Steigung <span class="math inline">\(m*\)</span> die <strong>Tangente</strong> von <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(x_0\)</span>.</p>
@@ -368,16 +362,14 @@ Falls</p>
 </div>
 <div id="definition-der-ableitung" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Definition der Ableitung<a href="differentialrechnung.html#definition-der-ableitung" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_ableitung.m4a">
-</audio>
 <div class="definition">
-<p><span id="def:ableitung" class="definition"><strong>Definition 5.3  (Ableitung) </strong></span>Die <strong>Ableitung</strong> (der <strong>Differentialquotient</strong>) einer Funktion <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(x,\)</span> geschrieben als <span class="math inline">\(f&#39; (x),\)</span> ist die Steigung der Tangente in diesem Punkt:
-<span class="math display">\[f&#39;(x)=  \lim_{ \triangle x \rightarrow 0 } \frac{f(x+ \triangle x)}{ \triangle x}.\]</span></p>
+<p><span id="def:ableitung" class="definition"><strong>Definition 5.2  (Ableitung) </strong></span>Die <strong>Ableitung</strong> (der <strong>Differentialquotient</strong>) einer Funktion <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(x\)</span>, geschrieben als <span class="math inline">\(f&#39; (x)\)</span>, ist die Steigung der Tangente in diesem Punkt:
+<span class="math inline">\(f&#39;(x)= \lim_{ \triangle x \rightarrow 0 } \frac{f(x+ \triangle x)}{ \triangle x}\)</span> .</p>
 </div>
 <p>Die sogenannte Leibniz-Notation der Ableitung ist <span class="math inline">\(f&#39;(x)= \frac{df(x)}{dx}\)</span>,</p>
 <p>wobei der Differentialoperator <span class="math inline">\(d\)</span> eine infinitesimal kleine Änderung ausdrückt.</p>
 <div class="definition">
-<p><span id="def:differential" class="definition"><strong>Definition 5.4  (Differential) </strong></span>Es sei <span class="math inline">\(f\)</span> eine Funktion mit Ableitung <span class="math inline">\(f&#39;\)</span>. Das <strong>Differential</strong> von <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(x\)</span> ist
+<p><span id="def:differential" class="definition"><strong>Definition 5.3  (Differential) </strong></span>Es sei <span class="math inline">\(f\)</span> eine Funktion mit Ableitung <span class="math inline">\(f&#39;\)</span>. Das <strong>Differential</strong> von <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(x\)</span> ist
 <span class="math inline">\(df (x) = f &#39; (x) dx\)</span>.</p>
 </div>
 <p>Das Differential drückt aus, dass sich <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(x\)</span> näherungsweise um <span class="math inline">\(f&#39; (x) dx\)</span> ändert, wobei – etwas salopp ausgedrückt – <span class="math inline">\(dx\)</span> eine infinitesimale Änderung von <span class="math inline">\(x\)</span> bezeichnet und <span class="math inline">\(f&#39;\)</span> die Richtung der Änderung von <span class="math inline">\(f\)</span> vorgibt.</p>
@@ -399,28 +391,22 @@ Falls</p>
 </div>
 <div id="differenzierbarkeit" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Differenzierbarkeit<a href="differentialrechnung.html#differenzierbarkeit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_differenzierbarkeit.m4a">
-</audio>
 <div class="definition">
-<p><span id="def:defdifferenz" class="definition"><strong>Definition 5.5  (Differenzierbarkeit) </strong></span>Die Funktion <span class="math inline">\(f\)</span> ist <strong>differenzierbar im Punkt</strong> <span class="math inline">\(x\)</span>, falls sie in einer offenen Umgebung von <span class="math inline">\(x\)</span> definiert ist und falls
-<span class="math display">\[\lim_{ \triangle x  \rightarrow 0 \ }  \frac{ f(x+ \triangle x)-f(x)}{  \triangle x }\]</span></p>
+<p><span id="def:defdifferenz" class="definition"><strong>Definition 5.4  (Differenzierbarkeit) </strong></span>Die Funktion <span class="math inline">\(f\)</span> ist <strong>differenzierbar im Punkt</strong> <span class="math inline">\(x\)</span>, falls sie in einer offenen Umgebung von <span class="math inline">\(x\)</span> definiert ist und falls
+<span class="math inline">\(lim_{ \triangle x \rightarrow 0 \ } \frac{ f(x+ \triangle x)-f(x)}{ x\triangle }\)</span></p>
 <p>existiert und endlich ist.</p>
 <p>Eine Funktion heißt <strong>differenzierbar</strong>, falls sie überall in ihrem Definitionsbereich differenzierbar ist.</p>
 </div>
 <p>Ist <span class="math inline">\(f\)</span> differenzierbar in <span class="math inline">\(x\)</span>, dann existieren die <strong>linksseitige Ableitung</strong> und die <strong>rechtsseitige Ableitung</strong> und nehmen denselben Wert an:</p>
-<p><span class="math display">\[\lim_{ \triangle x  \uparrow 0 \ }  \frac{ f(x+ \triangle x)-f(x)}{  x\triangle }  =  \lim_{ \triangle x  \downarrow 0 \ }  \frac{ f(x+ \triangle x)-f(x)}{  x\triangle }.\]</span></p>
+<p><span class="math inline">\(lim_{ \triangle x \uparrow 0 \ } \frac{ f(x+ \triangle x)-f(x)}{ x\triangle } = lim_{ \triangle x \downarrow 0 \ } \frac{ f(x+ \triangle x)-f(x)}{ x\triangle }\)</span>.</p>
 <div class="example">
-<p><span id="exm:differenzierbarkeit" class="example"><strong>Beispiel 5.3  (Differenzierbarkeit) </strong></span>Wir betrachten die Funktion <span class="math display">\[f(x)=\begin{cases} x, &amp;\text{ falls }  x&lt;1 \\ 2-x, &amp;\text{ falls } x \geq 1  \end{cases}.\]</span></p>
+<p><span id="exm:differenzierbarkeit" class="example"><strong>Beispiel 5.3  (Differenzierbarkeit) </strong></span>Wir betrachten die Funktion <span class="math inline">\(f(x)=\begin{pmatrix} x, falls \ x&lt;1 \\ 2-x, falls \ x \geq 1 \end{pmatrix}\)</span>.</p>
 <p>Obwohl die Funktion im Punkt <span class="math inline">\(x = 1\)</span> stetig ist, ist sie in diesem Punkt nicht differenzierbar.</p>
 <p>Denn: Im Punkt <span class="math inline">\(x = 1\)</span> gilt
-<span class="math display">\[\lim_{ \triangle x  \uparrow 0 \ }  \frac{ f(1+ \triangle x)-f(1)}{  \Delta x }  =  \lim_{ \triangle x  \uparrow 0 \ }  \frac{ 1+ \triangle x-1 }{  \Delta x } =1\]</span></p>
+<span class="math inline">\(\lim_{ \triangle x \uparrow 0 \ } \frac{ f(1+ \triangle x)-f(1)}{ \Delta x } = \lim_{ \triangle x \uparrow 0 \ } \frac{ 1+ \triangle x-1 }{ \Delta x } =1\)</span></p>
 <p>und</p>
-<p><span class="math display">\[\lim_{ \triangle x  \downarrow 0 \ }  \frac{ f(1+ \triangle x)-f(1)}{  \Delta x }  =  \lim_{ \triangle x  \downarrow 0 \ }  \frac{ (2-(1+ \triangle x))-(2-1) }{  \Delta x } = -1.\]</span></p>
-<!--![](images/differenz1.png)-->
-<p><img src="images/differenz2.png" /></p>
-<p>D.h.
-<span class="math display">\[\lim_{ \triangle x  \uparrow 0 \ }  \frac{ f(1+ \triangle x)-f(1)}{  \Delta x } \not= \lim_{ \triangle x  \downarrow 0 \ }  \frac{ f(1+ \triangle x)-f(1)}{  \Delta x }\]</span></p>
-<p>und die Funktion ist im Punkt <span class="math inline">\(x=1\)</span> nicht differentierbar.</p>
+<p><span class="math inline">\(\lim_{ \triangle x \downarrow 0 \ } \frac{ f(1+ \triangle x)-f(1)}{ \Delta x } = \lim_{ \triangle x \downarrow 0 \ } \frac{ (2-(1+ \triangle x))-(2-1) }{ \Delta x } = -1\)</span>.</p>
+<p><img src="images/differenz1.png" /></p>
 </div>
 <p>Wir betrachten den Zusammenhang zwischen Differenzierbarkeit und Stetigkeit.</p>
 <div class="theorem">
@@ -430,9 +416,10 @@ Falls</p>
 <li><p>Die Umkehraussage gilt i.A. nicht, wie das vorangegangene Beispiel zeigt.</p></li>
 <li><p>Man kann äquivalent sagen: Stetigkeit ist eine notwendige, aber keine hinreichende Bedingung für Differenzierbarkeit.</p></li>
 </ul>
-<p>Wir erweitern den Begriff der Differenzierbarkeit auf geschlossene Intervalle.</p>
+<p><img src="images/differenz2.png" />
+Wir erweitern den Begriff der Differenzierbarkeit auf geschlossene Intervalle.</p>
 <div class="definition">
-<p><span id="def:defdiffint" class="definition"><strong>Definition 5.6  (Differenzierbarkeit auf einem Intervall) </strong></span>Eine Funktion <span class="math inline">\(f\)</span> , definiert auf dem Intervall <span class="math inline">\([a,b]\)</span>, ist differenzierbar auf <span class="math inline">\([a,b]\)</span>, falls gilt:</p>
+<p><span id="def:defdiffint" class="definition"><strong>Definition 5.5  (Differenzierbarkeit auf einem Intervall) </strong></span>Eine Funktion <span class="math inline">\(f\)</span> , definiert auf dem Intervall <span class="math inline">\([a,b]\)</span>, ist differenzierbar auf <span class="math inline">\([a,b]\)</span>, falls gilt:</p>
 <ol style="list-style-type: lower-roman">
 <li><p>die rechtsseitige Ableitung für <span class="math inline">\(f (a)\)</span> existiert;</p></li>
 <li><p>die linksseitige Ableitung für <span class="math inline">\(f (b)\)</span> existiert;</p></li>
@@ -493,7 +480,7 @@ Falls</p>
 <summary>
 Beweise
 </summary>
-Allgemein können Ableitungen über die Definition des Differentialquotienten (Definition <a href="differentialrechnung.html#def:ableitung">5.3</a>) und
+Allgemein können Ableitungen über die Definition des Differentialquotienten (Definition <a href="differentialrechnung.html#def:ableitung">5.2</a>) und
 bereits bewiesene Regeln bestimmt werden.
 <ul>
 <li>
@@ -710,8 +697,6 @@ Antwort
 </div>
 <div id="ableitungen-höhere-ordnung" class="section level2 hasAnchor" number="5.6">
 <h2><span class="header-section-number">5.6</span> Ableitungen höhere Ordnung<a href="differentialrechnung.html#ableitungen-höhere-ordnung" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/abl_hordnung.m4a">
-</audio>
 <p>Wiederholtes Ableiten ergibt Ableitungen höherer Ordnung <span class="math inline">\(f&#39;\)</span> , <span class="math inline">\(f&#39;&#39;\)</span> , <span class="math inline">\(f&#39;&#39;&#39;\)</span>, usw. (sofern sie existieren).</p>
 <p><span class="math inline">\(f&#39;\)</span> ist die erste Ableitung, <span class="math inline">\(f&#39;&#39;\)</span> ist die zweite Ableitung, usw.</p>
 <ul>
@@ -740,19 +725,16 @@ Alle höheren Ableitungen sind <span class="math inline">\(0\)</span>, also <spa
 <div class="example">
 <p><span id="exm:taylorprofit" class="example"><strong>Beispiel 5.7  (Approximation von Gewinnfunktionen) </strong></span>Betrachten wir die exponentiale Nachfragefunktion (ein realistischeres Modell für Nachfragefunktionen!):</p>
 <p><span class="math display">\[p(q) = 100\cdot e^{-0,01\cdot q} = 100\cdot\exp(-0,01 q).\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><img src="images/unnamed-chunk-27-1.png" width="672" /></p>
 <p>Die Gewinnfunktion für einen Monopolisten mit solcher Nachfrage kann wie folgt berechnet werden:</p>
 <p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q),\]</span></p>
 <p>wo <span class="math inline">\(C(q)\)</span> ist die Kostenfunktion. Angenommen, die Kostenfunktion sieht wie folgt aus: <span class="math inline">\(C(q)=10-0.01q\)</span>,</p>
 <p>dann ist die Gewinnfunktion:</p>
 <p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q) = \exp(-0,01 q) \cdot q - 10 - 0,01\cdot q.\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="images/unnamed-chunk-28-1.png" width="672" /></p>
 <p>Wir suchen den Break-Even point (roter Punkt auf der Graphik). Aber: Wie können wir den Break-Even-Punkt finden? Wir können nicht nach <span class="math inline">\(q\)</span> auflösen, nach dem wir den Gewinn gleich Null setzen! (Versuch das 🤯)</p>
 <p>Wir können dennoch die Gewinnfunktion ohne Probleme ableiten und wie auf der Abbildung zu sehen ist, liegt der Break-Even Punkt nah bei <span class="math inline">\(q_0=10.\)</span> Können wir eventuell in der Umgebung von <span class="math inline">\(q_0=10\)</span> die Gewinnfunktion durch ihre Ableitungen approximieren?</p>
 </div>
-<p>Ein weiteres Beispiel ist der Funktionswert <span class="math inline">\(\ln(2),\)</span> der ohne Taschenrechner schwierig zu bestimmen ist.</p>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/satz_taylor.m4a">
-</audio>
 <div class="example">
 <p><span id="exm:taylor" class="example"><strong>Beispiel 5.8  (Funktionswertbestimmung für ln(2)) </strong></span>Der Funktionswert <span class="math inline">\(\ln(2)\)</span> ist ohne Taschenrechner schwierig zu bestimmen.</p>
 <p>Bekannt sind aber folgende Werte von <span class="math inline">\(f (x) = \ln \ x\)</span> an der Stelle <span class="math inline">\(x_0 = 1\)</span>:</p>
@@ -761,12 +743,11 @@ Alle höheren Ableitungen sind <span class="math inline">\(0\)</span>, also <spa
 <p>Aus <span class="math inline">\(f (x_0)\)</span>, <span class="math inline">\(f&#39; (x_0)\)</span>, <span class="math inline">\(f&#39;&#39;(x_0)\)</span>, …, kann mithilfe des <strong>Satzes von Taylor</strong> der Funktionswert <span class="math inline">\(f (x)\)</span> approximativ ermittelt werden.</p>
 <div class="theorem">
 <p><span id="thm:thmtaylor" class="theorem"><strong>Theorem 5.5  (Satz von Taylor) </strong></span>Es sei <span class="math inline">\(f\)</span> eine <span class="math inline">\(n\)</span>-fach differenzierbare Funktion.</p>
-<p>Die <strong>Taylor-Formel</strong> (auch <strong>Taylor-Entwicklung</strong>) von <span class="math inline">\(f (x)\)</span> in der Umgebung um <span class="math inline">\(x_0\)</span> ist gegeben durch</p>
-<p><span class="math display">\[f(x)=f(x_0)+ \sum_{k=1}^{n}  (\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k +R_n(x),\]</span></p>
-<p>wobei der Restterm: <span class="math display">\[R_n(x)=  \frac{f{(n+1)}( \xi) }{(n+1)!} (x-x_0)^{n+1}\]</span></p>
-<p>mit <span class="math inline">\(\xi \in [x_0,x]\)</span> den Näherungsfehler quantifiziert.</p>
-<p>Der <strong>Taylor-Polynom</strong> des <span class="math inline">\(k\)</span>-ten Grades: <span class="math display">\[f(x_0)+ \sum_{k=1}^{n}  (\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k \]</span></p>
-<p>entspricht dabei dem ersten Teil der Taylor-Formel (ohne das Residuum).</p>
+<p>Die Taylor-Formel (auch Taylor-Entwicklung) von <span class="math inline">\(f (x)\)</span> in der Umgebung um <span class="math inline">\(x_0\)</span> ist gegeben durch</p>
+<p><span class="math inline">\(f(x)=f(x_0)+ \sum_{k=1}^{n} (\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k +R_n(x)\)</span>,</p>
+<p>(Taylor-Polynom: <span class="math inline">\(f(x_0)+ \sum_{k=1}^{n} (\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k\)</span> )</p>
+<p>wobei <span class="math inline">\(R_n(x)= \frac{f{(n+1)}( \xi) }{(n+1)!} (x-x_0)^{n+1}\)</span></p>
+<p>mit <span class="math inline">\(\xi \in [x_0,x]\)</span>.</p>
 </div>
 <p>Falls <span class="math inline">\(R_n(x) \rightarrow 0\)</span> für <span class="math inline">\(n \rightarrow \infty\)</span>, dann kann der Funktionswert <span class="math inline">\(f (x)\)</span> durch das Taylor-Polynom approximiert werden.</p>
 <p>Insbesondere ist <span class="math inline">\(f (x_0) + f&#39; (x_0)(x − x_0)\)</span> eine lineare Approximation von <span class="math inline">\(f (x)\)</span>.</p>
@@ -806,7 +787,7 @@ Der Fehler liegt in <span class="math inline">\((\frac{1}{2^{11} \cdot 11}, 1/11
 <p>Nun können wir die Approximation gleich Null setzen und den approximativen Break-Even Punkt finden.</p>
 <p><span class="math display">\[-1,0516 + 0,8044\cdot (q-10)=0\rightarrow q \approx 11,3073.\]</span></p>
 <p>Das Ergebnis:</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" />
+<p><img src="images/unnamed-chunk-29-1.png" width="672" />
 Unsere Approximation für den Break-Even Punkt (grün) ist sehr nah an dem wahren Wert (rot).</p>
 </div>
 <div class="exercise">

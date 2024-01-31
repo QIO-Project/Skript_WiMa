@@ -216,8 +216,6 @@
             <section class="normal" id="section-">
 <div id="optimierung" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Kapitel 6</span> Optimierung<a href="optimierung.html#optimierung" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/einf_optim.m4a">
-</audio>
 <p>Ökonomische Modelle basieren häufig auf der Idee, dass ein Entscheidungsträger auf Basis möglicher Alternativen eine optimale Entscheidung trifft.</p>
 <p>Wir formalisieren optimale Entscheidungen als Maximieren oder Minimieren einer Funktion.</p>
 <p>Zum Beispiel:</p>
@@ -299,49 +297,44 @@ function checkAnswer_num(q) {
 </script>
 <div id="notwendige-bedingungen-für-maxima-und-minima" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Notwendige Bedingungen für Maxima und Minima<a href="optimierung.html#notwendige-bedingungen-für-maxima-und-minima" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/BEO.m4a">
-</audio>
 <p>Optimieren einer Funktion <span class="math inline">\(f (x), x \in D\)</span>, bedeutet, den Wert <span class="math inline">\(x\)</span> zu finden, an dem ein <strong>Extremwert</strong> (auch Extremum) vorliegt; dieser kann ein <strong>Maximum</strong> oder ein <strong>Minimum</strong> sein.</p>
 <p>Im Fall <span class="math inline">\(D=\mathbb{R}\)</span> liegt ein Optimierungsproblem ohne Nebenbedingungen vor.</p>
 <div class="definition">
 <p><span id="def:defmaxmin" class="definition"><strong>Definition 6.1  (Maximum, Minimum) </strong></span></p>
 <ul>
-<li>Die Funktion <span class="math inline">\(f\)</span> hat an der Stelle <span class="math inline">\(x ^∗\)</span> ein <strong>globales Maximum</strong>, falls gilt:
-<span class="math inline">\(f (x^∗ ) \geq f (x)\)</span> für alle <span class="math inline">\(x\)</span>.</li>
+<li>Die Funktion <span class="math inline">\(f\)</span> hat an der Stelle <span class="math inline">\(x ^∗\)</span> ein <strong>globales Maximum</strong>, falls gilt:</li>
 </ul>
+<p><span class="math inline">\(f (x^∗ ) \geq f (x)\)</span> für alle <span class="math inline">\(x\)</span>.</p>
 <details>
 <summary>
 Illustration
 </summary>
 <img src="images/gmax.png" />
 </details>
-<p><br></p>
 <ul>
-<li>Ein <strong>lokales Maximum </strong>liegt an der Stelle <span class="math inline">\(\hat{x}\)</span> vor, falls es ein <span class="math inline">\(\epsilon &gt;0\)</span>gibt mit
-<span class="math inline">\(f ( \hat {x}) \geq f (x)\)</span> für <span class="math inline">\(\hat {x} − \epsilon \leq x \leq \hat {x} + \epsilon\)</span>.</li>
+<li>Ein <strong>lokales Maximum </strong>liegt an der Stelle <span class="math inline">\(\hat{x}\)</span> vor, falls es ein <span class="math inline">\(\epsilon &gt;0\)</span>gibt mit</li>
 </ul>
+<p><span class="math inline">\(f ( \hat {x}) \geq f (x)\)</span> für <span class="math inline">\(\hat {x} − \epsilon \leq x \leq \hat {x} + \epsilon\)</span>.</p>
 <details>
 <summary>
 Illustration
 </summary>
 <img src="images/lmax.png" />
 </details>
-<p><br></p>
 <ul>
-<li>Analog hat <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(x^ ∗\)</span> ein <strong>globales Minimum</strong>, falls gilt:
-<span class="math inline">\(f (x^ ∗ ) \leq f (x)\)</span> für alle <span class="math inline">\(x\)</span>.</li>
+<li>Analog hat <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(x^ ∗\)</span> ein <strong>globales Minimum</strong>, falls gilt:</li>
 </ul>
+<p><span class="math inline">\(f (x^ ∗ ) \leq f (x)\)</span> für alle <span class="math inline">\(x\)</span>.</p>
 <details>
 <summary>
 Illustration
 </summary>
 <img src="images/gmin.png" />
 </details>
-<p><br></p>
 <ul>
-<li>Ein <strong>lokales Minimum</strong> liegt an der Stelle <span class="math inline">\(\hat {x}\)</span> vor, falls es ein <span class="math inline">\(\epsilon &gt;0\)</span> gibt mit
-<span class="math inline">\(f ( \hat {x}) \leq f (x)\)</span> für <span class="math inline">\(\hat {x} − \epsilon \leq x \leq \hat {x} + \epsilon\)</span>.</li>
+<li>Ein <strong>lokales Minimum</strong> liegt an der Stelle <span class="math inline">\(\hat {x}\)</span> vor, falls es ein <span class="math inline">\(\epsilon &gt;0\)</span> gibt mit</li>
 </ul>
+<p><span class="math inline">\(f ( \hat {x}) \leq f (x)\)</span> für <span class="math inline">\(\hat {x} − \epsilon \leq x \leq \hat {x} + \epsilon\)</span>.</p>
 <details>
 <summary>
 Illustration
@@ -350,8 +343,6 @@ Illustration
 </details>
 </div>
 <p>Folgendes Theorem gibt uns die notwendige Bedingung für ein lokales Maximum und ein lokales Minimum.</p>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/BEO2.m4a">
-</audio>
 <div class="theorem">
 <p><span id="thm:thmnbmaxmin" class="theorem"><strong>Theorem 6.1  (Bedingung erster Ordnung) </strong></span>Wenn die differenzierbare Funktion <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(x^*\)</span> einen Extremwert besitzt, dann gilt: <span class="math inline">\(f^\prime (x^ ∗ ) = 0\)</span>.</p>
 </div>
@@ -381,29 +372,29 @@ Ein stationärer Punkt ist entweder ein Extremum oder ein Wendepunkt.</p>
 <iframe src="https://scratch.mit.edu/projects/779600446/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen>
 </iframe>
 <div class="example">
-<p><span id="exm:monopol" class="example"><strong>Beispiel 6.2  (Monopol mit linearer Nachfrage und linearen Kosten) </strong></span></p>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/lec6_monop_lin_nachfr.m4a">
-</audio>
-<p>Ein Monopolist befindet sich in der folgenden Situation:</p>
+<p><span id="exm:monopol" class="example"><strong>Beispiel 6.2  (Monopol mit linearer Nachfrage und linearen Kosten) </strong></span>Ein Monopolist befindet sich in der folgenden Situation:</p>
 <ul>
 <li><p>lineare Nachfrage <span class="math inline">\(x = 100 − p\)</span> (<span class="math inline">\(x\)</span> ist die Nachfrage, <span class="math inline">\(p\)</span> ist der Preis);</p></li>
-<li><p>lineare Kostenfunktion <span class="math inline">\(\color{red}{C(x) = 25x}\)</span>.</p></li>
+<li><p>lineare Kostenfunktion <span class="math inline">\(C(x) = 25x\)</span>.</p></li>
 </ul>
-<p>Umformen der Nachfragefunktion zu <span class="math inline">\(\color{blue}{p = 100 − x}\)</span> ergibt die folgende <strong>Gewinnfunktion</strong>:</p>
-<p><span class="math display">\[\begin{align}\pi(x) &amp;= \underbrace{px}_{Preis\times Menge~} \underbrace{− ~~~~~~C(x)}_{~minus ~Kosten} \\
-&amp;= \color{blue}{(100-x)}\cdot x - \color{red}{25x}\\
-\pi(x)&amp;=100x − x^2 − 25x.
-\end{align}\]</span></p>
-<p>Der Gewinn ist maximal an der Stelle <span class="math inline">\(x^ ∗\)</span> mit:</p>
-<p><span class="math display">\[\pi&#39; (x^ ∗ ) = 100 − 2x^∗ − 25 = 0,\]</span></p>
+<p>Umformen der Nachfragefunktion zu <span class="math inline">\(p = 100 − x\)</span> ergibt die folgende <strong>Gewinnfunktion</strong>:</p>
+<p><span class="math inline">\(\pi(x) = px − C = 100x − x^2 − 25x\)</span>.</p>
+<p>Der Gewinn ist maximal an der Stelle <span class="math inline">\(x^ ∗\)</span> mit</p>
+<p><span class="math inline">\(\pi&#39; (x^ ∗ ) = 100 − 2x^∗ − 25 = 0\)</span>,</p>
 <p>also</p>
-<p><span class="math display">\[x^∗ = (100 − 25)/ 2 = 37,5.\]</span></p>
-<p>Der <strong>gewinnmaximierende Preis</strong> und der entsprechende Gewinn sind:</p>
-<p><span class="math display">\[p^∗ = 100 − x^∗ = 62,50.\]</span></p>
-<p><span class="math display">\[\pi^∗ = (62,50 − 25) 37,5 = 1.406,25.\]</span></p>
-<p><img src="images/monop_gewinn.png" /></p>
-<p>Der linke Graph zeigt den Gewinn <span class="math inline">\(π(x) = (100 − 25)x − x^2 = 75x − x^ 2.\)</span></p>
-<p>Der rechte Graph zeigt die Nachfrage <span class="math inline">\(p = 100 − x.\)</span></p>
+<p><span class="math inline">\(x^∗ = (100 − 25)/ 2 = 37,5\)</span>.</p>
+<p>Der <strong>gewinnmaximierende Preis</strong> und der entsprechende Gewinn sind</p>
+<p><span class="math inline">\(p^∗ = 100 − x^∗ = 62,50\)</span>,</p>
+<p><span class="math inline">\(\pi^∗ = (62,50 − 25) 37,5 = 1.406,25\)</span>.</p>
+<p><img src="images/monopol.png" /></p>
+<p>Der linke Graph zeigt:</p>
+<p>den Gesamterlös <span class="math inline">\(R(x) = px = 100x − x^2\)</span>
+die Gesamtkosten <span class="math inline">\(C(x) = 25x\)</span>
+den Gewinn <span class="math inline">\(π(x) = (100 − 25)x − x^2 = 75x − x^ 2\)</span>
+Der rechte Graph zeigt:</p>
+<p>die Nachfrage <span class="math inline">\(p = 100 − x\)</span>
+den Grenzerlös <span class="math inline">\(R&#39; (x) = 100 − 2x\)</span>
+die Grenzkosten <span class="math inline">\(C&#39; (x) = 25\)</span></p>
 </div>
 <div class="exercise">
 <p><span id="exr:stpunkte" class="exercise"><strong>Aufgabe 6.1  (Extremwerte) </strong></span>Finde die Extremwerte von</p>
@@ -471,8 +462,6 @@ Falls die Firma den Preis erhöht, werden weniger Einheiten abgesetzt; der Preis
 </div>
 <div id="bedingungen-zweiter-ordnung" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> Bedingungen zweiter Ordnung<a href="optimierung.html#bedingungen-zweiter-ordnung" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/BZO.m4a">
-</audio>
 <p>Zweite Ableitungen können determinieren, ob es sich bei einem stationären Punkt um ein Maximum oder ein Minimum handelt.</p>
 <p>Die drei möglichen Fälle für stationäre Punkte sind auf den Grafiken unten dargestellt.</p>
 <p>Graph (a) zeigt, dass im Fall eines Maximums, die Steigung der Funktion links des Maximums positiv ist (also für <span class="math inline">\(x &lt; x^ ∗\)</span> ), und dass sie rechts des Maximums negativ ist (<span class="math inline">\(x &gt; x^ ∗\)</span> ).</p>
@@ -507,7 +496,7 @@ Antwort
 <div class="example">
 <p><span id="exm:profit3" class="example"><strong>Beispiel 6.3  (Approximative Maximierung von Gewinnfunktionen mit Taylor-Approximation) </strong></span>In Beispiel <a href="differentialrechnung.html#exm:taylorprofit">5.7</a> betrachteten wir einen Monopolisten mit der Gewinnfunktion:</p>
 <p><span class="math display">\[\pi(q) = 100\cdot \exp(-0.01 q) \cdot q - 1000 - q.\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p><img src="images/unnamed-chunk-32-1.png" width="672" /></p>
 <p>Um diese Gewinnfunktion zu maximieren, würden wir als Erstes ihre Ableitung gleich Null setzen.</p>
 <p>Die Ableitung der Gewinnfunktion ist:</p>
 <p><span class="math display">\[\pi^\prime(q) = (-1)\cdot\exp(-0,01q)\cdot q + 100\cdot\exp(-0,01q) - 1.\]</span></p>
@@ -535,14 +524,12 @@ Antwort
 <p>Nun können wir auch die Bedingung zweiter Ordnung für das Erreichen eines Maximums überprüfen:</p>
 <p><span class="math display">\[\begin{align*}\pi^{\prime\prime}(q^*_{approx})&amp;=0.01\exp(-0.01\cdot 97.2817)\cdot 97.2817 -2\exp(-0.01\cdot 97.2817) \\
 &amp;=-0.3883&lt;0.\end{align*}\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p><img src="images/unnamed-chunk-33-1.png" width="672" /></p>
 <p>Unsere Approximation hat gut funktioniert. Das Ergebniss der Nullsetzung von Approximation der Gewinnableitung (grüner Punkt) liegt sehr nahe dem wahren Maximum (roter Punkt) in der obigen Abbildung der Gewinnfunktion.</p>
 </div>
 </div>
 <div id="optimierung-auf-einem-intervall" class="section level2 hasAnchor" number="6.3">
 <h2><span class="header-section-number">6.3</span> Optimierung auf einem Intervall<a href="optimierung.html#optimierung-auf-einem-intervall" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/opt_neben.m4a">
-</audio>
 <p>In der Praxis sind die meisten Optimierungsprobleme unter Nebenbedingungen zu lösen, zum Beispiel:</p>
 <ul>
 <li><p>eine Firma kann nur nicht-negative Mengen von Gütern produzieren;</p></li>

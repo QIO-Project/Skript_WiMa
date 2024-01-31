@@ -89,7 +89,6 @@ exm:stet
 def:defstetigkeitalg
 thm:thmsteteig
 thm:thmkomp
-def:defsekante
 def:deftangente
 exm:tangente
 def:ableitung
