@@ -216,6 +216,8 @@
             <section class="normal" id="section-">
 <div id="integralrechnung" class="section level1 hasAnchor" number="7">
 <h1><span class="header-section-number">Kapitel 7</span> Integralrechnung<a href="integralrechnung.html#integralrechnung" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<audio class="audio-specs" controls controlsList="nodownload" src="audio/einf_integr.m4a">
+</audio>
 <p>Wir befassen uns im Folgenden mit der Fragestellung, ob und wie von einer gegebenen Ableitungsfunktion <span class="math inline">\(f&#39; (x)\)</span> die zugrunde liegende Funktion <span class="math inline">\(f (x)\)</span> hergeleitet werden kann.</p>
 <p>Dieser Prozess – die Bestimmung des (unbestimmten) Integrals – ist die Umkehrung des Differenzierens.</p>
 <p>Eine Anwendung der Integralrechnung ist die Bestimmung von Flächeninhalten unterhalb eines Funktionsgraphen.</p>
@@ -307,8 +309,10 @@ function checkAnswer_num(q) {
 </div>
 <div id="das-unbestimmte-integral" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Das unbestimmte Integral<a href="integralrechnung.html#das-unbestimmte-integral" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_stammfkt.m4a">
+</audio>
 <ul>
-<li><p>Für die Funktion <span class="math inline">\(f (x) = x^ 2\)</span> wissen wir bereits, dass <span class="math inline">\(f&#39; (x) = 2x\)</span> gilt.</p></li>
+<li><p>Für die Funktion <span class="math inline">\(f (x) = x^2\)</span> wissen wir bereits, dass <span class="math inline">\(f&#39; (x) = 2x\)</span> gilt.</p></li>
 <li><p>Ist umgekehrt bekannt, dass <span class="math inline">\(f&#39; (x) = 2x\)</span>, so ist zwar klar, dass <span class="math inline">\(f (x) = x^ 2\)</span> eine Funktion mit dieser Ableitung ist.</p></li>
 <li><p>Jede andere Funktion der Form <span class="math inline">\(f (x) = x^ 2 + c\)</span> mit <span class="math inline">\(c\)</span> konstant, hat jedoch dieselbe Ableitung!</p></li>
 <li><p>Ausgehend von einer Ableitung kann die Funktion selbst also nicht eindeutig bestimmt werden, sondern nur bis auf eine (unbekannte) Konstante.</p></li>
@@ -525,6 +529,8 @@ Antwort
 </div>
 <div id="das-bestimmte-integral" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> Das bestimmte Integral<a href="integralrechnung.html#das-bestimmte-integral" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<audio class="audio-specs" controls controlsList="nodownload" src="audio/best_integr.m4a">
+</audio>
 <p>In der Aufgabe <a href="integralrechnung.html#exr:kosten">7.3</a> haben wir die Gesamtkostenfunktion bestimmt. Was aber wenn wir bloss die Veränderung der Kosten erfahren möchten, wenn sich die Produktion <span class="math inline">\(x\)</span> von <span class="math inline">\(100\)</span> auf <span class="math inline">\(150\)</span> verändert? Wie wir gleich sehen werden, entspricht die Kostenveränderung der Fläche unter der Grenzkostenfunktion <span class="math inline">\(C&#39;(x)\)</span>. Hier helfen uns bestimmte Integrale weiter.</p>
 <hr />
 <p>Es sei <span class="math inline">\(f\)</span> eine stetige und positive Funktion.</p>
@@ -532,12 +538,12 @@ Antwort
 <li><p>Das bestimmte Integral, auch Riemann-Integral, ist definiert als die Fläche auf einem Intervallstück zwischen der <span class="math inline">\(x\)</span>-Achse und dem Funktionsgraphen von <span class="math inline">\(f\)</span> .</p></li>
 <li><p>Man betrachte beispielsweise die Funktion <span class="math inline">\(f (x) = 2x\)</span> auf dem Intervall <span class="math inline">\([0,1]\)</span>. Klar ist: Die Fläche unterhalb von <span class="math inline">\(f\)</span> ist <span class="math inline">\(1\)</span> (Höhe mal Breite des Rechtecks geteilt durch <span class="math inline">\(2\)</span>).</p></li>
 </ul>
-<p><img src="images/unnamed-chunk-39-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-39-1.png" width="576" /></p>
 <!--![](images/flaeche21.png)-->
 <ul>
 <li>Die Integralrechnung bietet den mathematischen Apparat, den Flächeninhalt auch für nicht-lineare Funktionen zu bestimmen.</li>
 </ul>
-<p><img src="images/unnamed-chunk-40-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-40-1.png" width="576" /></p>
 <!--![](images/flaeche51.png)-->
 <!--<details>
 <summary>Details</summary>
@@ -556,7 +562,7 @@ Antwort
 <p><span class="math display">\[\int_{0}^{1} 2xdx = F(1)-F(0)=  \left[ x^2 \right]_0^1 = 1^2 - 0^2 = 1.\]</span></p>
 <p>Etwas allgemeiner:</p>
 <p><span class="math display">\[\int_{0}^{b} 2x \ dx =   \left[ x^2 \right]_0^b = b^2.\]</span></p>
-<p><img src="images/unnamed-chunk-41-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-41-1.png" width="576" /></p>
 <!--![](images/flaeche31.png)-->
 </div>
 <div class="example">
@@ -598,7 +604,7 @@ Wie man die Stammfunktion kalkuliert.
 &amp;= \frac14 \cdot 2^4 + \frac 12 \cdot e^{2^2}- \frac14 \cdot 1^4 - \frac 12 \cdot e^{1^2} \\
 &amp;= 29.69.
 \end{align}\]</span></p>
-<p><img src="images/unnamed-chunk-42-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-42-1.png" width="576" /></p>
 <!--![](images/flaeche41.png)-->
 </div>
 <div id="qbestint" class="quiz">
@@ -696,7 +702,7 @@ Antwort
 <li><p>Die Summe der Nettoinvestitionen zwischen zwei Zeitpunkten <span class="math inline">\(a\)</span> und <span class="math inline">\(b\)</span> ist durch die instantanen Kapitaländerungen gegeben (=Kapitalzuwachs), und es gilt:</p></li>
 </ul>
 <p><span class="math display">\[K(b) − K(a) = \int_a^b I(t) dt.\]</span></p>
-<p><img src="images/unnamed-chunk-44-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-44-1.png" width="576" /></p>
 <!--![](images/kapitalzuw1.png)-->
 <ol style="list-style-type: decimal">
 <li>Gesucht ist der Kapitalzuwachs zwischen Periode 1 und 2 für <span class="math inline">\(I(t)=2t^2+3t\)</span>.</li>
@@ -713,7 +719,7 @@ Antwort
 <li>Gesucht ist der Kapitalzuwachs zwischen Periode 1 und 4 für
 <span class="math display">\[I(t)=\begin{cases}0.5(2t^2+3t),&amp;t\in[1,2)\\ e^t,&amp;t\in[2,4).\end{cases}\]</span></li>
 </ol>
-<p><img src="images/unnamed-chunk-45-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-45-1.png" width="576" /></p>
 <p>Wir haben:</p>
 <p><span class="math display">\[\begin{align*} \int_1^4 I(t)dt&amp;\stackrel{Thm. 7.4 ii}= \color{blue}{\int_1^2 I(t)dt} + \color{red}{\int_2^4 I(t)dt}\\
 &amp;= \underbrace{\color{blue}{\int_1^20.5(2t^2+3t)dt}}_{\stackrel{Thm. 7.4 i}=0.5\int_1^2(2t^2+3t)dt = 0.5\cdot 55/6 = 55/12} + \color{red}{\int _2^4e^tdt}\\
