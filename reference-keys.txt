@@ -70,7 +70,6 @@ exm:konv3
 exr:konv4
 def:defreihen
 exm:sparbuch
-exm:geschlformel
 thm:konvreihen
 def:geomreihe
 thm:geomreihe
@@ -100,6 +99,7 @@ exm:differenzierbarkeit
 thm:thm1deffirenz
 def:defdiffint
 thm:thmregeln
+exm:eabl
 exm:grenzerl
 exm:durchkosten
 thm:thmlopital
@@ -170,7 +170,7 @@ exm:exaddsubmatrizen
 def:defskprodmatrizen
 exm:exmultsksubmatrizen
 def:defskalarprodukt
-fig:unnamed-chunk-53
+fig:unnamed-chunk-57
 exm:exkalarprodukt
 def:defnorm
 exm:exnorm
@@ -254,7 +254,7 @@ mengen-und-zahlen
 mengenoperationen
 zahlenmengen
 punktmengen-in-mathbb-rn
-intervale-als-punktmengen-in-mathbbrn
+intervale-als-punktmengen-in-mathbbr
 eigenschaften-des-mathbb-rn-abstand
 eigenschaften-des-mathbb-rn-varepsilon-umgebung
 funktionen
@@ -319,5 +319,3 @@ optimierung-ii
 bedingungen-erster-ordnung
 bedingungen-zweiter-ordnung-1
 optimierung-unter-nebenbedingungen-lagrange-methode
-intervale-als-punktmengen-in-mathbbr
-exm:eabl

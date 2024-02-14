@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
   
 
-<meta name="author" content="Maria Osipenko 2024-02-01" />
+<meta name="author" content="Maria Osipenko 2024-02-14" />
 
 
 
@@ -89,7 +89,7 @@
 <li class="chapter" data-level="2.2" data-path="grundlagen.html"><a href="grundlagen.html#zahlenmengen"><i class="fa fa-check"></i><b>2.2</b> Zahlenmengen</a></li>
 <li class="chapter" data-level="2.3" data-path="grundlagen.html"><a href="grundlagen.html#punktmengen-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Punktmengen in <span class="math inline">\(\mathbb R^n\)</span></a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbr"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R}\)</span></a></li>
 <li class="chapter" data-level="2.3.2" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-abstand"><i class="fa fa-check"></i><b>2.3.2</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: Abstand</a></li>
 <li class="chapter" data-level="2.3.3" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-varepsilon-umgebung"><i class="fa fa-check"></i><b>2.3.3</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\varepsilon-\)</span>Umgebung</a></li>
 </ul></li>
@@ -397,7 +397,7 @@ reelle Konstanten.
 <div class="example">
 <p><span id="exm:ints2" class="example"><strong>Beispiel 7.4  (Anwendung der Regeln und des Theorems <a href="integralrechnung.html#thm:thregint">7.2</a>) </strong></span></p>
 <ul>
-<li><p><span class="math inline">\(\int dx = \int \underbrace{12x}_{3\cdot4x}\cdot e^{2x^2+1} \cdot dx \stackrel{Thm.7.2 i}{=} 3\cdot{\ color{red}{\int 4x\cdot e^{2x^2+1} \cdot dx}} = 3\cdot\color{red}{e^{2x^2+1} }+ c\)</span> (Regel 8 mit <span class="math inline">\(g(x) = 2x^2+1\)</span> und <span class="math inline">\(g^\prime(x)=4x\)</span>).</p></li>
+<li><p><span class="math inline">\(\int dx = \int \underbrace{12x}_{3\cdot4x}\cdot e^{2x^2+1} \cdot dx \stackrel{Thm.7.2 i}{=} 3\cdot{\color{red}{\int 4x\cdot e^{2x^2+1} \cdot dx}} = 3\cdot\color{red}{e^{2x^2+1} }+ c\)</span> (Regel 8 mit <span class="math inline">\(g(x) = 2x^2+1\)</span> und <span class="math inline">\(g^\prime(x)=4x\)</span>).</p></li>
 <li><p><span class="math inline">\(\int \big(\underbrace{\frac2{3x+4}}_{\frac{2\cdot 1}{3x+4}} + e^x\big)dx\stackrel{Thm.7.2 i ,ii}{=} 2\cdot\color{red}{\int \frac1{3x+4}dx} + \color{green}{\int e^xdx}= 2\cdot\color{red}{\frac13\ln|3x+4|} + \color{green}{e^x} + c\)</span>
 (Regel 4 mit <span class="math inline">\(a=3\)</span>)</p></li>
 </ul>
@@ -538,12 +538,12 @@ Antwort
 <li><p>Das bestimmte Integral, auch Riemann-Integral, ist definiert als die Fläche auf einem Intervallstück zwischen der <span class="math inline">\(x\)</span>-Achse und dem Funktionsgraphen von <span class="math inline">\(f\)</span> .</p></li>
 <li><p>Man betrachte beispielsweise die Funktion <span class="math inline">\(f (x) = 2x\)</span> auf dem Intervall <span class="math inline">\([0,1]\)</span>. Klar ist: Die Fläche unterhalb von <span class="math inline">\(f\)</span> ist <span class="math inline">\(1\)</span> (Höhe mal Breite des Rechtecks geteilt durch <span class="math inline">\(2\)</span>).</p></li>
 </ul>
-<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-43-1.png" width="576" /></p>
 <!--![](images/flaeche21.png)-->
 <ul>
 <li>Die Integralrechnung bietet den mathematischen Apparat, den Flächeninhalt auch für nicht-lineare Funktionen zu bestimmen.</li>
 </ul>
-<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-44-1.png" width="576" /></p>
 <!--![](images/flaeche51.png)-->
 <!--<details>
 <summary>Details</summary>
@@ -562,7 +562,7 @@ Antwort
 <p><span class="math display">\[\int_{0}^{1} 2xdx = F(1)-F(0)=  \left[ x^2 \right]_0^1 = 1^2 - 0^2 = 1.\]</span></p>
 <p>Etwas allgemeiner:</p>
 <p><span class="math display">\[\int_{0}^{b} 2x \ dx =   \left[ x^2 \right]_0^b = b^2.\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-45-1.png" width="576" /></p>
 <!--![](images/flaeche31.png)-->
 </div>
 <div class="example">
@@ -604,7 +604,7 @@ Wie man die Stammfunktion kalkuliert.
 &amp;= \frac14 \cdot 2^4 + \frac 12 \cdot e^{2^2}- \frac14 \cdot 1^4 - \frac 12 \cdot e^{1^2} \\
 &amp;= 29.69.
 \end{align}\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-6-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-46-1.png" width="576" /></p>
 <!--![](images/flaeche41.png)-->
 </div>
 <div id="qbestint" class="quiz">
@@ -671,21 +671,21 @@ Antwort
 <h3><span class="header-section-number">7.2.1</span> Eigenschaften und elementare Rechenregeln<a href="integralrechnung.html#eigenschaften-und-elementare-rechenregeln" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Folgende Eingeschaften erleichten das Rechnen mit Integralen.</p>
 <div class="theorem">
-<p><span id="thm:thminteig" class="theorem"><strong>Theorem 7.4  (Eigenschaften von bestimmten Integralen I) </strong></span>Es seien <span class="math inline">\(f\)</span> und <span class="math inline">\(g\)</span> zwei auf <span class="math inline">\([a,b]\)</span> integrierbare Funktionen und <span class="math inline">\(k\)</span> eine reelle Konstante. Dann gilt:
-(i) <span class="math inline">\(\int_{a}^{b}k \cdot f(x)dx= k \cdot \int_a^b f(x)dx\)</span>,</p>
-<ol start="2" style="list-style-type: lower-roman">
-<li><span class="math inline">\(\int_{a}^{b}(f(x)+g(x))dx= \int_a^b f(x)dx +\int_a^b g(x)dx\)</span>.</li>
+<p><span id="thm:thminteig" class="theorem"><strong>Theorem 7.4  (Eigenschaften von bestimmten Integralen I) </strong></span>Es seien <span class="math inline">\(f\)</span> und <span class="math inline">\(g\)</span> zwei auf <span class="math inline">\([a,b]\)</span> integrierbare Funktionen und <span class="math inline">\(k\)</span> eine reelle Konstante. Dann gilt:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(\int_{a}^{b}k \cdot f(x)dx= k \cdot \int_a^b f(x)dx\)</span>,</p></li>
+<li><p><span class="math inline">\(\int_{a}^{b}(f(x)+g(x))dx= \int_a^b f(x)dx +\int_a^b g(x)dx\)</span>.</p></li>
 </ol>
 </div>
 <div class="theorem">
 <p><span id="thm:thminteig2" class="theorem"><strong>Theorem 7.5  (Eigenschaften von bestimmten Integralen II) </strong></span>Es sei <span class="math inline">\(f\)</span> in <span class="math inline">\([a,b]\)</span> und in <span class="math inline">\([b,c]\)</span> integrierbar. Dann gilt:
-<span class="math inline">\(\int_{a}^{c} (f(x) dx = \int_a^b f(x)dx + \int_b^c f(x)dx\)</span>.</p>
+<span class="math display">\[\int_{a}^{c} (f(x) dx =  \int_a^b f(x)dx + \int_b^c f(x)dx.\]</span></p>
 <p><img src="images/int.png" /></p>
 </div>
 <div class="theorem">
 <p><span id="thm:thminteig3" class="theorem"><strong>Theorem 7.6  (Eigenschaften von bestimmten Integralen III) </strong></span>Es sei <span class="math inline">\(f\)</span> integrierbar. Dann gilt:</p>
 <ol style="list-style-type: lower-roman">
-<li><p><span class="math inline">\(\int_{a}^{a} (f(x) dx = lim_{c \rightarrow a} \int_a^c f(x)dx =0\)</span>,</p></li>
+<li><p><span class="math inline">\(\int_{a}^{a} (f(x) dx = \lim_{c \rightarrow a} \int_a^c f(x)dx =0\)</span>,</p></li>
 <li><p><span class="math inline">\(\int_{c}^{a} (f(x) dx = - \int_a^c f(x)dx\)</span>.</p></li>
 </ol>
 </div>
@@ -702,7 +702,7 @@ Antwort
 <li><p>Die Summe der Nettoinvestitionen zwischen zwei Zeitpunkten <span class="math inline">\(a\)</span> und <span class="math inline">\(b\)</span> ist durch die instantanen Kapitaländerungen gegeben (=Kapitalzuwachs), und es gilt:</p></li>
 </ul>
 <p><span class="math display">\[K(b) − K(a) = \int_a^b I(t) dt.\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-48-1.png" width="576" /></p>
 <!--![](images/kapitalzuw1.png)-->
 <ol style="list-style-type: decimal">
 <li>Gesucht ist der Kapitalzuwachs zwischen Periode 1 und 2 für <span class="math inline">\(I(t)=2t^2+3t\)</span>.</li>
@@ -719,7 +719,7 @@ Antwort
 <li>Gesucht ist der Kapitalzuwachs zwischen Periode 1 und 4 für
 <span class="math display">\[I(t)=\begin{cases}0.5(2t^2+3t),&amp;t\in[1,2)\\ e^t,&amp;t\in[2,4).\end{cases}\]</span></li>
 </ol>
-<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="576" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-49-1.png" width="576" /></p>
 <p>Wir haben:</p>
 <p><span class="math display">\[\begin{align*} \int_1^4 I(t)dt&amp;\stackrel{Thm. 7.4 ii}= \color{blue}{\int_1^2 I(t)dt} + \color{red}{\int_2^4 I(t)dt}\\
 &amp;= \underbrace{\color{blue}{\int_1^20.5(2t^2+3t)dt}}_{\stackrel{Thm. 7.4 i}=0.5\int_1^2(2t^2+3t)dt = 0.5\cdot 55/6 = 55/12} + \color{red}{\int _2^4e^tdt}\\

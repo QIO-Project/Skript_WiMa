@@ -295,7 +295,7 @@ function checkAnswer_num(q) {
 <p>Ohne Nebenbedingungen ist die mögliche Lösungsmenge eines Optimierungsproblems der gesamte <span class="math inline">\(\mathbb{R} ^n\)</span>.
 Mit Nebenbedingungen ist die Lösungsmenge eingeschränkt auf eine Teilmenge <span class="math inline">\(X \subset \mathbb{R} ^n\)</span>.</p>
 <div class="definition">
-<p><span id="def:defstpunkt" class="definition"><strong>Definition 11.1  (Stationäre Punkte) </strong></span>Die Funktion <span class="math inline">\(f: \mathbb{R} ^n \rightarrow \mathbb{R}\)</span> hat einen <strong>stationären Punkt</strong> an der Stelle <span class="math inline">\(x^∗ = (x_1^∗ , \ldots , x_n ^∗ )\)</span>, falls gilt:</p>
+<p><span id="def:defstpunkt" class="definition"><strong>Definition 6.2  (Stationäre Punkte) </strong></span>Die Funktion <span class="math inline">\(f: \mathbb{R} ^n \rightarrow \mathbb{R}\)</span> hat einen <strong>stationären Punkt</strong> an der Stelle <span class="math inline">\(x^∗ = (x_1^∗ , \ldots , x_n ^∗ )\)</span>, falls gilt:</p>
 <p><span class="math display">\[\begin{align}f_1(x_1^∗ , \ldots , x_n^∗) &amp;= 0\\
 f_2(x_1^∗ , \ldots , x_n^∗) &amp;=0\\
 &amp;\vdots\\
@@ -349,7 +349,7 @@ f_n(x_1^∗, \ldots , x_n^∗)&amp; = 0.
 <p>Intuitiv: Falls an einem stationären Punkt <span class="math inline">\(x^∗\)</span> eine kleine Bewegung in eine <strong>beliebige Richtung</strong> weg von <span class="math inline">\(x^∗\)</span> mit einem abnehmenden (zunehmenden) Funktionswert einhergeht, dann hat <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(x^∗\)</span> ein lokales Maximum (Minimum).
 Wir betrachten die Bedingungen zweiter Ordnung im bivariaten Fall (<span class="math inline">\(n = 2\)</span>).</p>
 <div class="theorem">
-<p><span id="thm:thmbzo" class="theorem"><strong>Theorem 11.2  (Bedingungen zweiter Ordnung) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R} ^2 \rightarrow \mathbb{R}\)</span> eine Funktion mit stetigen zweiten partiellen Ableitungen in einer Umgebung des stationären Punkts <span class="math inline">\((x_1^∗ , x_2^∗ )\)</span>.</p>
+<p><span id="thm:thmbzo" class="theorem"><strong>Theorem 6.2  (Bedingungen zweiter Ordnung) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R} ^2 \rightarrow \mathbb{R}\)</span> eine Funktion mit stetigen zweiten partiellen Ableitungen in einer Umgebung des stationären Punkts <span class="math inline">\((x_1^∗ , x_2^∗ )\)</span>.</p>
 <p>Setze (Interpretation: <span class="math inline">\(D\)</span> ist die <strong>Determinante der Hesse-Matrix</strong>.)</p>
 <p><span class="math display">\[D = f_{x_1x_1} (x_1^∗ ,x_2^∗ ) f_{x_2x_2} (x_1^∗,x_2^∗ ) − f_{x_1x_2}^2 (x_1^∗ ,x_2^∗ ) .\]</span></p>
 <ol style="list-style-type: lower-roman">
@@ -480,7 +480,7 @@ Antwort
 <span class="math inline">\(g_1(x_1^* ,x_2^*) \neq 0\)</span> oder <span class="math inline">\(g_2(x_1^∗ ,x_2^∗) \neq 0\)</span>, also <span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span> ist kein stationärer Punkt von <span class="math inline">\(g\)</span>)</p></li>
 </ul>
 <div class="theorem">
-<p><span id="thm:thmlagrange" class="theorem"><strong>Theorem 11.3  (Lagrange Methode) </strong></span>Es seien <span class="math inline">\(f\)</span> und <span class="math inline">\(g\)</span> stetig differenzierbar. Ferner sei <span class="math inline">\((x_1^∗, x_2^∗)\)</span> eine Lösung des Problems</p>
+<p><span id="thm:thmlagrange" class="theorem"><strong>Theorem 11.2  (Lagrange Methode) </strong></span>Es seien <span class="math inline">\(f\)</span> und <span class="math inline">\(g\)</span> stetig differenzierbar. Ferner sei <span class="math inline">\((x_1^∗, x_2^∗)\)</span> eine Lösung des Problems</p>
 <p><span class="math display">\[\max_{x_1,x_2} f (x_1,x_2)\]</span></p>
 <p>unter der Bedingung
 <span class="math display">\[g(x_1,x_2) = 0.\]</span></p>
@@ -540,7 +540,7 @@ Antwort
 \mathcal L^*_{31}&amp; \mathcal L^*_{32}&amp; \mathcal L^*_{33}
 \end{pmatrix} = \begin{bmatrix} f_{11}+ \lambda^*g_{11} \ \ \ f_{12}+ \lambda ^*g_{12} \ \ \ g_1 \\ f_{21}+ \lambda^*g_{21} \ \ \ f_{22}+ \lambda ^*g_{22} \ \ \ g_2 \\ g_1 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ g_2 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0 \end{bmatrix}\]</span></p>
 <ul>
-<li>Die Determinante dieser <span class="math inline">\(3 × 3\)</span> Hesse-Matrix lautet (Jägerzaunregel, siehe <a href="#exm:detmat33"><strong>??</strong></a>):</li>
+<li>Die Determinante dieser <span class="math inline">\(3 × 3\)</span> Hesse-Matrix lautet (Jägerzaunregel, siehe <a href="matrizen-und-grundlegende-matrixoperationen.html#exm:detmat33">9.17</a>):</li>
 </ul>
 <p><span class="math display" id="eq:det">\[\begin{align}\det(H^*) &amp;= \mathcal L^*_{11}(\mathcal L^*_{22}\mathcal L^*_{33}-\mathcal L^*_{23}\mathcal L^*_{32})-\mathcal L^*_{12}(\mathcal L^*_{21}\mathcal L^*_{33}-\mathcal L^*_{23}\mathcal L^*_{31}) +\mathcal L^*_{13}(\mathcal L^*_{21}\mathcal L^*_{32}-\mathcal L^*_{22}\mathcal L^*_{31}) \\
 
@@ -550,7 +550,7 @@ Antwort
 \end{align}\]</span></p>
 <p>In der Praxis, wird meist mit Software-Tools kalkuliert (z.B. Excel).</p>
 <div class="theorem">
-<p><span id="thm:thmlocmaxmin" class="theorem"><strong>Theorem 11.4  (Hinreichende Bedingungen für ein lokales Maximum/Minimum) </strong></span>Es sei <span class="math inline">\((x_1^∗, x_2^∗ ,\lambda^∗ )\)</span> ein stationärer Punkt der Lagrange-Funktion</p>
+<p><span id="thm:thmlocmaxmin" class="theorem"><strong>Theorem 11.3  (Hinreichende Bedingungen für ein lokales Maximum/Minimum) </strong></span>Es sei <span class="math inline">\((x_1^∗, x_2^∗ ,\lambda^∗ )\)</span> ein stationärer Punkt der Lagrange-Funktion</p>
 <p><span class="math display">\[\mathcal{L} (x_1,x_2, \lambda)=f(x_1,x_2)+  \lambda   g(x_1,x_2).\]</span></p>
 <p>Dann gilt:</p>
 <ol style="list-style-type: lower-roman">
@@ -566,7 +566,7 @@ Antwort
 <p>Also hat <span class="math inline">\(f\)</span> ein Maximum an der Stelle <span class="math inline">\((x_1^∗ , x_2^∗ )\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:nutzenmaxl" class="example"><strong>Beispiel 11.6  (Nutzenmaximierung) </strong></span>Wir betrachten das Beispiel der Nutzenmaximierung <a href="#exm:nutzenmax"><strong>??</strong></a> aus Kapitel 1.</p>
+<p><span id="exm:nutzenmaxl" class="example"><strong>Beispiel 11.6  (Nutzenmaximierung) </strong></span>Wir betrachten das Beispiel der Nutzenmaximierung <a href="index.html#exm:nutzenmax">1.1</a> aus Kapitel 1.</p>
 <p>Das zu lösende Problem lautet:</p>
 <p><span class="math display">\[\max_{x,y} U(x,y) = \max_{x,y} \left(\sqrt x + \sqrt y\right),\]</span></p>
 <p>unter der Bedingung <span class="math inline">\(x + 3y = 100\)</span> (Budgetrestriktion).</p>
