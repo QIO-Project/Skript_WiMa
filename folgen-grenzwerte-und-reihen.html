@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
   
 
-<meta name="author" content="Maria Osipenko 2024-02-01" />
+<meta name="author" content="Maria Osipenko 2024-02-06" />
 
 
 
@@ -89,7 +89,7 @@
 <li class="chapter" data-level="2.2" data-path="grundlagen.html"><a href="grundlagen.html#zahlenmengen"><i class="fa fa-check"></i><b>2.2</b> Zahlenmengen</a></li>
 <li class="chapter" data-level="2.3" data-path="grundlagen.html"><a href="grundlagen.html#punktmengen-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Punktmengen in <span class="math inline">\(\mathbb R^n\)</span></a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbr"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R}\)</span></a></li>
 <li class="chapter" data-level="2.3.2" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-abstand"><i class="fa fa-check"></i><b>2.3.2</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: Abstand</a></li>
 <li class="chapter" data-level="2.3.3" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-varepsilon-umgebung"><i class="fa fa-check"></i><b>2.3.3</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\varepsilon-\)</span>Umgebung</a></li>
 </ul></li>
@@ -832,34 +832,36 @@ Der <strong>Grenzwert</strong> einer Reihe <span class="math inline">\(\sum_{t=1
 <div class="example">
 <p><span id="exm:sparbuch" class="example"><strong>Beispiel 3.10  (Sparbuch) </strong></span>Zahlt man <span class="math inline">\(82,19 \ Euro\)</span> auf ein Sparbuch ein, das zu <span class="math inline">\(4\%\)</span> verzinst wird, so erhält man nach 5 Jahren:
 <span class="math display">\[82,19 \cdot (1,04)^5 = 100 \ Euro.\]</span></p>
-</div>
 <ul>
 <li><p>Allgemein: zahlt man den Betrag <span class="math inline">\(\frac{100}{(1+r)^n}\)</span> auf ein Sparbuch ein, erhält man nach Ablauf von <span class="math inline">\(n\)</span> Jahren <span class="math inline">\(\frac{100}{(1+r)^n} \cdot (1+r)^n=100 \ Euro\)</span>.
 Wieviel muss ich heute auf das Sparbuch anlegen, damit ich drei Jahre lang nach Ablauf jedes Jahres <span class="math inline">\(100 \ Euro\)</span> abheben kann?</p></li>
 <li><p>Antwort: <span class="math inline">\(\frac{100}{(1+r)} + \frac{100}{(1+r)^2}+ \frac{100}{(1+r)^3} =100 \cdot \sum_{t=1}^{3} \frac{100}{(1+r)^t}\)</span> .</p></li>
 <li><p>Wieviel muss ich heute auf das Sparbuch anlegen, damit ich jedes Jahr <span class="math inline">\(100 \ Euro\)</span> abheben kann?</p></li>
 <li><p>Teilantwort: <span class="math inline">\(100 \cdot \sum_{t=1}^{\infty } \frac{1}{(1+r)^t} =\ ???\)</span>.</p></li>
-<li><p>Für manche Summen und Reihen gibt es geschlossene Formeln.</p></li>
 </ul>
-<div class="example">
-<p><span id="exm:geschlformel" class="example"><strong>Beispiel 3.11  (Konvergente Reihe) </strong></span></p>
+</div>
+<!--
+::: {.example #geschlformel name="Konvergente Reihe"}
 <br>
-Es gilt: <span class="math inline">\(s_n= \sum_{t=1}^{n} \frac{1}{t^2+t}= \frac{n}{n+1}\)</span>.
+Es gilt: \( s_n= \sum_{t=1}^{n}  \frac{1}{t^2+t}= \frac{n}{n+1}   \). 
 <br><br>
 <br>Für den Beweis nutzen wir die Methode der vollständigen Induktion:
 <br>
-(i) Man zeige zuerst, dass die Behauptung für <span class="math inline">\(n = 1\)</span> gilt.
+(i) Man zeige zuerst, dass die Behauptung für \(n = 1\) gilt.
 <br>
-(ii) Unter der Annahme, die Behauptung gelte für <span class="math inline">\(n\)</span>, zeige man, dass sie auch für <span class="math inline">\(n + 1\)</span> gilt (Induktionsschritt).
+(ii) Unter der Annahme, die Behauptung gelte für \(n\), zeige man, dass sie auch für \(n + 1\) gilt (Induktionsschritt). 
 <br><br>
 <details>
-<p>Zu (i): man verifiziert leicht, dass <span class="math inline">\(s_1=\frac{1}{2}\)</span> und dass <span class="math inline">\(\frac{n}{n+1}= \frac{1}{2}\)</span> .
+Zu (i): man verifiziert leicht, dass \(  s_1=\frac{1}{2}   \) und dass \(  \frac{n}{n+1}= \frac{1}{2}   \) . 
 <br>
-Zu (ii): Man nehme an, die Behauptung gelte für <span class="math inline">\(n\)</span> (also, <span class="math inline">\(s_{\color{red}n}=\frac {\color{red}{n}}{\color{red}n+1}\)</span>); dann gilt für <span class="math inline">\(n + 1\)</span>:</p>
-<p><span class="math display">\[ {s}_{\color{red}{n+1}}=s_n+ \frac{1}{(n+1)^2+(n+1)}= \frac{n}{n+1}+ \frac{1}{(n+1)((n+1)+1)}\]</span></p>
-<span class="math display">\[  =\frac{n(n+2)+1}{(n+1)(n+2)}= \frac{(n+1)^2}{(n+1)(n+2)}= \frac{n+1}{n+2} = \frac{\color{red}{(n+1)}}{\color{red}{(n+1)}+1}\]</span> .
+Zu (ii): Man nehme an, die Behauptung gelte für \(n\) (also, \(s_{\color{red}n}=\frac {\color{red}{n}}{\color{red}n+1}\)); dann gilt für \(n + 1\):
+
+\[ {s}_{\color{red}{n+1}}=s_n+ \frac{1}{(n+1)^2+(n+1)}= \frac{n}{n+1}+ \frac{1}{(n+1)((n+1)+1)}\]
+
+\[  =\frac{n(n+2)+1}{(n+1)(n+2)}= \frac{(n+1)^2}{(n+1)(n+2)}= \frac{n+1}{n+2} = \frac{\color{red}{(n+1)}}{\color{red}{(n+1)}+1}\] .
 </details>
-</div>
+:::
+-->
 <p>Da Reihen spezielle Folgen sind, können alle Aussagen über die Konvergenz und Divergenz von Folgen auf Reihen entsprechend übertragen werden.</p>
 <p>Das folgende Theorem ist nützlich, um zu ermitteln ob eine Reihe konvergiert oder divergiert.</p>
 <div class="theorem">
@@ -880,7 +882,7 @@ Zu (ii): Man nehme an, die Behauptung gelte für <span class="math inline">\(n\)
 <div id="geometrische-reihe" class="section level4 hasAnchor" number="3.4.1.1">
 <h4><span class="header-section-number">3.4.1.1</span> Geometrische Reihe<a href="folgen-grenzwerte-und-reihen.html#geometrische-reihe" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="definition">
-<p><span id="def:geomreihe" class="definition"><strong>Definition 3.7  (Geometrische Reihe) </strong></span>Die Geometrische Reihe ist gegeben durch <span class="math inline">\(g_n=\sum_{t=0}^{ n } x^t\)</span> , für <span class="math inline">\(x \in \mathbb{R}\)</span>.</p>
+<p><span id="def:geomreihe" class="definition"><strong>Definition 3.7  (Geometrische Reihe) </strong></span>Die Geometrische Reihe ist gegeben durch <span class="math display">\[g_n=\sum_{t=0}^{ n }  x^t,\]</span> für <span class="math inline">\(x \in \mathbb{R}\)</span>.</p>
 </div>
 <ul>
 <li><p>Es gilt <span class="math inline">\(\lim\limits_{n \rightarrow \infty} \lvert \frac{x^{n+1}}{x^n} \rvert = \lim\limits_{x \rightarrow \infty} \lvert x \rvert = \lvert x \rvert\)</span>.</p></li>
@@ -891,7 +893,7 @@ Zu (ii): Man nehme an, die Behauptung gelte für <span class="math inline">\(n\)
 <div class="theorem">
 <p><span id="thm:geomreihe" class="theorem"><strong>Theorem 3.7  (Konvergenz einer geometrischen Reihe) </strong></span></p>
 Es sei <span class="math inline">\(x \neq 1\)</span>. Dann gilt:
-<span class="math display">\[\sum_{t=1}^{n} x^t=  \frac{1-x^{n+1}}{1-x}, n \in  \mathbb{N}.\]</span>
+<span class="math display">\[\sum_{t=0}^{n} x^t=  \frac{1-x^{n+1}}{1-x}, n \in  \mathbb{N}.\]</span>
 <details>
 <summary>
 Beweis durch vollständige Induktion
@@ -904,17 +906,20 @@ Beweis durch vollständige Induktion
 </details>
 </div>
 <div class="corollary">
-<p><span id="cor:cor1" class="corollary"><strong>Korollar 3.1  (Spezielle geometrische Reihe) </strong></span>Es sei <span class="math inline">\(|x| &lt; 1\)</span>.</p>
-<p>Dann gilt: <span class="math inline">\(\sum_{t=0}^{ \infty } x^t= \frac{1}{1-x}\)</span> .</p>
+<p><span id="cor:cor1" class="corollary"><strong>Korollar 3.1  (Spezielle geometrische Reihe) </strong></span>Es sei <span class="math inline">\(|x| &lt; 1.\)</span> Dann gilt: <span class="math display">\[\sum_{t=0}^{ \infty }  x^t= \frac{1}{1-x}.\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:sparbuch2" class="example"><strong>Beispiel 3.12  (Sparbuch) </strong></span>(Fortsetzung von Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:sparbuch">3.10</a>)</p>
+<p><span id="exm:sparbuch2" class="example"><strong>Beispiel 3.11  (Sparbuch) </strong></span>(Fortsetzung von Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:sparbuch">3.10</a>)</p>
 <p>Das obige Ergebnis beantwortet die eingangs gestellte Frage: <br>
 Wieviel Geld muss ich heute auf ein Sparbuch legen, damit ich jedes Jahr <span class="math inline">\(100 \ Euro\)</span> abheben kann?
 <br>
 Antwort:</p>
-<p><span class="math inline">\(100\cdot \sum_{t=1}^{ \infty } \frac{1}{(1+r)^t}=100 \cdot [ \frac{1}{1-(1/(1+r))}- \frac{1}{(1+r)^0}]\)</span></p>
-<p><span class="math inline">\(=100 \cdot [ \frac{1}{(1+r-1)/(1+r)}-1]=100 \cdot [ \frac{1+r}{r}-1]= \frac{100}{r}\)</span>.</p>
+<p><span class="math display">\[\begin{align} 100\cdot \sum_{t=1}^{ \infty } \frac{1}{(1+r)^t}&amp;=100\cdot \left(\sum_{t=\color{red}{0}}^{ \infty } \frac{1}{(1+r)^t}\overbrace{\color{red}{-\frac1{(1+r)^0}}}^{=-1}\right)\\
+&amp;=100 \cdot \left[ \frac{1}{1-\underbrace{\color{blue}{(1/(1+r))}}}_{x~in~Kor ~3.1}- 1\right]\\
+&amp;=100 \cdot \left[ \frac{1}{(1+r-1)/(1+r)}-1\right]\\
+&amp;=100 \cdot \left[ \frac{1+r}{r}-1\right]\\
+&amp;= \frac{100}{r}.
+\end{align}\]</span></p>
 <p>Für verschiedenen Zinssätze <span class="math inline">\(r\)</span> ergibt sich der nötige Anlagebetrag:
 <img src="images/anlage.png" /></p>
 </div>
@@ -926,7 +931,7 @@ Antwort:</p>
 </div>
 <p>Obwohl die zugrunde liegende Folge <span class="math inline">\((1/t) \  _ {t \in \mathbb{N} }\)</span> konvergiert, divergiert die Reihe.</p>
 <div class="example">
-<p><span id="exm:coupons" class="example"><strong>Beispiel 3.13  (Collecting Coupons) </strong></span><br>
+<p><span id="exm:coupons" class="example"><strong>Beispiel 3.12  (Collecting Coupons) </strong></span><br>
 Source: <a href="https://en.wikipedia.org/wiki/Coupon_collector%27s_problem" class="uri">https://en.wikipedia.org/wiki/Coupon_collector%27s_problem</a>
 <br><br>
 In probability theory, the ‘coupon collector’s problem’ describes “collect all coupons and win” contests. It asks the following question:</p>

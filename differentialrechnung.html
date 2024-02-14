@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
   
 
-<meta name="author" content="Maria Osipenko 2024-02-01" />
+<meta name="author" content="Maria Osipenko 2024-02-14" />
 
 
 
@@ -89,7 +89,7 @@
 <li class="chapter" data-level="2.2" data-path="grundlagen.html"><a href="grundlagen.html#zahlenmengen"><i class="fa fa-check"></i><b>2.2</b> Zahlenmengen</a></li>
 <li class="chapter" data-level="2.3" data-path="grundlagen.html"><a href="grundlagen.html#punktmengen-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Punktmengen in <span class="math inline">\(\mathbb R^n\)</span></a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbr"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R}\)</span></a></li>
 <li class="chapter" data-level="2.3.2" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-abstand"><i class="fa fa-check"></i><b>2.3.2</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: Abstand</a></li>
 <li class="chapter" data-level="2.3.3" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-varepsilon-umgebung"><i class="fa fa-check"></i><b>2.3.3</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\varepsilon-\)</span>Umgebung</a></li>
 </ul></li>
@@ -353,15 +353,17 @@ Falls</p>
 <ul>
 <li><p>Man prüft leicht, dass <span class="math inline">\(\Delta x = 3-1=1\)</span> und <span class="math inline">\(\Delta y =9-4=5\)</span>, sodass die Steigung der Sekanten <span class="math inline">\(\Delta y/\Delta x = 5/1 = 5\)</span> ist.</p></li>
 <li><p>Wählt man <span class="math inline">\(Q^\prime = (4,16)\)</span>, so ist die Sekantensteigung <span class="math inline">\(\Delta y/\Delta x = 12/2 = 6\)</span>.</p></li>
-<li><p>Wählen Sie nun die Folge <span class="math inline">\(\Delta x_n = 1/n\)</span>, <span class="math inline">\(n geq 1\)</span>.</p></li>
+<li><p>Wählen Sie nun die Folge <span class="math inline">\(\Delta x_n = 1/n\)</span>, <span class="math inline">\(n \geq 1\)</span>.</p></li>
 <li><p>Dann: <span class="math inline">\(\Delta x_n \rightarrow 0\)</span>, wenn <span class="math inline">\(n \rightarrow \infty\)</span>.</p></li>
 </ul>
 <p>Für einen beliebigen Punkt <span class="math inline">\(x\)</span> bestimmen wir die Steigung der Tangente:</p>
-<p><span class="math inline">\(\frac{f(x+ \triangle x_n)-f(x)}{ \triangle x_n}\)</span></p>
-<p><span class="math inline">\(= \frac{(x+1/n)^2-x^2}{1/n}\)</span></p>
-<p><span class="math inline">\(= \frac{x^2+2x/n+1/n^2-x^2}{1/n}\)</span></p>
-<p><span class="math inline">\(= 2x + \frac{1}{n}\)</span> , und</p>
-<p><span class="math inline">\(\lim _{ \triangle x \rightarrow 0} 2x+1/n = 2x\)</span> (= die Ableitung von <span class="math inline">\(f(x)=x^2\)</span> ).</p>
+<p><span class="math display">\[\begin{align}\frac{f(x+ \triangle x_n)-f(x)}{ \triangle x_n}&amp;=\frac{(x+1/n)^2-x^2}{1/n}  \\
+
+&amp; =  \frac{x^2+2x/n+1/n^2-x^2}{1/n}\\
+
+&amp;= 2x +  \frac{1}{n},
+\end{align}\]</span></p>
+<p>und <span class="math inline">\(\lim _{ \triangle x \rightarrow 0} 2x+1/n = 2x\)</span> (= die Ableitung von <span class="math inline">\(f(x)=x^2\)</span> ).</p>
 <p><img src="images/extangente1.png" /></p>
 </div>
 </div>
@@ -372,7 +374,7 @@ Falls</p>
 </audio>
 <div class="definition">
 <p><span id="def:ableitung" class="definition"><strong>Definition 5.3  (Ableitung) </strong></span>Die <strong>Ableitung</strong> (der <strong>Differentialquotient</strong>) einer Funktion <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(x,\)</span> geschrieben als <span class="math inline">\(f&#39; (x),\)</span> ist die Steigung der Tangente in diesem Punkt:
-<span class="math display">\[f&#39;(x)=  \lim_{ \triangle x \rightarrow 0 } \frac{f(x+ \triangle x)}{ \triangle x}.\]</span></p>
+<span class="math display">\[f&#39;(x)=  \lim_{ \triangle x \rightarrow 0 } \frac{f(x+ \triangle x)-f(x)}{ \triangle x}.\]</span></p>
 </div>
 <p>Die sogenannte Leibniz-Notation der Ableitung ist <span class="math inline">\(f&#39;(x)= \frac{df(x)}{dx}\)</span>,</p>
 <p>wobei der Differentialoperator <span class="math inline">\(d\)</span> eine infinitesimal kleine Änderung ausdrückt.</p>
@@ -386,7 +388,7 @@ Falls</p>
 <ul>
 <li><p>Das Verhältnis <span class="math inline">\(\frac{ \triangle C}{ \triangle y} = \frac{C(y+ \triangle y) - C( y )}{ \triangle y}\)</span> reflektiert die durchschnittlichen zusätzlichen Kosten pro Einheit, wenn zusätzlich <span class="math inline">\(\Delta y\)</span> Einheiten produziert werden.</p></li>
 <li><p>Der Grenzwert dieses Verhältnisses, wenn <span class="math inline">\(\Delta y → 0\)</span>, ist die instantane Änderungsrate; in der Ökonomie stellt diese Rate die Grenzkosten (auch Marginalkosten) dar:
-<span class="math inline">\(lim_{ \triangle y \rightarrow 0 \ } \frac{ \triangle C}{ \triangle y} = lim_{ \triangle y \rightarrow 0 \ } \frac{C(y+ \triangle y) - C( y )}{ \triangle y} = C&#39;( y )\)</span></p></li>
+<span class="math display">\[\lim_{ \triangle y  \rightarrow 0 \ }  \frac{ \triangle C}{ \triangle y}  =  \lim_{ \triangle y  \rightarrow 0 \ } \frac{C(y+ \triangle y) - C( y )}{ \triangle y}  = C&#39;( y ) \]</span></p></li>
 <li><p>Beispiel einer linearen Kostenfunktion:</p></li>
 </ul>
 <p><img src="images/kosten1.png" /></p>
@@ -449,18 +451,18 @@ Falls</p>
       \begin{array}[t]{lll}
         \hline
         \text{(Funktions-)Typ} &amp; \text{Funktion} &amp; \text{Ableitung}\\\hline
-        \text{konstante Funktion} &amp; f(x)=c &amp; f^\prime(x)=0\\
-        \text{lineare Funktion} &amp; f(x)=mx + b &amp; f^\prime(x)=m\\
-        \text{Potenzfunktion} &amp; f(x)=x^n &amp; f^\prime(x)=n\, x^{n-1}\\
-        \text{Skalierung} &amp; g(x)=c\, f(x) &amp; g^\prime(x)=c\,
+        \text{1.konstante Funktion} &amp; f(x)=c &amp; f^\prime(x)=0\\
+        \text{2.lineare Funktion} &amp; f(x)=mx + b &amp; f^\prime(x)=m\\
+        \text{3.Potenzfunktion} &amp; f(x)=x^n &amp; f^\prime(x)=n\, x^{n-1}\\
+        \text{4.Skalierung} &amp; g(x)=c\, f(x) &amp; g^\prime(x)=c\,
                                                    f^\prime(x)\\
-        \text{Summenregel} &amp; f(x)=g_1(x) + g_2(x) &amp; f^\prime(x) =
+        \text{5.Summenregel} &amp; f(x)=g_1(x) + g_2(x) &amp; f^\prime(x) =
                                              g_1^\prime(x) + g_2^\prime(x)\\
                              &amp; f(x)=\sum_{i=1}^n g_i(x) &amp; f^\prime(x) =
                                                           \sum_{i=1}^n g_i^\prime(x)\\
-        \text{Produktregel} &amp; f(x)=g(x)\, h(x) &amp; f^\prime(x) = g^\prime(x)
+        \text{6.Produktregel} &amp; f(x)=g(x)\, h(x) &amp; f^\prime(x) = g^\prime(x)
                                             h(x) + g(x) h^\prime(x)\\
-        \text{Kettenregel} &amp; f(x)=g(h(x))&amp; f^\prime(x)=g^\prime(h(x))\,
+        \text{7.Kettenregel} &amp; f(x)=g(h(x))&amp; f^\prime(x)=g^\prime(h(x))\,
                                           h^\prime(x)\\   \hline            
       \end{array}
     \end{equation*}\]</span>
@@ -468,10 +470,10 @@ Falls</p>
       \begin{array}[t]{lll}
         \hline
         \text{(Funktions-)Typ}\!\!\!&amp; \text{Funktion} &amp; \text{Ableitung}\\\hline
-        \text{Quotientenregel} &amp; \displaystyle f(x)=\frac{g(x)}{h(x)}, h(x)\not=0 &amp;
+        \text{8.Quotientenregel} &amp; \displaystyle f(x)=\frac{g(x)}{h(x)}, h(x)\not=0 &amp;
                                                                           \displaystyle f^\prime(x) = \frac{g^\prime(x) h(x) - g(x) h^\prime(x)}
                                                                           {(h(x))^2}\\
-        \text{Inverse} &amp; y=f(x)\text{, wobei }&amp;
+        \text{10.Inverse} &amp; y=f(x)\text{, wobei }&amp;
                                                       \displaystyle (f^{(-1)})^\prime(y)
                                                       =
                                                       \frac{1}{f^\prime(x)}
@@ -481,11 +483,9 @@ Falls</p>
                              &amp;\text{und }
                                f^\prime(x)\not=0 &amp;
         \\
-        \text{Logarithmus} &amp; \ln (x) &amp; \displaystyle\ln^\prime(x)=\frac{1}{x}\\
+        \text{11.Logarithmus} &amp; \ln (x) &amp; \displaystyle\ln^\prime(x)=\frac{1}{x}\\
         &amp; \log_a (x) &amp; \displaystyle\log_a^\prime(x)=\frac{1}{x\cdot \ln (a)}\\
-        \text{Sinusfkt.} &amp; \sin(x) &amp; \sin^\prime(x)=\cos(x)\\
-         \text{Cosinusfkt.} &amp; \cos(x) &amp; \cos^\prime(x)=-\sin(x)\\
-           \text{Exponentialfkt.} &amp; e^{x} &amp; (e^{x})^\prime=e^{x}\\
+           \text{12.Exponentialfkt.} &amp; e^{x} &amp; (e^{x})^\prime=e^{x}\\
            &amp; a^{x} &amp; (a^{x})^\prime=a^{x}\ln (a)\\\hline
       \end{array}
     \end{equation*}\]</span></p>
@@ -627,7 +627,48 @@ woraus <span class="math inline">\(\left(\text{e}^x\right)^\prime=\text{e}^x\)</
 </details>
 </div>
 <div class="example">
-<p><span id="exm:prodfun" class="example"><strong>Beispiel 4.1  (Produktionsfunktion und Grenzproduktivität) </strong></span>Betrachten Sie die Produktionsfunktion <span class="math inline">\(TP(L) = L^a\)</span> , <span class="math inline">\(a &gt; 0\)</span>, welche den Input <span class="math inline">\(L\)</span> (Arbeit) auf den Output <span class="math inline">\(TP (L)\)</span> abbildet.
+<p><span id="exm:eabl" class="example"><strong>Beispiel 5.4  (Ableitung) </strong></span></p>
+<ul>
+<li>Ableitungsregeln 1-5:</li>
+</ul>
+<p><span class="math display">\[\begin{align}f(x) &amp;= 0,1x^4 -x^3 + 3x^2 - 5x +10 \\
+\rightarrow f&#39;(x) &amp;= 0,4x^3-3x^2 + 6x-5.\end{align}\]</span></p>
+<ul>
+<li>Ableitungsregeln 6 + 1-5:</li>
+</ul>
+<p><span class="math display">\[\begin{align}f(x) &amp;= (2x-1)(3-5x^2) \\
+\rightarrow f&#39;(x) &amp;= \color{red}{(2x-1)&#39;}(3-5x^2) + (2x-1) \color{blue}{(3-5x^2)&#39;} \\
+&amp;=  \color{red}{2}\cdot(3-5x^2) + (2x-1)\cdot  \color{blue}{(-10x)}=\ldots\end{align}\]</span></p>
+<ul>
+<li>Ableitungsregeln 7 + 1-5:</li>
+</ul>
+<p><span class="math display">\[\begin{align}f(x) &amp;= (1-2x)^2 \\
+\rightarrow f&#39;(x) &amp;=\big(\color{red}(\color{blue}{1-2x}\color{red}{)^2}\big)\color{blue}&#39;\cdot\color{blue}{(1-2\color{orange}x)\color{orange}&#39;} \\
+&amp;=\color{red}{2\cdot(\color{blue}{1-2x})}\cdot\color{orange}{(-2)}=\ldots\end{align}\]</span></p>
+<ul>
+<li>Ableitungsregeln 8 + 1-5:</li>
+</ul>
+<p><span class="math display">\[\begin{align}f(x) &amp;= \frac{2x-1}{3-5x^2} \\
+\rightarrow f&#39;(x) &amp;= \frac{\color{red}{(2x-1)&#39;}(3-5x^2) - (2x-1) \color{blue}{(3-5x^2)&#39;}}{(3-5x^2)^2}\\
+&amp;=  \frac{\color{red}{2}\cdot(3-5x^2) - (2x-1)\cdot  \color{blue}{(-10x)}}{(3-5x^2)^2}=\ldots
+\end{align}\]</span></p>
+<ul>
+<li>Ableitungsregel 10:</li>
+</ul>
+<p><span class="math inline">\(y=f(x)=x^2\)</span> umstellen nach <span class="math inline">\(x\)</span>: <span class="math inline">\(\color{blue}x=f^{-1}(y)=\color{blue}{\sqrt{y}}.\)</span> Dann nach Ableitungsregel 9:</p>
+<p><span class="math display">\[\left(f^{-1}(y)\right)&#39; = \frac1{f&#39;(x)} = \frac 1{2\color{blue}x} = \frac1{2\color{blue}{\sqrt{y}}}.\]</span></p>
+<ul>
+<li>Ableitungsregeln 11 + 1-5,7:</li>
+</ul>
+<p><span class="math display">\[\begin{align}f(x)&amp;=\log_{\color{blue}5}(\color{red}{2x})\\
+\rightarrow f&#39;(x)&amp;=\underbrace{\frac 1{\color{red}{2x}\cdot \color{blue}{\ln5}}}_{äussere Abl.}\cdot \underbrace{\color{red}{2}}_{innereAbl.} = \frac 1{x\cdot\ln5}\end{align}\]</span></p>
+<ul>
+<li>Ableitungsregeln 12 + 1-5,7:</li>
+</ul>
+<p><span class="math display">\[f(x)=e^{-3x+5}\rightarrow f&#39;(x) = e^{-3x+5}\cdot(-3x+5)&#39; = (-3)e^{-3x+5}.\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:prodfun" class="example"><strong>Beispiel 5.5  (Produktionsfunktion und Grenzproduktivität) </strong></span>Betrachten Sie die Produktionsfunktion <span class="math inline">\(TP(L) = L^a\)</span> , <span class="math inline">\(a &gt; 0\)</span>, welche den Input <span class="math inline">\(L\)</span> (Arbeit) auf den Output <span class="math inline">\(TP (L)\)</span> abbildet.
 Die Grenzproduktivität ist</p>
 <p><span class="math inline">\(MP (L) = dTP (L)/ \ dL = aL^{a−1}\)</span> ; falls</p>
 <p><span class="math inline">\(a &gt; 1\)</span>, dann ist <span class="math inline">\(MP (L)\)</span> steigend in <span class="math inline">\(L\)</span>,</p>
@@ -636,7 +677,7 @@ Die Grenzproduktivität ist</p>
 <p><img src="images/prodfun3.png" /></p>
 </div>
 <div class="example">
-<p><span id="exm:grenzerl" class="example"><strong>Beispiel 5.4  (Grenzerlös mit Produktregel) </strong></span>Der Erlös (Umsatz) bestimmt sich aus dem Preis eines Guts multipliziert mit der abgesetzten Menge, also <span class="math inline">\(TR(q) = pq\)</span>.</p>
+<p><span id="exm:grenzerl" class="example"><strong>Beispiel 5.6  (Grenzerlös mit Produktregel) </strong></span>Der Erlös (Umsatz) bestimmt sich aus dem Preis eines Guts multipliziert mit der abgesetzten Menge, also <span class="math inline">\(TR(q) = pq\)</span>.</p>
 <ul>
 <li><p>Eine im Wettbewerb stehende Firma wird den Preis als konstant annehmen (Marktpreis): <span class="math inline">\(\bar{p}\)</span>; der Grenzerlös ist daher <span class="math inline">\(MR(q) = dTR(q)/dq = \bar{p}\)</span>.</p></li>
 <li><p>Aus Sicht eines Monopolisten sind Menge und Preis durch eine Nachfragefunktion <span class="math inline">\(q = D(p)\)</span> bzw. durch deren Inverse <span class="math inline">\(p = D ^{(−1)}(q) =: p(q)\)</span> verknüpft.</p></li>
@@ -650,7 +691,7 @@ Die Grenzproduktivität ist</p>
 </ul>
 </div>
 <div class="example">
-<p><span id="exm:durchkosten" class="example"><strong>Beispiel 5.5  (Durchschnitts- und Grenzkosten mit Quotientenregel) </strong></span>Die Durchschnittsfunktion einer Funktion <span class="math inline">\(f (x)\)</span>, <span class="math inline">\(x ≥ 0\)</span>, ist gegeben durch</p>
+<p><span id="exm:durchkosten" class="example"><strong>Beispiel 5.7  (Durchschnitts- und Grenzkosten mit Quotientenregel) </strong></span>Die Durchschnittsfunktion einer Funktion <span class="math inline">\(f (x)\)</span>, <span class="math inline">\(x ≥ 0\)</span>, ist gegeben durch</p>
 <p><span class="math inline">\(A(x)= \frac{f(x)}{x}\)</span> .</p>
 <p>Die Quotientenregel ergibt</p>
 <p><span class="math inline">\(A&#39;(x)= \frac{f&#39;(x)x-1f(x)}{x^2} = \frac{1}{x} \left[ f&#39;(x)-A(x) \right]\)</span> .</p>
@@ -722,7 +763,7 @@ Antwort
 <li>Für die <span class="math inline">\(n\)</span>-te Ableitung wird auch die Notation <span class="math inline">\(f^{ (n)}\)</span> benutzt.</li>
 </ul>
 <div class="example">
-<p><span id="exm:ablhoh" class="example"><strong>Beispiel 5.6  (Einige Ableitungen höherer Ordnung) </strong></span>Die ersten vier Ableitungen von <span class="math inline">\(f (x) = x^ 4\)</span> sind</p>
+<p><span id="exm:ablhoh" class="example"><strong>Beispiel 5.8  (Einige Ableitungen höherer Ordnung) </strong></span>Die ersten vier Ableitungen von <span class="math inline">\(f (x) = x^ 4\)</span> sind</p>
 <p><span class="math inline">\(f&#39; (x) = 4x^3 , \ f&#39;&#39;(x) = 12x^2 , \ f&#39;&#39;&#39;(x) = 24x, f ^{(4)}(x) = 24\)</span>.
 Alle höheren Ableitungen sind <span class="math inline">\(0\)</span>, also <span class="math inline">\(f ^{(n)} (x) = 0\)</span>, für <span class="math inline">\(n \geq 5\)</span>.</p>
 </div>
@@ -738,15 +779,15 @@ Alle höheren Ableitungen sind <span class="math inline">\(0\)</span>, also <spa
 <p>In der Praxis stellt sich häufig folgendes Problem:</p>
 <p>Der Wert einer differenzierbaren Funktion <span class="math inline">\(f\)</span> ist an der Stelle <span class="math inline">\(x\)</span> nur schwer zu berechnen; dafür sind aber der Funktionswert und sämtliche Ableitungen an einer benachbarten Stelle <span class="math inline">\(x_0\)</span> bekannt.</p>
 <div class="example">
-<p><span id="exm:taylorprofit" class="example"><strong>Beispiel 5.7  (Approximation von Gewinnfunktionen) </strong></span>Betrachten wir die exponentiale Nachfragefunktion (ein realistischeres Modell für Nachfragefunktionen!):</p>
+<p><span id="exm:taylorprofit" class="example"><strong>Beispiel 5.9  (Approximation von Gewinnfunktionen) </strong></span>Betrachten wir die exponentiale Nachfragefunktion (ein realistischeres Modell für Nachfragefunktionen!):</p>
 <p><span class="math display">\[p(q) = 100\cdot e^{-0,01\cdot q} = 100\cdot\exp(-0,01 q).\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>Die Gewinnfunktion für einen Monopolisten mit solcher Nachfrage kann wie folgt berechnet werden:</p>
 <p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q),\]</span></p>
 <p>wo <span class="math inline">\(C(q)\)</span> ist die Kostenfunktion. Angenommen, die Kostenfunktion sieht wie folgt aus: <span class="math inline">\(C(q)=10-0.01q\)</span>,</p>
 <p>dann ist die Gewinnfunktion:</p>
 <p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q) = \exp(-0,01 q) \cdot q - 10 - 0,01\cdot q.\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>Wir suchen den Break-Even point (roter Punkt auf der Graphik). Aber: Wie können wir den Break-Even-Punkt finden? Wir können nicht nach <span class="math inline">\(q\)</span> auflösen, nach dem wir den Gewinn gleich Null setzen! (Versuch das 🤯)</p>
 <p>Wir können dennoch die Gewinnfunktion ohne Probleme ableiten und wie auf der Abbildung zu sehen ist, liegt der Break-Even Punkt nah bei <span class="math inline">\(q_0=10.\)</span> Können wir eventuell in der Umgebung von <span class="math inline">\(q_0=10\)</span> die Gewinnfunktion durch ihre Ableitungen approximieren?</p>
 </div>
@@ -754,7 +795,7 @@ Alle höheren Ableitungen sind <span class="math inline">\(0\)</span>, also <spa
 <audio class="audio-specs" controls controlsList="nodownload" src="audio/satz_taylor.m4a">
 </audio>
 <div class="example">
-<p><span id="exm:taylor" class="example"><strong>Beispiel 5.8  (Funktionswertbestimmung für ln(2)) </strong></span>Der Funktionswert <span class="math inline">\(\ln(2)\)</span> ist ohne Taschenrechner schwierig zu bestimmen.</p>
+<p><span id="exm:taylor" class="example"><strong>Beispiel 5.10  (Funktionswertbestimmung für ln(2)) </strong></span>Der Funktionswert <span class="math inline">\(\ln(2)\)</span> ist ohne Taschenrechner schwierig zu bestimmen.</p>
 <p>Bekannt sind aber folgende Werte von <span class="math inline">\(f (x) = \ln \ x\)</span> an der Stelle <span class="math inline">\(x_0 = 1\)</span>:</p>
 <p><span class="math inline">\(f (1) = 0\)</span>; <span class="math inline">\(f&#39; (1) = 1\)</span>; <span class="math inline">\(f&#39;&#39;(x) = −1\)</span>; <span class="math inline">\(f&#39;&#39;&#39;(1) = 2\)</span>; <span class="math inline">\(f ^{(4)}(1) = −6\)</span>; usw.</p>
 </div>
@@ -765,34 +806,36 @@ Alle höheren Ableitungen sind <span class="math inline">\(0\)</span>, also <spa
 <p><span class="math display">\[f(x)=f(x_0)+ \sum_{k=1}^{n}  (\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k +R_n(x),\]</span></p>
 <p>wobei der Restterm: <span class="math display">\[R_n(x)=  \frac{f{(n+1)}( \xi) }{(n+1)!} (x-x_0)^{n+1}\]</span></p>
 <p>mit <span class="math inline">\(\xi \in [x_0,x]\)</span> den Näherungsfehler quantifiziert.</p>
-<p>Der <strong>Taylor-Polynom</strong> des <span class="math inline">\(k\)</span>-ten Grades: <span class="math display">\[f(x_0)+ \sum_{k=1}^{n}  (\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k \]</span></p>
+<p>Der <strong>Taylor-Polynom</strong> des <span class="math inline">\(k\)</span>-ten Grades: <span class="math display">\[T_k(x,x_0)=f(x_0)+ \sum_{k=1}^{n}  (\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k \]</span></p>
 <p>entspricht dabei dem ersten Teil der Taylor-Formel (ohne das Residuum).</p>
 </div>
 <p>Falls <span class="math inline">\(R_n(x) \rightarrow 0\)</span> für <span class="math inline">\(n \rightarrow \infty\)</span>, dann kann der Funktionswert <span class="math inline">\(f (x)\)</span> durch das Taylor-Polynom approximiert werden.</p>
 <p>Insbesondere ist <span class="math inline">\(f (x_0) + f&#39; (x_0)(x − x_0)\)</span> eine lineare Approximation von <span class="math inline">\(f (x)\)</span>.</p>
 <p><img src="images/taylor.png" /></p>
 <div class="example">
-<p><span id="exm:taylorff" class="example"><strong>Beispiel 5.9  (Funktionswertbestimmung für ln(2) ff) </strong></span>Fortsetzung von Beispiel <a href="differentialrechnung.html#exm:taylor">5.8</a>. Wir bestimmen <span class="math inline">\(f (x) = ln(x)\)</span> anhand der Taylor-Approximation mit <span class="math inline">\(x_0 = 1\)</span>.</p>
+<p><span id="exm:taylorff" class="example"><strong>Beispiel 5.11  (Funktionswertbestimmung für ln(2) ff) </strong></span>Fortsetzung von Beispiel <a href="differentialrechnung.html#exm:taylor">5.10</a>. Wir bestimmen <span class="math inline">\(f (x) = \ln(x)\)</span> anhand der Taylor-Approximation mit <span class="math inline">\(x_0 = 1\)</span>.</p>
 <p>Es gilt:
-<span class="math inline">\(f&#39;(x)= \frac{1}{x}\)</span>,</p>
-<p><span class="math inline">\(f&#39;&#39;(x)= - \frac{1}{x^2}\)</span>,</p>
-<p><span class="math inline">\(f&#39;&#39;&#39;(x)= - \frac{2}{x^3}\)</span>,</p>
-<p><span class="math inline">\(f^{(n)}(x)= \frac{(-1)^{n+1}(n-1)!}{x^n}\)</span></p>
+<span class="math display">\[f&#39;(x)= \frac{1}{x},\]</span></p>
+<p><span class="math display">\[f&#39;&#39;(x)= - \frac{1}{x^2},\]</span></p>
+<p><span class="math display">\[f&#39;&#39;&#39;(x)= - \frac{2}{x^3},\]</span></p>
+<p><span class="math display">\[f^{(n)}(x)= \frac{(-1)^{n+1}(n-1)!}{x^n}.\]</span></p>
 <p>Approximation durch Taylor-Polynom n-ter Ordnung:
-<span class="math inline">\(f(x) \approx (x-1)- \frac{(x-1)^2}{2} + ... + (-1)^{n+1} \  \frac{(x-1)^n}{n}\)</span></p>
+<span class="math display">\[f(x) \approx (x-1)- \frac{(x-1)^2}{2} + ... + (-1)^{n+1} \  \frac{(x-1)^n}{n}.\]</span></p>
 <p>Konvergenz des Restterms für <span class="math inline">\(1 &lt; x ≤ 2\)</span>:</p>
 <p>aus <span class="math inline">\(1 &lt; ξ &lt; x ≤ 2\)</span>, also <span class="math inline">\(0 &lt; (x − 1)/ ξ ≤ 1/ 1 = 1\)</span>,</p>
 <p>folgt:</p>
-<p><span class="math inline">\(R_n(x)= \frac{(-1)^{n+2} \ n!}{ \xi ^{n+1}(n+1)!}(x-1)^{n+1}\)</span></p>
-<p><span class="math inline">\(= (-1)^n\frac{(x-1)^{n+1} }{ \xi ^{n+1}(n+1)} \rightarrow 0\)</span></p>
-<p>für <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
-<p>Wir bestimmen <span class="math inline">\(ln(2)\)</span> approximativ anhand des Taylor-Polynoms <span class="math inline">\(10\)</span>-ter Ordnung:</p>
-<p><span class="math inline">\(ln 2 ≈ 1 − 1/2 + 1/3 − 1/4 + 1/5 − 1/6 + 1/7 − 1/8 + 1/9 − 1/10 = 0,6456\)</span>.
+<p><span class="math display">\[\begin{align}R_n(x)&amp;= \frac{(-1)^{n+2} \ n!}{ \xi ^{n+1}(n+1)!}(x-1)^{n+1}\\
+
+&amp;= (-1)^n\frac{(x-1)^{n+1} }{ \xi ^{n+1}(n+1)} \rightarrow 0
+\end{align}\]</span></p>
+<p>für <span class="math inline">\(n \rightarrow \infty.\)</span></p>
+<p>Wir bestimmen <span class="math inline">\(\ln(2)\)</span> approximativ anhand des Taylor-Polynoms <span class="math inline">\(10\)</span>-ter Ordnung:</p>
+<p><span class="math display">\[\ln 2 ≈ 1 − 1/2 + 1/3 − 1/4 + 1/5 − 1/6 + 1/7 − 1/8 + 1/9 − 1/10 = 0,6456.\]</span>
 Der Fehler liegt in <span class="math inline">\((\frac{1}{2^{11} \cdot 11}, 1/11)= \left[ 0,000044; 0,0909091] \right]\)</span>.</p>
 <p><img src="images/taylor2.png" /></p>
 </div>
 <div class="example">
-<p><span id="exm:taylorprofit2" class="example"><strong>Beispiel 5.10  (Approximation von Gewinnfunktionen) </strong></span>Fortsetzung von Beispiel <a href="differentialrechnung.html#exm:taylorprofit">5.7</a>. Approximiere die Gewinnfunktion:</p>
+<p><span id="exm:taylorprofit2" class="example"><strong>Beispiel 5.12  (Approximation von Gewinnfunktionen) </strong></span>Fortsetzung von Beispiel <a href="differentialrechnung.html#exm:taylorprofit">5.9</a>. Approximiere die Gewinnfunktion:</p>
 <p><span class="math display">\[\pi(q) = \exp(-0,01 q) \cdot q - 10 - 0,01\cdot q\]</span></p>
 <p>in der Umgebung von <span class="math inline">\(q_0=10\)</span> mittels Taylor Entwicklung erster Ordnung:</p>
 <p><span class="math display">\[\pi(q)\approx \pi(q_0) + \pi^\prime(q_0)(q-q_0).\]</span></p>
@@ -806,7 +849,7 @@ Der Fehler liegt in <span class="math inline">\((\frac{1}{2^{11} \cdot 11}, 1/11
 <p>Nun können wir die Approximation gleich Null setzen und den approximativen Break-Even Punkt finden.</p>
 <p><span class="math display">\[-1,0516 + 0,8044\cdot (q-10)=0\rightarrow q \approx 11,3073.\]</span></p>
 <p>Das Ergebnis:</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" />
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 Unsere Approximation für den Break-Even Punkt (grün) ist sehr nah an dem wahren Wert (rot).</p>
 </div>
 <div class="exercise">
