@@ -170,7 +170,7 @@ exm:exaddsubmatrizen
 def:defskprodmatrizen
 exm:exmultsksubmatrizen
 def:defskalarprodukt
-fig:unnamed-chunk-57
+fig:unnamed-chunk-53
 exm:exkalarprodukt
 def:defnorm
 exm:exnorm
@@ -254,7 +254,7 @@ mengen-und-zahlen
 mengenoperationen
 zahlenmengen
 punktmengen-in-mathbb-rn
-intervale-als-punktmengen-in-mathbbr
+intervalle-als-punktmengen-in-mathbbr
 eigenschaften-des-mathbb-rn-abstand
 eigenschaften-des-mathbb-rn-varepsilon-umgebung
 funktionen

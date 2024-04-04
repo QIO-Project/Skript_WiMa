@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
   
 
-<meta name="author" content="Maria Osipenko 2024-02-14" />
+<meta name="author" content="Maria Osipenko 2024-04-04" />
 
 
 
@@ -89,7 +89,7 @@
 <li class="chapter" data-level="2.2" data-path="grundlagen.html"><a href="grundlagen.html#zahlenmengen"><i class="fa fa-check"></i><b>2.2</b> Zahlenmengen</a></li>
 <li class="chapter" data-level="2.3" data-path="grundlagen.html"><a href="grundlagen.html#punktmengen-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Punktmengen in <span class="math inline">\(\mathbb R^n\)</span></a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbr"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R}\)</span></a></li>
+<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervalle-als-punktmengen-in-mathbbr"><i class="fa fa-check"></i><b>2.3.1</b> Intervalle als Punktmengen in <span class="math inline">\(\mathbb{R}\)</span></a></li>
 <li class="chapter" data-level="2.3.2" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-abstand"><i class="fa fa-check"></i><b>2.3.2</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: Abstand</a></li>
 <li class="chapter" data-level="2.3.3" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-varepsilon-umgebung"><i class="fa fa-check"></i><b>2.3.3</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\varepsilon-\)</span>Umgebung</a></li>
 </ul></li>
@@ -553,8 +553,8 @@ Die Differenz <span class="math inline">\(A − B\)</span> ist analog definiert.
 </div>
 <p>Das Skalarprodukt ist also eine Operation, die aus zwei <strong>Vektoren</strong> eine <strong>Zahl</strong> liefert. Diese Zahl kann geometrisch interpretiert werden. Sie sagt aus, inwiefern die Vektoren, die als Pfeile aus dem Koordinatenursprung zu dem Punkt mit Vektorelementen als Koordinaten dargestellt werden, in die gleiche Richtung zeigen (siehe die Abbildung unten).</p>
 <p>Ist das Skalarprodukt <span class="math inline">\(\color{green}{positiv}\)</span>, ist der Winkel zwischen den Pfeilen <span class="math inline">\(\color{green}{\alpha&lt;90°}\)</span>. Bei einem <span class="math inline">\(\color{red}{negativen}\)</span> Skalarprodukt wird der Winkel <span class="math inline">\(\color{red}{\beta&gt;90°}\)</span>. Ist das Skalarprodukt Null, so stehen die Pfeile senkrecht zu einander (im 90° Winkel).</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-57"></span>
-<img src="_main_files/figure-html/unnamed-chunk-57-1.png" alt="Illustation von Skalarprodukt" width="672" />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-53"></span>
+<img src="_main_files/figure-html/unnamed-chunk-53-1.png" alt="Illustation von Skalarprodukt" width="672" />
 <p class="caption">
 Abbildung 9.1: Illustation von Skalarprodukt
 </p>
@@ -574,7 +574,7 @@ Abbildung 9.1: Illustation von Skalarprodukt
       \end{pmatrix}
       = 3\cdot 1 + 3 \cdot 5 = 18.
     \end{equation*}\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
 <ul>
 <li>Das <strong>Skalarprodukt</strong> <span class="math inline">\(\bf x^\top y\)</span> von <span class="math inline">\(\bf x = \begin{pmatrix}  3 &amp; -3  \end{pmatrix}\)</span> und <span class="math inline">\(\bf y = \begin{pmatrix}  -1\\  5  \end{pmatrix}\)</span> ist:
 <span class="math display">\[\begin{equation*}
@@ -589,7 +589,7 @@ Abbildung 9.1: Illustation von Skalarprodukt
     = 3\cdot (-1) + (-3) \cdot 5 = -18.
 \end{equation*}\]</span></li>
 </ul>
-<p><img src="_main_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
 </div>
 <p>Damit wir das Skalarprodukt im Sinne von Kosinus des entsprechenden <strong>Winkels</strong> interpretieren können, müssen wir es normieren, d.h. die Längen der Vektoren berücksichtigen. Dafür definieren wir die Euklidische Norm eines Vektors.</p>
 <div class="definition">
@@ -627,7 +627,7 @@ Fortführung von <a href="matrizen-und-grundlegende-matrixoperationen.html#exm:e
 &amp;= \arccos\left(\frac{18}{\sqrt{18}\sqrt{26}}\right)= \arccos(0.8321)= 0.588rad\\
 &amp;\approx33.7°
 \end{align}\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
 </div>
 <p>Es bleibt nur der Fall, wenn das Skalarprodukt Null ist. In diesem Fall stehen die Vektoren <strong>senkrecht</strong> zu einander. Solche senkrechte Vektoren bilden bspw. klassische Koordinatensysteme. Es ist ausserdem sinnvoll wenn die Vektoren, die die Basis von solchen Koordinatensystemen bilden, die Länge <span class="math inline">\(1\)</span> haben (intuitiv: jeweils ein Schritt in die jeweilige Richtung). Wenn man die Länge von Vektoren auf <span class="math inline">\(1\)</span> bringt, sagt man dazu <strong>normieren</strong>. Die folgende Definition präzisiert die Begriffe.</p>
 <div class="definition">

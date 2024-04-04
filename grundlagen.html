@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
   
 
-<meta name="author" content="Maria Osipenko 2024-02-14" />
+<meta name="author" content="Maria Osipenko 2024-04-04" />
 
 
 
@@ -89,7 +89,7 @@
 <li class="chapter" data-level="2.2" data-path="grundlagen.html"><a href="grundlagen.html#zahlenmengen"><i class="fa fa-check"></i><b>2.2</b> Zahlenmengen</a></li>
 <li class="chapter" data-level="2.3" data-path="grundlagen.html"><a href="grundlagen.html#punktmengen-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Punktmengen in <span class="math inline">\(\mathbb R^n\)</span></a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbr"><i class="fa fa-check"></i><b>2.3.1</b> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R}\)</span></a></li>
+<li class="chapter" data-level="2.3.1" data-path="grundlagen.html"><a href="grundlagen.html#intervalle-als-punktmengen-in-mathbbr"><i class="fa fa-check"></i><b>2.3.1</b> Intervalle als Punktmengen in <span class="math inline">\(\mathbb{R}\)</span></a></li>
 <li class="chapter" data-level="2.3.2" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-abstand"><i class="fa fa-check"></i><b>2.3.2</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: Abstand</a></li>
 <li class="chapter" data-level="2.3.3" data-path="grundlagen.html"><a href="grundlagen.html#eigenschaften-des-mathbb-rn-varepsilon-umgebung"><i class="fa fa-check"></i><b>2.3.3</b> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\varepsilon-\)</span>Umgebung</a></li>
 </ul></li>
@@ -289,8 +289,8 @@ function checkAnswer_num(q) {
 <h2><span class="header-section-number">2.1</span> Mengen und Zahlen<a href="grundlagen.html#mengen-und-zahlen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <audio class="audio-specs" controls controlsList="nodownload" src="audio/def_menge.mp3">
 </audio>
-<p>In unserem Beispiel zu Nutzenmaximierung haben wir uns überlegt, welche Konsummöglichkeiten (<span class="math inline">\(x=\# Donuts\)</span> und <span class="math inline">\(y=\# Kaffee\)</span>) der Studierende Alex sich leisten kann. Wie wir gesehen haben, gibt es mehrere finanzierbare Konsumkombinationen <span class="math inline">\((x,y)\)</span>
-für Alex, zwischen denen er wählen kann. Es ist sinnvoll solche Konsummöglichkeiten, die bestimmte Kriterien erfüllen, als eine Menge zu betrachten. Alex wird sein Nutzen maximieren, in dem er aus dieser Menge der für ihn erreichbaren Konsumbündeln, die Konsumkombination, die ihm den maximalen Nutzen bringt, auswählt.</p>
+<p>In unserem Beispiel zur Nutzenmaximierung haben wir uns überlegt, welche Konsummöglichkeiten (<span class="math inline">\(x=\# Donuts\)</span> und <span class="math inline">\(y=\# Kaffee\)</span>) der Studierende Alex sich leisten kann. Wie wir gesehen haben, gibt es mehrere finanzierbare Konsumkombinationen <span class="math inline">\((x,y)\)</span>
+für Alex, zwischen denen er wählen kann. Es ist sinnvoll solche Konsummöglichkeiten, die bestimmte Kriterien erfüllen, als eine Menge zu betrachten. Alex wird seinen Nutzen maximieren, indem er aus dieser Menge der für ihn erreichbaren Konsumbündel, die Konsumkombination, die ihm den maximalen Nutzen bringt, auswählt.</p>
 <p>Doch was ist eine Menge und wie kann man sie definieren?</p>
 <div class="definition">
 <p><span id="def:def1" class="definition"><strong>Definition 2.1  (Mengen) </strong></span>Eine Menge ist eine Zusammenfassung unterschiedlicher Objekte.</p>
@@ -313,20 +313,20 @@ Die Menge der geraden Zahlen zwischen 1 und 11 kann dargestellt werden …</p>
 <span class="math inline">\(M=\{x:x \text{ ist eine gerade Zahl zwischen 1 und 11}\}\)</span></li>
 </ul>
 </div>
-<p>Falls das Objekt <span class="math inline">\(x\)</span> Element der Menge <span class="math inline">\(M\)</span> ist, schreiben wir <span class="math inline">\(x\in M\)</span> ansonsten <span class="math inline">\(x\not\in M\)</span>.</p>
-<p>Im Fall von Alex’ Budgetmenge nutzt man die implizite Darstellung, denn alle erreichbaren Kombinationen aufzuschreiben viel zu lange dauern würde 😅.</p>
+<p>Falls das Objekt <span class="math inline">\(x\)</span> Element der Menge <span class="math inline">\(M\)</span> ist, schreiben wir <span class="math inline">\(x\in M,\)</span> ansonsten <span class="math inline">\(x\not\in M\)</span>.</p>
+<p>Im Fall von Alex’ Budgetmenge nutzt man die implizite Darstellung, denn alle erreichbaren Kombinationen aufzuschreiben würde viel zu lange dauern 😅.</p>
 <div class="example">
-<p><span id="exm:menge2" class="example"><strong>Beispiel 2.2  (Alex' Konsummenge) </strong></span>Wenn man ihm genug Zeit gibt, kann Alex beliebige (positive oder Null) Mengen von Kaffee und Donuts konsumieren. Seine Konsummenge kann dann wie folgt aufgeschrieben werden:</p>
+<p><span id="exm:menge2" class="example"><strong>Beispiel 2.2  (Alex' Konsummenge) </strong></span>Wenn man ihm genug Zeit gibt, kann Alex beliebige (nicht-negative) Mengen von Kaffee und Donuts konsumieren. Seine Konsummenge kann dann wie folgt aufgeschrieben werden:</p>
 <p><span class="math inline">\(C=\{(x,y):x\geq 0,y\geq 0\}\)</span></p>
 <p>Die Menge der für Alex erreichbaren Konsumbündeln aus Kaffee und Donuts definiert man als:</p>
-<p><span class="math inline">\(B=\{(x,y):P_X+P_Y\leq Budget\}\)</span></p>
+<p><span class="math inline">\(B=\{(x,y): x\cdot P_X+y \cdot P_Y\leq Budget\}\)</span></p>
 <p>Dann gilt für <span class="math inline">\(Budget=200\)</span>, <span class="math inline">\(P_X=2\)</span> und <span class="math inline">\(P_Y=4\)</span>:
 <span class="math display">\[(30;10)\in B\]</span>
 <span class="math display">\[(99;1)\not \in B \]</span></p>
 </div>
 <audio class="audio-specs" controls controlsList="nodownload" src="audio/def_teilmenge.mp3">
 </audio>
-<p>Nehmen wir nun an, Alex möchte sein Konsum von süßen und nicht so gesunden Donuts begrenzen. Er möchte nun <strong>nicht mehr als <span class="math inline">\(30\)</span> Donuts</strong> pro Monat verzerren.</p>
+<p>Nehmen wir nun an, Alex möchte seinen Konsum von süßen und nicht so gesunden Donuts begrenzen. Er möchte nun <strong>nicht mehr als <span class="math inline">\(30\)</span> Donuts</strong> pro Monat verzerren.</p>
 <p><br><strong>Hat sich nun seine Konsummenge verändert?</strong></p>
 <p><br>Hier helfen uns die Mengenrelationen (Teilmenge) weiter…</p>
 <div class="definition">
@@ -344,19 +344,19 @@ formal: <span class="math display">\[X=Y\]</span></p>
 <span class="math display">\[A=\{x\in \mathbb N:x\leq 11\}=\{1,2,3,4,5,6,7,8,9,10,11\}\]</span></p>
 <p>Dann gilt: <span class="math inline">\(A\subset \mathbb N\)</span>.</p>
 <p>Venn-Diagramm:</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
 <p>Nun zurück zu Alex und seiner selbst auferlegten Auflage, nicht mehr als <span class="math inline">\(30\)</span>
 Donuts im Monat zu essen.</p>
 <div class="example">
 <p><span id="exm:menge3" class="example"><strong>Beispiel 2.3  (Alex' Konsummenge unter Bedingung) </strong></span>Seine neue Konsummenge ist:
 <span class="math display">\[C_{neu} =  \{(x;y):0\leq x\leq 30,y\geq 0\}\]</span>
-Dann gilt: <span class="math inline">\(C_{neu}\subset C\)</span>. Denn alle Konsumkombinationen aus <span class="math inline">\(C_{neu}\)</span> sind auch in <span class="math inline">\(C\)</span> enthalten, aber in <span class="math inline">\(C\)</span> sind auch weitere Konsumkombinationen enthalten, wie z.B. <span class="math inline">\((45,90)\)</span>, die durch die Restriktion <span class="math inline">\(\#Donats\leq 30\)</span> nicht in <span class="math inline">\(C_{neu}\)</span> enthalten sind.</p>
+Dann gilt: <span class="math inline">\(C_{neu}\subset C\)</span>. Denn alle Konsumkombinationen aus <span class="math inline">\(C_{neu}\)</span> sind auch in <span class="math inline">\(C\)</span> enthalten, aber in <span class="math inline">\(C\)</span> sind auch weitere Konsumkombinationen enthalten, wie z.B. <span class="math inline">\((45,90)\)</span>, die durch die Restriktion <span class="math inline">\(\#Donuts\leq 30\)</span> nicht in <span class="math inline">\(C_{neu}\)</span> enthalten sind.</p>
 <p>Graphisch:</p>
 <div class="figure"><span style="display:block;" id="fig:konsummenge"></span>
-<img src="_main_files/figure-html/konsummenge-1.png" alt="Konsummenge mit (rechts) und ohne Restriktion auf Donats (links)." width="672" />
+<img src="_main_files/figure-html/konsummenge-1.png" alt="Konsummenge mit (rechts) und ohne Restriktion auf Donuts (links)." width="672" />
 <p class="caption">
-Abbildung 2.1: Konsummenge mit (rechts) und ohne Restriktion auf Donats (links).
+Abbildung 2.1: Konsummenge mit (rechts) und ohne Restriktion auf Donuts (links).
 </p>
 </div>
 </div>
@@ -366,7 +366,7 @@ Abbildung 2.1: Konsummenge mit (rechts) und ohne Restriktion auf Donats (links).
 </audio>
 <p>Alex hat nun ein weiteres Problem: die Lieblingsdonuts sind teurer geworden und kosten nun <span class="math inline">\(5\)</span> Euro. Eine gute Nachricht gibt es trotzdem - in der Mensa kostet eine Tasse Kaffee nur <span class="math inline">\(1\)</span> Euro. Somit verändert sich die Budgetmenge von Alex. Wie kann man die neue Situation mit der Situation davor vergleichen? Hier helfen uns die Mengenoperationen weiter.</p>
 <p>Wir definieren noch die <strong>Universalmenge</strong>, hier ausgedrückt mit <span class="math inline">\(U\)</span>. Das ist die größte Menge, mit der wir in einem bestimmten Kontext arbeiten. Die <strong>leere Menge</strong> (oder die <strong>Nullmenge</strong>) enthält keine Elemente, diese wird als <span class="math inline">\(\emptyset\)</span> notiert.</p>
-<p>Es ist sinnvoll für Alex’ Entscheidungsproblem die hypothetische Konsummenge <span class="math inline">\(C=\{(x,y):x\geq 0,y\geq 0\}\)</span> als Universalmenge festzulegen. Wenn Alex’ Budget <span class="math inline">\(0\)</span> Euro beträgt, ist seine Budgetmenge eine leere Menge.</p>
+<p>Es ist sinnvoll für Alex’ Entscheidungsproblem die hypothetische Konsummenge <span class="math inline">\(C=\{(x,y):x\geq 0,y\geq 0\}\)</span> als Universalmenge festzulegen. Wenn Alex’ Budget <span class="math inline">\(0\)</span> Euro beträgt, ist seine Budgetmenge die leere Menge.</p>
 <div class="definition">
 <p><span id="def:def3" class="definition"><strong>Definition 2.3  (Durchschnitt und Vereinigung) </strong></span><br>Der <strong>Durchschnitt</strong> zweier Mengen <span class="math inline">\(X\)</span> und <span class="math inline">\(Y\)</span> ist die Menge, deren Elemente sowohl in <span class="math inline">\(X\)</span> als auch in <span class="math inline">\(Y\)</span> enthalten sind; formal:</p>
 <p><span class="math inline">\(X\cap Y=\{x:x\in X \text{ und } x\in Y\}\)</span> <img src="images/schnitt.png" /></p>
@@ -566,11 +566,11 @@ Die strenge Ungleichung <span class="math inline">\(&gt;\)</span> und die schwac
 <li>weniger als 10 Krankheitstage im letzten Jahr (<span class="math inline">\(K\)</span>),</li>
 <li>die höchsten 45 Jahre alt sind (<span class="math inline">\(Z\)</span>)</li>
 </ul>
-<p>zu befragen, so kann der gewünschte Zielkreis mittels Ungleichungen wie folgst einggerenzt werden: <span class="math inline">\(X\geq 5,Y&gt;1,K&lt;10 \text{ und } Z\leq 45\)</span>.</p>
+<p>zu befragen, so kann der gewünschte Zielkreis mittels Ungleichungen wie folgt eingegrenzt werden: <span class="math inline">\(X\geq 5,Y&gt;1,K&lt;10 \text{ und } Z\leq 45\)</span>.</p>
 <p>Häufig möchte man keine bloßen Zahlen betrachten, sondern die <strong>Abweichungen</strong> zu einem Sollwert ohne die Richtung der Abweichung miteinzubeziehen. In diesem Fall braucht man die Beträge dieser Abweichungen.</p>
 <div class="definition">
 <p><span id="def:def7" class="definition"><strong>Definition 2.7  (Betrag) </strong></span>Der Betrag (auch Absolutwert, “Vorzeichenkiller”) von <span class="math inline">\(x\in\mathbb R\)</span> ist definiert als</p>
-<p><span class="math inline">\(v=\begin{cases}x, &amp;\text{ falls } x\geq 0,\\ -x, &amp;\text{ falls } x&lt;0\end{cases}\)</span></p>
+<p><span class="math inline">\(|x|=\begin{cases}x, &amp;\text{ falls } x\geq 0,\\ -x, &amp;\text{ falls } x&lt;0\end{cases}\)</span></p>
 </div>
 <p>Betrachten Sie als Beispiel die Abweichungen von monatlichen Umsätzen zum Jahresdurchschnitt:</p>
 <ul>
@@ -594,35 +594,35 @@ Beweis:
  
    // Generate a random question
     const questionObj3 = {
-      question: 'Welche Zahlenmenge beschreibt am besten Mitarbeiterzahl?',
+      question: 'Welche Zahlenmenge beschreibt am besten die Mitarbeiterzahl?',
       options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
       answer: '1',
       id: 3,
       where: 'result3'
     };
      const questionObj31 = {
-      question: 'Welche Zahlenmenge beschreibt am besten den Anteil von Mitarbeitern in Elternzeit?',
+      question: 'Welche Zahlenmenge beschreibt am besten den Anteil von Mitarbeitenden in Elternzeit?',
       options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
       answer: '3',
       id: 31,
       where: 'result31'
     };
      const questionObj32 = {
-      question: 'Welche Zahlenmenge beschreibt am besten Verschuldungsgrad eines Unternehmens?',
+      question: 'Welche Zahlenmenge beschreibt am besten dem Verschuldungsgrad eines Unternehmens?',
       options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
       answer: '4',
       id: 32,
       where: 'result32'
     };
      const questionObj33 = {
-      question: 'Welche Zahlenmenge beschreibt am besten Dauer von Geschäftsbeziehungen mit einem Bestandskunden?',
+      question: 'Welche Zahlenmenge beschreibt am besten die Dauer von Geschäftsbeziehungen mit einem Bestandskunden?',
       options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
       answer: '5',
       id: 33,
       where: 'result33'
     };
     const questionObj34 = {
-      question: 'Welche Zahlenmenge beschreibt am besten Stundensaldo von einem Mitarbeiterstundenkonto (in ganzen Stunden gemessen)?',
+      question: 'Welche Zahlenmenge beschreibt am besten den Stundensaldo von einem Mitarbeiterstundenkonto (in ganzen Stunden gemessen)?',
       options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
       answer: '2',
       id: 34,
@@ -761,9 +761,9 @@ Beweis:
 <h2><span class="header-section-number">2.3</span> Punktmengen in <span class="math inline">\(\mathbb R^n\)</span><a href="grundlagen.html#punktmengen-in-mathbb-rn" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <audio class="audio-specs" controls controlsList="nodownload" src="audio/punktmengen.mp3">
 </audio>
-<p>Häufig hat man die Situation, in der mehrere Objekte oder Personen oder deren Verhalten verglichen werden müssen. Die letzteren werden durch ein oder mehrere Werte repräsentiert. Diese einzelne Werte aus <span class="math inline">\(\mathbb R\)</span> oder Tupeln von mehreren Werten aus <span class="math inline">\(\mathbb R ^ 2, \mathbb R^3,\ldots\)</span> können wir immer als Punkte im geeigneten Koordinatensystem darstellen. Dies ermöglicht, die Ähnlichkeit der Objekte oder Personen zu ermitteln, in dem man den Abstand zwischen den Punkten misst.</p>
+<p>Häufig hat man die Situation, in der mehrere Objekte oder Personen oder deren Verhalten verglichen werden müssen. Die letzteren werden durch ein oder mehrere Werte repräsentiert. Diese einzelne Werte aus <span class="math inline">\(\mathbb R\)</span> oder Tupeln von mehreren Werten aus <span class="math inline">\(\mathbb R ^ 2, \mathbb R^3,\ldots\)</span> können wir immer als Punkte im geeigneten Koordinatensystem darstellen. Dies ermöglicht, die Ähnlichkeit der Objekte oder Personen zu ermitteln, indem man den Abstand zwischen den Punkten misst.</p>
 <ul>
-<li>Die reelle Linie, <span class="math inline">\(\mathbb{R}\)</span> eignet sich, wenn jedes Objekt mittels nur einer Zahl beschrieben wird. Diese markiert dann jeweils einen Punkt auf dem Zahlenstrahl:
+<li>Die reelle Linie <span class="math inline">\(\mathbb{R}\)</span> eignet sich, wenn jedes Objekt mittels nur einer Zahl beschrieben wird. Diese markiert dann jeweils einen Punkt auf dem Zahlenstrahl:
 <br><img src="images/R1.png" /></li>
 </ul>
 <div class="example">
@@ -775,7 +775,7 @@ Beweis:
 <br><img src="images/R2.png" /></li>
 </ul>
 <div class="example">
-<p><span id="exm:r2" class="example"><strong>Beispiel 2.5  (zweidimensionaler reeler Raum) </strong></span>Die Konsument*innen Alex, Tina und Amy werden hinsichtlich deren Kontostand (<span class="math inline">\(x\)</span>) und der Veränderung deren Konsumausgaben (<span class="math inline">\(y\)</span>) zum letzten Monat verglichen. Alex Verhalten wird durch den Tupel (Kontostand; Veränderung der Konsumausgaben <span class="math inline">\(=(x;y)\)</span>) <span class="math inline">\((500; 300)\)</span>, Tinas durch <span class="math inline">\((250; -200)\)</span> und Amys durch <span class="math inline">\((-600; 200)\)</span> beschrieben.
+<p><span id="exm:r2" class="example"><strong>Beispiel 2.5  (zweidimensionaler reeler Raum) </strong></span>Die Konsument*innen Alex, Tina und Amy werden hinsichtlich deren Kontostand (<span class="math inline">\(x\)</span>) und der Veränderung deren Konsumausgaben (<span class="math inline">\(y\)</span>) zum letzten Monat verglichen. Alex Verhalten wird durch das Tupel (Kontostand; Veränderung der Konsumausgaben <span class="math inline">\(=(x;y)\)</span>) <span class="math inline">\((500; 300)\)</span>, Tinas durch <span class="math inline">\((250; -200)\)</span> und Amys durch <span class="math inline">\((-600; 200)\)</span> beschrieben.
 Wie sehen die verschiedenen Konsumverhalten dieser Konsument*innen als Punkte im Koordinatensystem aus?</p>
 </div>
 <ul>
@@ -790,14 +790,14 @@ Wie sehen die verschiedenen Konsumverhalten dieser Konsument*innen als Punkte im
 <span class="math display">\[\mathbb R^n =  \left\{ {(x_1,x_2, ... , x_n) : x_i \in\mathbb R, 1 \leq i \leq n}\right\}  \]</span>
 Teilmengen von <span class="math inline">\(\mathbb{R^n}\)</span>: Punktmengen.</li>
 </ul>
-<div id="intervale-als-punktmengen-in-mathbbr" class="section level3 hasAnchor" number="2.3.1">
-<h3><span class="header-section-number">2.3.1</span> Intervale als Punktmengen in <span class="math inline">\(\mathbb{R}\)</span><a href="grundlagen.html#intervale-als-punktmengen-in-mathbbr" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="intervalle-als-punktmengen-in-mathbbr" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Intervalle als Punktmengen in <span class="math inline">\(\mathbb{R}\)</span><a href="grundlagen.html#intervalle-als-punktmengen-in-mathbbr" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Wichtige Punktmengen im <span class="math inline">\(\mathbb{R}\)</span> sind Intervalle.</p>
 <div class="example">
 <p><span id="exm:int" class="example"><strong>Beispiel 2.7  (Intervalle als Punktmengen) </strong></span>Die Personalchefin von Alex, Tina und Amy könnte z.B. nur Angestellte mit negativem Gehaltsscore im Intervall von <span class="math inline">\(-5\)</span> bis <span class="math inline">\(-1\)</span> in einer Auswertung betrachten. Dabei hätte sie mehrere Optionen festzulegen. Sollen die Mitarbeitende mit dem Score <span class="math inline">\(0\)</span> berücksichtigt werden oder sind sie noch außen vor? Bisher gab es keine Gehaltscores jenseits von <span class="math inline">\(-5\)</span>. Sollen aber künftig auch die Personen, die einen kleineren Score als <span class="math inline">\(-5\)</span> haben, in der Auswertung berücksichtigt werden?
-Im ersten Fall würden wir das entsprechende Intervall als <span class="math inline">\([-5;0]\)</span>, in dem zweiten - als <span class="math inline">\([-5;0)\)</span> und im dritten Fal (bei Ja) - <span class="math inline">\((-\infty; 0)\)</span> aufschreiben.</p>
+Im ersten Fall würden wir das entsprechende Intervall als <span class="math inline">\([-5;0]\)</span>, in dem zweiten - als <span class="math inline">\([-5;0)\)</span> und im dritten Fall (bei Ja) - <span class="math inline">\((-\infty; 0)\)</span> aufschreiben.</p>
 </div>
-<p>Dementsprechend für <span class="math inline">\(a, b \in R, \ a &lt; b\)</span> unterscheidet man:</p>
+<p>Dementsprechend unterscheidet man für <span class="math inline">\(a, b \in \mathbb R, \ a &lt; b\)</span>:</p>
 <ul>
 <li><p><strong>Beschränkte Mengen</strong>:</p>
 <ul>
@@ -820,7 +820,7 @@ Im ersten Fall würden wir das entsprechende Intervall als <span class="math inl
 <div id="q1" class="quiz">
 <script>
    const questionObj36 = {
-      question: 'Bei einer Befragung möchte man alle Mitarbeiter befragen, die länger als 3 Jahre aber maximal 5 Jahre in einem Unternehmen angestellt sind. Welches Intervall für die Betriebszugehörigkeit ist in diesem Fall relevant?',
+      question: 'Bei einer Befragung möchte man alle Mitarbeitende befragen, die länger als 3 Jahre aber maximal 5 Jahre in einem Unternehmen angestellt sind. Welches Intervall für die Betriebszugehörigkeit ist in diesem Fall relevant?',
       options: ['\\((3;5)\\)','\\([3;5)\\)' ,'\\((3;5]\\)', '\\([3;5)\\)'],
       answer: '3',
       id: 36,
@@ -828,7 +828,7 @@ Im ersten Fall würden wir das entsprechende Intervall als <span class="math inl
     };
     
    const questionObj37 = {
-      question: 'Bei einer anderen Befragung möchte man alle Mitarbeiter befragen, deren Betriebszugehörigkeit im Intervall \\([2;~~ 3,5)\\) Jahren liegt. Mitarbeiter mit welcher Betriebszugehörigkeit, können an der Umfrage teilnehmen?',
+      question: 'Bei einer anderen Befragung möchte man alle Mitarbeitende befragen, deren Betriebszugehörigkeit im Intervall \\([2;~~ 3,5)\\) Jahren liegt. Mitarbeiter mit welcher Betriebszugehörigkeit, können an der Umfrage teilnehmen?',
       options: ['1,5 Jahre','2 Jahre' ,'2,5 Jahre', '3,5 Jahre'],
       answer: ['2','3'],
       id: 37,
@@ -872,7 +872,7 @@ Im ersten Fall würden wir das entsprechende Intervall als <span class="math inl
 <input type="checkbox" name="option37" value=3> 2,5 Jahre
 </label>
 <label>
-<input type="checkbox" name="option37" value=4> 2,5 Jahre
+<input type="checkbox" name="option37" value=4> 3,5 Jahre
 </label>
 </div>
 <button onclick="checkAnswer_mmc(questionObj37)">Submit</button>
@@ -889,8 +889,8 @@ Im ersten Fall würden wir das entsprechende Intervall als <span class="math inl
 <audio class="audio-specs" controls controlsList="nodownload" src="audio/abstand.mp3">
 </audio>
 <p>Wie könnte nun die Personalchefin im Beispiel <a href="grundlagen.html#exm:r3">2.6</a> die Arbeitnehmer*innen Alex, Tina und Amy hinsichtlich deren Gehalts-<span class="math inline">\(x\)</span>, Produktivitätsveränderung <span class="math inline">\(y\)</span> und Zielerreichungsscore <span class="math inline">\(z\)</span> vergleichen?</p>
-<p>Deren Verhalten wird ja bisher durch den Tupel (Gehalt; Produktivität; Zielerreichung) <span class="math inline">\(=(x;y;z)\)</span> abgebildet. Tinas Beschreibung ist <span class="math inline">\((3; 2,5; 2)\)</span>, Alex <span class="math inline">\((-2; -5; -2,5)\)</span> und Amys <span class="math inline">\((-3; 1,2; 1,5)\)</span>. Welche Arbeitnehmer*innen sind sich am ähnlichsten?
-Es ist hier sinnvoll den <strong>Euklidschen Abstand</strong> zwischen den Punkten, die für Alex, Tina und Emy stehen, zu ermitteln.</p>
+<p>Deren Verhalten wird ja bisher durch das Tupel (Gehalt; Produktivität; Zielerreichung) <span class="math inline">\(=(x;y;z)\)</span> abgebildet. Tinas Beschreibung ist <span class="math inline">\((3; 2,5; 2)\)</span>, Alex <span class="math inline">\((-2; -5; -2,5)\)</span> und Amys <span class="math inline">\((-3; 1,2; 1,5)\)</span>. Welche Arbeitnehmer*innen sind sich am ähnlichsten?
+Es ist hier sinnvoll den <strong>Euklidschen Abstand</strong> zwischen den Punkten, die für Alex, Tina und Amy stehen, zu ermitteln.</p>
 <p>Nach dem Satz von Pythagoras beträgt die Länge der Geraden, die zwei Punkte <span class="math inline">\(a\)</span> und <span class="math inline">\(b\)</span> in <span class="math inline">\(\mathbb R^2\)</span> verbindet,
 <span class="math display">\[d(a, b) = \sqrt{(a_{1}-b_{1})^{2}  + (a_{2}-b_{2})^{2}}  \]</span>
 <img src="images/abstand.png" /></p>
@@ -963,7 +963,7 @@ Antwort
 </div>
 <div id="eigenschaften-des-mathbb-rn-varepsilon-umgebung" class="section level3 hasAnchor" number="2.3.3">
 <h3><span class="header-section-number">2.3.3</span> Eigenschaften des <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\varepsilon-\)</span>Umgebung<a href="grundlagen.html#eigenschaften-des-mathbb-rn-varepsilon-umgebung" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Wir brauchen noch ein Konzept, das uns hilft festzustellen, ob gegebene Punkte “nah genug” bei einander liegen. Später im Kurs wollen wir schauen, ob eine Folge gegen einen bestimmten Punkt strebt, bzw, ihm beliebig nah kommt. Dieses “beliebig nah” formalisiert man mit Hilfe der <span class="math inline">\(\varepsilon-\)</span>Umgebung.</p>
+<p>Wir brauchen noch ein Konzept, das uns hilft, festzustellen, ob gegebene Punkte “nah genug” bei einander liegen. Später im Kurs wollen wir schauen, ob eine Folge gegen einen bestimmten Punkt strebt, bzw, ihm beliebig nah kommt. Dieses “beliebig nah” formalisiert man mit Hilfe der <span class="math inline">\(\varepsilon-\)</span>Umgebung.</p>
 <div class="definition">
 <p><span id="def:defumgebung" class="definition"><strong>Definition 2.9  (ε-Umgebung) </strong></span>Es sei <span class="math inline">\(\varepsilon\)</span> eine positive reelle Zahl. Die <span class="math inline">\(\varepsilon\)</span>-Umgebung eines Punkts <span class="math inline">\(x_0 \in\mathbb R^n\)</span> ist definiert als die Menge
 <span class="math inline">\(N_ \varepsilon (x_0) = {x \in \mathbb R^n : d(x_0, x) &lt; \varepsilon }\)</span>.</p>
@@ -1030,13 +1030,13 @@ Die <strong>Komposition (Verkettung)</strong> von <span class="math inline">\(f\
 <div class="example">
 <p><span id="exm:fun2" class="example"><strong>Beispiel 2.11  (Komposition) </strong></span><span class="math inline">\(f (x) = x + 2, \ g( y ) = {y}^{2}\)</span> und <span class="math inline">\(g(f (x)) = {(x+2)}^{2}\)</span>.</p>
 </div>
-<p>Darüberhinaus, unterscheiden wir die wichtigsten Funktionstypen, je nach dem in welcher Weise die Funktionsvorschrift auf den Funktionsargument einwirkt. Das sind lineare, quadratische, Potenz-, exponentiale und logarithmische Funktionen.</p>
+<p>Darüberhinaus unterscheiden wir die wichtigsten Funktionstypen, je nach dem in welcher Weise die Funktionsvorschrift auf den Funktionsargument einwirkt. Das sind lineare, quadratische, Potenz-, exponentiale und logarithmische Funktionen.</p>
 <div id="lineare-funktionen" class="section level3 hasAnchor" number="2.4.1">
 <h3><span class="header-section-number">2.4.1</span> Lineare Funktionen<a href="grundlagen.html#lineare-funktionen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <audio class="audio-specs" controls controlsList="nodownload" src="audio/linfuns.mp3">
 </audio>
 <p>Im Beispiel Nutzenmaximierung hatte Alex die Budgetrestriktion <span class="math inline">\(x \cdot P_X + y \cdot P_Y = 100.\)</span>, die als eine lineare Funktion <span class="math inline">\(y(x)=\frac{100}{P_Y}-\frac {P_X}{P_Y} x\)</span> dargestellt werden könnte.</p>
-<p>Zudem, können viele Kostenfunktionen als lineare Funktionen der produzierten Mengen modelliert werden. In diesem Fall bestehen die Kosten aus einem fixen Betrag <span class="math inline">\(b\)</span> und wachsen proportional zu der produzierten Menge <span class="math inline">\(x\)</span> mit dem Faktor <span class="math inline">\(b\)</span>, so dass <span class="math inline">\(K(x) = ax+b\)</span>.</p>
+<p>Zudem können viele Kostenfunktionen als lineare Funktionen der produzierten Mengen modelliert werden. In diesem Fall bestehen die Kosten aus einem fixen Betrag <span class="math inline">\(b\)</span> und wachsen proportional zu der produzierten Menge <span class="math inline">\(x\)</span> mit dem Faktor <span class="math inline">\(b\)</span>, so dass <span class="math inline">\(K(x) = ax+b\)</span>.</p>
 <div class="definition">
 <p><span id="def:deflin" class="definition"><strong>Definition 2.13  (Lineare Funktion) </strong></span>Es seien <span class="math inline">\(a, b\)</span> reelle Zahlen. Die Funktion <span class="math inline">\(f : \mathbb{R} → \mathbb{R}\)</span> mit</p>
 <p><span class="math display">\[f (x) = a \cdot x + b, ~   x \in \mathbb{R}  \]</span></p>
@@ -1091,8 +1091,8 @@ Nun lautet die Kostenfunktion</p>
 </div>
 <div id="potenz--exponential--und-logarithmusfunktionen" class="section level3 hasAnchor" number="2.4.3">
 <h3><span class="header-section-number">2.4.3</span> Potenz-, Exponential- und Logarithmusfunktionen<a href="grundlagen.html#potenz--exponential--und-logarithmusfunktionen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Wachstumsprozesse sind meistens weder linear noch quadratisch in der Variable Zeit. Ein schnelles Wachstum gut mittels Exponential- und Potenzfunktionen beschrieben.</p>
-<p>Während der Corona-Pandemie hat man ganz genau die Ansteckungszahlen verfolgt. Angenommen, jede infizierte Person pro Woche weitere zwei Personen ansteckt. Dann sieht das Wachstum folgendermaßen aus:</p>
+<p>Wachstumsprozesse sind meistens weder linear noch quadratisch in der Variable Zeit. Ein schnelles Wachstum wird gut mittels Exponential- und Potenzfunktionen beschrieben.</p>
+<p>Während der Corona-Pandemie hat man ganz genau die Ansteckungszahlen verfolgt. Angenommen, jede infizierte Person hat pro Woche weitere zwei Personen ansteckt. Dann sieht das Wachstum folgendermaßen aus:</p>
 <p><img src="images/corona.gif" /></p>
 <p>An der Stelle brauchen wir die Definition und Rechenregeln für die Exponenten, die so ein Wachstum beschreiben können.</p>
 <p>Wir schreiben <span class="math inline">\({a}^{n}\)</span> für das <span class="math inline">\(n-fache\)</span> Produkt einer Zahl <span class="math inline">\(a\)</span> mit sich selbst (<span class="math inline">\(n \in \mathbb{N}\)</span>). Die Zahl <span class="math inline">\(n\)</span> wird Exponent genannt.</p>
@@ -1125,7 +1125,7 @@ Nun lautet die Kostenfunktion</p>
 <li><p>Häufig wird als Basis die Euler Konstante <span class="math inline">\(e = 2,718...\)</span> verwendet. ( mehr später)</p></li>
 <li><p>Beachte: Der Exponent ist nun die Funktionsvariable.</p></li>
 </ul>
-<p>Wenn wir nun eine Exponentialfunktion umkehren möchten, z.B. um herauszufinden, wie viele Wochen es dauert, bis eine bestimmte Anzahl von Infizierten erreich wird, bedienen wir uns der <strong>Logarithmusfunktion</strong>.</p>
+<p>Wenn wir nun eine Exponentialfunktion umkehren möchten, z.B. um herauszufinden, wie viele Wochen es dauert, bis eine bestimmte Anzahl von Infizierten erreicht wird, bedienen wir uns der <strong>Logarithmusfunktion</strong>.</p>
 <div class="definition">
 <p><span id="def:deflogfun" class="definition"><strong>Definition 2.17  (Logarithmusfunktion) </strong></span>Falls <span class="math display">\[x = b^y, \text{ mit }b &gt; 0 \text{ und } b  \neq  1,\]</span>
 dann ist <span class="math inline">\(y\)</span> der Logarithmus von <span class="math inline">\(x\)</span> zur Basis <span class="math inline">\(b\)</span>, geschrieben als
@@ -1190,7 +1190,7 @@ questionObj6 = {
 </div>
 <div id="konvexe-und-konkave-funktionen" class="section level3 hasAnchor" number="2.4.4">
 <h3><span class="header-section-number">2.4.4</span> Konvexe und konkave Funktionen<a href="grundlagen.html#konvexe-und-konkave-funktionen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Als wir die Nutzenfunktion von Alex untersucht haben, haben wir festgestellt, dass mit zunehmenden Konsummengen der Nutzen steigt, aber die Steigung nimmt mit zunehmenden Konsum ab. Man geht davon aus, dass alle Konsumenten so ein Verhalten aufweisen und sagt dazu, dass die typische Nutzenfunktion <strong>konkav</strong> sei.</p>
+<p>Als wir die Nutzenfunktion von Alex untersucht haben, haben wir festgestellt, dass mit zunehmenden Konsummengen der Nutzen steigt, aber die Steigung mit zunehmenden Konsum abnimmt. Man geht davon aus, dass alle Konsumenten so ein Verhalten aufweisen und sagt dazu, dass die typische Nutzenfunktion <strong>konkav</strong> sei.</p>
 <div class="definition">
 <p><span id="def:defkonkav" class="definition"><strong>Definition 2.18  (Konkave Funktion) </strong></span>Die Funktion <span class="math inline">\(f : D \rightarrow \mathbb{R}\)</span> ist <strong>konkav</strong>, falls für alle <span class="math inline">\(x_1,x_2 \in D\)</span> und <span class="math inline">\(\lambda \in (0,1)\)</span> gilt:
 <span class="math inline">\(f (\lambda x_1 + (1 − \lambda )x_2) \geq \lambda f (x_1) + (1 − \lambda)f (x_2)\)</span>.</p>
@@ -1210,7 +1210,7 @@ questionObj6 = {
 <div class="example">
 <p><span id="exm:nutzenf" class="example"><strong>Beispiel 1.3  (Nutzenfunktion) </strong></span>Sollte Alex eine feste Mengen an Donuts konsumieren (z.B. <span class="math inline">\(30\)</span>) so ist seine Nutzenfunktion nur von der Kaffeemenge abhängig und lautet: <span class="math inline">\(U(y )=\sqrt{30} + \sqrt{y}\)</span>
 Nehme beispielweise <span class="math inline">\(y_1=2\)</span>, <span class="math inline">\(y_2=4\)</span> und <span class="math inline">\(\lambda=0,5\)</span>. Dann ist <span class="math inline">\(\bar y=3\)</span>.
-<span class="math inline">\(U(y_1=2) = \sqrt{30} + \sqrt{2}=6,891439\)</span>, <span class="math inline">\(U(y_2=4) = \sqrt{30} + \sqrt{4}=7,477226\)</span> und <span class="math inline">\(U(\bar y) = \sqrt{30} + \sqrt{3}=7,209276\)</span>. Da eine Nutzenfunktion immer konkave ist, gilt: <span class="math inline">\(U(\bar y)=7,209276\geq 0,5\cdot U(y_1=2) + 0,5\cdot U(y_2=4) = 7,184332\)</span>.</p>
+<span class="math inline">\(U(y_1=2) = \sqrt{30} + \sqrt{2}=6,891439\)</span>, <span class="math inline">\(U(y_2=4) = \sqrt{30} + \sqrt{4}=7,477226\)</span> und <span class="math inline">\(U(\bar y) = \sqrt{30} + \sqrt{3}=7,209276\)</span>. Da eine Nutzenfunktion immer konkav ist, gilt: <span class="math inline">\(U(\bar y)=7,209276\geq 0,5\cdot U(y_1=2) + 0,5\cdot U(y_2=4) = 7,184332\)</span>.</p>
 </div>
 <p>Das Wachstum der Infiziertenzahl in der Corona-Pandemie war hingegen eine <strong>konvexe</strong> Funktion, da sich die Veränderung der Anzahl der Infizierten pro Zeiteinheit im Laufe der Zeit vervielfachte.</p>
 <div class="definition">
