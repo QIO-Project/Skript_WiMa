@@ -262,8 +262,10 @@ function checkAnswer_num(q) {
 
       if (isCorrect) {
         document.getElementById('result'+q.id).textContent = 'Glückwunsch! Deine Antwort ist richtig.';
+         document.getElementById('result'+q.id).style.color = "green";
       } else {
-        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        document.getElementById('result'+q.id).textContent = 'Sorry, die Antwort ist falsch. Die richtige Antwort ist: ' + Math.round(q.answer*10000)/10000;
+         document.getElementById('result'+q.id).style.color = "red";
       }
   }
 
@@ -720,6 +722,33 @@ Antwort
 &amp;= \color{blue}{\frac{55}{12}} + \color{red}{\left[e^t\right]_2^4} = \color{blue}{\frac{55}{12}} + \color{red}{(e^4 - e^2)} \\
 &amp;= 51,7924.
 \end{align*}\]</span></p>
+</div>
+<div id="qintegr4" class="quiz">
+<p>Geben ist die Funktion:</p>
+<p><span class="math display">\[
+f(x) = \begin{cases}0,001\cdot x , &amp;\text{ for } 0\leq x\leq 20,\\
+                      0,025 -0,00025\cdot x, &amp;\text{ for } 20&lt; x\leq 100.\end{cases}
+\]</span>
+<img src="_main_files/figure-html/unnamed-chunk-59-1.png" width="30%" /></p>
+<p id="question">
+<span id="question-text710"></span>
+</p>
+<input type="number" id="answer710" placeholder="Antwort eingeben">
+<button onclick="checkAnswer_num(questionObj710)">Check</button>
+<p id="result710">
+</p>
+<p>
+Hinweis: schreibe das Integral als: \(\int_{0}^{20}f(x)dx + \int_{20}^{x_0}f(x)dx\) um, setze die Ausdrücke für \(f(x)\) ein und kalkulieren die bestimmten Integrale.
+</p>
+<script>
+
+ // Generate a random question
+    const questionObj710 = generateQuestion_num(710);
+// Display the question
+    document.getElementById('question-text710').textContent = "Kalkulieren \\(F(x_0)=\\int_{0}^{x_0}f(x)dx\\) für \\(x_0="+(questionObj710.question[0]*10-5) + ".\\)";
+    questionObj710.answer = -0.25+0.025*(questionObj710.question[0]*10-5)-0.000125*Math.pow((questionObj710.question[0]*10-5),2);
+
+</script>
 </div>
 
 </div>

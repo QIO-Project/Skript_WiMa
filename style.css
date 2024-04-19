@@ -109,3 +109,8 @@ div.corollary {
   border:1px solid black;
 }
 
+div.column {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}

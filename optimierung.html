@@ -498,7 +498,7 @@ Antwort
 </details>
 </div>
 <div class="example">
-<p><span id="exm:profit3" class="example"><strong>Beispiel 6.3  (Approximative Maximierung von Gewinnfunktionen mit Taylor-Approximation$^\ast$) </strong></span>In Beispiel <a href="differentialrechnung.html#exm:taylorprofit">5.8</a> betrachteten wir einen Monopolisten mit der Gewinnfunktion:</p>
+<p><span id="exm:profit3" class="example"><strong>Beispiel 6.3  (Approximative Maximierung von Gewinnfunktionen mit Taylor-Approximation*) </strong></span>In Beispiel <a href="differentialrechnung.html#exm:taylorprofit">5.8</a> betrachteten wir einen Monopolisten mit der Gewinnfunktion:</p>
 <p><span class="math display">\[\pi(q) = 100\cdot \exp(-0.01 q) \cdot q - 1000 - q.\]</span></p>
 <p><img src="_main_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
 <p>Um diese Gewinnfunktion zu maximieren, würden wir als Erstes ihre Ableitung gleich Null setzen.</p>
@@ -506,19 +506,22 @@ Antwort
 <p><span class="math display">\[\pi^\prime(q) = (-1)\cdot\exp(-0,01q)\cdot q + 100\cdot\exp(-0,01q) - 1.\]</span></p>
 <p>Leider können wir diese ABleitung nicht nach <span class="math inline">\(q\)</span> umstellen! (Try it 🤯)</p>
 <p>Wie können wir dann die optimale Produktionsmenge <span class="math inline">\(q^*\)</span> herausfinden? <span class="math inline">\(\leadsto\)</span> graphisch: die Stelle, wo das Maximum erreicht wird, befindet sich ungefähr bei <span class="math inline">\(q=100\)</span>. Aber können wir eine bessere Approximation ermitteln?</p>
-<p>Wir approximieren die ABleitung <span class="math inline">\(\pi^\prime(q)\)</span> via Taylor Approximation erster Ordnung um <span class="math inline">\(q_0=100\)</span>.</p>
+<p>Wir approximieren die Ableitung <span class="math inline">\(\pi^\prime(q)\)</span> via Taylor Approximation erster Ordnung um <span class="math inline">\(q_0=100.\)</span></p>
+<p>Die Formel für die Taylor Approximation erster Ordnung für die Ableitung der Gewinnfunktion lautet:</p>
+<p><span class="math display">\[\pi^\prime(q) \approx \pi^\prime(q_0) +  \pi^{\prime\prime}(q_0)(q-q_0).\]</span></p>
+<p>Wir berechnen also:</p>
 <ul>
-<li>Der Funktionswert von der Ableitung in <span class="math inline">\(q_0=100\)</span> ist:</li>
+<li>den Funktionswert der Ableitung in <span class="math inline">\(q_0=100\)</span>:</li>
 </ul>
 <p><span class="math display">\[\pi^\prime(100) = (-1)\cdot \exp(-0.01\cdot 100)\cdot 100 + 100\cdot\exp(-0.01\cdot 100) - 1 = -1,\]</span></p>
 <ul>
-<li>Die Ableitung der Ableitung der Gewinnfunktion (hier <span class="math inline">\(\pi^{\prime\prime}(q)\)</span>) ist:</li>
+<li>die Ableitung der Ableitung (die zweite Ableitung) der Gewinnfunktion (hier <span class="math inline">\(\pi^{\prime\prime}(q)\)</span>):</li>
 </ul>
 <p><span class="math display">\[\begin{align*}\pi^{\prime\prime}(q) &amp;= 0.01\exp(-0.01q)\cdot q - \exp(-0.01q)+ 100(-0.01)\exp(-0.01q) \\
 &amp;= 0.01\exp(-0.01q)\cdot q - 2\exp(-0.01q).\end{align*}\]</span></p>
-<p>Also <span class="math display">\[\begin{align*}\pi^{\prime\prime}(q_0=100)&amp;=0.01\exp(-0.01\cdot 100)\cdot 100 -2\exp(-0.01\cdot 100) \\
+<p>Also: <span class="math display">\[\begin{align*}\pi^{\prime\prime}(q_0=100)&amp;=0.01\exp(-0.01\cdot 100)\cdot 100 -2\exp(-0.01\cdot 100) \\
 &amp;= -\exp(-1)=-\frac1e.\end{align*}\]</span></p>
-<p>Die Taylor Approximation erster Ordnung für die ABleitung der Gewinnfunktion lautet also:</p>
+<p>Die Taylor Approximation erster Ordnung für die Ableitung der Gewinnfunktion lautet also:</p>
 <p><span class="math display">\[\begin{align*}\pi^\prime(q) &amp;\approx \pi^\prime(q_0) +  \pi^{\prime\prime}(q_0)(q-q_0) \\
 &amp;=-1 - \frac 1e\cdot(q-100)
 \end{align*}\]</span></p>
@@ -531,181 +534,152 @@ Antwort
 <p><img src="_main_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
 <p>Unsere Approximation hat gut funktioniert. Das Ergebniss der Nullsetzung von Approximation der Gewinnableitung (grüner Punkt) liegt sehr nahe dem wahren Maximum (roter Punkt) in der obigen Abbildung der Gewinnfunktion.</p>
 </div>
-<!--
-## Optimierung auf einem Intervall
-
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/opt_neben.m4a"></audio>
-
-In der Praxis sind die meisten Optimierungsprobleme unter Nebenbedingungen zu lösen, zum Beispiel:
-
-- eine Firma kann nur nicht-negative Mengen von Gütern produzieren; 
-
-- eine Firma hat Kapazitätsbeschränkungen in der Produktion; 
-
-- ein Konsument hat ein beschränktes Budget. 
-
-::: {.example #optint name="Optimierung auf einem Intervall"}
-Wir bestimmen
-        \begin{equation*}
+<details>
+<summary>
+<h4>
+Weiteres zur Optimierung: Optimierung auf einem Intervall*
+</h4>
+</summary>
+<audio class="audio-specs" controls controlsList="nodownload" src="audio/opt_neben.m4a">
+</audio>
+<p>In der Praxis sind die meisten Optimierungsprobleme unter Nebenbedingungen zu lösen, zum Beispiel:</p>
+<ul>
+<li><p>eine Firma kann nur nicht-negative Mengen von Gütern produzieren;</p></li>
+<li><p>eine Firma hat Kapazitätsbeschränkungen in der Produktion;</p></li>
+<li><p>ein Konsument hat ein beschränktes Budget.</p></li>
+</ul>
+<div class="example">
+<p><span id="exm:optint" class="example"><strong>Beispiel 6.4  (Optimierung auf einem Intervall) </strong></span>Wir bestimmen
+<span class="math display">\[\begin{equation*}
           \max_x f(x)=3-2x\quad\text{ unter der Bedingung } 0\leq x\leq 1.
-        \end{equation*}
-
-Der Fall ohne Nebenbedingung hat kein Extremum 
-        ($f^\prime(x)=-2$, für alle $x$), also muss das Maximum auf einer der
-        Intervallgrenzen liegen. 
-
-Da die Ableitung negativ ist, also die Funktion fallend ist,
-        ist die Lösung die linke Grenze $x^\ast=0$.
- 
-![](images/optneb.png)       
-:::
-
-Die allgemeine Formulierung eines Optimierungsproblems unter
-    Nebenbedingungen (gegeben als Intervall) ist wie folgt:  
-    \begin{equation}
+        \end{equation*}\]</span></p>
+<p>Der Fall ohne Nebenbedingung hat kein Extremum
+(<span class="math inline">\(f^\prime(x)=-2\)</span>, für alle <span class="math inline">\(x\)</span>), also muss das Maximum auf einer der
+Intervallgrenzen liegen.</p>
+<p>Da die Ableitung negativ ist, also die Funktion fallend ist,
+ist die Lösung die linke Grenze <span class="math inline">\(x^\ast=0\)</span>.</p>
+<p><img src="images/optneb.png" /></p>
+</div>
+<p>Die allgemeine Formulierung eines Optimierungsproblems unter
+Nebenbedingungen (gegeben als Intervall) ist wie folgt:<br />
+<span class="math display">\[\begin{equation}
       \label{eq:2}
       \max_x f(x)\quad\text{ unter der Bedingung }\quad a\leq x\leq b.
-    \end{equation}
-
-Alternativ kann dies ausgedrückt werden als
-    \begin{equation*}
-      \max_{x\in [a,b]} f(x). 
-    \end{equation*}
-    
-Drei Fälle können als mögliche Lösungen des
-    Maximierungsproblems auftreten:
-
-(i) $x^\ast=a$: In diesem Fall gilt 
-        $f^\prime(x^\ast)\leq 0$ (linker Graph)
-        
-(ii) $a<x^\ast<b$: In diesem Fall $f^\prime(x)=0$
-        (mittlerer Graph)  
-
-(iii) $x^\ast=b$: In diesem Fall 
-        $f^\prime(x^\ast)\geq 0$ (rechter Graph)
-        
-![](images/neb2.png)
-
-- In den Fällen (i) und (iii) ist die Nebenbedingung **bindend**; in (ii) ist die Nebenbedingung **nicht-bindend**. 
-
-- Die Lösung in (ii) wird **innere Lösung** genannt. 
-
-- Der folgende Satz fasst die drei Situationen zusammen. 
-
-::: {#thmmaxneb .theorem name="Maximierung unter Nebenbedingungen"}
-
-Eine Lösung $x^\ast$ des Problems
-    \begin{equation*}
+    \end{equation}\]</span></p>
+<p>Alternativ kann dies ausgedrückt werden als
+<span class="math display">\[\begin{equation*}
+      \max_{x\in [a,b]} f(x).
+    \end{equation*}\]</span></p>
+<p>Drei Fälle können als mögliche Lösungen des
+Maximierungsproblems auftreten:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(x^\ast=a\)</span>: In diesem Fall gilt
+<span class="math inline">\(f^\prime(x^\ast)\leq 0\)</span> (linker Graph)</p></li>
+<li><p><span class="math inline">\(a&lt;x^\ast&lt;b\)</span>: In diesem Fall <span class="math inline">\(f^\prime(x)=0\)</span>
+(mittlerer Graph)</p></li>
+<li><p><span class="math inline">\(x^\ast=b\)</span>: In diesem Fall
+<span class="math inline">\(f^\prime(x^\ast)\geq 0\)</span> (rechter Graph)</p></li>
+</ol>
+<p><img src="images/neb2.png" /></p>
+<ul>
+<li><p>In den Fällen (i) und (iii) ist die Nebenbedingung <strong>bindend</strong>; in (ii) ist die Nebenbedingung <strong>nicht-bindend</strong>.</p></li>
+<li><p>Die Lösung in (ii) wird <strong>innere Lösung</strong> genannt.</p></li>
+<li><p>Der folgende Satz fasst die drei Situationen zusammen.</p></li>
+</ul>
+<div class="theorem">
+<p><span id="thm:thmmaxneb" class="theorem"><strong>Theorem 6.3  (Maximierung unter Nebenbedingungen) </strong></span>Eine Lösung <span class="math inline">\(x^\ast\)</span> des Problems
+<span class="math display">\[\begin{equation*}
       \max_x f(x)\quad\text{ unter der Bedingung } a\leq x\leq b
-    \end{equation*}
-    erfüllt eine oder beide der folgenden Bedingungen: 
-    \begin{align*}
+    \end{equation*}\]</span>
+erfüllt eine oder beide der folgenden Bedingungen:
+<span class="math display">\[\begin{align*}
       \phantom{test test} %
-      f^\prime(x^\ast)\leq 0&\quad\text{ und }\quad  (x^\ast-a)
-                                             f^\prime(x^\ast)=0\\ 
-      f^\prime(x^\ast)\geq 0&\quad\text{ und }\quad  (b-x^\ast)
-                                             f^\prime(x^\ast)=0. 
-    \end{align*}
-    Falls **beide** Bedingungen erfüllt sind und
-    darüberhinaus 
-    $f^\prime(a)\not=0$, $f^\prime(b)\not=0$ gilt, dann ist $x^\ast$
-    eine innere Lösung, also $a<x^\ast<b$. 
-:::
-
-::: {#thmminneb .theorem name="Minimierung unter Nebenbedingungen"}
-
- Eine Lösung $x^\ast$ des Problems 
-    \begin{equation*}
-      \min_x f(x)\quad\text{ unter der Bedingung } a\leq x\leq b,
-    \end{equation*}
-    erfüllt eine oder beide der folgenden Bedingungen: 
-    \begin{align*}
-      \phantom{test test} %
-      f^\prime(x^\ast)\geq 0&\quad\text{ und }\quad  (x^\ast-a)
-                                             f^\prime(x^\ast)=0\\ 
-      f^\prime(x^\ast)\leq 0&\quad\text{ und }\quad  (b-x^\ast)
+      f^\prime(x^\ast)\leq 0&amp;\quad\text{ und }\quad  (x^\ast-a)
+                                             f^\prime(x^\ast)=0\\
+      f^\prime(x^\ast)\geq 0&amp;\quad\text{ und }\quad  (b-x^\ast)
                                              f^\prime(x^\ast)=0.
-    \end{align*}
-    Falls weiterhin **beide** Bedingungen erfüllt sind und
-    darüberhinaus 
-    $f^\prime(a)\not=0$, $f^\prime(b)\not=0$ gilt, dann ist $x^\ast$
-    eine innere Lösung, also $a<x^\ast<b$. 
-:::
-
-Für die praktische Bestimmung des Maximums/ des Minimums führt man die folgenden Schritte durch:
-
-- bestimme die Ableitung  von \(f(x)\);
-- schaue, welche der beiden Bedingungen aus den Theoremen \@ref(thm: thmmaxneb) und \@ref(thm:thmminneb) (je nach dem, ob man maximieren oder minimieren soll) gelten und
-- löse nach \(x\) auf.
-- Abschlissend, prüfe, ob die resultierende Werte für \(x\) aus dem Zielintervall liegen und
-- vergleich die Funktionswerte, falls du mehrere \(x\)-Werte erhalten hast. Der kleinste (größte) Funktionswert bestimmt dann das Minimum (Maximum).
-
-Alternativ, kann man 
-
-- alle lokalen Maxima und Minima für die Zielfunktion bestimmen;
-- Die dazu gehörigen \(x\)-Werte, die auch auf dem Zielintervall liegen werden als Kandidaten für Min (Max)
- betrachtet.
-- Anschliessend, vergleicht man die Funktionswerte, die lokale Min (Max) darstellen mit den Randwerten \(f(a),f(b)\). Der kleinste (größte) Funktionswert bestimmt dann das Minimum (Maximum).
-
-::: {.exercise #maxminneb name="Minimum und Maximum unter Nebenbedingungen"}
-
-Lösen Sie die folgenden Probleme: 
-
-(a) \(\max_x (3 + 2x)\) unter der Bedingung \(0 ≤ x ≤ 10\) 
-
-(b) \(\max_x (1 + 10x^ 2)\) unter der Bedingung \(5 ≤ x ≤ 20\) 
-
-(c) \(\min_x (5 − x^ 2)\) unter der Bedingung \(0 ≤ x ≤ 10\) 
-
+    \end{align*}\]</span>
+Falls <strong>beide</strong> Bedingungen erfüllt sind und
+darüberhinaus
+<span class="math inline">\(f^\prime(a)\not=0\)</span>, <span class="math inline">\(f^\prime(b)\not=0\)</span> gilt, dann ist <span class="math inline">\(x^\ast\)</span>
+eine innere Lösung, also <span class="math inline">\(a&lt;x^\ast&lt;b\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:thmminneb" class="theorem"><strong>Theorem 6.4  (Minimierung unter Nebenbedingungen) </strong></span>Eine Lösung <span class="math inline">\(x^\ast\)</span> des Problems
+<span class="math display">\[\begin{equation*}
+      \min_x f(x)\quad\text{ unter der Bedingung } a\leq x\leq b,
+    \end{equation*}\]</span>
+erfüllt eine oder beide der folgenden Bedingungen:
+<span class="math display">\[\begin{align*}
+      \phantom{test test} %
+      f^\prime(x^\ast)\geq 0&amp;\quad\text{ und }\quad  (x^\ast-a)
+                                             f^\prime(x^\ast)=0\\
+      f^\prime(x^\ast)\leq 0&amp;\quad\text{ und }\quad  (b-x^\ast)
+                                             f^\prime(x^\ast)=0.
+    \end{align*}\]</span>
+Falls weiterhin <strong>beide</strong> Bedingungen erfüllt sind und
+darüberhinaus
+<span class="math inline">\(f^\prime(a)\not=0\)</span>, <span class="math inline">\(f^\prime(b)\not=0\)</span> gilt, dann ist <span class="math inline">\(x^\ast\)</span>
+eine innere Lösung, also <span class="math inline">\(a&lt;x^\ast&lt;b\)</span>.</p>
+</div>
+<p>Für die praktische Bestimmung des Maximums/ des Minimums führt man die folgenden Schritte durch:</p>
+<ul>
+<li>bestimme die Ableitung von <span class="math inline">\(f(x)\)</span>;</li>
+<li>schaue, welche der beiden Bedingungen aus den Theoremen @ref(thm: thmmaxneb) und <a href="optimierung.html#thm:thmminneb">6.4</a> (je nach dem, ob man maximieren oder minimieren soll) gelten und</li>
+<li>löse nach <span class="math inline">\(x\)</span> auf.</li>
+<li>Abschlissend, prüfe, ob die resultierende Werte für <span class="math inline">\(x\)</span> aus dem Zielintervall liegen und</li>
+<li>vergleich die Funktionswerte, falls du mehrere <span class="math inline">\(x\)</span>-Werte erhalten hast. Der kleinste (größte) Funktionswert bestimmt dann das Minimum (Maximum).</li>
+</ul>
+<p>Alternativ, kann man</p>
+<ul>
+<li>alle lokalen Maxima und Minima für die Zielfunktion bestimmen;</li>
+<li>Die dazu gehörigen <span class="math inline">\(x\)</span>-Werte, die auch auf dem Zielintervall liegen werden als Kandidaten für Min (Max)
+betrachtet.</li>
+<li>Anschliessend, vergleicht man die Funktionswerte, die lokale Min (Max) darstellen mit den Randwerten <span class="math inline">\(f(a),f(b)\)</span>. Der kleinste (größte) Funktionswert bestimmt dann das Minimum (Maximum).</li>
+</ul>
+<div class="exercise">
+<p><span id="exr:maxminneb" class="exercise"><strong>Aufgabe 6.3  (Minimum und Maximum unter Nebenbedingungen) </strong></span>Lösen Sie die folgenden Probleme:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\max_x (3 + 2x)\)</span> unter der Bedingung <span class="math inline">\(0 ≤ x ≤ 10\)</span></p></li>
+<li><p><span class="math inline">\(\max_x (1 + 10x^ 2)\)</span> unter der Bedingung <span class="math inline">\(5 ≤ x ≤ 20\)</span></p></li>
+<li><p><span class="math inline">\(\min_x (5 − x^ 2)\)</span> unter der Bedingung <span class="math inline">\(0 ≤ x ≤ 10\)</span></p></li>
+</ol>
 Skizzieren Sie die Lösungen graphisch. Wie unterscheiden sich die Lösungen vom jeweiligen Fall ohne Nebenbedingungen?
 <details>
-<summary>Antwort</summary>
-(a) \(\max_{0 \leq x \leq 10 }3+2x\)
-
-Da \(f'(x)=(3+2x)'=2>0\), schliessen wir:
-
-- \(f' (x^ ∗ ) ≤ 0\) und \((x^ ∗ − a)f' (x^ ∗ ) = 0\)  gilt nicht;
-
-- \(f' (x^ ∗ ) ≥ 0\) gilt und daher muss \((b − x^ ∗ )f' (x^ ∗ ) = 0\) gerfüllt sein und deshalb berechnen wir:
-
-\[(10-x) \cdot 2=0 \Leftrightarrow 20-2x=0 \Rightarrow x^*=10.\]
-
-![](images/aufneb2.png)
-
-(b) \(\max_{5 \leq x \leq 20 }1+10x^2\)
-
-Da \(f'(x)=(1+10x^2)'=20x>0 \ für \ 5 \leq x \leq 20 \), stellen wir fest:
-
-\(f' (x^ ∗ ) ≤ 0\) und \((x^ ∗ − a)f' (x^ ∗ ) = 0\)  gilt nicht;
-
-\(f' (x^ ∗ ) ≥ 0\) und \((b − x^ ∗ )f' (x^ ∗ ) = 0\) gilt, deshalb:
-
-\[(20-x) \cdot 20x=0 \Rightarrow  x_1^*=20, x_2^* =0\]
-
-Aber: \(x_2^*\not\in [5;20]!\) Also bleibt \(x_1^*=20\) die einzige Lösung.
-
-![](images/aufneb3.png)
-
-(c) \(\min_{0 \leq x \leq 10 }5-x^2\)
-
-Da \(f'(x)=(5-x^2)'= -2x<0\) für \(0 ≤ x ≤ 10\), stellt man fest:
-
-\(f' (x^ ∗ ) ≥ 0\) und  \((x^ ∗ − a)f' (x^ ∗ ) = 0\) gilt nicht
-
-\(f' (x^ ∗ ) ≤ 0\) und \((b − x^ ∗ )f' (x^ ∗ ) = 0\)  gilt, deshalb:
-
-
-\[(10-x)(-2x)=0 \rightarrow  x_1^*=0, x_2^*=10\]
-
-Da \(f(x_1^*=0)=5-0^2=5>f(x_2^*=10)=5-10^2=-95,\) wird das Minimum in $x_2^*$ erreicht.
-
-![](images/aufneb4.png)
-
+<summary>
+Antwort
+</summary>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\max_{0 \leq x \leq 10 }3+2x\)</span></li>
+</ol>
+<p>Da <span class="math inline">\(f&#39;(x)=(3+2x)&#39;=2&gt;0\)</span>, schliessen wir:</p>
+<ul>
+<li><p><span class="math inline">\(f&#39; (x^ ∗ ) ≤ 0\)</span> und <span class="math inline">\((x^ ∗ − a)f&#39; (x^ ∗ ) = 0\)</span> gilt nicht;</p></li>
+<li><p><span class="math inline">\(f&#39; (x^ ∗ ) ≥ 0\)</span> gilt und daher muss <span class="math inline">\((b − x^ ∗ )f&#39; (x^ ∗ ) = 0\)</span> gerfüllt sein und deshalb berechnen wir:</p></li>
+</ul>
+<p><span class="math display">\[(10-x) \cdot 2=0 \Leftrightarrow 20-2x=0 \Rightarrow x^*=10.\]</span></p>
+<p><img src="images/aufneb2.png" /></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\max_{5 \leq x \leq 20 }1+10x^2\)</span></li>
+</ol>
+<p>Da <span class="math inline">\(f&#39;(x)=(1+10x^2)&#39;=20x&gt;0 \ für \ 5 \leq x \leq 20\)</span>, stellen wir fest:</p>
+<p><span class="math inline">\(f&#39; (x^ ∗ ) ≤ 0\)</span> und <span class="math inline">\((x^ ∗ − a)f&#39; (x^ ∗ ) = 0\)</span> gilt nicht;</p>
+<p><span class="math inline">\(f&#39; (x^ ∗ ) ≥ 0\)</span> und <span class="math inline">\((b − x^ ∗ )f&#39; (x^ ∗ ) = 0\)</span> gilt, deshalb:</p>
+<p><span class="math display">\[(20-x) \cdot 20x=0 \Rightarrow  x_1^*=20, x_2^* =0\]</span></p>
+<p>Aber: <span class="math inline">\(x_2^*\not\in [5;20]!\)</span> Also bleibt <span class="math inline">\(x_1^*=20\)</span> die einzige Lösung.</p>
+<p><img src="images/aufneb3.png" /></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\min_{0 \leq x \leq 10 }5-x^2\)</span></li>
+</ol>
+<p>Da <span class="math inline">\(f&#39;(x)=(5-x^2)&#39;= -2x&lt;0\)</span> für <span class="math inline">\(0 ≤ x ≤ 10\)</span>, stellt man fest:</p>
+<p><span class="math inline">\(f&#39; (x^ ∗ ) ≥ 0\)</span> und <span class="math inline">\((x^ ∗ − a)f&#39; (x^ ∗ ) = 0\)</span> gilt nicht</p>
+<p><span class="math inline">\(f&#39; (x^ ∗ ) ≤ 0\)</span> und <span class="math inline">\((b − x^ ∗ )f&#39; (x^ ∗ ) = 0\)</span> gilt, deshalb:</p>
+<p><span class="math display">\[(10-x)(-2x)=0 \rightarrow  x_1^*=0, x_2^*=10\]</span></p>
+<p>Da <span class="math inline">\(f(x_1^*=0)=5-0^2=5&gt;f(x_2^*=10)=5-10^2=-95,\)</span> wird das Minimum in <span class="math inline">\(x_2^*\)</span> erreicht.</p>
+<p><img src="images/aufneb4.png" /></p>
 </details>
-:::
-
-
-::: {#qoptneb .quiz }
+</div>
+<div id="qoptneb" class="quiz">
 <script>
 
 
@@ -717,29 +691,32 @@ Da \(f(x_1^*=0)=5-0^2=5>f(x_2^*=10)=5-10^2=-95,\) wird das Minimum in $x_2^*$ er
       id: 12
     };
 </script>
-
-<p class="question">Frage: <span id="question-text12"></span></p>
+<p class="question">
+Frage: <span id="question-text12"></span>
+</p>
 <div class="options">
-<label>
-<input type="checkbox" name="option12" value=1> \(x=0\)
+<p><label>
+<input type="checkbox" name="option12" value=1> <span class="math inline">\(x=0\)</span>
 </label>
 <label>
-<input type="checkbox" name="option12" value=2>  \(x=-1\)
+<input type="checkbox" name="option12" value=2> <span class="math inline">\(x=-1\)</span>
 </label>
 <label>
-<input type="checkbox" name="option12" value=3>  \(x=1\)
-</label>
+<input type="checkbox" name="option12" value=3> <span class="math inline">\(x=1\)</span>
+</label></p>
 </div>
-<button onclick="checkAnswer_mmc(questionObj12)">Check</button>
-<p id="result12"></p> 
-
+<button onclick="checkAnswer_mmc(questionObj12)">
+Check
+</button>
+<p id="result12">
+</p>
 <script>
     // Display the question
     document.getElementById('question-text12').textContent = questionObj12.question;
 
 </script>
-:::
--->
+</div>
+</details>
 
 </div>
 </div>

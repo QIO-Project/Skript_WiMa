@@ -120,6 +120,10 @@ exr:stpunkte
 thm:thmbzo
 exr:bzo
 exm:profit3
+exm:optint
+thm:thmmaxneb
+thm:thmminneb
+exr:maxminneb
 exm:grenzkosten
 def:defstammfun
 exm:stammfun
@@ -165,7 +169,7 @@ exm:exaddsubmatrizen
 def:defskprodmatrizen
 exm:exmultsksubmatrizen
 def:defskalarprodukt
-fig:unnamed-chunk-65
+fig:unnamed-chunk-68
 exm:exkalarprodukt
 def:defnorm
 exm:exnorm
