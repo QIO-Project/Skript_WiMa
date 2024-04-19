@@ -75,10 +75,14 @@ def:geomreihe
 thm:geomreihe
 cor:cor1
 exm:sparbuch2
+def:harmreihe
+exm:coupons
+thm:harmreihe
 exm:prodfun
 exr:bonus
 def:defpstetig
 exm:stet1
+exm:stet2
 def:deflrstetigkeit
 thm:thmstetig
 exm:stet
@@ -244,7 +248,7 @@ folgen
 konvergenz-von-folgen
 konvergente-folgen-und-grenzwerte
 divergente-folgen
-wichtige-sätze-zu-konvergenz-von-folgen
+wichtige-sätze-zur-konvergenz-von-folgen
 beschränkte-folgen
 monotone-folgen
 reihen

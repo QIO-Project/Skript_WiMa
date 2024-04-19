@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
   
 
-<meta name="author" content="Maria Osipenko 2024-04-18" />
+<meta name="author" content="Maria Osipenko 2024-04-19" />
 
 
 
@@ -109,7 +109,7 @@
 <li class="chapter" data-level="3.2.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#konvergente-folgen-und-grenzwerte"><i class="fa fa-check"></i><b>3.2.1</b> Konvergente Folgen und Grenzwerte</a></li>
 <li class="chapter" data-level="3.2.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#divergente-folgen"><i class="fa fa-check"></i><b>3.2.2</b> Divergente Folgen</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#wichtige-sätze-zu-konvergenz-von-folgen"><i class="fa fa-check"></i><b>3.3</b> Wichtige Sätze zu Konvergenz von Folgen</a>
+<li class="chapter" data-level="3.3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#wichtige-sätze-zur-konvergenz-von-folgen"><i class="fa fa-check"></i><b>3.3</b> Wichtige Sätze zur Konvergenz von Folgen</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#beschränkte-folgen"><i class="fa fa-check"></i><b>3.3.1</b> Beschränkte Folgen</a></li>
 <li class="chapter" data-level="3.3.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#monotone-folgen"><i class="fa fa-check"></i><b>3.3.2</b> Monotone Folgen</a></li>
@@ -294,8 +294,8 @@ Die Produktionsfunktion eines Autoherstellers sei <span class="math inline">\(y 
 <p><span id="exr:bonus" class="exercise"><strong>Aufgabe 4.1  (Bonusschema) </strong></span>Die Verkäufer der Gitarrenmanufaktur, in der Sophia gerade ihr Praktikum macht, erhalten monatlich:</p>
 <ol style="list-style-type: lower-roman">
 <li><p>ein Grundgehalt von <span class="math inline">\(800 \ €\)</span>;</p></li>
-<li><p>plus eine Provision von <span class="math inline">\(10%\)</span> pro verkaufte Gitarre;</p></li>
-<li><p>plus einen Bonus von <span class="math inline">\(500 \ €\)</span>, falls der Umsatz <span class="math inline">\(20.000 \ €\)</span> übersteigt.</p></li>
+<li><p>plus eine Provision in Höhe von <span class="math inline">\(1\%\)</span> des Umsatzes;</p></li>
+<li><p>plus einen Bonus von <span class="math inline">\(500 \ €\)</span>, falls der Umsatz <span class="math inline">\(20000 \ €\)</span> übersteigt.</p></li>
 </ol>
 <p><img src="images/gitarrenman.png" /></p>
 <p>Es sei <span class="math inline">\(S\)</span> der Umsatz eines Monat; das Gehalt eines Verkäufers ist:</p>
@@ -337,7 +337,7 @@ Möglichkeit 2
 
 // Generate a random question
   const questionObj9 = {
-      question: 'Welche der abgebildeten Funktionen sind stetig? Wählen Sie passende Antwortoptionen 1-4 (von links nach rechts).',
+      question: 'Welche der abgebildeten Funktionen sind stetig? Wählen Sie die passenden Antwortoptionen 1-4 (von links nach rechts).',
       options: ['1', '2', '3', '4'],
       answer: ['1','2'],
       id: 9
@@ -380,7 +380,7 @@ Check
 <p>Da dies für jede Folge gilt, können wir den Bezug zu einer bestimmten Folge vernachlässigen und schreiben:
 <span class="math display">\[\lim\limits_{x \rightarrow a} f(x)=f(a).\]</span></p>
 </div>
-<p>Die folgenden Beispiele zeigen, wie man punkweise Stetikeit nachvollziehen kann.</p>
+<p>Die folgenden Beispiele zeigen, wie man punktweise Stetikeit nachvollziehen kann.</p>
 <div class="example">
 <p><span id="exm:stet1" class="example"><strong>Beispiel 4.2  (Punktweise Stetigkeit I) </strong></span>Wir zeigen, dass <span class="math inline">\(f (x) = x^2\)</span> , <span class="math inline">\(x \in \mathbb{R}\)</span>, stetig ist für beliebiges <span class="math inline">\(a \in \mathbb{R}\)</span>.</p>
 <p>Es sei <span class="math inline">\((x_n)_{n \in \mathbb{N} }\)</span> eine Folge mit <span class="math inline">\(\lim\limits_{n \rightarrow \infty} x_n=a\)</span>.</p>
@@ -395,7 +395,7 @@ Check
 <img src="images/stet1.png" /></p>
 </div>
 <div class="example">
-<p><span id="exm:nutzenmax" class="example"><strong>Beispiel 1.1  (Nutzenmaximierung) </strong></span>Die Funktion <span class="math inline">\(f(x) = \begin{pmatrix} +1, falls \ x \leq 0\\ -1, falls\ x&gt;0 \end{pmatrix}\)</span>, ist unstetig an der Stelle <span class="math inline">\(0\)</span>.
+<p><span id="exm:stet2" class="example"><strong>Beispiel 4.3  (Punktweise Stetigkeit II) </strong></span>Die Funktion <span class="math inline">\(f(x) = \begin{pmatrix} +1, falls \ x \leq 0\\ -1, falls\ x&gt;0 \end{pmatrix}\)</span>, ist unstetig an der Stelle <span class="math inline">\(0\)</span>.
 Wir wählen die Folge <span class="math inline">\(x_n = 1/n \cdot (−1)^n\)</span> , <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
 <p>Die folgende Graphik zeigt <span class="math inline">\(x_n\)</span> und <span class="math inline">\(f (x_n) = (−1)^n\)</span> , <span class="math inline">\(n = 1, ... , 20\)</span>.</p>
 <p><img src="images/stet2.png" /></p>
@@ -427,7 +427,7 @@ Wir wählen die Folge <span class="math inline">\(x_n = 1/n \cdot (−1)^n\)</sp
 <iframe src="https://www.geogebra.org/m/Jf7rP6uK" allowtransparency="true" width="485" height="650" frameborder="0" scrolling="no" allowfullscreen>
 </iframe>
 <div class="example">
-<p><span id="exm:stet" class="example"><strong>Beispiel 4.3  (Stetigkeit überprüfen) </strong></span>Es sei <span class="math inline">\(f:[0,10] \rightarrow \mathbb{R}\)</span> definiert als</p>
+<p><span id="exm:stet" class="example"><strong>Beispiel 4.4  (Stetigkeit überprüfen) </strong></span>Es sei <span class="math inline">\(f:[0,10] \rightarrow \mathbb{R}\)</span> definiert als</p>
 <p><span class="math inline">\(f(x) = \begin{cases} \lvert x-2 \rvert -2, &amp;wenn \ 0 \leq x&lt;2 \ oder \ 2 &lt; x \leq 6 \\ \frac{2}{x-6} -2, &amp;wenn \ 6&lt; x &lt;8 \\ (x-9)^3-1, &amp;wenn \ 8 \leq x \leq 10 \\ 1, &amp;wenn \ x=2 \end{cases}\)</span>.
 <img src="images/stet4.png" /></p>
 <p>Die Funktion <span class="math inline">\(f\)</span> ist unstetig in drei Punkten:</p>
@@ -459,7 +459,7 @@ Wir wählen die Folge <span class="math inline">\(x_n = 1/n \cdot (−1)^n\)</sp
 </ol>
 </div>
 <div class="theorem">
-<p><span id="thm:thmkomp" class="theorem"><strong>Theorem 4.3  (Komposition stetiger Funktionen) </strong></span>Es seien <span class="math inline">\(f : D \rightarrow\mathbb{R}\)</span> und <span class="math inline">\(g : E \rightarrow \mathbb{R}\)</span> Funktionen mit <span class="math inline">\(f (D) \subset E\)</span> Wenn <span class="math inline">\(f\)</span> und <span class="math inline">\(g\)</span> stetig sind, dann ist auch die Funktion</p>
+<p><span id="thm:thmkomp" class="theorem"><strong>Theorem 4.3  (Komposition stetiger Funktionen) </strong></span>Es seien <span class="math inline">\(f : D \rightarrow\mathbb{R}\)</span> und <span class="math inline">\(g : E \rightarrow \mathbb{R}\)</span> Funktionen mit <span class="math inline">\(f (D) \subset E.\)</span> Wenn <span class="math inline">\(f\)</span> und <span class="math inline">\(g\)</span> stetig sind, dann ist auch die Funktion</p>
 <p><span class="math inline">\(g \circ f:D \rightarrow \mathbb{R} , \ g(f(x))\)</span>,</p>
 <p>stetig.</p>
 </div>
