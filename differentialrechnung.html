@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Kapitel 5 Differentialrechnung | Wirtschaftsmathematik</title>
   <meta name="description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Kapitel 5 Differentialrechnung | Wirtschaftsmathematik" />
   <meta property="og:type" content="book" />
@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
   
 
-<meta name="author" content="Maria Osipenko 2024-04-19" />
+<meta name="author" content="Maria Osipenko 2024-05-02" />
 
 
 
@@ -133,7 +133,7 @@
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-ableitung"><i class="fa fa-check"></i><b>5.2</b> Definition der Ableitung</a></li>
 <li class="chapter" data-level="5.3" data-path="differentialrechnung.html"><a href="differentialrechnung.html#differenzierbarkeit"><i class="fa fa-check"></i><b>5.3</b> Differenzierbarkeit</a></li>
-<li class="chapter" data-level="5.4" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungsregel"><i class="fa fa-check"></i><b>5.4</b> Ableitungsregel</a></li>
+<li class="chapter" data-level="5.4" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungsregeln"><i class="fa fa-check"></i><b>5.4</b> Ableitungsregeln</a></li>
 <li class="chapter" data-level="5.5" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungen-höherer-ordnung"><i class="fa fa-check"></i><b>5.5</b> Ableitungen höherer Ordnung</a></li>
 <li class="chapter" data-level="5.6" data-path="differentialrechnung.html"><a href="differentialrechnung.html#der-satz-von-taylorast"><i class="fa fa-check"></i><b>5.6</b> Der Satz von Taylor<span class="math inline">\(^\ast\)</span></a></li>
 </ul></li>
@@ -343,7 +343,7 @@ function checkAnswer_symb(q) {
 <li><p>Wie gestalte ich den Konsum so, dass der Nutzen maximal ist?</p></li>
 </ul>
 <p><strong>Implizit</strong> wird diese Fragestellung durch die funktionale Verknüpfung <span class="math inline">\(y = f (x)\)</span> erfasst. <strong>Explizit</strong> wird dies ausgedrückt als Einfluss einer Veränderung von <span class="math inline">\(x\)</span>, geschrieben als <span class="math inline">\(\Delta x\)</span>, auf die Veränderung in <span class="math inline">\(y\)</span>, geschrieben als <span class="math inline">\(\Delta y\)</span>.</p>
-<p>In der Ökonomie wird diese Art der Analyse auch Grenzanalyse bezeichnet.
+<p>In der Ökonomie wird diese Art der Analyse auch als Grenzanalyse bezeichnet.
 Z.B. Gewinnmaximierung: “Eine profitmaximierende Firma erhöht ihren Output bis der Grenzerlös (<span class="math inline">\(\Delta R\)</span>) die Grenzkosten (<span class="math inline">\(\Delta C\)</span>) erreicht oder übersteigt.”</p>
 <p><img src="images/grenzerl.png" /></p>
 <div id="definition-der-tangente" class="section level2 hasAnchor" number="5.1">
@@ -377,7 +377,7 @@ In Einzelfällen kann die Tangente die Funktion sogar schneiden, wie hier im Bei
 </div>
 <ul>
 <li>Die Steigung der Sekanten, genannt Differenzenquotient, ist
-<span class="math display">\[{m}_{PQ}= \frac{f(x_2)-f(x_1)}{x_2-x_1}=:    \frac{\triangle y}{ \triangle  x},\]</span>
+<span class="math display">\[{m}_{PQ}= \frac{f(x_2)-f(x_1)}{x_2-x_1}=:    \frac{\Delta y}{ \Delta  x},\]</span>
 wobei <span class="math inline">\(\Delta y = f (x_2) − f (x_1)\)</span> und <span class="math inline">\(\Delta x = x_2 − x_1\)</span>.</li>
 </ul>
 <p><img src="images/sekante1.png" /></p>
@@ -387,31 +387,31 @@ wobei <span class="math inline">\(\Delta y = f (x_2) − f (x_1)\)</span> und <s
 <ul>
 <li><p>Fixieren Sie nun <span class="math inline">\(P = (x_0,f (x_0))\)</span> und betrachten Sie eine Folge von Werten <span class="math inline">\(({x_n})_{n \in \mathbb{N}}\)</span>, die gegen <span class="math inline">\(x_0\)</span> konvergiert.</p></li>
 <li><p>Dies ist äquivalent zu der Formulierung, dass <span class="math inline">\(\Delta x_n = x_n − x_0\)</span> gegen <span class="math inline">\(0\)</span> konvergiert.</p></li>
-<li><p>Falls für jede mögliche solcher Folgen die Steigungen der Sekanten existieren und diese Steigungen gegen einen Grenzwert <span class="math inline">\(m*\)</span> konvergieren, dann ist die Tangente diejenige Gerade mit Steigung <span class="math inline">\(m*\)</span>, die <span class="math inline">\(P\)</span> berührt.</p></li>
+<li><p>Falls für jede mögliche solcher Folgen die Steigungen der Sekanten existieren und diese Steigungen gegen einen Grenzwert <span class="math inline">\(m^*\)</span> konvergieren, dann ist die Tangente diejenige Gerade mit Steigung <span class="math inline">\(m^*\)</span>, die <span class="math inline">\(P\)</span> berührt.</p></li>
 </ul>
 <p><img src="images/tangente1.png" /></p>
 <div class="definition">
 <p><span id="def:deftangente" class="definition"><strong>Definition 5.2  (Tangente) </strong></span>Es sei <span class="math inline">\(f\)</span> auf einem offenen Intervall um <span class="math inline">\(x_0\)</span> definiert.
 Falls</p>
-<p><span class="math inline">\(m^ * = \lim _{ \triangle x \rightarrow 0} \frac{f(x_0+ \triangle x) -f(x_0) }{ \triangle x}\)</span></p>
-<p>existiert, dann ist die Gerade durch <span class="math inline">\((x_0,f (x_0))\)</span> mit Steigung <span class="math inline">\(m*\)</span> die <strong>Tangente</strong> von <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(x_0\)</span>.</p>
+<p><span class="math display">\[m^ * =  \lim_{ \Delta x \rightarrow 0} \frac{f(x_0+ \Delta x) -f(x_0) }\]</span></p>
+<p>existiert, dann ist die Gerade durch <span class="math inline">\((x_0,f (x_0))\)</span> mit Steigung <span class="math inline">\(m^*\)</span> die <strong>Tangente</strong> von <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(x_0\)</span>.</p>
 </div>
 <div class="example">
 <p><span id="exm:tangente" class="example"><strong>Beispiel 5.1  (Sekante und Tangente) </strong></span>Es seien <span class="math inline">\(f (x) = x^2\)</span> , <span class="math inline">\(P = (2, 4)\)</span> und <span class="math inline">\(Q=(3, 9)\)</span>.</p>
 <ul>
-<li><p>Man prüft leicht, dass <span class="math inline">\(\Delta x = 3-1=1\)</span> und <span class="math inline">\(\Delta y =9-4=5\)</span>, sodass die Steigung der Sekanten <span class="math inline">\(\Delta y/\Delta x = 5/1 = 5\)</span> ist.</p></li>
+<li><p>Man prüft leicht, dass <span class="math inline">\(\Delta x = 3-2=1\)</span> und <span class="math inline">\(\Delta y =9-4=5\)</span>, sodass die Steigung der Sekanten <span class="math inline">\(\Delta y/\Delta x = 5/1 = 5\)</span> ist.</p></li>
 <li><p>Wählt man <span class="math inline">\(Q^\prime = (4,16)\)</span>, so ist die Sekantensteigung <span class="math inline">\(\Delta y/\Delta x = 12/2 = 6\)</span>.</p></li>
 <li><p>Wählen Sie nun die Folge <span class="math inline">\(\Delta x_n = 1/n\)</span>, <span class="math inline">\(n \geq 1\)</span>.</p></li>
 <li><p>Dann: <span class="math inline">\(\Delta x_n \rightarrow 0\)</span>, wenn <span class="math inline">\(n \rightarrow \infty\)</span>.</p></li>
 </ul>
 <p>Für einen beliebigen Punkt <span class="math inline">\(x\)</span> bestimmen wir die Steigung der Tangente:</p>
-<p><span class="math display">\[\begin{align}\frac{f(x+ \triangle x_n)-f(x)}{ \triangle x_n}&amp;=\frac{(x+1/n)^2-x^2}{1/n}  \\
+<p><span class="math display">\[\begin{align}\frac{f(x+ \Delta x_n)-f(x)}{ \Delta x_n}&amp;=\frac{(x+1/n)^2-x^2}{1/n}  \\
 
 &amp; =  \frac{x^2+2x/n+1/n^2-x^2}{1/n}\\
 
 &amp;= 2x +  \frac{1}{n},
 \end{align}\]</span></p>
-<p>und <span class="math inline">\(\lim _{ \triangle x \rightarrow 0} 2x+1/n = 2x\)</span> (= die Ableitung von <span class="math inline">\(f(x)=x^2\)</span> ).</p>
+<p>und <span class="math inline">\(\lim _{ \Delta x \rightarrow 0} 2x+1/n = 2x\)</span> (= die Ableitung von <span class="math inline">\(f(x)=x^2\)</span> ).</p>
 <p><img src="images/extangente1.png" /></p>
 </div>
 </div>
@@ -422,7 +422,7 @@ Falls</p>
 </audio>
 <div class="definition">
 <p><span id="def:ableitung" class="definition"><strong>Definition 5.3  (Ableitung) </strong></span>Die <strong>Ableitung</strong> (der <strong>Differentialquotient</strong>) einer Funktion <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(x,\)</span> geschrieben als <span class="math inline">\(f&#39; (x),\)</span> ist die Steigung der Tangente in diesem Punkt:
-<span class="math display">\[f&#39;(x)=  \lim_{ \triangle x \rightarrow 0 } \frac{f(x+ \triangle x)-f(x)}{ \triangle x}.\]</span></p>
+<span class="math display">\[f&#39;(x)=  \lim_{ \Delta x \rightarrow 0 } \frac{f(x+ \Delta x)-f(x)}{ \Delta x}.\]</span></p>
 </div>
 <p>Die sogenannte Leibniz-Notation der Ableitung ist <span class="math inline">\(f&#39;(x)= \frac{df(x)}{dx}\)</span>,</p>
 <p>wobei der Differentialoperator <span class="math inline">\(d\)</span> eine infinitesimal kleine Änderung ausdrückt.</p>
@@ -434,14 +434,14 @@ Falls</p>
 <div class="example">
 <p><span id="exm:kosten" class="example"><strong>Beispiel 5.2  (Gesamtkosten und Grenzkosten) </strong></span>Die Gesamtkostenfunktion <span class="math inline">\(y \mapsto C( y )\)</span> einer Firma drückt die Kosten als Funktion der Anzahl <span class="math inline">\(y\)</span> produzierter Einheiten aus.</p>
 <ul>
-<li><p>Das Verhältnis <span class="math inline">\(\frac{ \triangle C}{ \triangle y} = \frac{C(y+ \triangle y) - C( y )}{ \triangle y}\)</span> reflektiert die durchschnittlichen zusätzlichen Kosten pro Einheit, wenn zusätzlich <span class="math inline">\(\Delta y\)</span> Einheiten produziert werden.</p></li>
+<li><p>Das Verhältnis <span class="math inline">\(\frac{ \Delta C}{ \Delta y} = \frac{C(y+ \Delta y) - C( y )}{ \Delta y}\)</span> reflektiert die durchschnittlichen zusätzlichen Kosten pro Einheit, wenn zusätzlich <span class="math inline">\(\Delta y\)</span> Einheiten produziert werden.</p></li>
 <li><p>Der Grenzwert dieses Verhältnisses, wenn <span class="math inline">\(\Delta y → 0\)</span>, ist die instantane Änderungsrate; in der Ökonomie stellt diese Rate die Grenzkosten (auch Marginalkosten) dar:
-<span class="math display">\[\lim_{ \triangle y  \rightarrow 0 \ }  \frac{ \triangle C}{ \triangle y}  =  \lim_{ \triangle y  \rightarrow 0 \ } \frac{C(y+ \triangle y) - C( y )}{ \triangle y}  = C&#39;( y ) \]</span></p></li>
+<span class="math display">\[\lim_{ \Delta y  \rightarrow 0 \ }  \frac{ \Delta C}{ \Delta y}  =  \lim_{ \Delta y  \rightarrow 0 \ } \frac{C(y+ \Delta y) - C( y )}{ \Delta y}  = C&#39;( y ) \]</span></p></li>
 <li><p>Beispiel einer linearen Kostenfunktion:</p></li>
 </ul>
 <p><img src="images/kosten1.png" /></p>
 <ul>
-<li><p>In der Praxis ist die Annahme einer linearen Kostenfunktion, also konstanter Grenzkosten, häufig unrealistisch (vgl. früheres Beispiel der Gitarrenmanufaktur). Stattdessen führt eine höhere Produktion häufig zu höheren Grenzkosten (zumindest aus kurzfristiger SIcht).</p></li>
+<li><p>In der Praxis ist die Annahme einer linearen Kostenfunktion, also konstanter Grenzkosten, häufig unrealistisch (vgl. früheres Beispiel der Gitarrenmanufaktur). Stattdessen führt eine höhere Produktion häufig zu höheren Grenzkosten (zumindest aus kurzfristiger Sicht).</p></li>
 <li><p>Dies wird beispielsweise durch eine quadratische Kostenfunktion ausgedrückt:</p></li>
 </ul>
 <p><img src="images/kosten2.png" /></p>
@@ -453,23 +453,23 @@ Falls</p>
 </audio>
 <div class="definition">
 <p><span id="def:defdifferenz" class="definition"><strong>Definition 5.5  (Differenzierbarkeit) </strong></span>Die Funktion <span class="math inline">\(f\)</span> ist <strong>differenzierbar im Punkt</strong> <span class="math inline">\(x\)</span>, falls sie in einer offenen Umgebung von <span class="math inline">\(x\)</span> definiert ist und falls
-<span class="math display">\[\lim_{ \triangle x  \rightarrow 0 \ }  \frac{ f(x+ \triangle x)-f(x)}{  \triangle x }\]</span></p>
+<span class="math display">\[\lim_{ \Delta x  \rightarrow 0 \ }  \frac{ f(x+ \Delta x)-f(x)}{  \Delta x }\]</span></p>
 <p>existiert und endlich ist.</p>
 <p>Eine Funktion heißt <strong>differenzierbar</strong>, falls sie überall in ihrem Definitionsbereich differenzierbar ist.</p>
 </div>
 <p>Ist <span class="math inline">\(f\)</span> differenzierbar in <span class="math inline">\(x\)</span>, dann existieren die <strong>linksseitige Ableitung</strong> und die <strong>rechtsseitige Ableitung</strong> und nehmen denselben Wert an:</p>
-<p><span class="math display">\[\lim_{ \triangle x  \uparrow 0 \ }  \frac{ f(x+ \triangle x)-f(x)}{  x\triangle }  =  \lim_{ \triangle x  \downarrow 0 \ }  \frac{ f(x+ \triangle x)-f(x)}{  x\triangle }.\]</span></p>
+<p><span class="math display">\[\lim_{ \Delta x  \uparrow 0 \ }  \frac{ f(x+ \Delta x)-f(x)}{  x\Delta }  =  \lim_{ \Delta x  \downarrow 0 \ }  \frac{ f(x+ \Delta x)-f(x)}{  x\Delta }.\]</span></p>
 <div class="example">
 <p><span id="exm:differenzierbarkeit" class="example"><strong>Beispiel 5.3  (Differenzierbarkeit) </strong></span>Wir betrachten die Funktion <span class="math display">\[f(x)=\begin{cases} x, &amp;\text{ falls }  x&lt;1 \\ 2-x, &amp;\text{ falls } x \geq 1  \end{cases}.\]</span></p>
 <p>Obwohl die Funktion im Punkt <span class="math inline">\(x = 1\)</span> stetig ist, ist sie in diesem Punkt nicht differenzierbar.</p>
 <p>Denn: Im Punkt <span class="math inline">\(x = 1\)</span> gilt
-<span class="math display">\[\lim_{ \triangle x  \uparrow 0 \ }  \frac{ f(1+ \triangle x)-f(1)}{  \Delta x }  =  \lim_{ \triangle x  \uparrow 0 \ }  \frac{ 1+ \triangle x-1 }{  \Delta x } =1\]</span></p>
+<span class="math display">\[\lim_{ \Delta x  \uparrow 0 \ }  \frac{ f(1+ \Delta x)-f(1)}{  \Delta x }  =  \lim_{ \Delta x  \uparrow 0 \ }  \frac{ 1+ \Delta x-1 }{  \Delta x } =1\]</span></p>
 <p>und</p>
-<p><span class="math display">\[\lim_{ \triangle x  \downarrow 0 \ }  \frac{ f(1+ \triangle x)-f(1)}{  \Delta x }  =  \lim_{ \triangle x  \downarrow 0 \ }  \frac{ (2-(1+ \triangle x))-(2-1) }{  \Delta x } = -1.\]</span></p>
+<p><span class="math display">\[\lim_{ \Delta x  \downarrow 0 \ }  \frac{ f(1+ \Delta x)-f(1)}{  \Delta x }  =  \lim_{ \Delta x  \downarrow 0 \ }  \frac{ (2-(1+ \Delta x))-(2-1) }{  \Delta x } = -1.\]</span></p>
 <!--![](images/differenz1.png)-->
 <p><img src="images/differenz2.png" /></p>
 <p>D.h.
-<span class="math display">\[\lim_{ \triangle x  \uparrow 0 \ }  \frac{ f(1+ \triangle x)-f(1)}{  \Delta x } \not= \lim_{ \triangle x  \downarrow 0 \ }  \frac{ f(1+ \triangle x)-f(1)}{  \Delta x }\]</span></p>
+<span class="math display">\[\lim_{ \Delta x  \uparrow 0 \ }  \frac{ f(1+ \Delta x)-f(1)}{  \Delta x } \not= \lim_{ \Delta x  \downarrow 0 \ }  \frac{ f(1+ \Delta x)-f(1)}{  \Delta x }\]</span></p>
 <p>und die Funktion ist im Punkt <span class="math inline">\(x=1\)</span> nicht differentierbar.</p>
 </div>
 <p>Wir betrachten den Zusammenhang zwischen Differenzierbarkeit und Stetigkeit.</p>
@@ -490,11 +490,11 @@ Falls</p>
 </ol>
 </div>
 </div>
-<div id="ableitungsregel" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Ableitungsregel<a href="differentialrechnung.html#ableitungsregel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ableitungsregeln" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Ableitungsregeln<a href="differentialrechnung.html#ableitungsregeln" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Mithilfe der folgenden Regeln können wir Ableitungen konkret bestimmen (Differenzierbarkeit stets vorausgesetzt).</p>
 <div class="theorem">
-<p><span id="thm:thmregeln" class="theorem"><strong>Theorem 5.2  (Ableitungsregeln) </strong></span>Im Folgendem, <span class="math inline">\(c\)</span>, <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span> und <span class="math inline">\(b\)</span> seien Konstanten.</p>
+<p><span id="thm:thmregeln" class="theorem"><strong>Theorem 5.2  (Ableitungsregeln) </strong></span>Im Folgenden, seien <span class="math inline">\(c\)</span>, <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span> und <span class="math inline">\(b\)</span> Konstanten.</p>
 <p><span class="math display">\[\begin{equation*}
       \begin{array}[t]{lll}
         \hline
@@ -1030,11 +1030,11 @@ Check
 <p><img src="_main_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
 <p>Die Gewinnfunktion für einen Monopolisten mit solcher Nachfrage kann wie folgt berechnet werden:</p>
 <p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q),\]</span></p>
-<p>wo <span class="math inline">\(C(q)\)</span> ist die Kostenfunktion. Angenommen, die Kostenfunktion sieht wie folgt aus: <span class="math inline">\(C(q)=10-0.01q\)</span>,</p>
+<p>wobei <span class="math inline">\(C(q)\)</span> die Kostenfunktion ist. Angenommen, die Kostenfunktion sieht wie folgt aus: <span class="math inline">\(C(q)=10-0,01q\)</span>,</p>
 <p>dann ist die Gewinnfunktion:</p>
 <p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q) = \exp(-0,01 q) \cdot q - 10 - 0,01\cdot q.\]</span></p>
 <p><img src="_main_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
-<p>Wir suchen den Break-Even point (roter Punkt auf der Graphik). Aber: Wie können wir den Break-Even-Punkt finden? Wir können nicht nach <span class="math inline">\(q\)</span> auflösen, nach dem wir den Gewinn gleich Null setzen! (Versuch das 🤯)</p>
+<p>Wir suchen den Break-Even-Punkt (roter Punkt auf der Graphik). Aber: Wie können wir den Break-Even-Punkt finden? Wir können nicht nach <span class="math inline">\(q\)</span> auflösen, nachdem wir den Gewinn gleich Null setzen! (Versuch das 🤯)</p>
 <p>Wir können dennoch die Gewinnfunktion ohne Probleme ableiten und wie auf der Abbildung zu sehen ist, liegt der Break-Even Punkt nah bei <span class="math inline">\(q_0=10.\)</span> Können wir eventuell in der Umgebung von <span class="math inline">\(q_0=10\)</span> die Gewinnfunktion durch ihre Ableitungen approximieren?</p>
 </div>
 <p>Ein weiteres Beispiel ist der Funktionswert <span class="math inline">\(\ln(2),\)</span> der ohne Taschenrechner schwierig zu bestimmen ist.</p>
@@ -1052,7 +1052,7 @@ Check
 <p><span class="math display">\[f(x)=f(x_0)+ \sum_{k=1}^{n}  \frac{f^{(k)}(x_0)}{k!}\cdot (x-x_0)^k +R_n(x),\]</span></p>
 <p>wobei der Rest: <span class="math display">\[R_n(x)=  \frac{f{(n+1)}( \xi) }{(n+1)!} (x-x_0)^{n+1}\]</span></p>
 <p>mit <span class="math inline">\(\xi \in [x_0,x]\)</span> den Näherungsfehler quantifiziert.</p>
-<p>Der <strong>Taylor-Polynom</strong> des <span class="math inline">\(k\)</span>-ten Grades: <span class="math display">\[T_k(x,x_0)=f(x_0)+ \sum_{k=1}^{n}  \frac{f^{(k)}(x_0)}{k!} \cdot(x-x_0)^k \]</span></p>
+<p>Das <strong>Taylor-Polynom</strong> <span class="math inline">\(k\)</span>-ten Grades: <span class="math display">\[T_k(x,x_0)=f(x_0)+ \sum_{k=1}^{n}  \frac{f^{(k)}(x_0)}{k!} \cdot(x-x_0)^k \]</span></p>
 <p>entspricht dabei dem ersten Teil der Taylor-Formel (ohne den Rest).</p>
 </div>
 <p>Falls <span class="math inline">\(R_n(x) \rightarrow 0\)</span> für <span class="math inline">\(n \rightarrow \infty\)</span>, dann kann der Funktionswert <span class="math inline">\(f (x)\)</span> durch das Taylor-Polynom approximiert werden.</p>
@@ -1092,11 +1092,11 @@ Der Fehler liegt in <span class="math inline">\((\frac{1}{2^{11} \cdot 11}, 1/11
 </ul>
 <p>Daher:</p>
 <p><span class="math display">\[\pi(q)\approx -1,0516 + 0,8044\cdot (q-10).\]</span></p>
-<p>Nun können wir die Approximation gleich Null setzen und den approximativen Break-Even Punkt finden.</p>
+<p>Nun können wir die Approximation gleich Null setzen und den approximativen Break-Even-Punkt finden.</p>
 <p><span class="math display">\[-1,0516 + 0,8044\cdot (q-10)=0\rightarrow q \approx 11,3073.\]</span></p>
 <p>Das Ergebnis:</p>
 <p><img src="_main_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
-<p>Unsere Approximation für den Break-Even Punkt (grün) ist sehr nah an dem wahren Wert (rot).</p>
+<p>Unsere Approximation für den Break-Even-Punkt (grün) ist sehr nah an dem wahren Wert (rot).</p>
 </div>
 <div class="exercise">
 <p><span id="exr:taylor" class="exercise"><strong>Aufgabe 5.1  (Zinssensitivität mit Taylor-Approximation) </strong></span>Für ein Portfolio aus Zinsinstrumenten sei <span class="math inline">\(P(r)\)</span> der Marktpreis in Abhängigkeit des Zinses <span class="math inline">\(r&gt;0\)</span> (bei flacher Zinskurve). Ferner bezeichne <span class="math display">\[\operatorname{DUR}(r):=-P&#39;(r)\]</span> die <em>absolute Duration</em>, die in Form einer Sensitivität die Änderung des Marktpreises des Portfolios bei absoluter Zinsänderung beschreibt.</p>

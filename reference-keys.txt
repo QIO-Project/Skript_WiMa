@@ -267,7 +267,7 @@ sekante-und-tangente
 von-der-sekante-zur-tangente
 definition-der-ableitung
 differenzierbarkeit
-ableitungsregel
+ableitungsregeln
 ableitungen-höherer-ordnung
 der-satz-von-taylorast
 optimierung
