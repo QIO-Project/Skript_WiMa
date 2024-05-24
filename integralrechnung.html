@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
   
 
-<meta name="author" content="Maria Osipenko 2024-05-02" />
+<meta name="author" content="Maria Osipenko 2024-05-24" />
 
 
 
@@ -309,7 +309,7 @@ function checkAnswer_num(q) {
 <ul>
 <li><p>Für die Funktion <span class="math inline">\(f (x) = x^2\)</span> wissen wir bereits, dass <span class="math inline">\(f&#39; (x) = 2x\)</span> gilt.</p></li>
 <li><p>Ist umgekehrt bekannt, dass <span class="math inline">\(f&#39; (x) = 2x\)</span>, so ist zwar klar, dass <span class="math inline">\(f (x) = x^ 2\)</span> eine Funktion mit dieser Ableitung ist.</p></li>
-<li><p>Jede andere Funktion der Form <span class="math inline">\(f (x) = x^ 2 + c\)</span> mit <span class="math inline">\(c\)</span> konstant, hat jedoch dieselbe Ableitung!</p></li>
+<li><p>Jede andere Funktion der Form <span class="math inline">\(f (x) = x^ 2 + c\)</span> mit <span class="math inline">\(c\)</span> konstant hat jedoch dieselbe Ableitung!</p></li>
 <li><p>Ausgehend von einer Ableitung kann die Funktion selbst also nicht eindeutig bestimmt werden, sondern nur bis auf eine (unbekannte) Konstante.</p></li>
 <li><p>Der Umkehrprozess der Differentiation wird <strong>Integration</strong> oder <strong>Integrieren</strong> genannt.</p></li>
 </ul>
@@ -322,7 +322,7 @@ function checkAnswer_num(q) {
 <p><span id="exm:stammfun" class="example"><strong>Beispiel 7.2  (Einige Stammfunktionen) </strong></span></p>
 <ul>
 <li><p>Stammfunktionen von <span class="math inline">\(f (x) = x\)</span> sind etwa <span class="math inline">\(F(x)= \frac{1}{2}x^2\)</span> und <span class="math inline">\(F(x)= \frac{1}{2}x^2 +7\)</span>.</p></li>
-<li><p>Stammfunktion von <span class="math inline">\(f (x) = 1/x\)</span> , <span class="math inline">\(x &gt; 0\)</span>, ist <span class="math inline">\(F(x) = ln x + c\)</span> (<span class="math inline">\(c\)</span>: konstant), denn <span class="math inline">\(F&#39; (x) = 1/x\)</span> .</p></li>
+<li><p>Stammfunktion von <span class="math inline">\(f (x) = 1/x\)</span> , <span class="math inline">\(x &gt; 0\)</span>, ist <span class="math inline">\(F(x) = \ln x + c\)</span> (<span class="math inline">\(c\)</span> konstant), denn <span class="math inline">\(F&#39; (x) = 1/x\)</span> .</p></li>
 </ul>
 </div>
 <div class="definition">
@@ -337,7 +337,7 @@ Die Funktion <span class="math inline">\(f (x)\)</span> heißt <strong>Integrand
 <li><span class="math inline">\(\int e^ z dz = e^ z + c\)</span>.</li>
 </ol>
 </div>
-<p>Die folgenden Sätze helfen unbestimmte Integrale zu finden.</p>
+<p>Die folgenden Sätze helfen, unbestimmte Integrale zu finden.</p>
 <div class="theorem">
 <p><span id="thm:thmregelnint" class="theorem"><strong>Theorem 7.1  (Grundintegrale) </strong></span>Es seien: <span class="math inline">\(g\)</span> stetige Funktion; <span class="math inline">\(n\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>
 reelle Konstanten.
@@ -450,9 +450,9 @@ Antwort
 <span class="math inline">\(= \ln (x^3+2x)+c\)</span> (Regel 5)
 </details>
 </div>
-<p>Die im Allgemeinen unbekannte <strong>Integrationskonstante</strong> <span class="math inline">\(c\)</span> kann man mit Hilfe zusätzlicher Information, wie der Funktionswert in einem Punkt, ausrechnen.</p>
+<p>Die im Allgemeinen unbekannte <strong>Integrationskonstante</strong> <span class="math inline">\(c\)</span> kann man mit Hilfe zusätzlicher Information, wie dem Funktionswert in einem Punkt, ausrechnen.</p>
 <div class="example">
-<p><span id="exm:integrc" class="example"><strong>Beispiel 7.5  (Berechnung der Integrationskonstante) </strong></span>Kennt man in der oberen Aufgabe <span class="math inline">\((i)\)</span> zusätzlich den Wert der Stammfunktion in einem Punkt, kann man dies nutzen um den Wert für die Integrationskonstante zu berechnen. Bspw. wird der Wert <span class="math inline">\(10\)</span> in <span class="math inline">\(x=1\)</span> angenommen <span class="math inline">\((F(1)=10).\)</span> Dann, aus <span class="math inline">\(F(1)=10\)</span> und <span class="math inline">\(F(x)= 2x^3 + c\)</span>, rechnet man:</p>
+<p><span id="exm:integrc" class="example"><strong>Beispiel 7.5  (Berechnung der Integrationskonstante) </strong></span>Kennt man in der oberen Aufgabe <span class="math inline">\((i)\)</span> zusätzlich den Wert der Stammfunktion in einem Punkt, kann man dies nutzen, um den Wert für die Integrationskonstante zu berechnen. Bspw. wird der Wert <span class="math inline">\(10\)</span> in <span class="math inline">\(x=1\)</span> angenommen <span class="math inline">\((F(1)=10).\)</span> Dann berechnet man aus <span class="math inline">\(F(1)=10\)</span> und <span class="math inline">\(F(x)= 2x^3 + c\)</span>:</p>
 <p><span class="math display">\[F(1)=2\cdot 1^3 + c = 10\rightarrow c = \color{red}{8}.\]</span></p>
 <p>(Wir haben <span class="math inline">\(x=1\)</span> in den Ausdruck für <span class="math inline">\(F(x)\)</span> eingesetzt und nach <span class="math inline">\(c\)</span> umgestellt.)</p>
 <p>Also lautet die Stammfunktion: <span class="math inline">\(F(x) = 2x^3 + \color{red}{8}.\)</span></p>
@@ -495,7 +495,7 @@ Antwort
  // Generate a random question
     const questionObj13 = generateQuestion_num(13);
 // Display the question
-    document.getElementById('question-text13').textContent = "Kalkuliere die Integrationskonstante für die Stammfunktion \\(F(x)\\) von \\["+questionObj13.question[0] + "\\cdot\\sqrt{x}+"+ questionObj13.question[1] + "\\]" + " wenn bekannt, dass \\(F(1)=" + questionObj13.question[2] + "\\). Runde auf vier Nachkommastellen.";
+    document.getElementById('question-text13').textContent = "Kalkuliere die Integrationskonstante für die Stammfunktion \\(F(x)\\) von \\["+questionObj13.question[0] + "\\cdot\\sqrt{x}+"+ questionObj13.question[1] + "\\]" + " wenn bekannt ist, dass \\(F(1)=" + questionObj13.question[2] + "\\). Runde auf vier Nachkommastellen.";
     questionObj13.answer = questionObj13.question[2] - 2/3*questionObj13.question[0] - questionObj13.question[1]
 </script>
 <div class="exercise">
@@ -526,7 +526,7 @@ Antwort
 <h2><span class="header-section-number">7.2</span> Das bestimmte Integral<a href="integralrechnung.html#das-bestimmte-integral" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <audio class="audio-specs" controls controlsList="nodownload" src="audio/best_integr.m4a">
 </audio>
-<p>In der Aufgabe <a href="integralrechnung.html#exr:kosten">7.3</a> haben wir die Gesamtkostenfunktion bestimmt. Was aber wenn wir bloss die Veränderung der Kosten erfahren möchten, wenn sich die Produktion <span class="math inline">\(x\)</span> von <span class="math inline">\(100\)</span> auf <span class="math inline">\(150\)</span> verändert? Wie wir gleich sehen werden, entspricht die Kostenveränderung der Fläche unter der Grenzkostenfunktion <span class="math inline">\(C&#39;(x)\)</span>. Hier helfen uns bestimmte Integrale weiter.</p>
+<p>In der Aufgabe <a href="integralrechnung.html#exr:kosten">7.3</a> haben wir die Gesamtkostenfunktion bestimmt. Was aber, wenn wir bloß die Veränderung der Kosten erfahren möchten, wenn sich die Produktion <span class="math inline">\(x\)</span> von <span class="math inline">\(100\)</span> auf <span class="math inline">\(150\)</span> verändert? Wie wir gleich sehen werden, entspricht die Kostenveränderung der Fläche unter der Grenzkostenfunktion <span class="math inline">\(C&#39;(x)\)</span>. Hier helfen uns bestimmte Integrale weiter.</p>
 <hr />
 <p>Es sei <span class="math inline">\(f\)</span> eine stetige und positive Funktion.</p>
 <ul>
@@ -738,7 +738,7 @@ f(x) = \begin{cases}0,001\cdot x , &amp;\text{ for } 0\leq x\leq 20,\\
 <p id="result710">
 </p>
 <p>
-Hinweis: schreibe das Integral als: \(\int_{0}^{20}f(x)dx + \int_{20}^{x_0}f(x)dx\) um, setze die Ausdrücke für \(f(x)\) ein und kalkulieren die bestimmten Integrale.
+Hinweis: Schreibe das Integral als: \(\int_{0}^{20}f(x)dx + \int_{20}^{x_0}f(x)dx\) um, setze die Ausdrücke für \(f(x)\) ein und kalkuliere die bestimmten Integrale.
 </p>
 <script>
 
