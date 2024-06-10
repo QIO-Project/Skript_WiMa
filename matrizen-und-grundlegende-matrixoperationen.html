@@ -526,7 +526,7 @@ Die Differenz <span class="math inline">\(A − B\)</span> ist analog definiert.
 </div>
 <p>Bevor wir die Multiplikation von Matrizen definieren, betrachten wir als Spezialfall das Produkt zweier Vektoren (Skalarprodukt).</p>
 <div class="definition">
-<p><span id="def:defskalarprodukt" class="definition"><strong>Definition 9.7  (Skalarprodukt) </strong></span>Es sei <span class="math inline">\(x^\top\)</span> ein <span class="math inline">\(n\)</span>-dimensionaler Zeilenvektor (<span class="math inline">\(1 × n\)</span>) und <span class="math inline">\(y\)</span> ein <span class="math inline">\(n\)</span>-dimensionaler Spaltenvektor (<span class="math inline">\(n × 1\)</span>). Dann ist das Skalarprodukt <span class="math inline">\(x^\top\)</span> y definiert als die Summe der Produkte der Elemente von <span class="math inline">\(x\)</span> und <span class="math inline">\(y\)</span>:</p>
+<p><span id="def:defskalarprodukt" class="definition"><strong>Definition 9.7  (Skalarprodukt) </strong></span>Es sei <span class="math inline">\(\bf x^\top\)</span> ein <span class="math inline">\(n\)</span>-dimensionaler Zeilenvektor (<span class="math inline">\(1 × n\)</span>) und <span class="math inline">\(\bf y\)</span> ein <span class="math inline">\(n\)</span>-dimensionaler Spaltenvektor (<span class="math inline">\(n × 1\)</span>). Dann ist das Skalarprodukt <span class="math inline">\(\bf x^\top y\)</span> definiert als die Summe der Produkte der Elemente von <span class="math inline">\(\bf x\)</span> und <span class="math inline">\(\bf y\)</span>:</p>
 <p><span class="math display">\[\begin{equation*}
       \begin{pmatrix}
         x_{1} &amp; x_{2} &amp; \ldots &amp; x_{n}
@@ -552,7 +552,7 @@ Abbildung 9.1: Illustation von Skalarprodukt
 <p>Dieser <strong>Winkel</strong> zwischen den Vektoren als Pfeilen kann auch als ein <strong>Ähnlichkeitsmass</strong> genutzt werden: je kleiner der Winkel, desto ähnlicher sind die Daten, die als Punkte in <span class="math inline">\(\mathbb R^n\)</span> dargestellt werden.</p>
 <div class="example">
 <p><span id="exm:exkalarprodukt" class="example"><strong>Beispiel 9.5  (Skalarprodukt) </strong></span><br>
-- Das <strong>Skalarprodukt</strong> <span class="math inline">\(\bf x^\top y\)</span> von <span class="math inline">\(\bf x = \begin{pmatrix}  3 &amp; 3  \end{pmatrix}\)</span> und <span class="math inline">\(\bf y = \begin{pmatrix}  1\\  5  \end{pmatrix}\)</span> ist:
+- Das <strong>Skalarprodukt</strong> <span class="math inline">\(\bf x^\top y\)</span> von <span class="math inline">\(\bf x^\top = \begin{pmatrix}  3 &amp; 3  \end{pmatrix}\)</span> und <span class="math inline">\(\bf y = \begin{pmatrix}  1\\  5  \end{pmatrix}\)</span> ist:
 <span class="math display">\[\begin{equation*}
      \begin{pmatrix}
         3 &amp; 3
@@ -566,7 +566,7 @@ Abbildung 9.1: Illustation von Skalarprodukt
     \end{equation*}\]</span></p>
 <p><img src="_main_files/figure-html/unnamed-chunk-69-1.png" width="672" /></p>
 <ul>
-<li>Das <strong>Skalarprodukt</strong> <span class="math inline">\(\bf x^\top y\)</span> von <span class="math inline">\(\bf x = \begin{pmatrix}  3 &amp; -3  \end{pmatrix}\)</span> und <span class="math inline">\(\bf y = \begin{pmatrix}  -1\\  5  \end{pmatrix}\)</span> ist:
+<li>Das <strong>Skalarprodukt</strong> <span class="math inline">\(\bf x^\top y\)</span> von <span class="math inline">\(\bf x^\top = \begin{pmatrix}  3 &amp; -3  \end{pmatrix}\)</span> und <span class="math inline">\(\bf y = \begin{pmatrix}  -1\\  5  \end{pmatrix}\)</span> ist:
 <span class="math display">\[\begin{equation*}
    \begin{pmatrix}
       3 &amp; -3
@@ -584,7 +584,7 @@ Abbildung 9.1: Illustation von Skalarprodukt
 <p>Damit wir das Skalarprodukt im Sinne von Kosinus des entsprechenden <strong>Winkels</strong> interpretieren können, müssen wir es normieren, d.h. die Längen der Vektoren berücksichtigen. Dafür definieren wir die Euklidische Norm eines Vektors.</p>
 <div class="definition">
 <p><span id="def:defnorm" class="definition"><strong>Definition 9.8  (Euklidische Norm eines Vektors) </strong></span>Die Euklidische Norm (Länge) eines Vektors <span class="math inline">\(\bf x\)</span> wird mit <span class="math inline">\(\lvert \lvert \bf x \rvert \lvert\)</span> bezeichnet und ist definiert als:
-<span class="math display">\[\lvert \lvert \bf x \rvert \lvert = \sqrt{x^\top x} = \sqrt{ \sum_{i=1}^{n} x_i^2 }\]</span></p>
+<span class="math display">\[\lvert \lvert {\bf x} \rvert \lvert = \sqrt{{\bf x}^\top {\bf x}} = \sqrt{ \sum_{i=1}^{n} x_i^2 }\]</span></p>
 </div>
 <div class="example">
 <p><span id="exm:exnorm" class="example"><strong>Beispiel 9.6  (Euklidische Norm) </strong></span>Die euklidische Norm von <span class="math inline">\(\bf z = \begin{pmatrix}  0\\  4\\  -3  \end{pmatrix}\)</span> ist:</p>
@@ -625,7 +625,7 @@ Fortführung von <a href="matrizen-und-grundlegende-matrixoperationen.html#exm:e
 Vektoren, die paarweise orthogonal sind und alle die Länge eins haben, heißen <strong>orthonormiert</strong>.</p>
 </div>
 <div class="exercise">
-<p><span id="exr:ortho2" class="exercise"><strong>Aufgabe 9.1  (orthonormale Vektoren finden) </strong></span>Betrachten Sie <span class="math inline">\(\mathbf x = \begin{pmatrix}  a &amp; b &amp; a  \end{pmatrix}\)</span> und <span class="math inline">\(\bf y = \begin{pmatrix}  0\\  0,6\\  -0,8  \end{pmatrix}.\)</span></p>
+<p><span id="exr:ortho2" class="exercise"><strong>Aufgabe 9.1  (orthonormale Vektoren finden) </strong></span>Betrachten Sie <span class="math inline">\(\mathbf x^\top = \begin{pmatrix}  a &amp; b &amp; a  \end{pmatrix}\)</span> und <span class="math inline">\(\bf y = \begin{pmatrix}  0\\  0,6\\  -0,8  \end{pmatrix}.\)</span></p>
 <p>Finden Sie <span class="math inline">\(a,b&gt;0\)</span>, so dass die Vektoren orthonormal sind.</p>
 <p>Tipp: Kalkuliere zuerst das Skalarprodukt der beiden Vektoren (als Funktion von <span class="math inline">\(a\)</span> und <span class="math inline">\(b\)</span>). Schreibe danach die Länge von <span class="math inline">\(\bf x\)</span> auf, ebenfalls als Funktion von <span class="math inline">\(a\)</span> und <span class="math inline">\(b\)</span>. Benutze die beiden Gleichungen, um die Unbekannten <span class="math inline">\(a\)</span> und <span class="math inline">\(b\)</span> zu berechnen.</p>
 <Details>
@@ -641,7 +641,7 @@ Antwort
 <p><span class="math display">\[2\cdot 9/16b^2 + b^2 = 1\rightarrow 17/8b^2 =1\rightarrow b = \sqrt{8/17} = 2\sqrt{2/17}.\]</span></p>
 <p>Daher ist <span class="math inline">\(a=3/4\cdot 2\sqrt{2/17} = 1,5 \cdot \sqrt{2/17}.\)</span></p>
 <p>Daher:</p>
-<p><span class="math inline">\(\mathbf x = \begin{pmatrix}  1,5 \cdot \sqrt{2/17} &amp; \sqrt{8/17} &amp; 1,5 \cdot \sqrt{2/17}  \end{pmatrix}\)</span></p>
+<p><span class="math inline">\(\mathbf x^\top = \begin{pmatrix}  1,5 \cdot \sqrt{2/17} &amp; \sqrt{8/17} &amp; 1,5 \cdot \sqrt{2/17}  \end{pmatrix}\)</span></p>
 </details>
 </div>
 <p>Nun definieren wir das Produkt zweier Matrizen. Das <strong>Produkt zweier Matrizen</strong> ist so definiert, dass einige Eigenschaften der Multiplikation reeller Zahlen erhalten bleiben.</p>
@@ -818,27 +818,27 @@ Antwort
 <h2><span class="header-section-number">9.3</span> Ökonomische Anwendungen<a href="matrizen-und-grundlegende-matrixoperationen.html#ökonomische-anwendungen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Übersichtliche Darstellung und transparente Operationen mit Matrizen finden zahlreiche Anwendungen in wirtschaftlichen Fragestellungen. Hier sind zwei Beispiele.</p>
 <div class="example">
-<p><span id="exm:exmntkonsum" class="example"><strong>Beispiel 9.10  (Monatliche Konsumausgaben) </strong></span>Der Spaltenvektor <span class="math inline">\(x\)</span> stelle die Mengen der <span class="math inline">\(n\)</span> Güter, die ein Konsument im Monat kauft, dar:</p>
-<p><span class="math inline">\(x = \begin{pmatrix} x_1 \\ x_2 \\ ... \\ x_n \end{pmatrix}\)</span></p>
+<p><span id="exm:exmntkonsum" class="example"><strong>Beispiel 9.10  (Monatliche Konsumausgaben) </strong></span>Der Spaltenvektor <span class="math inline">\(\bf x\)</span> stelle die Mengen der <span class="math inline">\(n\)</span> Güter, die ein Konsument im Monat kauft, dar:</p>
+<p><span class="math inline">\({\bf x}= \begin{pmatrix} x_1 \\ x_2 \\ ... \\ x_n \end{pmatrix}\)</span></p>
 <p>Die zugehörigen Preise (in Euro) je einer Einheit jedes Konsumgutes werden im Zeilenvektor <span class="math inline">\(p&#39;\)</span> eingetragen:</p>
-<p><span class="math inline">\(p&#39;=(p_1 \ \ p_2 \ \ ... \ \ p_n)\)</span></p>
-<p>Die monatlichen Konsumausgaben entsprechen dem Skalarprodukt <span class="math inline">\(E = p^\top x\)</span>:</p>
-<p><span class="math display">\[E= p^\top x= (p_{1} \ \ p_{2} \ \ ... \ p_{n}) \begin{pmatrix} x_{1} \\ x_{2} \\ . \\ . \\ x_{n}  \end{pmatrix} =  \sum_{i=1}^{n} p_ix_i.\]</span></p>
+<p><span class="math inline">\({\bf p}^\top=(p_1 \ \ p_2 \ \ ... \ \ p_n)\)</span></p>
+<p>Die monatlichen Konsumausgaben entsprechen dem Skalarprodukt <span class="math inline">\(E = \bf p^\top x\)</span>:</p>
+<p><span class="math display">\[E= {\bf p^\top x}= (p_{1} \ \ p_{2} \ \ ... \ p_{n}) \begin{pmatrix} x_{1} \\ x_{2} \\ . \\ . \\ x_{n}  \end{pmatrix} =  \sum_{i=1}^{n} p_ix_i.\]</span></p>
 </div>
 <div class="example">
 <p><span id="exm:exregwanderung" class="example"><strong>Beispiel 9.11  (Regionale Wanderung) </strong></span>Die Übergangsmatrix aus Beispiel <a href="matrizen-und-grundlegende-matrixoperationen.html#exm:regmigration">9.2</a> beschreibt das Migrationsverhalten der Bevölkerung in drei Regionen.</p>
 <p>Aktuell, also zur Zeit <span class="math inline">\(t = 0\)</span>, sei die Bevölkerung wie folgt auf die drei Regionen verteilt (Zahlen in Mio),</p>
-<p><span class="math inline">\(x_0 = \begin{pmatrix} 5 \\ 10 \\ 6 \end{pmatrix}\)</span></p>
+<p><span class="math inline">\({\bf x_0} = \begin{pmatrix} 5 \\ 10 \\ 6 \end{pmatrix}\)</span></p>
 <p>Mit der Übergangsmatrix <span class="math inline">\(P\)</span></p>
 <p><span class="math inline">\(P = \begin{pmatrix} 0,80 \ \ 0,15 \ \ 0,05 \\ 0,10 \ \ 0,70 \ \ 0,05\\ 0,10 \ \ 0,15 \ \ 0,90 \\ \end{pmatrix}\)</span></p>
 <p>können wir die Bevölkerungsverteilung zu Beginn der nächsten Periode (<span class="math inline">\(t = 1\)</span>) ermitteln: <span class="math inline">\(x_1 = Px_0\)</span>.</p>
-<p>Die Lösung <span class="math inline">\(x_1 = P x_0\)</span> mit den konkreten Zahlen lautet:</p>
-<p><span class="math inline">\(Px_0 = \begin{pmatrix} 0,80 \ \ 0,15 \ \ 0,05 \\ 0,10 \ \ 0,70 \ \ 0,05\\ 0,10 \ \ 0,15 \ \ 0,90 \\ \end{pmatrix} \begin{pmatrix} 5 \\ 10 \\ 6 \end{pmatrix}\)</span></p>
+<p>Die Lösung <span class="math inline">\({\bf x_1} = P {\bf x_0}\)</span> mit den konkreten Zahlen lautet:</p>
+<p><span class="math inline">\(P {\bf x_0} = \begin{pmatrix} 0,80 \ \ 0,15 \ \ 0,05 \\ 0,10 \ \ 0,70 \ \ 0,05\\ 0,10 \ \ 0,15 \ \ 0,90 \\ \end{pmatrix} \begin{pmatrix} 5 \\ 10 \\ 6 \end{pmatrix}\)</span></p>
 <p><span class="math inline">\(= \begin{pmatrix} 0,80 \cdot 5\ + \ 0,15 \cdot 10 \ + \ 0,05 \cdot 6\\ 0,10 \cdot 5 \ + \ 0,70 \cdot 10 \ + \ 0,05 \cdot 6\\ 0,10 \cdot 5\ + \ 0,15 \cdot 10 \ + \ 0,90 \cdot 6 \\ \end{pmatrix} =\begin{pmatrix} 5,8 \\7,8\\ 7,4\end{pmatrix}\)</span></p>
 <p>Demnach leben nach einer Periode mehr Menschen in Regionen 1 und 3, wohingegen die Bevölkerung in Region 2 geschrumpft ist.</p>
-<p>Analog lässt sich berechnen, wie sich die Bevölkerung nach zwei Perioden auf die drei Regionen verteilt: <span class="math inline">\(x_2 = Px_1 = P(Px_0) = P^ 2 x_0\)</span>.</p>
+<p>Analog lässt sich berechnen, wie sich die Bevölkerung nach zwei Perioden auf die drei Regionen verteilt: <span class="math inline">\({\bf x_2} = P {\bf x_1} = P(P {\bf x_0}) = P^ 2 {\bf x_0}\)</span>.</p>
 <p>Allgemein gilt nach <span class="math inline">\(n\)</span> Perioden:</p>
-<p><span class="math display">\[x_n = Px_{n−1} = P^ n x_0.\]</span></p>
+<p><span class="math display">\[ {\bf x_n} = P {\bf x}_{n−1} = P^ n  {\bf x_0}.\]</span></p>
 </div>
 <div class="exercise">
 <p><span id="exr:regwand" class="exercise"><strong>Aufgabe 9.5  (Regionale Wanderung) </strong></span>Man bestimme <span class="math inline">\(x_2\)</span>, die Bevölkerung in den drei Regionen am Ende der zweiten Periode.</p>
