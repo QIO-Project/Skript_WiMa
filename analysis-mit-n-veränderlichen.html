@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
   
 
-<meta name="author" content="Maria Osipenko 2024-05-24" />
+<meta name="author" content="Maria Osipenko 2024-06-10" />
 
 
 
@@ -161,7 +161,7 @@
 <li class="chapter" data-level="8.2.1" data-path="lineare-gleichungssysteme.html"><a href="lineare-gleichungssysteme.html#lösen-von-gleichungssystemen-mit-m-linearen-gleichungen"><i class="fa fa-check"></i><b>8.2.1</b> Lösen von Gleichungssystemen mit <span class="math inline">\(m\)</span> linearen Gleichungen</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html"><i class="fa fa-check"></i><b>9</b> Matrizen und Grundlegende Matrixoperationen</a>
+<li class="chapter" data-level="9" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html"><i class="fa fa-check"></i><b>9</b> Matrizen und grundlegende Matrixoperationen</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#matrizen"><i class="fa fa-check"></i><b>9.1</b> Matrizen</a></li>
 <li class="chapter" data-level="9.2" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#grundlegende-matrizenoperationen"><i class="fa fa-check"></i><b>9.2</b> Grundlegende Matrizenoperationen</a></li>
@@ -169,7 +169,7 @@
 <li class="chapter" data-level="9.4" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#transponierte-einer-matrix"><i class="fa fa-check"></i><b>9.4</b> Transponierte einer Matrix</a></li>
 <li class="chapter" data-level="9.5" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#determinante-und-inverse-einer-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinante und Inverse einer Matrix</a>
 <ul>
-<li class="chapter" data-level="9.5.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#mehr-zu-der-determinante"><i class="fa fa-check"></i><b>9.5.1</b> Mehr zu der Determinante</a></li>
+<li class="chapter" data-level="9.5.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#mehr-zur-determinante"><i class="fa fa-check"></i><b>9.5.1</b> Mehr zur Determinante</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html"><i class="fa fa-check"></i><b>10</b> Analysis mit <span class="math inline">\(n\)</span> Veränderlichen</a>
@@ -283,11 +283,11 @@ function checkAnswer_num(q) {
 <p>Bislang haben wir in der Analysis Funktionen mit einer Variablen betrachtet.</p>
 <!--![](images/introanalysisn.png)-->
 <p>Die Anwendungsbeispiele in der Linearen Algebra haben aber bereits gezeigt, dass typische Anwendungsprobleme als Funktion mehrerer Variablen auftreten. Beispielsweise hängt das Outputniveau einer Firma typischerweise von mehreren Inputvariablen ab.</p>
-<p>Daher erweitern wir die Begriffe der Stetigkeit und der Differenzierbarkeit auf Funktionen mehrere Veränderlicher. Dies ist die Grundlage für die (bedingte) Optimierung von Funktionen mehrerer Veränderlichen.</p>
+<p>Daher erweitern wir die Begriffe der Stetigkeit und der Differenzierbarkeit auf Funktionen mehrere Veränderliche. Dies ist die Grundlage für die (bedingte) Optimierung von Funktionen mehrerer Veränderlicher.</p>
 <div id="stetigkeit" class="section level2 hasAnchor" number="10.1">
 <h2><span class="header-section-number">10.1</span> Stetigkeit<a href="analysis-mit-n-veränderlichen.html#stetigkeit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><p>Es sei <span class="math inline">\(x = (x_1, ... , x_n)\)</span> ein Punkt im <span class="math inline">\(\mathbb{R}^n\)</span> , und <span class="math inline">\(f (x) = f (x_1, ... , x_n) = y\)</span> bezeichne eine Funktion mit <span class="math inline">\(n\)</span> Variablen.</p></li>
+<li><p>Es sei <span class="math inline">\(x = (x_1, ... , x_n)\)</span> ein Punkt im <span class="math inline">\(\mathbb{R}^n\)</span> und <span class="math inline">\(f (x) = f (x_1, ... , x_n) = y\)</span> bezeichne eine Funktion mit <span class="math inline">\(n\)</span> Variablen.</p></li>
 <li><p>Zur Feststellung der Stetigkeit einer Funktion <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(a\)</span> genügte im univariaten Fall (<span class="math inline">\(n = 1\)</span>) die Betrachtung, wie die Funktion sich dem Punkt <span class="math inline">\(f (a)\)</span> von rechts und von links nähert:</p></li>
 </ul>
 <p><span class="math display">\[\lim_{ x\rightarrow a^-} f (x) = \lim_{x\rightarrow a^+} f (x) = f (a).\]</span></p>
@@ -296,7 +296,7 @@ function checkAnswer_num(q) {
 </ul>
 <p><img src="images/stetign.png" /></p>
 <p>Die Definition der Stetigkeit für Funktionen im <span class="math inline">\(\mathbb{R}\)</span> lautet: Eine Funktion <span class="math inline">\(f : D\rightarrow \mathbb{R}\)</span> ist stetig in <span class="math inline">\(a \in D\)</span>, falls für jede Folge mit <span class="math inline">\(\lim_{n\rightarrow\infty} x_n = a\)</span> gilt: <span class="math inline">\(\lim_{n\rightarrow \infty} f (x_n) = f (a)\)</span>.</p>
-<p>D.h. für jede Folge, deren Folgenterme fast alle “nah” an <span class="math inline">\(a\)</span> liegen, die zugehörigen Funktionswerte fast alle “nah” an <span class="math inline">\(f (a)\)</span> liegen, wobei “nah” durch den (Euklidschen) Abstand <span class="math inline">\(|x_n − a|\)</span> bestimmt wird.</p>
+<p>D.h. für jede Folge, deren Folgenterme fast alle “nah” an <span class="math inline">\(a\)</span> liegen, liegen die zugehörigen Funktionswerte fast alle “nah” an <span class="math inline">\(f (a)\)</span>, wobei “nah” durch den (Euklidschen) Abstand <span class="math inline">\(|x_n − a|\)</span> bestimmt wird.</p>
 <p>Im multivariatem Fall wird Stetigkeit für eine Funktion im <span class="math inline">\(\mathbb{R}^n\)</span> ganz analog definiert, indem (wieder) der <strong>Euklidische Abstand</strong> zugrunde gelegt wird:</p>
 <p><span class="math display">\[d(x,a)=  \sqrt{ \sum_{i=1}^{n}  (x_i-a_i)^2}.\]</span></p>
 <ul>
@@ -304,7 +304,7 @@ function checkAnswer_num(q) {
 </ul>
 <p><span class="math display">\[d(x,a)=  \sqrt{   (x_1-a_1)^2 + (x_2-a_2)^2}.\]</span></p>
 <div class="definition">
-<p><span id="def:defcontn" class="definition"><strong>Definition 10.1  (Stetigkeit für Funktionen von n Variablen) </strong></span>Eine Funktion <span class="math inline">\(f\)</span> in <span class="math inline">\(\mathbb {R}^n\)</span> ist stetig im Punkt <span class="math inline">\({\bf a} = (a_1,\ldots, a_n)^\top\)</span>, wenn für jede <span class="math inline">\(\varepsilon&gt;0\)</span> es existiert ein <span class="math inline">\(\delta&gt;0,\)</span> sodass aus <span class="math inline">\(||{\bf x} - {\bf a}||&lt;\delta\)</span> folgt <span class="math inline">\(||f({\bf x}) - f({\bf a})||&lt;\varepsilon.\)</span></p>
+<p><span id="def:defcontn" class="definition"><strong>Definition 10.1  (Stetigkeit für Funktionen von n Variablen) </strong></span>Eine Funktion <span class="math inline">\(f\)</span> in <span class="math inline">\(\mathbb {R}^n\)</span> ist stetig im Punkt <span class="math inline">\({\bf a} = (a_1,\ldots, a_n)^\top\)</span>, wenn für jedes <span class="math inline">\(\varepsilon&gt;0\)</span> ein <span class="math inline">\(\delta&gt;0\)</span> existiert, sodass aus <span class="math inline">\(||{\bf x} - {\bf a}||&lt;\delta\)</span> folgt <span class="math inline">\(||f({\bf x}) - f({\bf a})||&lt;\varepsilon.\)</span></p>
 </div>
 </div>
 <div id="partielle-ableitungen" class="section level2 hasAnchor" number="10.2">
@@ -375,7 +375,7 @@ Antwort
 <p>In Falle einer additiv separierbarer Funktion gilt</p>
 <p><span class="math display">\[\frac{\partial f}{\partial x_i} = g^\prime_i(x_i).\]</span></p>
 <div class="example">
-<p><span id="exm:nutzensep" class="example"><strong>Beispiel 10.2  (Alex' Nutzenfunktion ist additiv separierbar) </strong></span>Die Nutzenfunktion von Alex, die wir im Beipiel <a href="index.html#exm:nutzenf">1.3</a> untersucht haben ist additiv separierbar, denn:</p>
+<p><span id="exm:nutzensep" class="example"><strong>Beispiel 10.2  (Alex' Nutzenfunktion ist additiv separierbar) </strong></span>Die Nutzenfunktion von Alex, die wir im Beipiel <a href="index.html#exm:nutzenf">1.3</a> untersucht haben, ist additiv separierbar, denn:</p>
 <p><span class="math display">\[U(x,y) = \underbrace{\sqrt{x}}_{g(x)} + \underbrace{\sqrt{y}}_{g(y)}.\]</span></p>
 <p>Daher:</p>
 <p><span class="math display">\[U_x(x,y) = U_x(x) = (\sqrt{x})^\prime = \frac 12(x)^{-\frac12} = \frac 12\cdot \frac 1{x^{\frac12}} = \frac1{2\sqrt{x}}.\]</span></p>
@@ -488,7 +488,7 @@ f_{22}(x_1, x_2) &amp;= \frac{ \partial^2 f (x_1, x_2)}{ \partial x_2^2}.
 <p>Die partiellen Ableitungen erster und zweiter Ordnung können in übersichtlich in einem <strong>Vektor</strong>, bzw. in einer <strong>Matrix</strong> erfasst werden.</p>
 <div class="definition">
 <p><span id="def:defgrad" class="definition"><strong>Definition 10.5  (Gradientenvektor) </strong></span>Sei <span class="math inline">\(f:\mathbb R^n\rightarrow\mathbb R\)</span> eine differenzierbare Funktion.
-Der <strong>Gradientenvektor</strong> oder der <strong>Gradient</strong> ist der Vektor des Teils erster Ordnung
+Der <strong>Gradientenvektor</strong> oder der <strong>Gradient</strong> ist der Vektor der partiellen Ableitungen erster Ordnung
 Derivate:
 <span class="math display">\[\begin{equation*}
        \nabla f =
@@ -549,7 +549,7 @@ Formal:</p>
 <p><span id="exr:grahes" class="exercise"><strong>Aufgabe 10.2  (Gradient und Hesse-Matrix) </strong></span>Für die Funktion <span class="math inline">\(f(x,y) = x^2 -5xy^2\)</span> gebe den Gradienten und die Hesse-Matrix an.</p>
 <details>
 <summary>
-Answer
+Antwort
 </summary>
 Der Gradient ist:
 <span class="math display">\[ G(x, y) =  \nabla f=\begin{bmatrix} f_x\\ f_y\end{bmatrix}=\begin{bmatrix} 2x- 5y^2\\ - 10xy  \end{bmatrix}.  \]</span>

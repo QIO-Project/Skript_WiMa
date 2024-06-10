@@ -288,7 +288,7 @@ grundlegende-matrizenoperationen
 ökonomische-anwendungen
 transponierte-einer-matrix
 determinante-und-inverse-einer-matrix
-mehr-zu-der-determinante
+mehr-zur-determinante
 analysis-mit-n-veränderlichen
 stetigkeit
 partielle-ableitungen
