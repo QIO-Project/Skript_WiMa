@@ -223,6 +223,7 @@ thm:thmschwarz
 exr:grahes
 thm:thmnotbedn
 exm:monprofitn
+thm:thmbzo2
 exm:stpunkte1
 exm:stpunkte2
 exr:maxminn
