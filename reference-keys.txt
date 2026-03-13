@@ -42,9 +42,6 @@ thm:th2
 def:defpotfun
 def:defexpfun
 def:deflogfun
-def:defkonkav
-def:defkonvex
-exm:konvexf
 def:deffolge
 exm:geldanl
 exm:folgen
@@ -247,7 +244,6 @@ funktionen
 lineare-funktionen
 quadratische-funktionen
 potenz--exponential--und-logarithmusfunktionen
-konvexe-und-konkave-funktionen
 folgen-grenzwerte-und-reihen
 folgen
 konvergenz-von-folgen

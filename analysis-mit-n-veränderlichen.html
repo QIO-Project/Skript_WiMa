@@ -4,23 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Kapitel 10 Analysis mit \(n\) Veränderlichen | Wirtschaftsmathematik</title>
-  <meta name="description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
-  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+  <title>Kapitel 10 Analysis mit \(n\) Veränderlichen | Wirtschaftsmathematik: Ferienkurs</title>
+  <meta name="description" content="Das ist der Skript für den Kurs Wirtschaftsmathematikim Ferienkursformat." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Kapitel 10 Analysis mit \(n\) Veränderlichen | Wirtschaftsmathematik" />
+  <meta property="og:title" content="Kapitel 10 Analysis mit \(n\) Veränderlichen | Wirtschaftsmathematik: Ferienkurs" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
+  <meta property="og:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematikim Ferienkursformat." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Kapitel 10 Analysis mit \(n\) Veränderlichen | Wirtschaftsmathematik" />
+  <meta name="twitter:title" content="Kapitel 10 Analysis mit \(n\) Veränderlichen | Wirtschaftsmathematik: Ferienkurs" />
   
-  <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematik. Die Unterlagen basieren auf den Skripten von Prof. Dr. Natalie Packham und Prof. Dr. Thomas Knispel. Weitere Mitwirkende sind Susanne Föhse-Hiltmann und Annika Weber." />
+  <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematikim Ferienkursformat." />
   
 
-<meta name="author" content="Maria Osipenko 2024-06-20" />
+<meta name="author" content="Maria Osipenko 2026-02-09" />
 
 
 
@@ -72,7 +72,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Wirtschaftsmathematik</a></li>
+<li><a href="./">Wirtschaftsmathematik: Ferienkurs</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Einführung</a>
@@ -98,7 +98,6 @@
 <li class="chapter" data-level="2.4.1" data-path="grundlagen.html"><a href="grundlagen.html#lineare-funktionen"><i class="fa fa-check"></i><b>2.4.1</b> Lineare Funktionen</a></li>
 <li class="chapter" data-level="2.4.2" data-path="grundlagen.html"><a href="grundlagen.html#quadratische-funktionen"><i class="fa fa-check"></i><b>2.4.2</b> Quadratische Funktionen</a></li>
 <li class="chapter" data-level="2.4.3" data-path="grundlagen.html"><a href="grundlagen.html#potenz--exponential--und-logarithmusfunktionen"><i class="fa fa-check"></i><b>2.4.3</b> Potenz-, Exponential- und Logarithmusfunktionen</a></li>
-<li class="chapter" data-level="2.4.4" data-path="grundlagen.html"><a href="grundlagen.html#konvexe-und-konkave-funktionen"><i class="fa fa-check"></i><b>2.4.4</b> Konvexe und konkave Funktionen</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html"><i class="fa fa-check"></i><b>3</b> Folgen, Grenzwerte und Reihen</a>
@@ -199,7 +198,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wirtschaftsmathematik</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wirtschaftsmathematik: Ferienkurs</a>
           </h1>
         </div>
 
@@ -278,8 +277,7 @@ function checkAnswer_num(q) {
       }
     }
 </script>
-<audio class="audio-specs" controls controlsList="nodownload" src="audio/10einf_analn.m4a">
-</audio>
+<!--<audio class="audio-specs" controls controlsList="nodownload" src="audio/10einf_analn.m4a"></audio>-->
 <p>Bislang haben wir in der Analysis Funktionen mit einer Variablen betrachtet.</p>
 <!--![](images/introanalysisn.png)-->
 <p>Die Anwendungsbeispiele in der Linearen Algebra haben aber bereits gezeigt, dass typische Anwendungsprobleme als Funktion mehrerer Variablen auftreten. Beispielsweise hängt das Outputniveau einer Firma typischerweise von mehreren Inputvariablen ab.</p>
@@ -295,7 +293,7 @@ function checkAnswer_num(q) {
 <li>Im multivariaten Fall gibt es unendlich viele Möglichkeiten sich dem Punkt <span class="math inline">\(f (a)\)</span> zu nähern (s. Bild rechts).</li>
 </ul>
 <p><img src="images/stetign.png" /></p>
-<p>Die Definition der Stetigkeit für Funktionen im <span class="math inline">\(\mathbb{R}\)</span> lautet: Eine Funktion <span class="math inline">\(f : D\rightarrow \mathbb{R}\)</span> ist stetig in <span class="math inline">\(a \in D\)</span>, falls für jede Folge mit <span class="math inline">\(\lim_{n\rightarrow\infty} x_n = a\)</span> gilt: <span class="math inline">\(\lim_{n\rightarrow \infty} f (x_n) = f (a)\)</span>.</p>
+<p>Die Definition der Stetigkeit für Funktionen im <span class="math inline">\(\mathbb{R}\)</span> lautet: Eine Funktion <span class="math inline">\(f : D\rightarrow  \mathbb{R}\)</span> ist stetig in <span class="math inline">\(a \in D\)</span>, falls für jede Folge mit <span class="math inline">\(\lim_{n\rightarrow\infty} x_n = a\)</span> gilt: <span class="math inline">\(\lim_{n\rightarrow \infty} f (x_n) = f (a)\)</span>.</p>
 <p>D.h. für jede Folge, deren Folgenterme fast alle “nah” an <span class="math inline">\(a\)</span> liegen, liegen die zugehörigen Funktionswerte fast alle “nah” an <span class="math inline">\(f (a)\)</span>, wobei “nah” durch den (Euklidschen) Abstand <span class="math inline">\(|x_n − a|\)</span> bestimmt wird.</p>
 <p>Im multivariatem Fall wird Stetigkeit für eine Funktion im <span class="math inline">\(\mathbb{R}^n\)</span> ganz analog definiert, indem (wieder) der <strong>Euklidische Abstand</strong> zugrunde gelegt wird:</p>
 <p><span class="math display">\[d(x,a)=  \sqrt{ \sum_{i=1}^{n}  (x_i-a_i)^2}.\]</span></p>
@@ -312,15 +310,15 @@ function checkAnswer_num(q) {
 <p>Wenn eine Funktion eine stetige Ableitung hat, bezeichnet man sie als <strong>differenzierbar</strong>. Wir erweitern nun den Begriff der <strong>Ableitung</strong> auf Funktionen <span class="math inline">\(f (x_1, ... , x_n)\)</span> im <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
 <p>Die (erste) partielle Ableitung von <span class="math inline">\(f\)</span> nach der <span class="math inline">\(i\)</span>-ten Variable <span class="math inline">\(x_i\)</span> erhält man durch Ableiten von <span class="math inline">\(f\)</span> nach <span class="math inline">\(x_i\)</span>, wobei die übrigen Variablen <span class="math inline">\(x_1, ... , x_{i−1}, x_{i+1}, ... , x_n\)</span> als Konstanten behandelt werden.</p>
 <div class="definition">
-<p><span id="def:defpartableitung" class="definition"><strong>Definition 10.2  (Partielle Ableitung) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span> differenzierbar in jeder Variablen. Die (ersten) partiellen Ableitungen von <span class="math inline">\(f\)</span> sind für <span class="math inline">\(i = 1, ... , n\)</span> gegeben durch</p>
+<p><span id="def:defpartableitung" class="definition"><strong>Definition 10.2  (Partielle Ableitung) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R}^n  \rightarrow  \mathbb{R}\)</span> differenzierbar in jeder Variablen. Die (ersten) partiellen Ableitungen von <span class="math inline">\(f\)</span> sind für <span class="math inline">\(i = 1, ... , n\)</span> gegeben durch</p>
 <p><span class="math display">\[\frac{ \partial f(x_1, ... x_n)}{ \partial x_i} =\lim _{ \Delta x_i \rightarrow 0}  \frac{f(x_1, ... , x_{i-1}, x_i+ \Delta x_i, x_{i+1}, ... , x_n) -f(x_1, ... , x_n) }{ \Delta x_i }\]</span></p>
 <p>Kurzschreibweise:</p>
 <p><span class="math display">\[\frac{ \partial f}{ \partial x_i } = f_{x_i}=f_i.\]</span></p>
 </div>
 <p>Da es sich bei den partiellen Ableitungen um univariate Ableitungen handelt, gelten die üblichen Ableitungsregeln.</p>
-<p>Im bivariaten Fall (zwei Variablen: <span class="math inline">\(n = 2\)</span>), also <span class="math inline">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span>, gilt:</p>
-<p><span class="math inline">\(f_{x_1}(x_1,x_2)= \frac{ \partial f(x_1, x_2)}{ \partial x_1} =\lim _{ \Delta x_1 \rightarrow 0} \frac{f(x_1, + \Delta x_1, x_{2} -f(x_1,x_2) }{ \Delta x_1 }\)</span> (partielle Ableitung nach <span class="math inline">\(x_1\)</span>)</p>
-<p><span class="math inline">\(f_{x_2}(x_1,x_2)= \frac{ \partial f(x_1, x_2)}{ \partial x_2} =\lim _{ \Delta x_2 \rightarrow 0} \frac{f(x_1,x_2 + \Delta x_2) -f(x_1,x_2) }{ \Delta x_2 }\)</span> (partielle Ableitung nach <span class="math inline">\(x_2\)</span>)</p>
+<p>Im bivariaten Fall (zwei Variablen: <span class="math inline">\(n = 2\)</span>), also <span class="math inline">\(f: \mathbb{R}^n  \rightarrow  \mathbb{R}\)</span>, gilt:</p>
+<p><span class="math inline">\(f_{x_1}(x_1,x_2)= \frac{ \partial f(x_1, x_2)}{ \partial x_1} =\lim _{ \Delta x_1 \rightarrow 0}  \frac{f(x_1, + \Delta x_1, x_{2} -f(x_1,x_2) }{ \Delta x_1 }\)</span> (partielle Ableitung nach <span class="math inline">\(x_1\)</span>)</p>
+<p><span class="math inline">\(f_{x_2}(x_1,x_2)= \frac{ \partial f(x_1, x_2)}{ \partial x_2} =\lim _{ \Delta x_2 \rightarrow 0}  \frac{f(x_1,x_2 + \Delta x_2) -f(x_1,x_2) }{ \Delta x_2 }\)</span> (partielle Ableitung nach <span class="math inline">\(x_2\)</span>)</p>
 <p>Die folgende Abbildung illustriert die partiellen Ableitungen:
 <img src="images/partialabb.png" /></p>
 <div class="example">
@@ -446,17 +444,17 @@ Beweis
 <h2><span class="header-section-number">10.3</span> Partielle Ableitungen höherer Ordnung<a href="analysis-mit-n-veränderlichen.html#partielle-ableitungen-höherer-ordnung" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Analog zum univariaten Fall erhält man partielle Ableitungen höherer Ordnung durch mehrfaches Ableiten.</p>
 <div class="definition">
-<p><span id="def:defpartiellab2" class="definition"><strong>Definition 10.4  (Partielle Ableitungen zweiter Ordnung) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span> eine zweimal differenzierbare Funktion. Die partiellen Ableitungen zweiter Ordnung sind gegeben durch:
+<p><span id="def:defpartiellab2" class="definition"><strong>Definition 10.4  (Partielle Ableitungen zweiter Ordnung) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R}^n  \rightarrow  \mathbb{R}\)</span> eine zweimal differenzierbare Funktion. Die partiellen Ableitungen zweiter Ordnung sind gegeben durch:
 <span class="math display">\[\frac{ \partial^2 f(x_1, x_n)}{ \partial x_i \delta x_j}  = \frac{ \partial f_{x_i} (x_1, ..., x_n)}{ \partial x_j},\ \ \  i,j=1, ... , n.\]</span></p>
 <p>Kurzschreibweisen:</p>
 <p><span class="math display">\[\frac{ \partial^2 f}{ \partial x_i \delta x_j} = f_{x_ix_j}=f_{ij}.\]</span></p>
 </div>
 <ul>
 <li><p>Die Anzahl der partiellen Ableitungen zweiter Ordnung ist <span class="math inline">\(n^2\)</span> und ergibt sich aus der Anzahl der Kombinationen von <span class="math inline">\(i,j = 1, ... , n\)</span>.</p></li>
-<li><p>Die Ableitungen <span class="math inline">\(f_{ij}, i \neq j\)</span>, heißen <strong>Kreuzableitungen</strong>.</p></li>
+<li><p>Die Ableitungen <span class="math inline">\(f_{ij}, i  \neq j\)</span>, heißen <strong>Kreuzableitungen</strong>.</p></li>
 </ul>
 <div class="example">
-<p><span id="exm:partab3" class="example"><strong>Beispiel 10.5  (Partielle Ableitungen zweiter Ordnung) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\)</span>. Die partiellen Ableitungen zweiter Ordnung sind gegeben durch:</p>
+<p><span id="exm:partab3" class="example"><strong>Beispiel 10.5  (Partielle Ableitungen zweiter Ordnung) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R}^2  \rightarrow  \mathbb{R}\)</span>. Die partiellen Ableitungen zweiter Ordnung sind gegeben durch:</p>
 <p><span class="math display">\[\begin{align}f_{11}(x_1, x_2) &amp;= \frac{ \partial^2 f (x_1, x_2)}{ \partial x_1^2},\\
 
 f_{12}(x_1, x_2) &amp;= \frac{ \partial^2 f (x_1, x_2)}{ \partial x_1\partial x_2},\\
@@ -528,7 +526,7 @@ Sei $f(x_1,x_2)=5-2x_1+3x_2$.
        \end{equation*}
 :::-->
 <div class="definition">
-<p><span id="def:defhesse" class="definition"><strong>Definition 10.6  (Hesse-Matrix) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span> eine zweifach differenzierbare Funktion. Die <strong>Hesse-Matrix</strong> enthält die partiellen Ableitungen zweiter Ordnung:</p>
+<p><span id="def:defhesse" class="definition"><strong>Definition 10.6  (Hesse-Matrix) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R}^n  \rightarrow  \mathbb{R}\)</span> eine zweifach differenzierbare Funktion. Die <strong>Hesse-Matrix</strong> enthält die partiellen Ableitungen zweiter Ordnung:</p>
 <p><span class="math display">\[H =  \begin{bmatrix} f_{11} &amp; f_{12} &amp; \ldots &amp; f_{1n} \\ f_{21} &amp; f_{22} &amp; ... &amp; f_{2n} \\ \vdots&amp;\vdots&amp;\ldots&amp;\vdots \\ f_{n1} &amp; f_{n2} &amp; ... &amp; f_{nn} \end{bmatrix}.\]</span></p>
 </div>
 <div class="example">
@@ -780,42 +778,42 @@ Höhenlinien können auch mithilfe der impliziten
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/10-analysisn.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["_main.pdf", "_main.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/10-analysisn.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
