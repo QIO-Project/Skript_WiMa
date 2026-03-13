@@ -524,8 +524,8 @@ Die Folge <span class="math inline">\({\displaystyle (a_{n})_{n\in \mathbb {N} }
 <p>Bevor wir Grenzwerte für komplexere Folgen in den Aufgaben bestimmen, hier sind ein Paar <strong>Tipps für Grenzwertfindung</strong>:</p>
 <ul>
 <li><p>Falls ein Bruch <span class="math inline">\(\frac{a_n}{b_n}\)</span> in der Form <span class="math inline">\(\frac\infty\infty\)</span> oder <span class="math inline">\(\frac00\)</span> vorliegt: finde die größte Potenz von <span class="math inline">\(n\)</span> im Nenner und klammere diese in Zähler und Nenner aus. Kürze anschliessend und schaue, wo Folgen mit Grenzwert Null entstanden sind.</p></li>
-<li><p>Falls <span class="math inline">\(a_n - b_n\)</span> in der Form <span class="math inline">\(\infty - \infty\)</span> vorliegt, nutze die Umformung <span class="math display">\[a-b=\frac{(a-b)(a+b)}{a+b} = \frac{a^2-b^2}{a+b}.\]</span> Verwende danach den obigen Tipp.</p></li>
 <li><p>Falls <span class="math inline">\(a_n\)</span> <span class="math inline">\((-1)^n\)</span> enthält, betrachte die Teilfolgen für <span class="math inline">\(n\)</span> gerade und ungerade separat und wende den Satz <a href="folgen-grenzwerte-und-reihen.html#thm:thmkonv3">3.3</a> an.</p></li>
+<li><p>Falls <span class="math inline">\(a_n - b_n\)</span> in der Form <span class="math inline">\(\infty - \infty\)</span> vorliegt, nutze die Umformung <span class="math display">\[a-b=\frac{(a-b)(a+b)}{a+b} = \frac{a^2-b^2}{a+b}.\]</span> Verwende danach den obigen Tipp.</p></li>
 </ul>
 <!--- Falls \(a_n\) in der Form \(const^\infty\) vorliegt, bringe den Ausdruck in die Form \((1+\frac xn)^n\) und nutze \(\lim_{n\rightarrow \infty}(1+\frac xn)^n=e^x\).-->
 <div class="example">
@@ -844,7 +844,7 @@ Der <strong>Grenzwert</strong> einer Reihe <span class="math inline">\(\sum_{t=1
 Wie viel muss ich heute auf das Sparbuch anlegen, damit ich drei Jahre lang nach Ablauf jedes Jahres <span class="math inline">\(100 \ Euro\)</span> abheben kann?</p></li>
 <li><p>Antwort: <span class="math inline">\(\frac{100}{(1+r)} + \frac{100}{(1+r)^2}+ \frac{100}{(1+r)^3} =100 \cdot \sum_{t=1}^{3} \frac{100}{(1+r)^t}\)</span> .</p></li>
 <li><p>Wieviel muss ich heute auf das Sparbuch anlegen, damit ich jedes Jahr <span class="math inline">\(100 \ Euro\)</span> abheben kann?</p></li>
-<li><p>Teilantwort: <span class="math inline">\(100 \cdot \sum_{t=1}^{\infty }  \frac{1}{(1+r)^t} =\ ???\)</span>.</p></li>
+<li><p>Teilantwort: <span class="math inline">\(100 \cdot \sum_{t=1}^{\infty }  \frac{1}{(1+r)^t} =\ ???\)</span></p></li>
 </ul>
 </div>
 <!--
