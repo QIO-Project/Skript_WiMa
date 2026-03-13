@@ -541,7 +541,7 @@ enthält die <strong>(streng) positiven Zahlen</strong>. Es gilt:</p>
 <p><span id="def:def6" class="definition"><strong>Definition 2.6  (Ungleichungen) </strong></span><br>
 Die strenge Ungleichung <span class="math inline">\(&gt;\)</span> und die schwache Ungleichung <span class="math inline">\(\geq\)</span> sind wie folgt definiert:</p>
 <ol style="list-style-type: decimal">
-<li><p>Falls <span class="math inline">\(a+b\in\mathbb R_{++}\)</span>, dann <span class="math inline">\(a&gt;b\)</span></p></li>
+<li><p>Falls <span class="math inline">\(a-b\in\mathbb R_{++}\)</span>, dann <span class="math inline">\(a&gt;b\)</span></p></li>
 <li><p>Falls <span class="math inline">\(−(a−b)\in\mathbb R_{++}\)</span>, dann <span class="math inline">\(b&gt;a\)</span></p></li>
 <li><p>Falls <span class="math inline">\(a−b\in\mathbb R_+\)</span>, dann <span class="math inline">\(a\geq b\)</span></p></li>
 <li><p>Falls <span class="math inline">\(−(a−b)\in\mathbb R_+\)</span>, dann <span class="math inline">\(b\geq a\)</span>.</p></li>
@@ -1026,7 +1026,7 @@ Die <strong>Komposition (Verkettung)</strong> von <span class="math inline">\(f\
 <div id="lineare-funktionen" class="section level3 hasAnchor" number="2.4.1">
 <h3><span class="header-section-number">2.4.1</span> Lineare Funktionen<a href="grundlagen.html#lineare-funktionen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <!--<audio class="audio-specs" controls controlsList="nodownload" src="audio/linfuns.mp3"></audio>-->
-<p>Im Beispiel Nutzenmaximierung hatte Alex die Budgetrestriktion <span class="math inline">\(x \cdot P_X + y \cdot P_Y = 100.\)</span>, die als eine lineare Funktion <span class="math inline">\(y(x)=\frac{100}{P_Y}-\frac {P_X}{P_Y} x\)</span> dargestellt werden könnte.</p>
+<p>Im Beispiel Nutzenmaximierung hatte Alex die Budgetrestriktion <span class="math inline">\(x \cdot P_X + y \cdot P_Y = 100\)</span>, die als eine lineare Funktion <span class="math inline">\(y(x)=\frac{100}{P_Y}-\frac {P_X}{P_Y} x\)</span> dargestellt werden kann.</p>
 <p>Zudem können viele Kostenfunktionen als lineare Funktionen der produzierten Mengen modelliert werden. In diesem Fall bestehen die Kosten aus einem fixen Betrag <span class="math inline">\(b\)</span> und wachsen proportional zu der produzierten Menge <span class="math inline">\(x\)</span> mit dem Faktor <span class="math inline">\(b\)</span>, so dass <span class="math inline">\(K(x) = ax+b\)</span>.</p>
 <div class="definition">
 <p><span id="def:deflin" class="definition"><strong>Definition 2.13  (Lineare Funktion) </strong></span>Es seien <span class="math inline">\(a, b\)</span> reelle Zahlen. Die Funktion <span class="math inline">\(f : \mathbb{R}  → \mathbb{R}\)</span> mit</p>
@@ -1160,11 +1160,11 @@ questionObj5 = {
 <button onclick="checkAnswer_num(questionObj5)">Check</button>
 <p id="result5">
 </p>
-<p>Wie lange dauert es, bis die Weltbevölkerung die Marke <span class="math inline">\(8\)</span> Milliarden erreicht?</p>
+<p>Angenommen, die Weltbevölkerung beträgt heutzutage <span class="math inline">\(7,5\)</span> Milliarden. Wie lange dauert es, bis die Weltbevölkerung die Marke <span class="math inline">\(10\)</span> Milliarden erreicht?</p>
 <script>
 questionObj6 = {
         question: [],
-        answer: Math.log(8/5.2)/Math.log(1.015),
+        answer: Math.log(10/7.5)/Math.log(1.015),
         id: 6
       };
 
