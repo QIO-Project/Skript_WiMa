@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematikim Ferienkursformat." />
   
 
-<meta name="author" content="Maria Osipenko 2026-03-13" />
+<meta name="author" content="Maria Osipenko 2026-03-16" />
 
 
 
@@ -444,7 +444,7 @@ Submit
 <p><span id="exm:konvfolgen" class="example"><strong>Beispiel 3.4  (Einige konvergente Folgen und deren Grenzwert) </strong></span>Beispiele für konvergente Folgen und deren Grenzwert:</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(\lim\limits_{n \rightarrow  \infty }  \frac{1}{n} =0\)</span></p></li>
-<li><p><span class="math inline">\(\lim\limits_{n \rightarrow  \infty }  \frac{1}{n+1} =1\)</span></p></li>
+<li><p><span class="math inline">\(\lim\limits_{n \rightarrow  \infty }  \frac{n}{n+1} =1\)</span></p></li>
 <li><p><span class="math inline">\(\lim\limits_{n \rightarrow  \infty } c^n =0\)</span>, für <span class="math inline">\(c &lt; 1\)</span></p></li>
 <li><p><span class="math inline">\(\lim\limits_{n \rightarrow  \infty } e^{-n} =0\)</span></p></li>
 <li><p><span class="math inline">\(\lim\limits_{n \rightarrow  \infty } e^{-1/n} =1\)</span></p></li>
@@ -842,7 +842,7 @@ Der <strong>Grenzwert</strong> einer Reihe <span class="math inline">\(\sum_{t=1
 <li><p>Dividiert man beide Seiten der obigen Gleichung durch <span class="math inline">\((1,04)^\color{red}5,\)</span> so erhält man <span class="math inline">\(82,19 = \frac{100}{(1,04)^\color{red}5 }.\)</span> Der Betrag von <span class="math inline">\(82,19\)</span> Euro stellt also den Betrag dar, den man zum Zinssatz von <span class="math inline">\(4\%=0,04\)</span> anlegen muss, damit man nach <span class="math inline">\(\color{red}5\)</span> Jahren <span class="math inline">\(100\)</span> Euro abheben darf.</p></li>
 <li><p>Allgemein: zahlt man den Betrag <span class="math inline">\(\frac{100}{(1+r)^n}\)</span> auf ein Sparbuch ein, erhält man nach Ablauf von <span class="math inline">\(n\)</span> Jahren <span class="math inline">\(\frac{100}{(1+r)^n} \cdot (1+r)^n=100 \ Euro\)</span>.
 Wie viel muss ich heute auf das Sparbuch anlegen, damit ich drei Jahre lang nach Ablauf jedes Jahres <span class="math inline">\(100 \ Euro\)</span> abheben kann?</p></li>
-<li><p>Antwort: <span class="math inline">\(\frac{100}{(1+r)} + \frac{100}{(1+r)^2}+ \frac{100}{(1+r)^3} =100 \cdot \sum_{t=1}^{3} \frac{100}{(1+r)^t}\)</span> .</p></li>
+<li><p>Antwort: <span class="math inline">\(\frac{100}{(1+r)} + \frac{100}{(1+r)^2}+ \frac{100}{(1+r)^3} = \sum_{t=1}^{3} \frac{100}{(1+r)^t}  = 100 \cdot \sum_{t=1}^{3} \frac{1}{(1+r)^t}\)</span> .</p></li>
 <li><p>Wieviel muss ich heute auf das Sparbuch anlegen, damit ich jedes Jahr <span class="math inline">\(100 \ Euro\)</span> abheben kann?</p></li>
 <li><p>Teilantwort: <span class="math inline">\(100 \cdot \sum_{t=1}^{\infty }  \frac{1}{(1+r)^t} =\ ???\)</span></p></li>
 </ul>
@@ -930,6 +930,21 @@ Antwort:</p>
 <p>Für verschiedenen Zinssätze <span class="math inline">\(r\)</span> ergibt sich der nötige Anlagebetrag:
 <img src="images/anlage.png" /></p>
 </div>
+<div class="example">
+<p><span id="exm:annuitaet" class="example"><strong>Beispiel 3.12  (Annuität) </strong></span>(Fortsetzung von Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:sparbuch">3.10</a>)</p>
+<p>Die Formel aus dem Theorem 3.7 hilft uns auch bei der Berechnung von Annuitäten weiter. <br>
+Nimmt man einen Bankkredit in Höhe von z.B. <span class="math inline">\(100.000\)</span> Euro zu einem jährlichen Zinssatz von 3 % auf der über einen Zeitraum von <span class="math inline">\(20\)</span> Jahren durch jährliche Zahlungen in konstanter Höhe (Annuität), zurückgezahlt werden soll, so kann man die Annuität mit Hilfe der obigen Formel berechnen. Wir modellieren Sie die Rückzahlung als geometrische Reihe.</p>
+<p>Dann entspricht dir Kreditsumme (der Barwert) des Rückzahlungsplans dem Ausdruck:</p>
+<p><span class="math display">\[100.000 = A\cdot \sum_{t=1}^{20}\frac{1}{1,03^{20}}.\]</span></p>
+<p>wobei <span class="math inline">\(\sum_{t=1}^{20}\frac{1}{1,03^{20}} = \sum_{t=1}^{20}\left(\frac{1}{1,03}\right)^{20}=\sum_{t=\color{red}{0}}^{20}\left(\frac{1}{1,03}\right)^{20}\color{red}{-1}.\)</span></p>
+<p>Setze <span class="math inline">\(x= \frac{1}{1+r}, n=20\)</span>, dann <span class="math inline">\(\frac{1-x^{n+1}}{1-x} = \frac{1-\left(\frac1{1+r}\right)^{21}}{1-\frac1{1+r}} = \frac{1+r}r - \frac 1{r(1+r)^{20}}.\)</span> Ferner gilt: <span class="math inline">\(\frac{1+r}r - \frac 1{r(1+r)^{20}}- 1 = \frac 1r - \frac 1{r(1+r)^{20}}.\)</span></p>
+<p>Demnach berechnet sich die Annuität als:</p>
+<p><span class="math display">\[100.000 = A\cdot \left(\frac 1r - \frac 1{r(1+r)^{20}}\right)\rightarrow A = \frac{100.000}{\left(\frac 1r - \frac 1{r(1+r)^{20}}\right)}.\]</span>
+Für <span class="math inline">\(r=0.03\)</span>:</p>
+<p><span class="math display">\[A=\frac{100.000}{\left(\frac 1{0.03} - \frac 1{0.03(1.03)^{20}}\right)} = 6721.5708.\]</span></p>
+<p>Also:</p>
+<p><span class="math display">\[100.000 = A\cdot \sum_{t=1}^{20}\frac{1}{1,03^{20}}.\]</span></p>
+</div>
 <div id="qfolgen2" class="quiz">
 <p id="question">
 <span id="question-text210"></span>
@@ -973,7 +988,7 @@ Antwort:</p>
 </div>
 <p>Obwohl die zugrunde liegende Folge <span class="math inline">\((1/t) \  _ {t  \in   \mathbb{N}  }\)</span> konvergiert, divergiert die Reihe.</p>
 <div class="example">
-<p><span id="exm:coupons" class="example"><strong>Beispiel 3.12  (Collecting Coupons) </strong></span><br>
+<p><span id="exm:coupons" class="example"><strong>Beispiel 3.13  (Collecting Coupons) </strong></span><br>
 Source: <a href="https://en.wikipedia.org/wiki/Coupon_collector%27s_problem" class="uri">https://en.wikipedia.org/wiki/Coupon_collector%27s_problem</a>
 <br><br>
 In probability theory, the ‘coupon collector’s problem’ describes “collect all coupons and win” contests. It asks the following question:</p>

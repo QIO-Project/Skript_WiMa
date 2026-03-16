@@ -72,6 +72,7 @@ def:geomreihe
 thm:geomreihe
 cor:cor1
 exm:sparbuch2
+exm:annuitaet
 def:harmreihe
 exm:coupons
 thm:harmreihe
