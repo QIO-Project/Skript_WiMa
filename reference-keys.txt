@@ -154,7 +154,6 @@ exm:prodsys2
 exm:prodsys3
 exr:nsub
 exr:nelim
-exm:gleicgg
 exr:maschinen
 def:defmatrix
 def:defverktor
