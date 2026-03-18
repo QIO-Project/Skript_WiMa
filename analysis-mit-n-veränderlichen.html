@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematikim Ferienkursformat." />
   
 
-<meta name="author" content="Maria Osipenko 2026-03-17" />
+<meta name="author" content="Maria Osipenko 2026-03-18" />
 
 
 
@@ -295,12 +295,12 @@ function checkAnswer_num(q) {
 <p><img src="images/stetign.png" /></p>
 <p>Die Definition der Stetigkeit für Funktionen im <span class="math inline">\(\mathbb{R}\)</span> lautet: Eine Funktion <span class="math inline">\(f : D\rightarrow  \mathbb{R}\)</span> ist stetig in <span class="math inline">\(a \in D\)</span>, falls für jede Folge mit <span class="math inline">\(\lim_{n\rightarrow\infty} x_n = a\)</span> gilt: <span class="math inline">\(\lim_{n\rightarrow \infty} f (x_n) = f (a)\)</span>.</p>
 <p>D.h. für jede Folge, deren Folgenterme fast alle “nah” an <span class="math inline">\(a\)</span> liegen, liegen die zugehörigen Funktionswerte fast alle “nah” an <span class="math inline">\(f (a)\)</span>, wobei “nah” durch den (Euklidschen) Abstand <span class="math inline">\(|x_n − a|\)</span> bestimmt wird.</p>
-<p>Im multivariatem Fall wird Stetigkeit für eine Funktion im <span class="math inline">\(\mathbb{R}^n\)</span> ganz analog definiert, indem (wieder) der <strong>Euklidische Abstand</strong> zugrunde gelegt wird:</p>
-<p><span class="math display">\[d(x,a)=  \sqrt{ \sum_{i=1}^{n}  (x_i-a_i)^2}.\]</span></p>
+<p>Im multivariatem Fall wird Stetigkeit für eine Funktion im <span class="math inline">\(\mathbb{R}^n\)</span> ganz analog definiert, indem (wieder) der <strong>Euklidische Abstand</strong> (Euclidische Norm) zugrunde gelegt wird:</p>
+<p><span class="math display">\[d(x,a)= ||\mathbf x - \mathbf a|| = \sqrt{ \sum_{i=1}^{n}  (x_i-a_i)^2}.\]</span></p>
 <ul>
 <li>Spezialfall <span class="math inline">\(\mathbb{R}^2\)</span> :</li>
 </ul>
-<p><span class="math display">\[d(x,a)=  \sqrt{   (x_1-a_1)^2 + (x_2-a_2)^2}.\]</span></p>
+<p><span class="math display">\[d(x,a)=  ||\mathbf x - \mathbf a|| = \sqrt{   (x_1-a_1)^2 + (x_2-a_2)^2}.\]</span></p>
 <div class="definition">
 <p><span id="def:defcontn" class="definition"><strong>Definition 10.1  (Stetigkeit für Funktionen von n Variablen) </strong></span>Eine Funktion <span class="math inline">\(f\)</span> in <span class="math inline">\(\mathbb {R}^n\)</span> ist stetig im Punkt <span class="math inline">\({\bf a} = (a_1,\ldots, a_n)^\top\)</span>, wenn für jedes <span class="math inline">\(\varepsilon&gt;0\)</span> ein <span class="math inline">\(\delta&gt;0\)</span> existiert, sodass aus <span class="math inline">\(||{\bf x} - {\bf a}||&lt;\delta\)</span> folgt <span class="math inline">\(||f({\bf x}) - f({\bf a})||&lt;\varepsilon.\)</span></p>
 </div>

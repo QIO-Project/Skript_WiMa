@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematikim Ferienkursformat." />
   
 
-<meta name="author" content="Maria Osipenko 2026-03-17" />
+<meta name="author" content="Maria Osipenko 2026-03-18" />
 
 
 
@@ -389,7 +389,7 @@ reelle Konstanten.
 <div class="example">
 <p><span id="exm:ints2" class="example"><strong>Beispiel 7.4  (Anwendung der Regeln und des Theorems <a href="integralrechnung.html#thm:thregint">7.2</a>) </strong></span></p>
 <ul>
-<li><p><span class="math inline">\(\int dx = \int \underbrace{12x}_{3\cdot4x}\cdot e^{2x^2+1} \cdot dx \stackrel{Thm.7.2 i}{=} 3\cdot{\color{red}{\int 4x\cdot e^{2x^2+1} \cdot dx}} = 3\cdot\color{red}{e^{2x^2+1} }+ c\)</span> (Regel 8 mit <span class="math inline">\(g(x) = 2x^2+1\)</span> und <span class="math inline">\(g^\prime(x)=4x\)</span>).</p></li>
+<li><p><span class="math inline">\(\int 12x \cdot e^{2x^2+1} \cdot dx = \int \underbrace{12x}_{3\cdot4x}\cdot e^{2x^2+1} \cdot dx \stackrel{Thm.7.2 i}{=} 3\cdot{\color{red}{\int 4x\cdot e^{2x^2+1} \cdot dx}} = 3\cdot\color{red}{e^{2x^2+1} }+ c\)</span> (Regel 8 mit <span class="math inline">\(g(x) = 2x^2+1\)</span> und <span class="math inline">\(g^\prime(x)=4x\)</span>).</p></li>
 <li><p><span class="math inline">\(\int \big(\underbrace{\frac2{3x+4}}_{\frac{2\cdot 1}{3x+4}} + e^x\big)dx\stackrel{Thm.7.2 i ,ii}{=} 2\cdot\color{red}{\int \frac1{3x+4}dx} + \color{green}{\int e^xdx}= 2\cdot\color{red}{\frac13\ln|3x+4|} + \color{green}{e^x} + c\)</span>
 (Regel 4 mit <span class="math inline">\(a=3\)</span>)</p></li>
 </ul>
@@ -590,7 +590,7 @@ Wie man die Stammfunktion kalkuliert.
 </details>
 <hr />
 <p><br></p>
-<p>Die Fläche auf <span class="math inline">\([0,5;1]\)</span> ist:</p>
+<p>Die Fläche auf <span class="math inline">\([1;2]\)</span> ist:</p>
 <p><span class="math display">\[\begin{align}\int_{1}^{2} x^3 + xe^{x^2}dx &amp;= \left[ \frac14x^4 + \frac 12 \cdot e^{x^2} \right] _{1}^2\\
 &amp;= \frac14 \cdot 2^4 + \frac 12 \cdot e^{2^2}- \frac14 \cdot 1^4 - \frac 12 \cdot e^{1^2} \\
 &amp;= 29.69.
@@ -741,8 +741,8 @@ Hinweis: Schreibe das Integral als: \(\int_{0}^{20}f(x)dx + \int_{20}^{x_0}f(x)d
  // Generate a random question
     const questionObj710 = generateQuestion_num(710);
 // Display the question
-    document.getElementById('question-text710').textContent = "Kalkulieren \\(F(x_0)=\\int_{0}^{x_0}f(x)dx\\) für \\(x_0="+(questionObj710.question[0]*10-5) + ".\\)";
-    questionObj710.answer = -0.25+0.025*(questionObj710.question[0]*10-5)-0.000125*Math.pow((questionObj710.question[0]*10-5),2);
+    document.getElementById('question-text710').textContent = "Kalkulieren \\(F(x_0)=\\int_{0}^{x_0}f(x)dx\\) für \\(x_0="+(40+questionObj710.question[1]) + ".\\)";
+    questionObj710.answer = -0.25+0.025*(40+questionObj710.question[1])-0.000125*Math.pow((40+questionObj710.question[1]),2);
 
 </script>
 </div>

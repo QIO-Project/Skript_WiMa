@@ -178,8 +178,6 @@ exm:mmult
 exm:mmultlgs
 thm:thmmmult
 exr:exrmmult
-def:defidempotenz
-exr:idempo
 exr:exrmmult2
 exm:exmntkonsum
 exm:exregwanderung
@@ -200,7 +198,6 @@ exm:detmat33
 thm:thmdeter
 exm:determinante
 exm:determinanteExcel
-exr:aufdeter
 def:defcontn
 def:defpartableitung
 exm:partialab

@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematikim Ferienkursformat." />
   
 
-<meta name="author" content="Maria Osipenko 2026-03-17" />
+<meta name="author" content="Maria Osipenko 2026-03-18" />
 
 
 
@@ -807,7 +807,7 @@ wobei <span class="math inline">\(A=\begin{pmatrix}
 </div>
 <p>Der folgende Satz enthält einige Eingenschaften der Matrixmultiplikation.</p>
 <div class="theorem">
-<p><span id="thm:thmmmult" class="theorem"><strong>Theorem 9.1  (Eingenschaften der Matrimultiplikation) </strong></span>Es sei <span class="math inline">\(A\)</span> eine <span class="math inline">\(m \times n\)</span> Matrix und seien <span class="math inline">\(B\)</span> und <span class="math inline">\(C\)</span> Matrizen, sodass die folgenden Operationen wohldefiniert sind:</p>
+<p><span id="thm:thmmmult" class="theorem"><strong>Theorem 9.1  (Eingenschaften der Matrixmultiplikation) </strong></span>Es sei <span class="math inline">\(A\)</span> eine <span class="math inline">\(m \times n\)</span> Matrix und seien <span class="math inline">\(B\)</span> und <span class="math inline">\(C\)</span> Matrizen, sodass die folgenden Operationen wohldefiniert sind:</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>Multiplikation mit der Einheitsmatrix:
 <span class="math inline">\(A I_n = A\)</span> und <span class="math inline">\(I_m A = A\)</span>.</p></li>
@@ -838,26 +838,29 @@ wobei <span class="math inline">\(A=\begin{pmatrix}
       0 &amp;\phantom{-}2
     \end{pmatrix}\)</span>.</p>
 </div>
-<p>Matrizen, die die Eigenschaft <span class="math inline">\(AB= BA\)</span> haben, heißen <strong>idempotente</strong> Matrizen.</p>
-<div class="definition">
-<p><span id="def:defidempotenz" class="definition"><strong>Definition 9.11  (Idempotenz) </strong></span>Eine quadratische Matrix <span class="math inline">\(A\)</span> heißt <strong>idempotent</strong>, wenn gilt:
-<span class="math inline">\(A\, A=A\)</span>.</p>
-</div>
-<div class="exercise">
-<p><span id="exr:idempo" class="exercise"><strong>Aufgabe 9.3  (Idempotente Matrizen) </strong></span>Man zeige, dass folgende Matrizen idempotent sind:
-<span class="math display">\[\begin{pmatrix}
-        -1 &amp; 2\\
-        -1 &amp; 2
-      \end{pmatrix}\]</span>
-und
-<span class="math display">\[\displaystyle
+<!--Matrizen, die die Eigenschaft $AB= BA$ haben, heißen **idempotente** Matrizen.
+
+::: {#defidempotenz .definition name="Idempotenz"}
+Eine quadratische Matrix $A$ heißt **idempotent**, wenn gilt:
+$A\, A=A$.
+:::
+
+::: {.exercise #idempo name="Idempotente Matrizen"}
+Man zeige, dass folgende Matrizen idempotent sind:
+\[\begin{pmatrix}
+        -1 & 2\\
+        -1 & 2
+      \end{pmatrix}\]
+    und
+\[\displaystyle
       \begin{pmatrix}
-        \phantom{-}3 &amp; \phantom{-}6\\
-        -1 &amp; -2
-\end{pmatrix}\]</span></p>
-</div>
+        \phantom{-}3 & \phantom{-}6\\
+        -1 & -2
+\end{pmatrix}\]
+:::
+-->
 <div class="exercise">
-<p><span id="exr:exrmmult2" class="exercise"><strong>Aufgabe 9.4  (Matrixmultiplikation II) </strong></span>Es seien</p>
+<p><span id="exr:exrmmult2" class="exercise"><strong>Aufgabe 9.3  (Matrixmultiplikation II) </strong></span>Es seien</p>
 <p><span class="math inline">\(A = \begin{pmatrix} 2 \ 1 \\ 1\ 1 \\ 1 \ 1  \end{pmatrix}\)</span> und</p>
 <p><span class="math inline">\(B = \begin{pmatrix} 1 \ -1 \ \  1 \\ 0 \ \ \ \ \ 2 \ \ \ 1\end{pmatrix}\)</span></p>
 Beide Produkte sind wohldefiniert, aber man erkennt leicht, dass <span class="math inline">\(AB \neq BA\)</span>.
@@ -879,6 +882,8 @@ Antwort
 <p><span class="math inline">\({\bf p}^\top=(p_1 \ \ p_2 \ \ ... \ \ p_n)\)</span></p>
 <p>Die monatlichen Konsumausgaben entsprechen dem Skalarprodukt <span class="math inline">\(E = \bf p^\top x\)</span>:</p>
 <p><span class="math display">\[E= {\bf p^\top x}= (p_{1} \ \ p_{2} \ \ ... \ p_{n}) \begin{pmatrix} x_{1} \\ x_{2} \\ . \\ . \\ x_{n}  \end{pmatrix} =  \sum_{i=1}^{n} p_ix_i.\]</span></p>
+<p>Kauft ein Kunde die folgenden Produktmengen <span class="math inline">\({\bf x}= \begin{pmatrix} 3 \\ 9 \\ 5\end{pmatrix}\)</span> zu den Preisen <span class="math inline">\({\bf p}^\top=(2 \ \ 4 \ \ 10)\)</span> ein, so kalkuliert man die Ausgaben als:</p>
+<p><span class="math display">\[\mathbf {\bf p^\top x} = (2 \ \ 4 \ \ 10)\cdot \begin{pmatrix} 3 \\ 9 \\ 5\end{pmatrix} = 92.\]</span></p>
 </div>
 <div class="example">
 <p><span id="exm:exregwanderung" class="example"><strong>Beispiel 9.11  (Regionale Wanderung) </strong></span>Die Übergangsmatrix aus Beispiel <a href="matrizen-und-grundlegende-matrixoperationen.html#exm:regmigration">9.2</a> beschreibt das Migrationsverhalten der Bevölkerung in drei Regionen.</p>
@@ -896,7 +901,7 @@ Antwort
 <p><span class="math display">\[ {\bf x_n} = P {\bf x}_{n−1} = P^ n  {\bf x_0}.\]</span></p>
 </div>
 <div class="exercise">
-<p><span id="exr:regwand" class="exercise"><strong>Aufgabe 9.5  (Regionale Wanderung) </strong></span>Man bestimme <span class="math inline">\(x_2\)</span>, die Bevölkerung in den drei Regionen am Ende der zweiten Periode.</p>
+<p><span id="exr:regwand" class="exercise"><strong>Aufgabe 9.4  (Regionale Wanderung) </strong></span>Man bestimme <span class="math inline">\(x_2\)</span>, die Bevölkerung in den drei Regionen am Ende der zweiten Periode.</p>
 <details>
 <summary>
 Antwort
@@ -905,7 +910,7 @@ Antwort
 </details>
 </div>
 <div class="exercise">
-<p><span id="exr:kundebest" class="exercise"><strong>Aufgabe 9.6  (Kundenbestellung) </strong></span>Die Kundenbestellungen eines Herstellers sind:</p>
+<p><span id="exr:kundebest" class="exercise"><strong>Aufgabe 9.5  (Kundenbestellung) </strong></span>Die Kundenbestellungen eines Herstellers sind:</p>
 <p>– Kunde 1 bestellt 3 Einheiten des Produkts 1,</p>
 <p>– Kunde 2 bestellt 2 Einheiten des Produkts 1,</p>
 <p>– Kunde 3 bestellt 0 Einheiten des Produkts 1,</p>
@@ -935,7 +940,7 @@ Antwort
 <!--<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_transpon.m4a"></audio>-->
 <p>Wir haben bereits gesehen, dass man durch das Transponieren einen Spaltenvektor zu einem Zeilenvektor und umgekehrt umwandeln kann. Auch Matrizen kann man transponieren und so deren DImensionen vertauschen.</p>
 <div class="definition">
-<p><span id="def:deftransponierte" class="definition"><strong>Definition 9.12  (Transponierte einer Matrix) </strong></span>Es sei <span class="math inline">\(A\)</span> eine <span class="math inline">\(m\times n\)</span> Matrix. Die <strong>transponierte Matrix</strong>
+<p><span id="def:deftransponierte" class="definition"><strong>Definition 9.11  (Transponierte einer Matrix) </strong></span>Es sei <span class="math inline">\(A\)</span> eine <span class="math inline">\(m\times n\)</span> Matrix. Die <strong>transponierte Matrix</strong>
 <span class="math inline">\(A^\top\)</span>, auch geschrieben als <span class="math inline">\(A^\prime\)</span>, ist eine <span class="math inline">\(n\times m\)</span> Matrix,
 die entsteht, indem man die Zeilen (Spalten) von <span class="math inline">\(A\)</span> zu den
 Spalten (Zeilen) von <span class="math inline">\(A^\top\)</span> macht:
@@ -1014,7 +1019,7 @@ zu lösen, müssen wir die Matrix <span class="math inline">\(A\)</span> auf der
 <p>Dafür definieren wir die <strong>Inverse</strong> einer quadratischen Matrix.</p>
 <!--<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_inverse.m4a"></audio>-->
 <div class="definition">
-<p><span id="def:definverse" class="definition"><strong>Definition 9.13  (Inverse einer quadratischen Matrix) </strong></span></p>
+<p><span id="def:definverse" class="definition"><strong>Definition 9.12  (Inverse einer quadratischen Matrix) </strong></span></p>
 <ul>
 <li><p>Es sei <span class="math inline">\(A\)</span> eine quadratische <span class="math inline">\(n\times n\)</span> Matrix. Die <span class="math inline">\(n\times n\)</span> Matrix
 <span class="math inline">\(B\)</span> ist die <strong>inverse Matrix</strong> von <span class="math inline">\(A\)</span>, wenn gilt:
@@ -1312,7 +1317,7 @@ y_{2}
 <p>Bei der Bestimmung der Inversen <span class="math inline">\(A^{-1}\)</span> spielt die besondere Kennzahl - die <strong>Determinante</strong> der ursprunglichen Matrix <span class="math inline">\(A\)</span> - eine entscheidende Rolle. In den nachfolgenden Kapiteln, wird diese Kennzahl gebraucht, um bspw. Maxima und Minima von multivariaten Funktionen zu überprüfen. Im Folgenden, definieren wir diese Kennzahl explizit.</p>
 <!--<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_determinante.m4a"></audio>-->
 <div class="definition">
-<p><span id="def:defdeterminante" class="definition"><strong>Definition 9.14  (Determinante) </strong></span>Es sei <span class="math inline">\(A\)</span> eine <span class="math inline">\(2\times 2\)</span> Matrix. Der Term
+<p><span id="def:defdeterminante" class="definition"><strong>Definition 9.13  (Determinante) </strong></span>Es sei <span class="math inline">\(A\)</span> eine <span class="math inline">\(2\times 2\)</span> Matrix. Der Term
 <span class="math inline">\(a_{22}a_{11}-a_{21}a_{12}\)</span> ist die <strong>Determinante</strong> von <span class="math inline">\(A\)</span>
 und wird mit <span class="math inline">\(|A|\)</span> oder <span class="math inline">\(\det(A)\)</span> bezeichnet.</p>
 </div>
@@ -1401,10 +1406,12 @@ sowie
 <p><span id="exm:determinanteExcel" class="example"><strong>Beispiel 9.19  (Determinante in Excel) </strong></span>In Excel bestimmt man die Determinante einer Matrix mit Hilfe der Funktion =MDET(Bereich).
 <img src="images/mdetexcel.png" /></p>
 </div>
-<div class="exercise">
-<p><span id="exr:aufdeter" class="exercise"><strong>Aufgabe 9.7  (Determinante) </strong></span>Zeigen Sie, dass: <span class="math inline">\(\det(A^{-1})=1/\det(A)\)</span>.</p>
-</div>
-<!--### Rang und Determinante$^\ast$
+<!--
+::: {.exercise #aufdeter name="Determinante"}
+Zeigen Sie, dass: $\det(A^{-1})=1/\det(A)$.
+:::
+
+### Rang und Determinante$^\ast$
 
 Dieser Abschnitt enthält weitere vertiefende Eigenschaften von Matrizen und deren Determinanten, die in weiterführenden quantitativen Kursen von Nutzen sein werden. Bei Interesse, schaue also sich die Sätze und die Beispiele an.
 
