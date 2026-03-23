@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematikim Ferienkursformat." />
   
 
-<meta name="author" content="Maria Osipenko 2026-03-18" />
+<meta name="author" content="Maria Osipenko 2026-03-19" />
 
 
 
@@ -133,8 +133,9 @@
 <li class="chapter" data-level="5.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-ableitung"><i class="fa fa-check"></i><b>5.2</b> Definition der Ableitung</a></li>
 <li class="chapter" data-level="5.3" data-path="differentialrechnung.html"><a href="differentialrechnung.html#differenzierbarkeit"><i class="fa fa-check"></i><b>5.3</b> Differenzierbarkeit</a></li>
 <li class="chapter" data-level="5.4" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungsregeln"><i class="fa fa-check"></i><b>5.4</b> Ableitungsregeln</a></li>
-<li class="chapter" data-level="5.5" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungen-höherer-ordnung"><i class="fa fa-check"></i><b>5.5</b> Ableitungen höherer Ordnung</a></li>
-<li class="chapter" data-level="5.6" data-path="differentialrechnung.html"><a href="differentialrechnung.html#der-satz-von-taylorast"><i class="fa fa-check"></i><b>5.6</b> Der Satz von Taylor<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="5.5" data-path="differentialrechnung.html"><a href="differentialrechnung.html#regel-von-lhôpital"><i class="fa fa-check"></i><b>5.5</b> Regel von L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differentialrechnung.html"><a href="differentialrechnung.html#ableitungen-höherer-ordnung"><i class="fa fa-check"></i><b>5.6</b> Ableitungen höherer Ordnung</a></li>
+<li class="chapter" data-level="5.7" data-path="differentialrechnung.html"><a href="differentialrechnung.html#der-satz-von-taylorast"><i class="fa fa-check"></i><b>5.7</b> Der Satz von Taylor<span class="math inline">\(^\ast\)</span></a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="optimierung.html"><a href="optimierung.html"><i class="fa fa-check"></i><b>6</b> Optimierung</a>
 <ul>
@@ -169,6 +170,7 @@
 <li class="chapter" data-level="9.5" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#determinante-und-inverse-einer-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinante und Inverse einer Matrix</a>
 <ul>
 <li class="chapter" data-level="9.5.1" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#mehr-zur-determinante"><i class="fa fa-check"></i><b>9.5.1</b> Mehr zur Determinante</a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrizen-und-grundlegende-matrixoperationen.html"><a href="matrizen-und-grundlegende-matrixoperationen.html#rang-und-determinanteast"><i class="fa fa-check"></i><b>9.5.2</b> Rang und Determinante<span class="math inline">\(^\ast\)</span></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="analysis-mit-n-veränderlichen.html"><a href="analysis-mit-n-veränderlichen.html"><i class="fa fa-check"></i><b>10</b> Analysis mit <span class="math inline">\(n\)</span> Veränderlichen</a>
@@ -286,7 +288,9 @@ function checkAnswer_num(q) {
 <p>Ohne Nebenbedingungen ist die mögliche Lösungsmenge eines Optimierungsproblems der gesamte <span class="math inline">\(\mathbb{R} ^n\)</span>.
 Mit Nebenbedingungen ist die Lösungsmenge eingeschränkt auf eine Teilmenge <span class="math inline">\(X   \subset \mathbb{R} ^n\)</span>.</p>
 <div class="definition">
-<p><span id="def:defstpunkt" class="definition"><strong>Definition 6.2  (Stationäre Punkte) </strong></span>Die Funktion <span class="math inline">\(f: \mathbb{R} ^n  \rightarrow  \mathbb{R}\)</span> hat einen <strong>stationären Punkt</strong> an der Stelle <span class="math inline">\(x^∗ = (x_1^∗ , \ldots , x_n ^∗ )\)</span>, falls gilt:</p>
+<p><span id="def:defstpunkt" class="definition"><strong>Definition 11.1  (Stationäre Punkte) </strong></span>Die Funktion <span class="math inline">\(f: \mathbb{R} ^n  \rightarrow  \mathbb{R}\)</span> hat einen <strong>stationären Punkt</strong> an der Stelle <span class="math inline">\(\mathbf x^∗ = (x_1^∗ , \ldots , x_n ^∗ )\)</span>, falls gilt:</p>
+<p><span class="math display">\[\nabla \mathbf f(\mathbf x^∗) = \mathbf 0,\]</span></p>
+<p>bzw.:</p>
 <p><span class="math display">\[\begin{align}f_1(x_1^∗ , \ldots , x_n^∗) &amp;= 0\\
 f_2(x_1^∗ , \ldots , x_n^∗) &amp;=0\\
 &amp;\vdots\\
@@ -301,7 +305,7 @@ Wie im univariaten Fall ist eine <em>notwendige Bedingung</em> dafür, dass <spa
 <p><span id="thm:thmnotbedn" class="theorem"><strong>Theorem 11.1  (Notwendige Bedingungen) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R} ^n   \rightarrow  \mathbb{R}\)</span> differenzierbar. Falls <span class="math inline">\(f\)</span> ein lokales Maximum <span class="math inline">\(\color{red}{\text{(ein lokales Minimum)}}\)</span> an der Stelle <span class="math inline">\(x^∗ = (x_1^∗ ,\ldots. , x_n ^∗)\)</span> hat, also</p>
 <p><span class="math inline">\(f (x_1^∗ , \ldots , x_n^∗) ≥ f (x_1,\ldots , x_n)\)</span>
 <span class="math inline">\(\color{red}{f (x_1^∗ , \ldots , x_n^∗) \leq f (x_1,\ldots , x_n)}\)</span></p>
-<p>für alle Punkte <span class="math inline">\((x_1, \ldots , x_n)\)</span> in einer Umgebung von <span class="math inline">\(x^∗\)</span> , dann gilt</p>
+<p>für alle Punkte <span class="math inline">\((x_1, \ldots , x_n)\)</span> in einer Umgebung von <span class="math inline">\(x^∗\)</span> , dann gilt <span class="math inline">\(\nabla \mathbf f(\mathbf x^*) = \mathbf 0\)</span>, bzw.</p>
 <p><span class="math display">\[\begin{align*}f_1(x_1^∗, \ldots , x_n ^∗ )&amp; = 0\\
 f_2(x_1^∗, \ldots , x_n^∗ )&amp; = 0\\
   &amp;~~~\vdots\\
@@ -316,15 +320,16 @@ f_n(x_1^∗, \ldots , x_n^∗)&amp; = 0.
 <div class="example">
 <p><span id="exm:monprofitn" class="example"><strong>Beispiel 11.1  (Preisdiskriminierung im Monopol) </strong></span>Ein Monopolist verkauft ein identisches Produkt in zwei getrennten Märkten.</p>
 <p>Die inversen Nachfragefunktionen sind</p>
-<p><span class="math inline">\(p_1(x_1) = 12 − x_1\)</span></p>
-<p><span class="math inline">\(p_2(x_2) = 10 − 2x_2\)</span>,</p>
+<p><span class="math inline">\(p_1(x_1) = 12 − x_1,\)</span></p>
+<p><span class="math inline">\(p_2(x_2) = 10 − 2x_2,\)</span></p>
 <p>wobei <span class="math inline">\(p_i\)</span> die Preise und <span class="math inline">\(x_i\)</span> die Outputmengen auf den jeweiligen Märkten sind.</p>
-<p>Die Kostenfunktion der Firma ist <span class="math inline">\(C(x_1,x_2) = 1/2 (x_1 + x_2)^2\)</span> .</p>
-<p>Die Gewinnfunktion ist folglich</p>
-<p><span class="math inline">\(\pi(x_1,x_2) = p_1x_1 + p_2x_2 − C(x_1,x_2) = 12x_1 − x_1^2 + 10x_2 − 2x_2^2 − 1/2 (x_1 + x_2)^2\)</span> .</p>
+<p>Die Kostenfunktion der Firma ist</p>
+<p><span class="math inline">\(C(x_1,x_2) = 1/2 (x_1 + x_2)^2.\)</span></p>
+<p>Die Gewinnfunktion ist folglich:</p>
+<p><span class="math inline">\(\pi(x_1,x_2) = p_1x_1 + p_2x_2 − C(x_1,x_2) = 12x_1 − x_1^2 + 10x_2 − 2x_2^2 − 1/2 (x_1 + x_2)^2.\)</span></p>
 <p>Die Bedingungen erster Ordnung lauten:</p>
-<p><span class="math inline">\(\pi_1(x_1^∗,x_2^∗) = 12 − 2_1x^∗ − (x_1^∗ + x_2^∗ ) = 0\)</span>
-<span class="math inline">\(\pi_2(x_1^∗,x_2^∗) = 10 − 4x_2^∗ − (x_1^∗ + x_2^∗ ) = 0\)</span></p>
+<p><span class="math inline">\(\pi_1(x_1^∗,x_2^∗) = 12 − 2x_1^∗ − (x_1^∗ + x_2^∗ ) = 0,\)</span></p>
+<p><span class="math inline">\(\pi_2(x_1^∗,x_2^∗) = 10 − 4x_2^∗ − (x_1^∗ + x_2^∗ ) = 0.\)</span></p>
 <p>Diese Bedingungen zeigen, dass zur Gewinnmaximierung notwendigerweise die Grenzerträge in beiden Märkten gleich sein müssen, da die Grenzkosten <span class="math inline">\((x_1^∗ + x_2^∗ )\)</span> identisch sind.</p>
 <p>Die gewinnmaximierenden Angebotsmengen sind dann: <span class="math inline">\(x_1^∗ = 3,57\)</span> und <span class="math inline">\(x_2^∗ = 1,29\)</span> (höherer Verkauf in Markt <span class="math inline">\(1\)</span>).</p>
 <p><img src="images/monprofit.png" /></p>
@@ -337,11 +342,12 @@ f_n(x_1^∗, \ldots , x_n^∗)&amp; = 0.
 <p>Die Bedingungen erster Ordnung sind lediglich <strong>notwendig</strong>, aber <strong>nicht hinreichend</strong> für einen Extremwert.</p>
 <p>Bedingungen zweiter Ordnung ermöglichen die Prüfung, ob es sich bei einem stationären Punkt um ein Minimum oder ein Maximum handelt.</p>
 <p>Intuitiv: Falls an einem stationären Punkt <span class="math inline">\(x^∗\)</span> eine kleine Bewegung in eine <strong>beliebige Richtung</strong> weg von <span class="math inline">\(x^∗\)</span> mit einem abnehmenden (zunehmenden) Funktionswert einhergeht, dann hat <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\(x^∗\)</span> ein lokales Maximum (Minimum).
-Wir betrachten die Bedingungen zweiter Ordnung im bivariaten Fall (<span class="math inline">\(n = 2\)</span>).</p>
+Wir betrachten die Bedingungen zweiter Ordnung im bivariaten Fall (<span class="math inline">\(n = 2.\)</span>)</p>
 <div class="theorem">
 <p><span id="thm:thmbzo2" class="theorem"><strong>Theorem 11.2  (Bedingungen zweiter Ordnung) </strong></span>Es sei <span class="math inline">\(f: \mathbb{R} ^2  \rightarrow  \mathbb{R}\)</span> eine Funktion mit stetigen zweiten partiellen Ableitungen in einer Umgebung des stationären Punkts <span class="math inline">\((x_1^∗ , x_2^∗ )\)</span>.</p>
-<p>Setze (Interpretation: <span class="math inline">\(D\)</span> ist die <strong>Determinante der Hesse-Matrix</strong>.)</p>
+<p>Setze</p>
 <p><span class="math display">\[D = f_{x_1x_1} (x_1^∗ ,x_2^∗ ) f_{x_2x_2} (x_1^∗,x_2^∗ ) − f_{x_1x_2}^2 (x_1^∗ ,x_2^∗ ) .\]</span></p>
+<p>(Interpretation: <span class="math inline">\(D\)</span> ist die <strong>Determinante der Hesse-Matrix</strong>.)</p>
 <ol style="list-style-type: lower-roman">
 <li><p>Falls <span class="math inline">\(D &gt; 0\)</span> und <span class="math inline">\(f_{x_1x_1} (x_1^∗ ,x_2^∗ ) &gt; 0\)</span>, dann hat <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span> ein lokales Minimum.</p></li>
 <li><p>Falls <span class="math inline">\(D &gt; 0\)</span> und <span class="math inline">\(f_{x_1x_1} (x_1^∗ ,x_2^∗ ) &lt; 0\)</span>, dann hat <span class="math inline">\(f\)</span> an der Stelle <span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span> ein lokales Maximum.</p></li>
@@ -478,34 +484,72 @@ Antwort
 <p>Dann existiert eine reelle Zahl <span class="math inline">\(\lambda^∗\)</span> , sodass <span class="math inline">\((x_1^∗, x_2^∗,\lambda^∗)\)</span> ein stationärer Punkt der Lagrange-Funktion</p>
 <p><span class="math display">\[\mathcal{L} (x_1,x_2, \lambda)=f(x_1,x_2)+  \lambda   g(x_1,x_2) \]</span></p>
 <p>ist.</p>
-<p>Mit anderen Worten: an der Stelle <span class="math inline">\((x_1^∗, x_2^∗,\lambda^∗)\)</span> gilt:</p>
+<p>Mit anderen Worten: an der Stelle <span class="math inline">\((x_1^∗, x_2^∗,\lambda^∗)\)</span> gilt <span class="math inline">\(\nabla \mathcal L=\mathbf 0,\)</span>
+bzw.</p>
 <p><span class="math display">\[\begin{align}\frac{ \partial \mathcal{L}  }{ \partial  x_1  } &amp;=0,\\
 \frac{ \partial \mathcal{L}  }{ \partial  x_2  } &amp;=0,\\
 \frac{ \partial \mathcal{L}  }{ \partial  \lambda  } &amp;=0.
 \end{align}\]</span></p>
 </div>
+<!--::: {.example #optlagr name="Optimierung mit Lagrange-Methode"}
+Wir lösen das folgende Optimierungsproblem:
+
+\[\max_{ x_1,x_2} x_1^{0,25} x_2^{0,75}\]
+
+unter der Bedingung, dass
+
+\[100 − 2x_1 − 4x_2 = 0.\]
+
+Die Lagrange-Funktion ist
+
+\[\mathcal{L} (x_1,x_2, \lambda)= x_1^{0,25}x_2^{0,75} + \lambda(100-2x_1-4x_2).\]
+
+Die Bedingungen erster Ordnung lauten:
+
+\begin{align}0,25x_1^{ −0,75} x_2{ 0,75} − 2\lambda &= 0\\
+
+0,75x_1^{ 0,25} x_2^{−0,25} − 4\lambda &= 0\\
+
+100 − 2x_1 − 4x_2 &= 0
+\end{align}
+
+Eliminieren von \(λ\) in den ersten beiden Gleichungen ergibt
+
+\(x_2 = 3/ 2 x_1\)
+
+und Substituieren in die dritte Gleichung ergibt
+
+\(x_1^∗ = 12,5\) und \(x_2^∗ = 18,75\).
+
+Für \(λ^∗\) erhalten wir \(λ^∗ = 0,25x_1^{ −0,75} x_2^{ 0,75} /2 = 0,75x_1^{ 0,25} x_2^{ −0,25} /4 = 0,169425\).
+
+![](images/lagropt.png)
+
+Die grüne Linie enthält alle Funktionswerte, die die Restriktion erfüllen.
+
+Der rote Punkt markiert das Maximum auf der Restriktionsmenge.
+:::
+
+-->
 <div class="example">
-<p><span id="exm:optlagr" class="example"><strong>Beispiel 11.4  (Optimierung mit Lagrange-Methode) </strong></span>Wir lösen das folgende Optimierungsproblem:</p>
-<p><span class="math display">\[\max_{ x_1,x_2} x_1^{0,25} x_2^{0,75}\]</span></p>
-<p>unter der Bedingung, dass</p>
-<p><span class="math display">\[100 − 2x_1 − 4x_2 = 0.\]</span></p>
-<p>Die Lagrange-Funktion ist</p>
-<p><span class="math display">\[\mathcal{L} (x_1,x_2, \lambda)= x_1^{0,25}x_2^{0,75} + \lambda(100-2x_1-4x_2).\]</span></p>
-<p>Die Bedingungen erster Ordnung lauten:</p>
-<p><span class="math display">\[\begin{align}0,25x_1^{ −0,75} x_2{ 0,75} − 2\lambda &amp;= 0\\
+<p><span id="exm:nutzenmaxl" class="example"><strong>Beispiel 11.4  (Nutzenmaximierung I) </strong></span>Wir betrachten das Beispiel der Nutzenmaximierung <a href="#exm:nutzenmax"><strong>??</strong></a> aus Kapitel 1.</p>
+<p>Das zu lösende Problem lautet:</p>
+<p><span class="math display">\[\max_{x,y} U(x,y) = \max_{x,y} \left(\sqrt x + \sqrt y\right),\]</span></p>
+<p>unter der Bedingung <span class="math inline">\(x + 3y = 100\)</span> (Budgetrestriktion).</p>
+<p>Für die Lagrange-Methode schreiben wir die Budgetrestriktion in der Form <span class="math inline">\(100 − x − 3y = 0\)</span>.</p>
+<p>Die Lagrange-Funktion ist:</p>
+<p><span class="math display">\[\mathcal{L} (x,y, \lambda)= \sqrt{x} +  \sqrt{y} + \lambda (100-x-3y).\]</span></p>
+<p>Die Bedingungen erster Ordnung sind:</p>
+<p><span class="math display">\[\begin{align}\frac{ \partial  \mathcal{L}  }{ \partial x } (x,y, \lambda )&amp;= \frac{1}{2 \sqrt{x} } -  \lambda =0  \\
 
-0,75x_1^{ 0,25} x_2^{−0,25} − 4\lambda &amp;= 0\\
+\frac{ \partial  \mathcal{L}  }{ \partial y } (x,y, \lambda )&amp;= \frac{1}{2 \sqrt{y} } -  3\lambda =0  \\
 
-100 − 2x_1 − 4x_2 &amp;= 0
+\frac{ \partial  \mathcal{L}  }{ \partial  \lambda  } (x,y, \lambda )&amp;= 100-x-3y =0.
+
 \end{align}\]</span></p>
-<p>Eliminieren von <span class="math inline">\(λ\)</span> in den ersten beiden Gleichungen ergibt</p>
-<p><span class="math inline">\(x_2 = 3/ 2 x_1\)</span></p>
-<p>und Substituieren in die dritte Gleichung ergibt</p>
-<p><span class="math inline">\(x_1^∗ = 12,5\)</span> und <span class="math inline">\(x_2^∗ = 18,75\)</span>.</p>
-<p>Für <span class="math inline">\(λ^∗\)</span> erhalten wir <span class="math inline">\(λ^∗ = 0,25x_1^{ −0,75} x_2^{ 0,75} /2 = 0,75x_1^{ 0,25} x_2^{ −0,25} /4 = 0,169425\)</span>.</p>
-<p><img src="images/lagropt.png" /></p>
-<p>Die grüne Linie enthält alle Funktionswerte, die die Restriktion erfüllen.</p>
-<p>Der rote Punkt markiert das Maximum auf der Restriktionsmenge.</p>
+<p>Die Lösung ist <span class="math inline">\(x^∗ = 75\)</span>, <span class="math inline">\(y^∗ = 100/12 = 8,3333\)</span> und <span class="math inline">\(λ^∗ = 0,05774\)</span>.</p>
+<p>Hierbei drückt <span class="math inline">\(\lambda^∗\)</span> den Grenznutzen aus, d.h. die Änderungsrate des optimalen Nutzen bei einer Lockerung der Budgetrestriktion.</p>
+<p><img src="images/nutzenm.png" /></p>
 </div>
 <p>Im Allgemeinem gilt:</p>
 <ul>
@@ -530,7 +574,7 @@ Antwort
 \mathcal L^*_{31}&amp; \mathcal L^*_{32}&amp; \mathcal L^*_{33}
 \end{pmatrix} = \begin{bmatrix} f_{11}+ \lambda^*g_{11} \ \ \ f_{12}+ \lambda ^*g_{12} \ \ \ g_1 \\ f_{21}+ \lambda^*g_{21} \ \ \ f_{22}+ \lambda ^*g_{22} \ \ \ g_2 \\ g_1 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ g_2 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0 \end{bmatrix}\]</span></p>
 <ul>
-<li>Die Determinante dieser <span class="math inline">\(3 × 3\)</span> Hesse-Matrix lautet (Jägerzaunregel, siehe <a href="matrizen-und-grundlegende-matrixoperationen.html#exm:detmat33">9.17</a>):</li>
+<li>Die Determinante dieser <span class="math inline">\(3 × 3\)</span> Hesse-Matrix lautet (Jägerzaunregel, siehe <a href="#exm:detmat33"><strong>??</strong></a>):</li>
 </ul>
 <p><span class="math display" id="eq:det">\[\begin{align}\det(H^*) &amp;= \mathcal L^*_{11}(\mathcal L^*_{22}\mathcal L^*_{33}-\mathcal L^*_{23}\mathcal L^*_{32})-\mathcal L^*_{12}(\mathcal L^*_{21}\mathcal L^*_{33}-\mathcal L^*_{23}\mathcal L^*_{31}) +\mathcal L^*_{13}(\mathcal L^*_{21}\mathcal L^*_{32}-\mathcal L^*_{22}\mathcal L^*_{31}) \\
 
@@ -548,31 +592,20 @@ Antwort
 <li><p><span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span> ist ein lokales Minimum von <span class="math inline">\(f\)</span> unter der Restriktion <span class="math inline">\(g(x_1,x_2) = 0\)</span>, falls <span class="math inline">\(\det(H^∗) &lt; 0\)</span>.</p></li>
 </ol>
 </div>
+<!--::: {.example #optlagr2 name="Optimierung mit der Lagrange Methode"}
+Wir führen das vorherige Beispiel \@ref(exm:optlagr) fort. 
+
+Die Hesse-Matrix lautet: 
+
+\( H^*(x_1,x_2)= \begin{bmatrix} -  \frac{0,1875x_2^{0,75}}{x_1^{1,75}}    \ \  \frac{0,1875}{x_1^{0,75}x_2^{0,25}}  \ \ -2 \\  \frac{0,1875}{x_1^{0,75}x_2^{0,25}}  \ \  -\frac{0,1875x_1^{0,25}}{x_2^{1,25}}  \ \ -4 \\-2 \ \ \ \ \ \ \ \ \ \  \ \ \ -4 \ \ \ \ \  \ \ \ \ \  \ \ \ \ \ \ \ 0 \end{bmatrix}  \)
+
+Die Determinante an der Stelle \((x_1^∗ , x_2^∗ , λ^∗ )\) ist \(\det(H^*) = 0,5783\). 
+
+Also hat \(f\) ein Maximum an der Stelle \((x_1^∗ , x_2^∗ )\).
+:::
+-->
 <div class="example">
-<p><span id="exm:optlagr2" class="example"><strong>Beispiel 11.5  (Optimierung mit der Lagrange Methode) </strong></span>Wir führen das vorherige Beispiel <a href="optimierung-ii.html#exm:optlagr">11.4</a> fort.</p>
-<p>Die Hesse-Matrix lautet:</p>
-<p><span class="math inline">\(H^*(x_1,x_2)= \begin{bmatrix} -  \frac{0,1875x_2^{0,75}}{x_1^{1,75}}    \ \  \frac{0,1875}{x_1^{0,75}x_2^{0,25}}  \ \ -2 \\  \frac{0,1875}{x_1^{0,75}x_2^{0,25}}  \ \  -\frac{0,1875x_1^{0,25}}{x_2^{1,25}}  \ \ -4 \\-2 \ \ \ \ \ \ \ \ \ \  \ \ \ -4 \ \ \ \ \  \ \ \ \ \  \ \ \ \ \ \ \ 0 \end{bmatrix}\)</span></p>
-<p>Die Determinante an der Stelle <span class="math inline">\((x_1^∗ , x_2^∗ , λ^∗ )\)</span> ist <span class="math inline">\(\det(H^*) = 0,5783\)</span>.</p>
-<p>Also hat <span class="math inline">\(f\)</span> ein Maximum an der Stelle <span class="math inline">\((x_1^∗ , x_2^∗ )\)</span>.</p>
-</div>
-<div class="example">
-<p><span id="exm:nutzenmaxl" class="example"><strong>Beispiel 11.6  (Nutzenmaximierung) </strong></span>Wir betrachten das Beispiel der Nutzenmaximierung <a href="index.html#exm:nutzenmax">1.1</a> aus Kapitel 1.</p>
-<p>Das zu lösende Problem lautet:</p>
-<p><span class="math display">\[\max_{x,y} U(x,y) = \max_{x,y} \left(\sqrt x + \sqrt y\right),\]</span></p>
-<p>unter der Bedingung <span class="math inline">\(x + 3y = 100\)</span> (Budgetrestriktion).</p>
-<p>Für die Lagrange-Methode schreiben wir die Budgetrestriktion in der Form <span class="math inline">\(100 − x − 3y = 0\)</span>.</p>
-<p>Die Lagrange-Funktion ist:</p>
-<p><span class="math display">\[\mathcal{L} (x,y, \lambda)= \sqrt{x} +  \sqrt{y} + \lambda (100-x-3y).\]</span></p>
-<p>Die Bedingungen erster Ordnung sind:</p>
-<p><span class="math display">\[\begin{align}\frac{ \partial  \mathcal{L}  }{ \partial x } (x,y, \lambda )&amp;= \frac{1}{2 \sqrt{x} } -  \lambda =0  \\
-
-\frac{ \partial  \mathcal{L}  }{ \partial y } (x,y, \lambda )&amp;= \frac{1}{2 \sqrt{y} } -  3\lambda =0  \\
-
-\frac{ \partial  \mathcal{L}  }{ \partial  \lambda  } (x,y, \lambda )&amp;= 100-x-3y =0.
-
-\end{align}\]</span></p>
-<p>Die Lösung ist <span class="math inline">\(x^∗ = 75\)</span>, <span class="math inline">\(y^∗ = 100/12 = 8,3333\)</span> und <span class="math inline">\(λ^∗ = 0,05774\)</span>.</p>
-<p>Hierbei drückt <span class="math inline">\(\lambda^∗\)</span> den Grenznutzen aus, d.h. die Änderungsrate des optimalen Nutzen bei einer Lockerung der Budgetrestriktion.</p>
+<p><span id="exm:nutzenmaxll" class="example"><strong>Beispiel 11.5  (Nutzenmaximierung II) </strong></span>Wir betrachten weiterhin das Beispiel der Nutzenmaximierung <a href="optimierung-ii.html#exm:nutzenmaxl">11.4</a>.</p>
 <p>Die Hesse-Matrix is:</p>
 <p><span class="math display">\[H(x,y,\lambda)=\begin{pmatrix}\frac{\partial^2\mathcal L}{\partial x^2}&amp; \frac{\partial^2\mathcal L}{\partial x\partial y}&amp; \frac{\partial^2\mathcal L}{\partial x\partial\lambda}\\
 \frac{\partial^2\mathcal L}{\partial y\partial x}&amp; \frac{\partial^2\mathcal L}{\partial y^2}&amp; \frac{\partial^2\mathcal L}{\partial y\partial\lambda}\\
@@ -584,14 +617,14 @@ Antwort
 \end{pmatrix}
 \]</span></p>
 <p>Das Einsetzen von <span class="math inline">\(x^∗ = 75\)</span>, <span class="math inline">\(y^∗ = 100/12 = 8,3333\)</span> und <span class="math inline">\(λ^∗ = 0,05774\)</span> ergibt:
-<span class="math display">\[H^*=\begin{pmatrix}-0,0003849&amp; 0&amp; -1\\
+<span class="math display">\[H^*=H(x^*,y^*,\lambda^*) = \begin{pmatrix}-0,0003849&amp; 0&amp; -1\\
 0&amp; -0,0103923&amp; -3\\
 -1&amp; -3&amp; \end{pmatrix} \]</span></p>
 <p>Die Determinante der Hesse-Matrix lautet (Formel <a href="optimierung-ii.html#eq:det">(11.1)</a>):</p>
 <p><span class="math display">\[\det(H^*) = \frac{1}{4(x^*)^{3/2}} \cdot (-3)^2 +  \frac{1}{4(y^*)^{3/2}} \cdot (-1)^2 = 0,0139&gt;0,\]</span></p>
 <p>oder in Excel:</p>
-<p><img src="images/mdetbsp2.png" /></p>
-<p>also handelt es sich um ein Maximum.</p>
+<p><img src="images/mdetbsp2.png" />
+also handelt es sich um ein Maximum.</p>
 </div>
 <div class="exercise">
 <p><span id="exr:lagrmeth" class="exercise"><strong>Aufgabe 11.2  (Lagrange Methode) </strong></span>Es sei <span class="math display">\[f(x,y)=3x+2y+5,\]</span> wobei <span class="math inline">\(x&gt;0\)</span>, <span class="math inline">\(y&gt;0\)</span> gilt.</p>

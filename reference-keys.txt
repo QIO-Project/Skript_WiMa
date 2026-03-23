@@ -292,3 +292,6 @@ optimierung-ii
 bedingungen-erster-ordnung
 bedingungen-zweiter-ordnung-1
 optimierung-unter-nebenbedingungen-lagrange-methode
+regel-von-lhôpital
+rang-und-determinanteast
+exm:nutzenmaxll
