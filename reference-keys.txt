@@ -273,5 +273,3 @@ optimierung-ii
 bedingungen-erster-ordnung
 bedingungen-zweiter-ordnung-1
 optimierung-unter-nebenbedingungen-lagrange-methode
-fig:unnamed-chunk-3
-regel-von-lhôpital
