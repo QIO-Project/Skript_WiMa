@@ -46,6 +46,9 @@ def:deflogfun
 def:deffolge
 exm:geldanl
 exm:folgen
+def:defbeschr
+exm:beschf
+def:defmonfolgen
 exr:folgengl
 def:defkonv
 exm:grenzwert
@@ -54,15 +57,11 @@ def:defdiv
 thm:thmkonv
 thm:thmkonv2
 thm:thmkonv3
+thm:thmkonv4
 exm:limits
 exm:limits2
-exm:limits3
 exr:grenzwerte
-exr:grenzwerte2
-def:defbeschr
-exm:beschf
 thm:thm1
-def:defmonfolgen
 thm:monfolge
 exm:konv3
 exr:konv4
@@ -233,10 +232,7 @@ konvergenz-von-folgen
 konvergente-folgen-und-grenzwerte
 divergente-folgen
 wichtige-sätze-zur-konvergenz-von-folgen
-beschränkte-folgen
-monotone-folgen
 reihen
-spezielle-reihen
 geometrische-reihe
 stetigkeit-von-funktionen
 punktweise-stetigkeit

@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematikim Ferienkursformat." />
   
 
-<meta name="author" content="Maria Osipenko 2026-09-13" />
+<meta name="author" content="Maria Osipenko 2026-09-14" />
 
 
 
@@ -110,14 +110,10 @@
 <li class="chapter" data-level="2.2.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#konvergente-folgen-und-grenzwerte"><i class="fa fa-check"></i><b>2.2.1</b> Konvergente Folgen und Grenzwerte</a></li>
 <li class="chapter" data-level="2.2.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#divergente-folgen"><i class="fa fa-check"></i><b>2.2.2</b> Divergente Folgen</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#wichtige-s%C3%A4tze-zur-konvergenz-von-folgen"><i class="fa fa-check"></i><b>2.3</b> Wichtige Sätze zur Konvergenz von Folgen</a>
-<ul>
-<li class="chapter" data-level="2.3.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#beschr%C3%A4nkte-folgen"><i class="fa fa-check"></i><b>2.3.1</b> Beschränkte Folgen</a></li>
-<li class="chapter" data-level="2.3.2" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#monotone-folgen"><i class="fa fa-check"></i><b>2.3.2</b> Monotone Folgen</a></li>
-</ul></li>
+<li class="chapter" data-level="2.3" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#wichtige-s%C3%A4tze-zur-konvergenz-von-folgen"><i class="fa fa-check"></i><b>2.3</b> Wichtige Sätze zur Konvergenz von Folgen</a></li>
 <li class="chapter" data-level="2.4" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#reihen"><i class="fa fa-check"></i><b>2.4</b> Reihen</a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#spezielle-reihen"><i class="fa fa-check"></i><b>2.4.1</b> Spezielle Reihen</a></li>
+<li class="chapter" data-level="2.4.1" data-path="folgen-grenzwerte-und-reihen.html"><a href="folgen-grenzwerte-und-reihen.html#geometrische-reihe"><i class="fa fa-check"></i><b>2.4.1</b> Geometrische Reihe</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="stetigkeit-von-funktionen.html"><a href="stetigkeit-von-funktionen.html"><i class="fa fa-check"></i><b>3</b> Stetigkeit von Funktionen</a>
@@ -288,7 +284,6 @@ Der Konvergenz-Begriff ist fundamental für verschiedene Anwendungen und Konzept
 <li>in der Finanzmathematik;</li>
 <li>in der Analysis (Stetigkeit, Differenzenquotient).</li>
 </ul>
-<p>Von Interesse für uns werden auch die Eigenschaften der Monotonie (ob die Folgenglieder immer größer oder kleiner werden) und der Beschränktheit (ob eine obere oder untere Schranke für Folgenglieder gefunden werden kann) sein. Diese werden uns dabei behilflich sein, Konvergenz festzustellen.</p>
 <p>Wir betrachten zunächst ein Beispiel für Folgen im Kontext einer Geldanlage.</p>
 <div class="example">
 <p><span id="exm:geldanl" class="example"><strong>Beispiel 2.1  (Geldanlage) </strong></span>Nach einer Investition von <span class="math inline">\(82,19\)</span> Euro zum festen jährlichen Zinssatz von <span class="math inline">\(4\%=0,04\)</span> erhält man</p>
@@ -332,6 +327,44 @@ Setzen wir etwa \(n=3\) (für den Monat Juni), dann haben wir \(128.432 \cdot 1,
 <li><p>Obwohl kein Folgenelement den Wert null annimmt, ist der Grenzwert null.</p></li>
 <li><p>Die beiden anderen Folgen nähern sich keinem eindeutigen endlichen Wert an.</p></li>
 </ul>
+<p>Von Interesse für uns werden auch die Eigenschaften der <strong>Beschränktheit</strong> (ob eine obere oder untere Schranke für Folgenglieder gefunden werden kann) und der <strong>Monotonie</strong> (ob die Folgenglieder immer größer oder kleiner werden) und sein. Diese werden uns dabei behilflich sein, Konvergenz festzustellen.</p>
+<div class="definition">
+<p><span id="def:defbeschr" class="definition"><strong>Definition 2.2  (Beschränkte Folge) </strong></span>Eine Folge ist <strong>beschränkt</strong>, falls es eine Zahl <span class="math inline">\(K &gt; 0\)</span> gibt, sodass ein Index <span class="math inline">\(N\)</span> existiert mit
+<span class="math inline">\(a_n &lt; K\)</span> für alle <span class="math inline">\(n &gt; N\)</span> (von oben beschränkt) und</p>
+<p><span class="math inline">\(a_n &gt; −K\)</span> für alle <span class="math inline">\(n &gt; N\)</span> (von unten beschränkt).</p>
+<p>Andernfalls ist die Folge <strong>unbeschränkt</strong>.</p>
+</div>
+<p>Also gilt:</p>
+<p>Eine Folge ist beschränkt genau dann, wenn es eine Zahl <span class="math inline">\(K &gt; 0\)</span> gibt, sodass ein Index <span class="math inline">\(N\)</span> existiert mit</p>
+<p><span class="math inline">\(|a_n| &lt; K\)</span>, für alle <span class="math inline">\(n &gt; N\)</span>.</p>
+<div class="example">
+<p><span id="exm:beschf" class="example"><strong>Beispiel 2.3  (Beschränkte und unbeschränkte Folgen) </strong></span></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(a_n = (-1)^n, \ n = 1,2,3, ...\)</span> ist eine beschränkte Folge (aber konvergiert nicht);</li>
+</ol>
+<p><img src="images/Krahmen1.png" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li><span class="math inline">\(a_n = 1/n, \ n = 1,2,3, ...\)</span> ist beschränkt (und konvergiert);</li>
+</ol>
+<p><img src="images/beschr11.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li><span class="math inline">\(a_n = 2n, \ n = 1,2,3, ...\)</span> ist unbeschränkt, da nicht von oben beschränkt;</li>
+</ol>
+<p><img src="images/unbeschoben1.png" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li><span class="math inline">\(a_n = −n^2 , \ n = 1,2,3, ...\)</span> ist unbeschränkt, da nicht von unten beschränkt;</li>
+</ol>
+<p><img src="images/unbeschunten1.png" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li><span class="math inline">\(a_n = (−2)^n , \ n = 1,2,3, ...\)</span> ist weder von unten noch von oben beschränkt;</li>
+</ol>
+<p><img src="images/unbesch1.png" /></p>
+</div>
+<div class="definition">
+<p><span id="def:defmonfolgen" class="definition"><strong>Definition 2.3  (Monotone Folgen) </strong></span>Eine Folge<span class="math inline">\((a_n) _{ n \in  \mathbb{N} }\)</span> ist <strong>monoton steigend</strong>, falls <span class="math inline">\(a_1 ≤ a_2 ≤ a_3 ≤ ...\)</span> , und sie ist <strong>monoton fallend</strong>, falls <span class="math inline">\(a_1 ≥ a_2 ≥ a_3 ≥ \ldots\)</span> .</p>
+<p>Gilten <span class="math inline">\(&lt;\)</span> bzw. <span class="math inline">\(&gt;\)</span>, so ist die Folge <strong>streng monoton wachsend</strong> bzw. <strong>streng monotone fallend</strong>.</p>
+</div>
+<p>Folge Nummer 3 aus Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:beschf">2.3</a> ist eine streng monoton wachsende Folge. Die Folgen mit den Nummern 2 und 4 sind (streng) monoton fallend.</p>
 <div class="exercise">
 <p><span id="exr:folgengl" class="exercise"><strong>Aufgabe 2.1  (Folgenglieder) </strong></span>Bestimmen Sie die ersten zehn Terme jeder der angegebenen Folgen:</p>
 <ol style="list-style-type: lower-alpha">
@@ -344,11 +377,13 @@ Setzen wir etwa \(n=3\) (für den Monat Juni), dann haben wir \(128.432 \cdot 1,
 <li><span class="math inline">\(f (n) = 3 + [(−1)^n(1/n)]\)</span></li>
 </ol>
 <p>Tipp: Setze jeweils <span class="math inline">\(n=1;2;3;4;...10\)</span> ein, um die ersten 10 Terme zu bestimmen. In Excel kann man eine Zeile mit den <span class="math inline">\(n\)</span>-Werten füllen (<span class="math inline">\(1,2,\ldots,10\)</span>) und die Formel für die Folge eintippen, wobei statt <span class="math inline">\(n\)</span> die Zelle mit <span class="math inline">\(1\)</span> für <span class="math inline">\(n\)</span> ausgewählt wird, und dann anschliessen die Formel für die gesamte Zeile weiter gezogen wird.</p>
+<p>Bestimmen Sie, ob die Folgen monotone bzw. beschränkt sind.</p>
 <details>
 <summary>
 Antwort
 </summary>
-<p><img src="images/folgenglieder.png" /></p>
+<p><img src="images/folgenglieder.png" />
+Monotone Folgen: a-d, beschränkte Folgen: a,b,d,e.</p>
 </details>
 </div>
 <div id="qfolgen" class="quiz">
@@ -416,14 +451,14 @@ Submit
 <div id="konvergente-folgen-und-grenzwerte" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Konvergente Folgen und Grenzwerte<a href="folgen-grenzwerte-und-reihen.html#konvergente-folgen-und-grenzwerte" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="definition">
-<p><span id="def:defkonv" class="definition"><strong>Definition 2.2  (Grenzwert) </strong></span>Die Folge <span class="math inline">\((a_n) _{n\in\mathbb N}\)</span> hat den <strong>Grenzwert</strong> (auch: <strong>Limes</strong>) <span class="math inline">\(a \in  \mathbb{R}\)</span>, falls für jedes beliebige <span class="math inline">\(\varepsilon &gt; 0\)</span> ein Index <span class="math inline">\(N\)</span> existiert, sodass gilt:</p>
+<p><span id="def:defkonv" class="definition"><strong>Definition 2.4  (Grenzwert) </strong></span>Die Folge <span class="math inline">\((a_n) _{n\in\mathbb N}\)</span> hat den <strong>Grenzwert</strong> (auch: <strong>Limes</strong>) <span class="math inline">\(a \in  \mathbb{R}\)</span>, falls für jedes beliebige <span class="math inline">\(\varepsilon &gt; 0\)</span> ein Index <span class="math inline">\(N\)</span> existiert, sodass gilt:</p>
 <p><span class="math inline">\(|a_n − a| &lt; \varepsilon\)</span>, für alle <span class="math inline">\(n &gt; N\)</span>.</p>
 <p>Eine Folge mit Grenzwert heißt <strong>konvergent</strong>, und der Grenzwert wird geschrieben als</p>
 <p><span class="math display">\[\lim\limits_{n \rightarrow  \infty } a_n=a\]</span></p>
 <p>Alternative Schreibweise: <span class="math inline">\(a_n \rightarrow a\)</span> für <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:grenzwert" class="example"><strong>Beispiel 2.3  (Konvergenz überprüfen) </strong></span>Wir untersuchen die Folge <span class="math inline">\((a_n) _{n\in\mathbb N}\)</span> mit <span class="math inline">\(a_n = 1/n\)</span>.</p>
+<p><span id="exm:grenzwert" class="example"><strong>Beispiel 2.4  (Konvergenz überprüfen) </strong></span>Wir untersuchen die Folge <span class="math inline">\((a_n) _{n\in\mathbb N}\)</span> mit <span class="math inline">\(a_n = 1/n\)</span>.</p>
 <p>Zunächst zur Anschauung: Wählen Sie <span class="math inline">\(\varepsilon = 0,01\)</span>. Dann prüft man leicht: für jedes <span class="math inline">\(n &gt; 100\)</span> gilt <span class="math inline">\(|a_n − 0| &lt; 1/100 = 1/100 = 0,01 = \varepsilon\)</span>.</p>
 <p>Also ist der Abstand der Folgenterme <span class="math inline">\({a}_{101},  {a}_{102}\)</span> von <span class="math inline">\(0\)</span> kleiner als <span class="math inline">\(\varepsilon = 0,01\)</span>.</p>
 <p>Überprüfen Sie die obige Eigenschaft für <span class="math inline">\(\varepsilon= 0,002\)</span> und <span class="math inline">\(n &gt; 500\)</span>.</p>
@@ -432,7 +467,7 @@ Submit
 <p><img src="images/konv_folge.png" /></p>
 </div>
 <div class="example">
-<p><span id="exm:konvfolgen" class="example"><strong>Beispiel 2.4  (Einige konvergente Folgen und deren Grenzwert) </strong></span>Beispiele für konvergente Folgen und deren Grenzwert:</p>
+<p><span id="exm:konvfolgen" class="example"><strong>Beispiel 2.5  (Einige konvergente Folgen und deren Grenzwert) </strong></span>Beispiele für konvergente Folgen und deren Grenzwert:</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(\lim\limits_{n \rightarrow  \infty }  \frac{1}{n} =0\)</span></p></li>
 <li><p><span class="math inline">\(\lim\limits_{n \rightarrow  \infty }  \frac{n}{n+1} =1\)</span></p></li>
@@ -445,7 +480,7 @@ Submit
 <div id="divergente-folgen" class="section level3 hasAnchor" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Divergente Folgen<a href="folgen-grenzwerte-und-reihen.html#divergente-folgen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="definition">
-<p><span id="def:defdiv" class="definition"><strong>Definition 2.3  (Divergente Folge) </strong></span>Eine Folge ohne Grenzwert divergiert.</p>
+<p><span id="def:defdiv" class="definition"><strong>Definition 2.5  (Divergente Folge) </strong></span>Eine Folge ohne Grenzwert divergiert.</p>
 </div>
 <!--<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_divergenz.m4a"></audio>-->
 <p>Man unterscheidet die folgenden Formen von Divergenz:</p>
@@ -487,13 +522,45 @@ Dann gilt:</p>
 <li><p><span class="math inline">\(\lim\limits_{n \rightarrow  \infty } (a_n/b_n)= 0\)</span></p></li>
 </ol>
 </div>
-<p>Bemerkung:</p>
-<p>Falls <span class="math inline">\(\lim\limits_{n \rightarrow  \infty } a_n= 0\)</span> , so kann der Grenzwert des Produkts, <span class="math inline">\(\lim\limits_{n \rightarrow \infty} (a_n\cdot b_n)\)</span>, konvergieren oder divergieren.</p>
-<p>Eine Folgerung aus (iii) ist: <span class="math inline">\(\lim\limits_{n \rightarrow  \infty } 1/b_n= 0\)</span>.</p>
+<!--Bemerkung:
+
+Falls \( \lim\limits_{n \rightarrow  \infty } a_n= 0  \) , so kann der Grenzwert des Produkts, \( \lim\limits_{n \rightarrow \infty} (a_n\cdot b_n)\), konvergieren oder divergieren. 
+
+Eine Folgerung aus (iii) ist: \( \lim\limits_{n \rightarrow  \infty } 1/b_n= 0  \).-->
 <div class="theorem">
 <p><span id="thm:thmkonv3" class="theorem"><strong>Theorem 2.3  (Konvergenz von Folgen III) </strong></span>Seien <span class="math inline">\(\displaystyle (b_{n})_{n\in \mathbb {N} }\displaystyle (c_{n})_{n\in \mathbb {N} }\)</span> zwei Folgen und sei <span class="math inline">\({\displaystyle a\in \mathbb {R} }\)</span>.
 Die Folge <span class="math inline">\({\displaystyle (a_{n})_{n\in \mathbb {N} }}\)</span> definiert durch
 <span class="math inline">\({\displaystyle a_{n}={\begin{cases}b_{\frac {n+1}{2}}&amp;{\text{für }}n{\text{ ungerade}}\\c_{\frac {n}{2}}&amp;{\text{für }}n{\text{ gerade}}\end{cases}}}\)</span> konvergiert genau dann gegen <span class="math inline">\({\displaystyle a}\)</span>, wenn die Folgen <span class="math inline">\({\displaystyle (b_{n})_{n\in \mathbb {N} }}\)</span> und <span class="math inline">\({\displaystyle (c_{n})_{n\in \mathbb {N} }}\)</span> gegen <span class="math inline">\({\displaystyle a}\)</span> konvergieren.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:thmkonv4" class="theorem"><strong>Theorem 2.4  (Konvergenz von Folgen IV) </strong></span>Es sei <span class="math inline">\(f: D \to \mathbb{R}\)</span> eine Funktion und <span class="math inline">\((b_n)\)</span> eine Folge in <span class="math inline">\(D\)</span> mit dem Grenzwert <span class="math inline">\(b\)</span>. Wenn <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(b\)</span> stetig ist (siehe nächstes Kapitel), gilt für die zusammengesetzte Folge <span class="math inline">\(a_n = f(b_n)\)</span>:</p>
+<p><span class="math display">\[\lim _{n\rightarrow \infty } a_n= \lim _{n\rightarrow \infty }f(b_{n})=f\left(\lim _{n\rightarrow \infty }b_{n}\right)=f(b).\]</span></p>
+</div>
+<p>Hier sind ein Paar <strong>Tipps für Grenzwertfindung</strong>:</p>
+<ul>
+<li><p>Falls ein Bruch <span class="math inline">\(\frac{a_n}{b_n}\)</span> in der Form <span class="math inline">\(\frac\infty\infty\)</span> oder <span class="math inline">\(\frac00\)</span> vorliegt: finde die größte Potenz von <span class="math inline">\(n\)</span> im Nenner und klammere diese in Zähler und Nenner aus. Kürze anschliessend und schaue, wo Folgen mit Grenzwert Null entstanden sind.</p></li>
+<li><p>Falls <span class="math inline">\(a_n\)</span> <span class="math inline">\((-1)^n\)</span> enthält, betrachte die Teilfolgen für <span class="math inline">\(n\)</span> gerade und ungerade separat und wende den Satz <a href="folgen-grenzwerte-und-reihen.html#thm:thmkonv3">2.3</a> an.</p></li>
+</ul>
+<!--- Falls \(a_n - b_n\) in der Form \(\infty - \infty\) vorliegt, nutze die Umformung \[a-b=\frac{(a-b)(a+b)}{a+b} = \frac{a^2-b^2}{a+b}.\] Verwende danach den obigen Tipp.-->
+<!--- Falls \(a_n\) in der Form \(const^\infty\) vorliegt, bringe den Ausdruck in die Form \((1+\frac xn)^n\) und nutze \(\lim_{n\rightarrow \infty}(1+\frac xn)^n=e^x\).-->
+<div class="example">
+<p><span id="exm:limits" class="example"><strong>Beispiel 2.6  (Grenzwertfindung I) </strong></span><br>Finde den Grenzwert:</p>
+<p><span class="math display">\[\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n}.\]</span></p>
+<details>
+<summary>
+Grenzwertberechnung
+</summary>
+<p>Wir fangen damit an, dass wir uns den Nenner anschauen und die höchste Potenz von <span class="math inline">\(n\)</span> raussuchen (hier ist es <span class="math inline">\(n^2\)</span>). Dann klammern wir <span class="math inline">\(n^2\)</span> im Zähler und im Nenner aus. (D.h. jeder Summand wird mit durch <span class="math inline">\(n^2\)</span> geteilt.):</p>
+<p><span class="math display">\[\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n} = \lim_{n\rightarrow\infty}\frac{n^2\cdot\left(\frac{2n^2}{n^2}-\frac{4n}{n^2}+\frac5{n^2}\right)}{n^2\cdot\left(\frac6{n^2}-\frac{5n^2}{n^2}+\frac{7n}{n^2}\right)}.\]</span></p>
+<p>Nun kürzen wir die einzelne Brüche im Zähler und Nenner soweit wir können. Auch <span class="math inline">\(n^2/n^2\)</span> im grossen Bruch kann gekürzt werden:</p>
+<p><span class="math display">\[= \lim_{n\rightarrow\infty}\frac{n^2\cdot\left(2-\frac{4}{n}+\frac5{n^2}\right)}{n^2\cdot\left(\frac6{n^2}-5+\frac{7}{n}\right)} = \lim_{n\rightarrow\infty}\frac{2-\frac{4}{n}+\frac5{n^2}}{\frac6{n^2}-5+\frac{7}{n}}.\]</span></p>
+<p>Im nächsten Schritt, wenden wir <span class="math inline">\(\lim_{n\rightarrow\infty}\)</span> an jeden SUmmand im Zähler und im Nenner einzeln:</p>
+<p><span class="math display">\[=\frac{\lim_{n\rightarrow\infty}\left(2-\frac{4}{n}+\frac5{n^2}\right)}{\lim_{n\rightarrow\infty}\left(\frac6{n^2}-5+\frac{7}{n}\right)} = \frac{\lim_{n\rightarrow\infty}2-\lim_{n\rightarrow\infty}\frac{4}{n}+\lim_{n\rightarrow\infty}\frac5{n^2}}{\lim_{n\rightarrow\infty}\frac6{n^2}-\lim_{n\rightarrow\infty}5+\lim_{n\rightarrow\infty}\frac{7}{n}}.\]</span></p>
+<p>Wie wir gesehen haben, alle Folgen, wo eine Zahl durch <span class="math inline">\(n, n^2,n^3,\ldots\)</span> geteilt wird, konvergieren gegen Null bei steigendem <span class="math inline">\(n\)</span>. Ausserdem, gilt: der Grenzwert einer Zahl ist die Zahl selbst. Daher:</p>
+<p><span class="math display">\[\frac{\overbrace{\lim_{n\rightarrow\infty}2}^{\rightarrow 2}-\overbrace{\lim_{n\rightarrow\infty}\frac{4}{n}}^{\rightarrow0}+\overbrace{\lim_{n\rightarrow\infty}\frac5{n^2}}^{\rightarrow 0}}{\underbrace{\lim_{n\rightarrow\infty}\frac6{n^2}}_{\rightarrow 0}-\underbrace{\lim_{n\rightarrow\infty}5}_{\rightarrow 5}+\underbrace{\lim_{n\rightarrow\infty}\frac{7}{n}}_{\rightarrow0}} = \frac{2-0+0}{0-5+0} = -\frac25.\]</span></p>
+<p>Also ist der Grenzwert:</p>
+<p><span class="math display">\[\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n}=-\frac25.\]</span></p>
+</details>
 </div>
 <div id="qkonv" class="quiz">
 <p id="question">
@@ -512,34 +579,8 @@ Die Folge <span class="math inline">\({\displaystyle (a_{n})_{n\in \mathbb {N} }
     questionObj8.answer = questionObj8.question[0]
 </script>
 </div>
-<p>Bevor wir Grenzwerte für komplexere Folgen in den Aufgaben bestimmen, hier sind ein Paar <strong>Tipps für Grenzwertfindung</strong>:</p>
-<ul>
-<li><p>Falls ein Bruch <span class="math inline">\(\frac{a_n}{b_n}\)</span> in der Form <span class="math inline">\(\frac\infty\infty\)</span> oder <span class="math inline">\(\frac00\)</span> vorliegt: finde die größte Potenz von <span class="math inline">\(n\)</span> im Nenner und klammere diese in Zähler und Nenner aus. Kürze anschliessend und schaue, wo Folgen mit Grenzwert Null entstanden sind.</p></li>
-<li><p>Falls <span class="math inline">\(a_n\)</span> <span class="math inline">\((-1)^n\)</span> enthält, betrachte die Teilfolgen für <span class="math inline">\(n\)</span> gerade und ungerade separat und wende den Satz <a href="folgen-grenzwerte-und-reihen.html#thm:thmkonv3">2.3</a> an.</p></li>
-<li><p>Falls <span class="math inline">\(a_n - b_n\)</span> in der Form <span class="math inline">\(\infty - \infty\)</span> vorliegt, nutze die Umformung <span class="math display">\[a-b=\frac{(a-b)(a+b)}{a+b} = \frac{a^2-b^2}{a+b}.\]</span> Verwende danach den obigen Tipp.</p></li>
-</ul>
-<!--- Falls \(a_n\) in der Form \(const^\infty\) vorliegt, bringe den Ausdruck in die Form \((1+\frac xn)^n\) und nutze \(\lim_{n\rightarrow \infty}(1+\frac xn)^n=e^x\).-->
 <div class="example">
-<p><span id="exm:limits" class="example"><strong>Beispiel 2.5  (Grenzwertfindung I) </strong></span><br>Finde den Grenzwert:</p>
-<p><span class="math display">\[\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n}.\]</span></p>
-<details>
-<summary>
-Grenzwertberechnung
-</summary>
-<p>Wir fangen damit an, dass wir uns den Nenner anschauen und die höchste Potenz von <span class="math inline">\(n\)</span> raussuchen (hier ist es <span class="math inline">\(n^2\)</span>). Dann klammern wir <span class="math inline">\(n^2\)</span> im Zähler und im Nenner aus. (D.h. jeder Summand wird mit durch <span class="math inline">\(n^2\)</span> geteilt.):</p>
-<p><span class="math display">\[\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n} = \lim_{n\rightarrow\infty}\frac{n^2\cdot\left(\frac{2n^2}{n^2}-\frac{4n}{n^2}+\frac5{n^2}\right)}{n^2\cdot\left(\frac6{n^2}-\frac{5n^2}{n^2}+\frac{7n}{n^2}\right)}.\]</span></p>
-<p>Nun kürzen wir die einzelne Brüche im Zähler und Nenner soweit wir können. Auch <span class="math inline">\(n^2/n^2\)</span> im grossen Bruch kann gekürzt werden:</p>
-<p><span class="math display">\[= \lim_{n\rightarrow\infty}\frac{n^2\cdot\left(2-\frac{4}{n}+\frac5{n^2}\right)}{n^2\cdot\left(\frac6{n^2}-5+\frac{7}{n}\right)} = \lim_{n\rightarrow\infty}\frac{2-\frac{4}{n}+\frac5{n^2}}{\frac6{n^2}-5+\frac{7}{n}}.\]</span></p>
-<p>Im nächsten Schritt, wenden wir <span class="math inline">\(\lim_{n\rightarrow\infty}\)</span> an jeden SUmmand im Zähler und im Nenner einzeln:</p>
-<p><span class="math display">\[=\frac{\lim_{n\rightarrow\infty}\left(2-\frac{4}{n}+\frac5{n^2}\right)}{\lim_{n\rightarrow\infty}\left(\frac6{n^2}-5+\frac{7}{n}\right)} = \frac{\lim_{n\rightarrow\infty}2-\lim_{n\rightarrow\infty}\frac{4}{n}+\lim_{n\rightarrow\infty}\frac5{n^2}}{\lim_{n\rightarrow\infty}\frac6{n^2}-\lim_{n\rightarrow\infty}5+\lim_{n\rightarrow\infty}\frac{7}{n}}.\]</span></p>
-<p>Wie wir gesehen haben, alle Folgen, wo eine Zahl durch <span class="math inline">\(n, n^2,n^3,\ldots\)</span> geteilt wird, konvergieren gegen Null bei steigendem <span class="math inline">\(n\)</span>. Ausserdem, gilt: der Grenzwert einer Zahl ist die Zahl selbst. Daher:</p>
-<p><span class="math display">\[\frac{\overbrace{\lim_{n\rightarrow\infty}2}^{\rightarrow 2}-\overbrace{\lim_{n\rightarrow\infty}\frac{4}{n}}^{\rightarrow0}+\overbrace{\lim_{n\rightarrow\infty}\frac5{n^2}}^{\rightarrow 0}}{\underbrace{\lim_{n\rightarrow\infty}\frac6{n^2}}_{\rightarrow 0}-\underbrace{\lim_{n\rightarrow\infty}5}_{\rightarrow 5}+\underbrace{\lim_{n\rightarrow\infty}\frac{7}{n}}_{\rightarrow0}} = \frac{2-0+0}{0-5+0} = -\frac25.\]</span></p>
-<p>Also ist der Grenzwert:</p>
-<p><span class="math display">\[\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n}=-\frac25.\]</span></p>
-</details>
-</div>
-<div class="example">
-<p><span id="exm:limits2" class="example"><strong>Beispiel 2.6  (Grenzwertfindung II) </strong></span><br>Finde den Grenzwert:
+<p><span id="exm:limits2" class="example"><strong>Beispiel 2.7  (Grenzwertfindung II) </strong></span><br>Finde den Grenzwert:
 <span class="math display">\[\lim_{n\rightarrow\infty}(-1)^{n}\cdot\frac{4n^3}{5n^4-n^2}.\]</span></p>
 <details>
 <summary>
@@ -564,31 +605,49 @@ Die beiden Teilfolgen haben also den gleichen Grenzwert <span class="math inline
 </details>
 </div>
 <div class="example">
-<p><span id="exm:limits3" class="example"><strong>Beispiel 2.7  (Grenzwertfindung III) </strong></span></p>
-<br>Finde den Grenzwert:
-<span class="math display">\[\lim_{n\rightarrow\infty}{\sqrt{4n^2+3n}-{2n}}.\]</span>
+<p><span id="exm:limits" class="example"><strong>Beispiel 2.6  (Grenzwertfindung III) </strong></span><br>Finde den Grenzwert:</p>
+<p><span class="math display">\[\lim_{n\rightarrow\infty}e^{\frac{2n^2-4n+5}{6-5n^2+7n}}.\]</span></p>
 <details>
 <summary>
 Grenzwertberechnung
 </summary>
-<p>Hier nutzen wir die Umformung <span class="math inline">\(a-b = \frac{(a-b)(a+b)}{(a+b)}\)</span> und die binomische Formel: <span class="math inline">\((a-b)(a+b)=a^2-b^2.\)</span> Hier müssen wir mit <span class="math inline">\((\overbrace{\sqrt{4n^2+3n}}^{a}+\overbrace{{2n}}^{b})\)</span> multiplizieren, damit</p>
-<p><span class="math display">\[\begin{align}(\color{red}{\sqrt{4n^2+3n}}-\color{blue}{{2n}})\cdot (\color{red}{\sqrt{4n^2+3n}}+\color{blue}{{2n}})&amp; = (\color{red}{\sqrt{4n^2+3n}})^2-(\color{blue}{{2n}})^2 \\
-&amp;= \color{red}{{4n^2+3n}}-\color{blue}{{4n^2}} \\
-&amp;= 3n
-\end{align}\]</span> resultiert.</p>
-<p>Wir berechnen:
-<span class="math display">\[\begin{align}\lim_{n\rightarrow\infty}{\sqrt{4n^2+3n}-{2n}} &amp;= \lim_{n\rightarrow\infty}\frac{\left(\sqrt{4n^2+3n}-{2n}\right)\left(\sqrt{4n^2+3n}+{2n}\right)}{\sqrt{4n^2+3n}+{2n}}\\
-&amp;=\lim_{n\rightarrow\infty}\frac{3n}{\sqrt{4n^2+3n}+{2n}} = \lim_{n\rightarrow\infty}\frac{3n}{\sqrt{n^2(4+\frac3n)}+{2n}} \\
-&amp;= \lim_{n\rightarrow\infty}\frac{3n}{n\cdot\sqrt{4+\frac3n}+{2n}} = \lim_{n\rightarrow\infty}\frac{3n}{n\cdot\left(\sqrt{4+\frac3n}+{2}\right)}\\
-&amp;=\lim_{n\rightarrow\infty}\frac{3}{\sqrt{4+\underbrace{\frac3n}_{\rightarrow0}}+{2}} = \frac{3}{\sqrt{4+0}+2} = \frac 34.
-\end{align}\]</span></p>
-<p>In der zweiten Zeile der Gleichung haben wir benutzt: <span class="math inline">\(\sqrt{n^2(4+\frac3n)} = \sqrt{n^2}\cdot\sqrt{4+\frac3n} = n\cdot \sqrt{4+\frac3n}.\)</span></p>
-<p>Also gilt für den Grenzwert:</p>
-<p><span class="math display">\[\lim_{n\rightarrow\infty}{\sqrt{4n^2+3n}-{2n}}=\frac 34.\]</span></p>
+<p>Wir haben den Grenzwert der Folge <span class="math inline">\(\frac{2n^2-4n+5}{6-5n^2+7n}\)</span> bereits bestimmt:</p>
+<p><span class="math display">\[\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n}=-\frac25.\]</span></p>
+Nun wenden wir das Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:thmkonv4">2.4</a> an:
+<span class="math display">\[\lim_{n\rightarrow\infty}e^{\frac{2n^2-4n+5}{6-5n^2+7n}} = e^{\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n}} = e^{-\frac25} = 0,6703.\]</span>
 </details>
 </div>
+<!--.example #limits3 name="Grenzwertfindung III"}
+<br>Finde den Grenzwert:
+\[\lim_{n\rightarrow\infty}{\sqrt{4n^2+3n}-{2n}}.\]
+<details>
+<summary>Grenzwertberechnung</summary>
+Hier nutzen wir die Umformung \(a-b = \frac{(a-b)(a+b)}{(a+b)}\) und die binomische Formel: \((a-b)(a+b)=a^2-b^2.\) Hier müssen wir mit \((\overbrace{\sqrt{4n^2+3n}}^{a}+\overbrace{{2n}}^{b})\) multiplizieren, damit 
+
+\[\begin{align}(\color{red}{\sqrt{4n^2+3n}}-\color{blue}{{2n}})\cdot (\color{red}{\sqrt{4n^2+3n}}+\color{blue}{{2n}})& = (\color{red}{\sqrt{4n^2+3n}})^2-(\color{blue}{{2n}})^2 \\
+&= \color{red}{{4n^2+3n}}-\color{blue}{{4n^2}} \\
+&= 3n
+\end{align}\] resultiert.
+
+Wir berechnen:
+\[\begin{align}\lim_{n\rightarrow\infty}{\sqrt{4n^2+3n}-{2n}} &= \lim_{n\rightarrow\infty}\frac{\left(\sqrt{4n^2+3n}-{2n}\right)\left(\sqrt{4n^2+3n}+{2n}\right)}{\sqrt{4n^2+3n}+{2n}}\\
+&=\lim_{n\rightarrow\infty}\frac{3n}{\sqrt{4n^2+3n}+{2n}} = \lim_{n\rightarrow\infty}\frac{3n}{\sqrt{n^2(4+\frac3n)}+{2n}} \\
+&= \lim_{n\rightarrow\infty}\frac{3n}{n\cdot\sqrt{4+\frac3n}+{2n}} = \lim_{n\rightarrow\infty}\frac{3n}{n\cdot\left(\sqrt{4+\frac3n}+{2}\right)}\\
+&=\lim_{n\rightarrow\infty}\frac{3}{\sqrt{4+\underbrace{\frac3n}_{\rightarrow0}}+{2}} = \frac{3}{\sqrt{4+0}+2} = \frac 34.
+\end{align}\]
+
+In der zweiten Zeile der Gleichung haben wir benutzt: \(\sqrt{n^2(4+\frac3n)} = \sqrt{n^2}\cdot\sqrt{4+\frac3n} = n\cdot \sqrt{4+\frac3n}.\)
+
+
+Also gilt für den Grenzwert:
+
+\[\lim_{n\rightarrow\infty}{\sqrt{4n^2+3n}-{2n}}=\frac 34.\]
+
+</details>
+
+:::-->
 <div class="exercise">
-<p><span id="exr:grenzwerte" class="exercise"><strong>Aufgabe 2.2  (Grenzwerte I) </strong></span>Bestimmen Sie den Grenzwert von:</p>
+<p><span id="exr:grenzwerte" class="exercise"><strong>Aufgabe 2.2  (Grenzwerte) </strong></span>Bestimmen Sie den Grenzwert von:</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\frac{n}{(n+1)^2}\)</span> , <span class="math inline">\(n   \in \mathbb{N}\)</span>;
 <details>
@@ -646,85 +705,44 @@ Antwort
 </summary>
 <span class="math inline">\(\lim\limits_{n \rightarrow \infty} 8 − 2n =-\infty\)</span> (Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:thmkonv2">2.2</a> (i) und (ii)).
 </details></li>
-<li><span class="math inline">\(\sqrt{n^2-2n} - n\)</span>, <span class="math inline">\(n   \in \mathbb{N}\)</span>.
-<details>
-<summary>
-Antwort
-</summary>
-<span class="math inline">\(\lim\limits_{n \rightarrow \infty} \sqrt{n^2-2n} - n =\lim\limits_{n \rightarrow \infty} \frac{(\sqrt{n^2-2n} - n)(\sqrt{n^2-2n} + n)}{\sqrt{n^2-2n} + n} = \lim\limits_{n \rightarrow \infty} \frac{n^2-2n-n^2}{n\left(\sqrt{1-\frac1{n^2}} + 1\right)}\)</span>
-<span class="math inline">\(= \lim\limits_{n \rightarrow \infty} \frac{-2n}{n\left(\sqrt{1-\frac1{n^2}} + 1\right)}=\frac{-2}{\left(\sqrt{1-0} + 1\right)}=-1\)</span> (Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:thmkonv">2.1</a> (iii)).
-</details></li>
 </ol>
+<!--(f) \(\sqrt{n^2-2n} - n\), \( n   \in \mathbb{N} \).
+<details>
+<summary>Antwort</summary>
+\(\lim\limits_{n \rightarrow \infty} \sqrt{n^2-2n} - n =\lim\limits_{n \rightarrow \infty} \frac{(\sqrt{n^2-2n} - n)(\sqrt{n^2-2n} + n)}{\sqrt{n^2-2n} + n} = \lim\limits_{n \rightarrow \infty} \frac{n^2-2n-n^2}{n\left(\sqrt{1-\frac1{n^2}} + 1\right)} \)
+\(= \lim\limits_{n \rightarrow \infty} \frac{-2n}{n\left(\sqrt{1-\frac1{n^2}} + 1\right)}=\frac{-2}{\left(\sqrt{1-0} + 1\right)}=-1\) (Theorem \@ref(thm:thmkonv) (iii)).-->
+</details>
 <!--(g) \(\frac{(3n^2+6)^n}{(3n^2)^n}\), \( n   \in \mathbb{N} \).
 <details>
 <summary>Antwort</summary>
 \(\lim\limits_{n \rightarrow \infty} \frac{(3n^2+6)^n}{(3n^2)^n} =\lim\limits_{n \rightarrow \infty} \left(\frac{3n^2+6}{3n^2}\right)^n = \lim\limits_{n \rightarrow \infty} (1+\frac2n)^n =e^2\).
 </details>-->
 </div>
-<div class="exercise">
-<p><span id="exr:grenzwerte2" class="exercise"><strong>Aufgabe 2.3  (Grenzwerte II) </strong></span>Bestimmen Sie für jede Belegung von <span class="math inline">\((a_n)_{n\in\mathbb N}\)</span> und <span class="math inline">\((b_n)_{n\in\mathbb N}\)</span> <span class="math inline">\(\lim\limits_{n \rightarrow  \infty } (a_n \cdot b_n)\)</span>, wobei <span class="math inline">\(\lim\limits_{n \rightarrow  \infty } (a_n)= 0\)</span> und <span class="math inline">\(\lim\limits_{n \rightarrow  \infty } (b_n)= + \infty\)</span> gilt.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(a_n = 1/n\)</span>, <span class="math inline">\(b_n = n\)</span>, <span class="math inline">\(n   \in \mathbb{N}\)</span>;
+<!--::: {.exercise #grenzwerte2 name="Grenzwerte II"}
+
+Bestimmen Sie für jede Belegung von \((a_n)_{n\in\mathbb N}\) und \((b_n)_{n\in\mathbb N}\) \( \lim\limits_{n \rightarrow  \infty } (a_n \cdot b_n)\), wobei \( \lim\limits_{n \rightarrow  \infty } (a_n)= 0  \) und \( \lim\limits_{n \rightarrow  \infty } (b_n)= + \infty  \) gilt. 
+
+(a) \(a_n = 1/n\), \(b_n = n\), \( n   \in \mathbb{N} \); 
 <details>
-<summary>
-Antwort
-</summary>
-<span class="math inline">\(\lim\limits_{n \rightarrow \infty} \frac1{n}\cdot n= \lim\limits_{n \rightarrow \infty} 1 = 1\)</span>.
-</details></li>
-<li><span class="math inline">\(a_n = 1/n\)</span>, <span class="math inline">\(b_n= \sqrt{n}\)</span>, <span class="math inline">\(n   \in \mathbb{N}\)</span>;
+<summary>Antwort</summary>
+\(\lim\limits_{n \rightarrow \infty} \frac1{n}\cdot n= \lim\limits_{n \rightarrow \infty} 1 = 1 \).
+</details>
+
+(b) \(a_n = 1/n\), \( b_n= \sqrt{n}  \), \( n   \in \mathbb{N} \); 
 <details>
-<summary>
-Antwort
-</summary>
-<span class="math inline">\(\lim\limits_{n \rightarrow \infty} \frac1{n}\cdot \sqrt n= \lim\limits_{n \rightarrow \infty} \frac1{\sqrt n} = 0\)</span> (Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:thmkonv2">2.2</a> (iii)).
-</details></li>
-<li><span class="math inline">\(a_n = 1/ \sqrt{n}\)</span>, <span class="math inline">\(b_n = n\)</span>, <span class="math inline">\(n   \in \mathbb{N}\)</span>.
+<summary>Antwort</summary>
+\(\lim\limits_{n \rightarrow \infty} \frac1{n}\cdot \sqrt n= \lim\limits_{n \rightarrow \infty} \frac1{\sqrt n} = 0 \) (Theorem \@ref(thm:thmkonv2) (iii)).
+</details>
+
+(c) \(a_n = 1/ \sqrt{n}  \), \(b_n = n\), \( n   \in \mathbb{N} \).
 <details>
-<summary>
-Antwort
-</summary>
-<span class="math inline">\(\lim\limits_{n \rightarrow \infty} \frac1{\sqrt{n}}\cdot n= \lim\limits_{n \rightarrow \infty} \sqrt{n} = \infty\)</span>.
-</details></li>
-</ol>
-</div>
-<p>Die folgenden Eigenschaften der Beschränktheit und der Monotonie sind hilfreich bei der Bestimmung, ob eine Folge konvergiert oder nicht.</p>
-<div id="beschränkte-folgen" class="section level3 hasAnchor" number="2.3.1">
-<h3><span class="header-section-number">2.3.1</span> Beschränkte Folgen<a href="folgen-grenzwerte-und-reihen.html#beschr%C3%A4nkte-folgen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<!--<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_beschrfolge.m4a"></audio>-->
-<div class="definition">
-<p><span id="def:defbeschr" class="definition"><strong>Definition 2.4  (Beschränkte Folge) </strong></span>Eine Folge ist <strong>beschränkt</strong>, falls es eine Zahl <span class="math inline">\(K &gt; 0\)</span> gibt, sodass ein Index <span class="math inline">\(N\)</span> existiert mit
-<span class="math inline">\(a_n &lt; K\)</span> für alle <span class="math inline">\(n &gt; N\)</span> (von oben beschränkt) und</p>
-<p><span class="math inline">\(a_n &gt; −K\)</span> für alle <span class="math inline">\(n &gt; N\)</span> (von unten beschränkt).</p>
-<p>Andernfalls ist die Folge <strong>unbeschränkt</strong>.</p>
-</div>
-<p>Also gilt:</p>
-<p>Eine Folge ist beschränkt genau dann, wenn es eine Zahl <span class="math inline">\(K &gt; 0\)</span> gibt, sodass ein Index <span class="math inline">\(N\)</span> existiert mit</p>
-<p><span class="math inline">\(|a_n| &lt; K\)</span>, für alle <span class="math inline">\(n &gt; N\)</span>.</p>
-<div class="example">
-<p><span id="exm:beschf" class="example"><strong>Beispiel 2.8  (Beschränkte und unbeschränkte Folgen) </strong></span></p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(a_n = (-1)^n, \ n = 1,2,3, ...\)</span> ist eine beschränkte Folge (aber konvergiert nicht);</li>
-</ol>
-<p><img src="images/Krahmen1.png" /></p>
-<ol start="2" style="list-style-type: decimal">
-<li><span class="math inline">\(a_n = 1/n, \ n = 1,2,3, ...\)</span> ist beschränkt (und konvergiert);</li>
-</ol>
-<p><img src="images/beschr11.png" /></p>
-<ol start="3" style="list-style-type: decimal">
-<li><span class="math inline">\(a_n = 2n, \ n = 1,2,3, ...\)</span> ist unbeschränkt, da nicht von oben beschränkt;</li>
-</ol>
-<p><img src="images/unbeschoben1.png" /></p>
-<ol start="4" style="list-style-type: decimal">
-<li><span class="math inline">\(a_n = −n^2 , \ n = 1,2,3, ...\)</span> ist unbeschränkt, da nicht von unten beschränkt;</li>
-</ol>
-<p><img src="images/unbeschunten1.png" /></p>
-<ol start="5" style="list-style-type: decimal">
-<li><span class="math inline">\(a_n = (−2)^n , \ n = 1,2,3, ...\)</span> ist weder von unten noch von oben beschränkt;</li>
-</ol>
-<p><img src="images/unbesch1.png" /></p>
-</div>
+<summary>Antwort</summary>
+\(\lim\limits_{n \rightarrow \infty} \frac1{\sqrt{n}}\cdot n= \lim\limits_{n \rightarrow \infty} \sqrt{n} = \infty \).
+</details>
+:::-->
+<p>Auch die Eigenschaften der Beschränktheit und der Monotonie sind hilfreich bei der Bestimmung, ob eine Folge konvergiert oder nicht.</p>
 <div class="theorem">
-<p><span id="thm:thm1" class="theorem"><strong>Theorem 2.4  (Beschränktheit von konvergenten Folgen) </strong></span>Jede konvergente Folge ist beschränkt.</p>
+<p><span id="thm:thm1" class="theorem"><strong>Theorem 2.5  (Beschränktheit von konvergenten Folgen) </strong></span>Jede konvergente Folge ist beschränkt.</p>
 <details>
 <summary>
 Beweis
@@ -736,16 +754,8 @@ sodass <span class="math inline">\(|a_n−a|\leq 1\)</span> für alle <span clas
 <p><span class="math inline">\(|a_n|\leq 1+|a|\)</span> für alle <span class="math inline">\(n\geq N\)</span>.</p>
 </details>
 </div>
-</div>
-<div id="monotone-folgen" class="section level3 hasAnchor" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Monotone Folgen<a href="folgen-grenzwerte-und-reihen.html#monotone-folgen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="definition">
-<p><span id="def:defmonfolgen" class="definition"><strong>Definition 2.5  (Monotone Folgen) </strong></span>Eine Folge<span class="math inline">\((a_n) _{ n \in  \mathbb{N} }\)</span> ist <strong>monoton steigend</strong>, falls <span class="math inline">\(a_1 ≤ a_2 ≤ a_3 ≤ ...\)</span> , und sie ist <strong>monoton fallend</strong>, falls <span class="math inline">\(a_1 ≥ a_2 ≥ a_3 ≥ \ldots\)</span> .</p>
-<p>Gilten <span class="math inline">\(&lt;\)</span> bzw. <span class="math inline">\(&gt;\)</span>, so ist die Folge <strong>streng monoton wachsend</strong> bzw. <strong>streng monotone fallend</strong>.</p>
-</div>
-<p>Folge Nummer 3 aus Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:beschf">2.8</a> ist eine streng monoton wachsende Folge. Die Folgen mit den Nummern 2 und 4 sind (streng) monoton fallend.</p>
 <div class="theorem">
-<p><span id="thm:monfolge" class="theorem"><strong>Theorem 2.5  (Konvergenz einer monotonen Folge) </strong></span></p>
+<p><span id="thm:monfolge" class="theorem"><strong>Theorem 2.6  (Konvergenz einer monotonen Folge) </strong></span></p>
 Eine monotone Folge konvergiert genau dann, wenn sie beschränkt ist.
 <details>
 <summary>
@@ -764,48 +774,41 @@ wenn <span class="math inline">\(m\)</span> groß genug, liegen also fast alle E
 </li>
 <li>
 “<span class="math inline">\(\Rightarrow\)</span>” (aus konvergent folgt beschränkt)<br>
-Siehe Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:thm1">2.4</a>.
+Siehe Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:thm1">2.5</a>.
 </li>
 </ul>
 </details>
 </div>
-<p>Die Folgen mit den Nummern 2, 3 und 4 aus Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:beschf">2.8</a> sind monoton. Aber nur eine Folge davon (Nummer 2) ist beschränkt, daher konvergiert diese Folge nach Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:monfolge">2.5</a>.</p>
+<p>Die Folgen mit den Nummern 2, 3 und 4 aus Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:beschf">2.3</a> sind monoton. Aber nur eine Folge davon (Nummer 2) ist beschränkt, daher konvergiert diese Folge nach Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:monfolge">2.6</a>.</p>
 <div class="example">
-<p><span id="exm:konv3" class="example"><strong>Beispiel 2.9  (Konvergenz zeigen) </strong></span></p>
+<p><span id="exm:konv3" class="example"><strong>Beispiel 2.8  (Konvergenz zeigen) </strong></span></p>
+Zeigen Sie, dass die Folge <span class="math inline">\(a_n = 1 /{(1 + r)}^n\)</span> konvergiert, wenn <span class="math inline">\(r ≥ 0\)</span>.
+<details>
+<summary>
+Antwort
+</summary>
+<p>Die Folge ist für <span class="math inline">\(n&gt;1\)</span> durch <span class="math inline">\(K=\frac 1{1+r}\)</span> beschränkt. Zudem gilt <span class="math inline">\(a_{n+1}=\frac 1{(1+r)^{(n+1)}}=\frac 1{(1+r)^{n}\cdot (1+r)} =a_n\cdot \frac 1{1+r}\lt a_n\)</span> für <span class="math inline">\(\frac 1{1+r}\lt 1\)</span> also streng monoton fallend. Nach Satz 3.3.4 konvergiert also die Folge für <span class="math inline">\(r&gt;0\)</span>.<br></p>
+<!--Wenn \(-1<r<0\) ist die Folge nach oben unbeschränkt: für beliebig großes \(K\) existiert ein Index \(N\), so dass \(a_n>K\) für alle \(n>N\). Da \(−1 < r < 0\) gilt \(\frac 1{1 + r}>1\) und \(\frac 1{(1 + r)}^n = \left({\frac 1{1+r}}\right)^{n}\) streng monoton steigend. Zudem gilt \(\left({\frac 1{1+r}}\right)^{n}>K\) für \(n>\log_{\frac1{1+r}}K = N\).-->
+</details>
+</div>
+<div class="exercise">
+<p><span id="exr:konv4" class="exercise"><strong>Aufgabe 2.3  (Konvergenz zeigen) </strong></span></p>
 Zeigen Sie, dass <span class="math inline">\(a_n = 1/{2^n}\)</span> , <span class="math inline">\({ n \in  \mathbb{N} }\)</span>, konvergiert.
 <details>
 <summary>
 Antwort
 </summary>
-Die Folge <span class="math inline">\(a_n = \frac1{2^n}={\left(\frac 12\right)}^n\)</span> ist für <span class="math inline">\(n&gt;1\)</span> durch <span class="math inline">\(\frac 12\)</span> nach oben und durch <span class="math inline">\(0\)</span> nach unten beschränkt (siehe Eigenschaften der Potenzfunktion). Also ist die Folge für <span class="math inline">\(n&gt;1\)</span> durch <span class="math inline">\(K=\frac 12\)</span> beschränkt. Zudem gilt <span class="math inline">\(a_{n+1}=\frac 1{2^{(n+1)}}=\frac 1{2^{n}\cdot 2} =a_n\cdot \frac 12\lt a_n\)</span> also streng monoton fallend. Nach Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:monfolge">2.5</a> konvergiert also die Folge.
+Die Folge <span class="math inline">\(a_n = \frac1{2^n}={\left(\frac 12\right)}^n\)</span> ist für <span class="math inline">\(n&gt;1\)</span> durch <span class="math inline">\(\frac 12\)</span> nach oben und durch <span class="math inline">\(0\)</span> nach unten beschränkt (siehe Eigenschaften der Potenzfunktion). Also ist die Folge für <span class="math inline">\(n&gt;1\)</span> durch <span class="math inline">\(K=\frac 12\)</span> beschränkt. Zudem gilt <span class="math inline">\(a_{n+1}=\frac 1{2^{(n+1)}}=\frac 1{2^{n}\cdot 2} =a_n\cdot \frac 12\lt a_n\)</span> also streng monoton fallend. Nach Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:monfolge">2.6</a> konvergiert also die Folge.
 </details>
 </div>
-<div class="exercise">
-<p><span id="exr:konv4" class="exercise"><strong>Aufgabe 2.4  (Konvergenz zeigen) </strong></span></p>
-Zeigen Sie, dass die Folge <span class="math inline">\(a_n = 1 /{(1 + r)}^n\)</span><br>
-(i) konvergiert, wenn <span class="math inline">\(r ≥ 0\)</span>, und<br>
-(ii) divergiert, wenn <span class="math inline">\(−1 &lt; r &lt; 0\)</span>.
+<!--::: {.exercise #konv4 name="Divergenz zeigen"}
+
+Zeigen Sie, dass der Wert einer Anlage von \(0,01 \ €\) im Jahr \(0\) im Zeitverlauf divergiert (positiver Zinssatz \(r\) vorausgesetzt).
 <details>
-<summary>
-Antwort
-</summary>
-<ol style="list-style-type: lower-roman">
-<li>Die Folge ist für <span class="math inline">\(n&gt;1\)</span> durch <span class="math inline">\(K=\frac 1{1+r}\)</span> beschränkt. Zudem gilt <span class="math inline">\(a_{n+1}=\frac 1{(1+r)^{(n+1)}}=\frac 1{(1+r)^{n}\cdot (1+r)} =a_n\cdot \frac 1{1+r}\lt a_n\)</span> für <span class="math inline">\(\frac 1{1+r}\lt 1\)</span> also streng monoton fallend. Nach Satz 3.3.4 konvergiert also die Folge für <span class="math inline">\(r&gt;0\)</span>.<br></li>
-<li>Die Folge ist nach oben unbeschränkt: für beliebig großes <span class="math inline">\(K\)</span> existiert ein Index <span class="math inline">\(N\)</span>, so dass <span class="math inline">\(a_n&gt;K\)</span> für alle <span class="math inline">\(n&gt;N\)</span>. Da <span class="math inline">\(−1 &lt; r &lt; 0\)</span> gilt <span class="math inline">\(\frac 1{1 + r}&gt;1\)</span> und <span class="math inline">\(\frac 1{(1 + r)}^n = \left({\frac 1{1+r}}\right)^{n}\)</span> streng monoton steigend. Zudem gilt <span class="math inline">\(\left({\frac 1{1+r}}\right)^{n}&gt;K\)</span> für <span class="math inline">\(n&gt;\log_{\frac1{1+r}}K = N\)</span>.</li>
-</ol>
+<summary>Antwort</summary>
+Der Wert dieser Anlage wird durch die Folge: \(a_n = 0,01\cdot(1+r)^n\) dargestellt. Die Folge ist nach oben unbeschränkt: für beliebig großes \(K\) existiert ein Index \(N\), so dass \(a_n>K\) für alle \(n>N\). Es gilt dabei \(0,01(1+r)^{n}>K\) für \(n>\log_{1+r}(100K) = N\).
 </details>
-</div>
-<div class="exercise">
-<p><span id="exr:konv4" class="exercise"><strong>Aufgabe 2.4  (Divergenz zeigen) </strong></span></p>
-Zeigen Sie, dass der Wert einer Anlage von <span class="math inline">\(0,01 \ €\)</span> im Jahr <span class="math inline">\(0\)</span> im Zeitverlauf divergiert (positiver Zinssatz <span class="math inline">\(r\)</span> vorausgesetzt).
-<details>
-<summary>
-Antwort
-</summary>
-Der Wert dieser Anlage wird durch die Folge: <span class="math inline">\(a_n = 0,01\cdot(1+r)^n\)</span> dargestellt. Die Folge ist nach oben unbeschränkt: für beliebig großes <span class="math inline">\(K\)</span> existiert ein Index <span class="math inline">\(N\)</span>, so dass <span class="math inline">\(a_n&gt;K\)</span> für alle <span class="math inline">\(n&gt;N\)</span>. Es gilt dabei <span class="math inline">\(0,01(1+r)^{n}&gt;K\)</span> für <span class="math inline">\(n&gt;\log_{1+r}(100K) = N\)</span>.
-</details>
-</div>
-</div>
+:::-->
 </div>
 <div id="reihen" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Reihen<a href="folgen-grenzwerte-und-reihen.html#reihen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -826,7 +829,7 @@ Der <strong>Grenzwert</strong> einer Reihe <span class="math inline">\(\sum_{t=1
 <p>Hinweis: <span class="math inline">\(s_1=a_1, s_2=a_1+a_2\)</span> usw. und <span class="math inline">\(s_n = (a_1+a_2+...a_n)\)</span> (kumulative Summe)</p>
 <p>Anwendung: Reihen sind beispielsweise nützlich zur Barwertberechnung bestimmter Zahlungsströme (Rentenrechnung).</p>
 <div class="example">
-<p><span id="exm:sparbuch" class="example"><strong>Beispiel 2.10  (Geldanlage) </strong></span>Fortführung von Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:geldanl">2.1</a>.</p>
+<p><span id="exm:sparbuch" class="example"><strong>Beispiel 2.9  (Geldanlage) </strong></span>Fortführung von Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:geldanl">2.1</a>.</p>
 <p>Zahlt man <span class="math inline">\(82,19 \ Euro\)</span> auf ein Sparbuch ein, das zu <span class="math inline">\(4\%\)</span> verzinst wird, so erhält man nach 5 Jahren:</p>
 <p><span class="math display">\[82,19 \cdot (1,04)^5 = 100 \ Euro.\]</span></p>
 <ul>
@@ -863,7 +866,7 @@ Zu (ii): Man nehme an, die Behauptung gelte für \(n\) (also, \(s_{\color{red}n}
 <p>Da Reihen spezielle Folgen sind, können alle Aussagen über die Konvergenz und Divergenz von Folgen auf Reihen entsprechend übertragen werden.</p>
 <p>Das folgende Theorem ist nützlich, um zu ermitteln ob eine Reihe konvergiert oder divergiert.</p>
 <div class="theorem">
-<p><span id="thm:konvreihen" class="theorem"><strong>Theorem 2.6  (Konvergenz von Reihen) </strong></span>Es sei <span class="math inline">\((a_n)_{n\in  \mathbb{N} }\)</span>, <span class="math inline">\({n\in  \mathbb{N} }\)</span>, eine Reihe mit</p>
+<p><span id="thm:konvreihen" class="theorem"><strong>Theorem 2.7  (Konvergenz von Reihen) </strong></span>Es sei <span class="math inline">\((a_n)_{n\in  \mathbb{N} }\)</span>, <span class="math inline">\({n\in  \mathbb{N} }\)</span>, eine Reihe mit</p>
 <p><span class="math display">\[\lim\limits_{n \rightarrow +\infty} \ \lvert  \frac{a_{n+1}} {a_n} \rvert =a. \]</span></p>
 <p>Dann gilt:
 <br>
@@ -875,10 +878,8 @@ Zu (ii): Man nehme an, die Behauptung gelte für \(n\) (also, \(s_{\color{red}n}
 <br><br></p>
 <p><span class="math inline">\(\sum_{t=1}^{ \infty }  a_t\)</span> bezeichnet nicht nur die Reihe, sondern auch den Grenzwert</p>
 </div>
-<div id="spezielle-reihen" class="section level3 hasAnchor" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Spezielle Reihen<a href="folgen-grenzwerte-und-reihen.html#spezielle-reihen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="geometrische-reihe" class="section level4 hasAnchor" number="2.4.1.1">
-<h4><span class="header-section-number">2.4.1.1</span> Geometrische Reihe<a href="folgen-grenzwerte-und-reihen.html#geometrische-reihe" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="geometrische-reihe" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Geometrische Reihe<a href="folgen-grenzwerte-und-reihen.html#geometrische-reihe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="definition">
 <p><span id="def:geomreihe" class="definition"><strong>Definition 2.7  (Geometrische Reihe) </strong></span>Die Geometrische Reihe ist gegeben durch <span class="math display">\[g_n=\sum_{t=0}^{ n }  x^t,\]</span> für <span class="math inline">\(x \in  \mathbb{R}\)</span>.</p>
 </div>
@@ -889,7 +890,7 @@ Zu (ii): Man nehme an, die Behauptung gelte für \(n\) (also, \(s_{\color{red}n}
 <li><p>Falls <span class="math inline">\(x = −1\)</span>, dann divergiert die Geometrische Reihe, denn die Werte der Reihe alternieren zwischen <span class="math inline">\(0\)</span> und <span class="math inline">\(1\)</span> für <span class="math inline">\(n \in  \mathbb{N}\)</span>.</p></li>
 </ul>
 <div class="theorem">
-<p><span id="thm:geomreihe" class="theorem"><strong>Theorem 2.7  (Konvergenz einer geometrischen Reihe) </strong></span></p>
+<p><span id="thm:geomreihe" class="theorem"><strong>Theorem 2.8  (Konvergenz einer geometrischen Reihe) </strong></span></p>
 Es sei <span class="math inline">\(x \neq 1\)</span>. Dann gilt:
 <span class="math display">\[\sum_{t=0}^{n} x^t=  \frac{1-x^{n+1}}{1-x}, n \in  \mathbb{N}.\]</span>
 <details>
@@ -907,7 +908,7 @@ Beweis durch vollständige Induktion
 <p><span id="cor:cor1" class="corollary"><strong>Korollar 2.1  (Spezielle geometrische Reihe) </strong></span>Es sei <span class="math inline">\(|x| &lt; 1.\)</span> Dann gilt: <span class="math display">\[\sum_{t=0}^{ \infty }  x^t= \frac{1}{1-x}.\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:sparbuch2" class="example"><strong>Beispiel 2.11  (Geldanlage) </strong></span>(Fortsetzung von Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:sparbuch">2.10</a>)</p>
+<p><span id="exm:sparbuch2" class="example"><strong>Beispiel 2.10  (Geldanlage) </strong></span>(Fortsetzung von Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:sparbuch">2.9</a>)</p>
 <p>Das obige Ergebnis beantwortet die eingangs gestellte Frage: <br>
 Wieviel Geld muss ich heute auf ein Sparbuch legen, damit ich jedes Jahr <span class="math inline">\(100 \ Euro\)</span> abheben kann?
 <br>
@@ -922,7 +923,7 @@ Antwort:</p>
 <img src="images/anlage.png" /></p>
 </div>
 <div class="example">
-<p><span id="exm:annuitaet" class="example"><strong>Beispiel 2.12  (Annuität) </strong></span>(Fortsetzung von Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:sparbuch">2.10</a>)</p>
+<p><span id="exm:annuitaet" class="example"><strong>Beispiel 2.11  (Annuität) </strong></span>(Fortsetzung von Beispiel <a href="folgen-grenzwerte-und-reihen.html#exm:sparbuch">2.9</a>)</p>
 <p>Die Formel aus dem Theorem 3.7 hilft uns auch bei der Berechnung von Annuitäten weiter. <br>
 Nimmt man einen Bankkredit in Höhe von z.B. <span class="math inline">\(100.000\)</span> Euro zu einem jährlichen Zinssatz von 3 % auf der über einen Zeitraum von <span class="math inline">\(20\)</span> Jahren durch jährliche Zahlungen in konstanter Höhe (Annuität), zurückgezahlt werden soll, so kann man die Annuität mit Hilfe der obigen Formel berechnen. Wir modellieren Sie die Rückzahlung als geometrische Reihe.</p>
 <p>Dann entspricht dir Kreditsumme (der Barwert) des Rückzahlungsplans dem Ausdruck:</p>
@@ -979,7 +980,7 @@ Für <span class="math inline">\(r=0.03\)</span>:</p>
 </div>
 <p>Obwohl die zugrunde liegende Folge <span class="math inline">\((1/t) \  _ {t  \in   \mathbb{N}  }\)</span> konvergiert, divergiert die Reihe.</p>
 <div class="example">
-<p><span id="exm:coupons" class="example"><strong>Beispiel 2.13  (Collecting Coupons) </strong></span><br>
+<p><span id="exm:coupons" class="example"><strong>Beispiel 2.12  (Collecting Coupons) </strong></span><br>
 Source: <a href="https://en.wikipedia.org/wiki/Coupon_collector%27s_problem" class="uri">https://en.wikipedia.org/wiki/Coupon_collector%27s_problem</a>
 <br><br>
 In probability theory, the ‘coupon collector’s problem’ describes “collect all coupons and win” contests. It asks the following question:</p>
@@ -1017,11 +1018,11 @@ By Cmglee - Own work, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/w/ind
 </details>
 </div>
 <div class="theorem">
-<p><span id="thm:harmreihe" class="theorem"><strong>Theorem 2.8  (Divergenz Harmonischer Reihen) </strong></span>Die Harmonische Reihe, gegeben durch <span class="math inline">\(\sum_{t=1}^{n}  \frac{1}{t}\)</span> , <span class="math inline">\(n \in  \mathbb{N}\)</span>, divergiert.
+<p><span id="thm:harmreihe" class="theorem"><strong>Theorem 2.9  (Divergenz Harmonischer Reihen) </strong></span>Die Harmonische Reihe, gegeben durch <span class="math inline">\(\sum_{t=1}^{n}  \frac{1}{t}\)</span> , <span class="math inline">\(n \in  \mathbb{N}\)</span>, divergiert.
 <br><br>
 Es gilt:</p>
 <p><span class="math display">\[\lim\limits_{n \rightarrow  \infty }  \left| \frac{1/(n+1)}{1/n}  \right| = \lim\limits_{n \rightarrow  \infty }  \frac{n}{n+1} = 1,\]</span></p>
-<p>sodass das obige Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:konvreihen">2.6</a> nicht zur Konvergenz-Ermittlung herangezogen werden kann.</p>
+<p>sodass das obige Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:konvreihen">2.7</a> nicht zur Konvergenz-Ermittlung herangezogen werden kann.</p>
 <details>
 <summary>
 Beweis
@@ -1047,7 +1048,6 @@ Das zeigt uns, dass die Folge <span class="math inline">\(\left(\sum_{k=1}^{2^{n
 </details>
 <!-- Folgen weitere Aufgaben: https://www.max-academy.de/contentPool/5de2640c9cefaf0008c441e5-->
 
-</div>
 </div>
 </div>
 </div>
