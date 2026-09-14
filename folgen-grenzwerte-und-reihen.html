@@ -562,23 +562,6 @@ Grenzwertberechnung
 <p><span class="math display">\[\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n}=-\frac25.\]</span></p>
 </details>
 </div>
-<div id="qkonv" class="quiz">
-<p id="question">
-<span id="question-text8"></span>
-</p>
-<input type="number" id="answer8" placeholder="Antwort eingeben">
-<button onclick="checkAnswer_num(questionObj8)">Check</button>
-<p id="result8">
-</p>
-<script>
-
- // Generate a random question
-    const questionObj8 = generateQuestion_num(8);
-// Display the question
-    document.getElementById('question-text8').textContent = "Bestimmen Sie den Grenzwert der Folge: \\(a_n=\\frac{"+questionObj8.question[0] +"n+"+questionObj8.question[1]+"}n\\)";
-    questionObj8.answer = questionObj8.question[0]
-</script>
-</div>
 <div class="example">
 <p><span id="exm:limits2" class="example"><strong>Beispiel 2.7  (Grenzwertfindung II) </strong></span><br>Finde den Grenzwert:
 <span class="math display">\[\lim_{n\rightarrow\infty}(-1)^{n}\cdot\frac{4n^3}{5n^4-n^2}.\]</span></p>
@@ -616,6 +599,38 @@ Grenzwertberechnung
 Nun wenden wir das Theorem <a href="folgen-grenzwerte-und-reihen.html#thm:thmkonv4">2.4</a> an:
 <span class="math display">\[\lim_{n\rightarrow\infty}e^{\frac{2n^2-4n+5}{6-5n^2+7n}} = e^{\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n}} = e^{-\frac25} = 0,6703.\]</span>
 </details>
+</div>
+<div id="qkonv" class="quiz">
+<p id="question">
+<span id="question-text8"></span>
+</p>
+<input type="number" id="answer8" placeholder="Antwort eingeben">
+<button onclick="checkAnswer_num(questionObj8)">Check</button>
+<p id="result8">
+</p>
+<script>
+
+ // Generate a random question
+    const questionObj8 = generateQuestion_num(8);
+// Display the question
+    document.getElementById('question-text8').textContent = "Bestimmen Sie den Grenzwert der Folge: \\(a_n=\\frac{"+questionObj8.question[0] +"n+"+questionObj8.question[1]+"}n\\)";
+    questionObj8.answer = questionObj8.question[0]
+</script>
+<p id="question">
+<span id="question-text88"></span>
+</p>
+<input type="number" id="answer88" placeholder="Antwort eingeben">
+<button onclick="checkAnswer_num(questionObj88)">Check</button>
+<p id="result88">
+</p>
+<script>
+
+ // Generate a random question
+    const questionObj88 = generateQuestion_num(88);
+// Display the question
+    document.getElementById('question-text88').textContent = "Bestimmen Sie den Grenzwert der Folge: \\(a_n=\\ln\\Big(\\frac{"+questionObj8.question[0] +"n+"+questionObj8.question[1]+"}n\\Big)\\)";
+    questionObj88.answer = Math.log(questionObj8.question[0])
+</script>
 </div>
 <!--.example #limits3 name="Grenzwertfindung III"}
 <br>Finde den Grenzwert:

@@ -153,7 +153,7 @@ exm:exaddsubmatrizen
 def:defskprodmatrizen
 exm:exmultsksubmatrizen
 def:defskalarprodukt
-fig:unnamed-chunk-64
+fig:unnamed-chunk-65
 exm:exkalarprodukt
 def:defnorm
 exm:exnorm
