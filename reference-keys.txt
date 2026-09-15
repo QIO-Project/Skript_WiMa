@@ -95,8 +95,6 @@ def:differential
 exm:kosten
 def:defdifferenz
 exm:differenzierbarkeit
-thm:thm1deffirenz
-def:defdiffint
 thm:thmregeln
 exm:eabl
 exm:grenzerl
@@ -239,8 +237,7 @@ punktweise-stetigkeit
 stetige-funktionen-und-deren-eigenschaften
 differentialrechnung
 definition-der-tangente
-sekante-und-tangente
-von-der-sekante-zur-tangente
+herleitung
 definition-der-ableitung
 differenzierbarkeit
 ableitungsregeln

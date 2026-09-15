@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematikim Ferienkursformat." />
   
 
-<meta name="author" content="Maria Osipenko 2026-09-14" />
+<meta name="author" content="Maria Osipenko 2026-09-15" />
 
 
 
@@ -125,8 +125,7 @@
 <ul>
 <li class="chapter" data-level="4.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-tangente"><i class="fa fa-check"></i><b>4.1</b> Definition der Tangente</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#sekante-und-tangente"><i class="fa fa-check"></i><b>4.1.1</b> Sekante und Tangente</a></li>
-<li class="chapter" data-level="4.1.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#von-der-sekante-zur-tangente"><i class="fa fa-check"></i><b>4.1.2</b> Von der Sekante zur Tangente</a></li>
+<li class="chapter" data-level="4.1.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#herleitung"><i class="fa fa-check"></i><b>4.1.1</b> Herleitung</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-ableitung"><i class="fa fa-check"></i><b>4.2</b> Definition der Ableitung</a></li>
 <li class="chapter" data-level="4.3" data-path="differentialrechnung.html"><a href="differentialrechnung.html#differenzierbarkeit"><i class="fa fa-check"></i><b>4.3</b> Differenzierbarkeit</a></li>
@@ -290,14 +289,15 @@ function checkAnswer_num(q) {
 <div id="das-unbestimmte-integral" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Das unbestimmte Integral<a href="integralrechnung.html#das-unbestimmte-integral" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <!--<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_stammfkt.m4a"></audio>-->
-<ul>
-<li><p>Für die Funktion <span class="math inline">\(f (x) = x^2\)</span> wissen wir bereits, dass <span class="math inline">\(f&#39; (x) = 2x\)</span> gilt.</p></li>
-<li><p>Ist umgekehrt bekannt, dass <span class="math inline">\(f&#39; (x) = 2x\)</span>, so ist zwar klar, dass <span class="math inline">\(f (x) = x^ 2\)</span> eine Funktion mit dieser Ableitung ist.</p></li>
-<li><p>Jede andere Funktion der Form <span class="math inline">\(f (x) = x^ 2 + c\)</span> mit <span class="math inline">\(c\)</span> konstant hat jedoch dieselbe Ableitung!</p></li>
-<li><p>Ausgehend von einer Ableitung kann die Funktion selbst also nicht eindeutig bestimmt werden, sondern nur bis auf eine (unbekannte) Konstante.</p></li>
-<li><p>Der Umkehrprozess der Differentiation wird <strong>Integration</strong> oder <strong>Integrieren</strong> genannt.</p></li>
-</ul>
-<p>Im Beispiel erhält man aus der Grenzkostenfunktion <span class="math inline">\(C&#39;\)</span> durch Integrieren die Kostenfunktion (bis auf die Fixkosten).</p>
+<!--- Für die Funktion \(f (x) = x^2\) wissen wir bereits, dass \(f' (x) = 2x\) gilt. 
+
+- Ist umgekehrt bekannt, dass \(f' (x) = 2x\), so ist zwar klar, dass \(f (x) = x^ 2\) eine Funktion mit dieser Ableitung ist. 
+
+- Jede andere Funktion der Form \(f (x) = x^ 2 + c\) mit \(c\) konstant hat jedoch dieselbe Ableitung! 
+
+- Ausgehend von einer Ableitung kann die Funktion selbst also nicht eindeutig bestimmt werden, sondern nur bis auf eine (unbekannte) Konstante. -->
+<p>Der Umkehrprozess der Differentialrechnung wird <strong>Integration</strong> oder <strong>Integrieren</strong> genannt.</p>
+<p>Im Beispiel erhält man aus der Grenzkostenfunktion <span class="math inline">\(C&#39;\)</span> durch <strong>Integrieren</strong> die Kostenfunktion (bis auf die Fixkosten).</p>
 <div class="definition">
 <p><span id="def:defstammfun" class="definition"><strong>Definition 6.1  (Stammfunktion) </strong></span>Es sei <span class="math inline">\(f\)</span> eine stetige Funktion im Intervall <span class="math inline">\([a,b]\)</span>. Eine differenzierbare Funktion <span class="math inline">\(F\)</span> in <span class="math inline">\([a,b]\)</span> heißt <strong>Stammfunktion</strong> zu <span class="math inline">\(f\)</span> , falls gilt:
 <span class="math inline">\(F&#39; (x) = f (x)\)</span> bzw. <span class="math inline">\(dF / dx = f (x)\)</span>.</p>

@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Das ist der Skript für den Kurs Wirtschaftsmathematikim Ferienkursformat." />
   
 
-<meta name="author" content="Maria Osipenko 2026-09-14" />
+<meta name="author" content="Maria Osipenko 2026-09-15" />
 
 
 
@@ -125,8 +125,7 @@
 <ul>
 <li class="chapter" data-level="4.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-tangente"><i class="fa fa-check"></i><b>4.1</b> Definition der Tangente</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#sekante-und-tangente"><i class="fa fa-check"></i><b>4.1.1</b> Sekante und Tangente</a></li>
-<li class="chapter" data-level="4.1.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#von-der-sekante-zur-tangente"><i class="fa fa-check"></i><b>4.1.2</b> Von der Sekante zur Tangente</a></li>
+<li class="chapter" data-level="4.1.1" data-path="differentialrechnung.html"><a href="differentialrechnung.html#herleitung"><i class="fa fa-check"></i><b>4.1.1</b> Herleitung</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="differentialrechnung.html"><a href="differentialrechnung.html#definition-der-ableitung"><i class="fa fa-check"></i><b>4.2</b> Definition der Ableitung</a></li>
 <li class="chapter" data-level="4.3" data-path="differentialrechnung.html"><a href="differentialrechnung.html#differenzierbarkeit"><i class="fa fa-check"></i><b>4.3</b> Differenzierbarkeit</a></li>
@@ -327,33 +326,35 @@ function checkAnswer_symb(q) {
 <li><p>Welchen Einfluss hat eine Veränderung in der Geldmenge auf die Inflation?</p></li>
 <li><p>Wie gestalte ich den Konsum so, dass der Nutzen maximal ist?</p></li>
 </ul>
-<p><strong>Implizit</strong> wird diese Fragestellung durch die funktionale Verknüpfung <span class="math inline">\(y = f (x)\)</span> erfasst. <strong>Explizit</strong> wird dies ausgedrückt als Einfluss einer Veränderung von <span class="math inline">\(x\)</span>, geschrieben als <span class="math inline">\(\Delta x\)</span>, auf die Veränderung in <span class="math inline">\(y\)</span>, geschrieben als <span class="math inline">\(\Delta y\)</span>.</p>
-<p>In der Ökonomie wird diese Art der Analyse auch als Grenzanalyse bezeichnet.
-Z.B. Gewinnmaximierung: “Eine profitmaximierende Firma erhöht ihren Output bis der Grenzerlös (<span class="math inline">\(\Delta R\)</span>) die Grenzkosten (<span class="math inline">\(\Delta C\)</span>) erreicht oder übersteigt.”</p>
-<p><img src="images/grenzerl.png" /></p>
+<!--**Implizit** wird diese Fragestellung durch die funktionale Verknüpfung \(y = f (x)\) erfasst.  **Explizit** wird dies ausgedrückt als Einfluss einer Veränderung von \(x\), geschrieben als \(\Delta x\), auf die Veränderung in \(y\), geschrieben als \(\Delta y\).
+
+In der Ökonomie wird diese Art der Analyse auch als Grenzanalyse bezeichnet.
+Z.B. Gewinnmaximierung: “Eine profitmaximierende Firma erhöht ihren Output bis der Grenzerlös (\(\Delta R\)) die Grenzkosten (\(\Delta C\)) erreicht oder übersteigt.”
+
+![](images/grenzerl.png)-->
 <div id="definition-der-tangente" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Definition der Tangente<a href="differentialrechnung.html#definition-der-tangente" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <!--<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_tangente.m4a"></audio>-->
-<p>Eine umgangssprachliche Beschreibung der Tangentengeraden lautet wie folgt:</p>
-<p>“Eine Tangente ist eine Gerade, die eine Funktion nur in einem Punkt berührt.”</p>
+<p>Eine umgangssprachliche Beschreibung der Tangentengeraden lautet wie folgt: “Eine Tangente ist eine Gerade, die eine Funktion nur in einem Punkt berührt.”</p>
 <p>Im Graphen berührt die Gerade <span class="math inline">\(l_P\)</span> die Funktion nur im Punkt <span class="math inline">\(P\)</span>, ohne die Funktion an einem anderen Punkt zu schneiden.</p>
 <p><img src="images/tang1.png" /></p>
-<p>Für eine glatte Funktion ist die Steigung der Tangente identisch zur Steigung der Funktion in dem Berührungspunkt.</p>
-<p>Die Steigung der Tangente in <span class="math inline">\(P\)</span> entspricht der Ableitung von <span class="math inline">\(y = f (x)\)</span> im Punkt <span class="math inline">\(P\)</span>.</p>
+<p>Für eine glatte Funktion ist die Steigung der Tangente identisch zur Steigung der Funktion in dem Berührungspunkt. Die Steigung der Tangente in <span class="math inline">\(P\)</span> entspricht der Ableitung von <span class="math inline">\(y = f (x)\)</span> im Punkt <span class="math inline">\(P\)</span>.</p>
 <!--<details>
 <summary></summary>
 ![](images/tang_besch.png)
 </details>-->
-<p>Die obige Aussage deckt unser allgemeines Verständnis der Tangente gut ab, eignet sich aber nicht als Definition.</p>
-<p>Denn: Die Tangente kann die Funktion in einem weiter entfernt liegenden Punkt schneiden; daher müssen wir uns auf geeignete Umgebungen des Punkts <span class="math inline">\(P\)</span> beschränken (siehe die Abbildung unten für <span class="math inline">\(f(x)=\sin(x)\)</span>).
-In Einzelfällen kann die Tangente die Funktion sogar schneiden, wie hier im Beispiel <span class="math inline">\(y = x^3\)</span> an der Stelle <span class="math inline">\(x = 0\)</span> (siehe die Abbildung unten für <span class="math inline">\(f(x)=x^3\)</span>).</p>
-<p><img src="images/tang23.png" /></p>
+<!--Die obige Aussage deckt unser allgemeines Verständnis der Tangente gut ab, eignet sich aber nicht als Definition.
+
+Denn: Die Tangente kann die Funktion in einem weiter entfernt liegenden Punkt schneiden; daher müssen wir uns auf geeignete Umgebungen des Punkts \(P\) beschränken (siehe die Abbildung unten für \(f(x)=\sin(x)\)). 
+In Einzelfällen kann die Tangente die Funktion sogar schneiden, wie hier im Beispiel \(y = x^3\) an der Stelle \(x = 0\) (siehe die Abbildung unten für \(f(x)=x^3\)). 
+
+![](images/tang23.png)-->
 <!--![](images/tang2.png)
 ![](images/tang3.png)
 -->
-<div id="sekante-und-tangente" class="section level3 hasAnchor" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Sekante und Tangente<a href="differentialrechnung.html#sekante-und-tangente" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Wir wenden uns daher einer formalen Herleitung des Ableitungsbegriffs zu. Zunächst definieren wir weitere Konzepte, die eine Rolle beim Definieren einer Tangente spielen.</p>
+<div id="herleitung" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Herleitung<a href="differentialrechnung.html#herleitung" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Zunächst definieren wir eine Sekante, die den AUsgangspunkt für das Definieren einer Tangente darstellt.</p>
 <!--<audio class="audio-specs" controls controlsList="nodownload" src="audio/def_sekante.m4a"></audio>-->
 <div class="definition">
 <p><span id="def:defsekante" class="definition"><strong>Definition 4.1  (Sekante) </strong></span>Es seien <span class="math inline">\(P = (x_1, f (x_1))\)</span> und <span class="math inline">\(Q = (x_2, f (x_2))\)</span> zwei Punkte im Graphen der Funktion <span class="math inline">\(f\)</span> . Die Sekante von <span class="math inline">\(P\)</span> und <span class="math inline">\(Q\)</span> ist die Gerade, die <span class="math inline">\(P\)</span> und <span class="math inline">\(Q\)</span> verbindet.</p>
@@ -364,9 +365,6 @@ In Einzelfällen kann die Tangente die Funktion sogar schneiden, wie hier im Bei
 wobei <span class="math inline">\(\Delta y = f (x_2) − f (x_1)\)</span> und <span class="math inline">\(\Delta x = x_2 − x_1\)</span>.</li>
 </ul>
 <p><img src="images/sekante1.png" /></p>
-</div>
-<div id="von-der-sekante-zur-tangente" class="section level3 hasAnchor" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> Von der Sekante zur Tangente<a href="differentialrechnung.html#von-der-sekante-zur-tangente" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>Fixieren Sie nun <span class="math inline">\(P = (x_0,f (x_0))\)</span> und betrachten Sie eine Folge von Werten <span class="math inline">\(({x_n})_{n  \in  \mathbb{N}}\)</span>, die gegen <span class="math inline">\(x_0\)</span> konvergiert.</p></li>
 <li><p>Dies ist äquivalent zu der Formulierung, dass <span class="math inline">\(\Delta x_n = x_n − x_0\)</span> gegen <span class="math inline">\(0\)</span> konvergiert.</p></li>
@@ -440,6 +438,7 @@ Falls</p>
 </div>
 <p>Ist <span class="math inline">\(f\)</span> differenzierbar in <span class="math inline">\(x\)</span>, dann existieren die <strong>linksseitige Ableitung</strong> und die <strong>rechtsseitige Ableitung</strong> und nehmen denselben Wert an:</p>
 <p><span class="math display">\[\lim_{ \Delta x  \uparrow 0 \ }  \frac{ f(x+ \Delta x)-f(x)}{  x\Delta }  =  \lim_{ \Delta x  \downarrow 0 \ }  \frac{ f(x+ \Delta x)-f(x)}{  x\Delta }.\]</span></p>
+<p>Intuitiv: eine Funktion ist differenzierbar, wenn ihre Ableitung eine stetige Funktion darstellt.</p>
 <div class="example">
 <p><span id="exm:differenzierbarkeit" class="example"><strong>Beispiel 4.3  (Differenzierbarkeit) </strong></span>Wir betrachten die Funktion <span class="math display">\[f(x)=\begin{cases} x, &amp;\text{ falls }  x&lt;1 \\ 2-x, &amp;\text{ falls } x \geq 1  \end{cases}.\]</span></p>
 <p>Obwohl die Funktion im Punkt <span class="math inline">\(x = 1\)</span> stetig ist, ist sie in diesem Punkt nicht differenzierbar.</p>
@@ -453,29 +452,37 @@ Falls</p>
 <span class="math display">\[\lim_{ \Delta x  \uparrow 0 \ }  \frac{ f(1+ \Delta x)-f(1)}{  \Delta x } \not= \lim_{ \Delta x  \downarrow 0 \ }  \frac{ f(1+ \Delta x)-f(1)}{  \Delta x }\]</span></p>
 <p>und die Funktion ist im Punkt <span class="math inline">\(x=1\)</span> nicht differentierbar.</p>
 </div>
-<p>Wir betrachten den Zusammenhang zwischen Differenzierbarkeit und Stetigkeit.</p>
-<div class="theorem">
-<p><span id="thm:thm1deffirenz" class="theorem"><strong>Theorem 4.1  (Differenzierbarkeit und Stetigkeit) </strong></span>Falls eine Funktion <span class="math inline">\(f\)</span> im Punkt <span class="math inline">\(x\)</span> differenzierbar ist, so ist sie in <span class="math inline">\(x\)</span> auch stetig.</p>
-</div>
-<ul>
-<li><p>Die Umkehraussage gilt i.A. nicht, wie das vorangegangene Beispiel zeigt.</p></li>
-<li><p>Man kann äquivalent sagen: Stetigkeit ist eine notwendige, aber keine hinreichende Bedingung für Differenzierbarkeit.</p></li>
-</ul>
-<p>Wir erweitern den Begriff der Differenzierbarkeit auf geschlossene Intervalle.</p>
-<div class="definition">
-<p><span id="def:defdiffint" class="definition"><strong>Definition 4.6  (Differenzierbarkeit auf einem Intervall) </strong></span>Eine Funktion <span class="math inline">\(f\)</span> , definiert auf dem Intervall <span class="math inline">\([a,b]\)</span>, ist differenzierbar auf <span class="math inline">\([a,b]\)</span>, falls gilt:</p>
-<ol style="list-style-type: lower-roman">
-<li><p>die rechtsseitige Ableitung für <span class="math inline">\(f (a)\)</span> existiert;</p></li>
-<li><p>die linksseitige Ableitung für <span class="math inline">\(f (b)\)</span> existiert;</p></li>
-<li><p><span class="math inline">\(f\)</span> ist differenzierbar auf dem offenen Intervall <span class="math inline">\((a,b)\)</span>.</p></li>
-</ol>
-</div>
+<!--Wir betrachten den Zusammenhang zwischen Differenzierbarkeit und Stetigkeit. 
+
+::: {#thm1deffirenz .theorem name="Differenzierbarkeit und Stetigkeit"}
+
+Falls eine Funktion \(f\) im Punkt \(x\) differenzierbar ist, so ist sie in \(x\) auch stetig. 
+
+:::
+
+- Die Umkehraussage gilt i.A. nicht, wie das vorangegangene Beispiel zeigt. 
+
+- Man kann äquivalent sagen: Stetigkeit ist eine notwendige, aber keine hinreichende Bedingung für Differenzierbarkeit.
+
+Wir erweitern den Begriff der Differenzierbarkeit auf geschlossene Intervalle. 
+
+::: {#defdiffint .definition name="Differenzierbarkeit auf einem Intervall"}
+
+Eine Funktion \(f\) , definiert auf dem Intervall \([a,b]\), ist differenzierbar auf \([a,b]\), falls gilt: 
+
+(i) die rechtsseitige Ableitung für \(f (a)\) existiert; 
+
+(ii) die linksseitige Ableitung für \(f (b)\) existiert; 
+
+(iii) \(f\) ist differenzierbar auf dem offenen Intervall \((a,b)\).
+:::
+-->
 </div>
 <div id="ableitungsregeln" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Ableitungsregeln<a href="differentialrechnung.html#ableitungsregeln" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Mithilfe der folgenden Regeln können wir Ableitungen konkret bestimmen (Differenzierbarkeit stets vorausgesetzt).</p>
 <div class="theorem">
-<p><span id="thm:thmregeln" class="theorem"><strong>Theorem 4.2  (Ableitungsregeln) </strong></span>Im Folgenden, seien <span class="math inline">\(c\)</span>, <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span> und <span class="math inline">\(b\)</span> Konstanten.</p>
+<p><span id="thm:thmregeln" class="theorem"><strong>Theorem 4.1  (Ableitungsregeln) </strong></span>Im Folgenden, seien <span class="math inline">\(c\)</span>, <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span> und <span class="math inline">\(b\)</span> Konstanten.</p>
 <p><span class="math display">\[\begin{equation*}
       \begin{array}[t]{lll}
         \hline
@@ -928,7 +935,7 @@ Alle höheren Ableitungen sind <span class="math inline">\(0\)</span>, also <spa
 <p>Existieren die ersten beiden Ableitungen, so heißt eine Funktion <strong>zweimal differenzierbar</strong>.</p>
 <p>Mit der zweiten Ableitung lässt sich bestimmen, ob eine Funktion konvex oder konkav ist.</p>
 <div class="theorem">
-<p><span id="thm:thmconcon" class="theorem"><strong>Theorem 4.3  (Ableitungen von Konvexen und Konkaven Funktionen) </strong></span>Es sei <span class="math inline">\(D \subset  \mathbb{R}\)</span> ein offenes Intervall und sei <span class="math inline">\(f: D  \rightarrow   \mathbb{R}\)</span> zweimal differenzierbar.
+<p><span id="thm:thmconcon" class="theorem"><strong>Theorem 4.2  (Ableitungen von Konvexen und Konkaven Funktionen) </strong></span>Es sei <span class="math inline">\(D \subset  \mathbb{R}\)</span> ein offenes Intervall und sei <span class="math inline">\(f: D  \rightarrow   \mathbb{R}\)</span> zweimal differenzierbar.
 <span class="math inline">\(f\)</span> ist <strong>konvex</strong> genau dann, wenn <span class="math inline">\(f&#39;&#39;(x) \geq 0\)</span> (<strong>konkav</strong>: <span class="math inline">\(f&#39;&#39;(x)\leq 0\)</span>) für alle <span class="math inline">\(x    \in    \mathbb{D}\)</span>.</p>
 </div>
 <hr />
@@ -1031,7 +1038,7 @@ Check
 </div>
 <p>Aus <span class="math inline">\(f (x_0)\)</span>, <span class="math inline">\(f&#39; (x_0)\)</span>, <span class="math inline">\(f&#39;&#39;(x_0)\)</span>, …, kann mithilfe des <strong>Satzes von Taylor</strong> der Funktionswert <span class="math inline">\(f (x)\)</span> approximativ ermittelt werden.</p>
 <div class="theorem">
-<p><span id="thm:thmtaylor" class="theorem"><strong>Theorem 4.4  (Satz von Taylor) </strong></span>Es sei <span class="math inline">\(f\)</span> eine <span class="math inline">\(n\)</span>-fach differenzierbare Funktion.</p>
+<p><span id="thm:thmtaylor" class="theorem"><strong>Theorem 4.3  (Satz von Taylor) </strong></span>Es sei <span class="math inline">\(f\)</span> eine <span class="math inline">\(n\)</span>-fach differenzierbare Funktion.</p>
 <p>Die <strong>Taylor-Formel</strong> (auch <strong>Taylor-Entwicklung</strong>) von <span class="math inline">\(f (x)\)</span> in der Umgebung um <span class="math inline">\(x_0\)</span> ist gegeben durch</p>
 <p><span class="math display">\[f(x)=f(x_0)+ \sum_{k=1}^{n}  \frac{f^{(k)}(x_0)}{k!}\cdot (x-x_0)^k +R_n(x),\]</span></p>
 <p>wobei der Rest: <span class="math display">\[R_n(x)=  \frac{f{(n+1)}( \xi) }{(n+1)!} (x-x_0)^{n+1}\]</span></p>
